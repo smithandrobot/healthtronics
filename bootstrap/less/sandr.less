@@ -12,7 +12,6 @@
 .page-top .logo
 {
 	position: relative;
-	left: 39px;
 	top: 36px;
 }
 
@@ -20,7 +19,20 @@
 {
 	position: absolute;
 	bottom: 0;
-	left: 521px;
+	left: 475px;
+}
+
+.nav-primary .contact
+{
+	float: left;
+	font-size: 15px;
+	width: 154px;
+	padding-top: 5px;
+}
+
+.nav-primary .search
+{
+	margin-bottom: 20px;
 }
 
 .nav-secondary li
@@ -33,12 +45,11 @@
 
 .header-bg
 {
-	padding: 17px 40px 33px 43px;
+	padding: 17px 0px 33px 0px;
 	background-color: @yellow;
 	background-image: url("../images/logo_endo_header_bg.png");
 	background-repeat: no-repeat;
-	// background-position: 678px 27px;
-	background-position: 738px 27px;
+	background-position: 666px 27px;
 }
 
 .header-bg h1
@@ -47,16 +58,17 @@
 	float: left;
 	font-size: 46px;
 	line-height: 50px;
+	letter-spacing: -1px;
 }
 
 .header-bg p
 {
 	color: @greyDark;
 	float: left;
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-family: @altFontFamily;
 	font-size: 19px;
 	line-height: 22px;
-	margin-left: 20px;
+	margin-left: 30px;
 	width: 330px;
 	font-weight: 100;
 }
@@ -68,18 +80,24 @@
 	font-style: italic;
 }
 
+.header-bg .share
+{
+	position: relative;
+}
+
+.header-bg .share .image
+{
+	position: absolute;
+	top: 75px;
+	right: 5px;
+}
+
 
 // Page Content
----------------------------------------------------------------------
-
-#services.page-content
-{
-	// padding: 20px 40px;
-}
+// ------------------------------------------------------------------
 
 #services .large-mol-container
 {
-	// width: 440px;
 	height: 390px;
 	background-color: @red;
 	float: left;
@@ -94,10 +112,816 @@
 	float: left;
 }
 
+.large-molecule
+{
+	position: relative;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+.large-molecule-copy
+{
+	background-color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, .9);
+	height: 130px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.large-molecule .inner
+{
+	padding: 20px 23px 20px 15px;
+	height: 93px;
+	overflow: hidden;
+	position: relative;
+}
+
+.large-molecule .inner .arrow
+{
+	height: 22px;
+	width: 22px;
+	background-image: url(../images/bg_small_molecule.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	position: absolute;
+	right: 10px;
+	bottom: 17px;
+}
+
+.large-molecule:hover .inner .arrow
+{
+	background-position: 0px -23px;
+}
+
+.large-molecule h1
+{
+	color: @blue;
+	font-size: 24px;
+	line-height: 24px;
+	letter-spacing: -1px;
+	margin-bottom: 8px;
+	width: 420px;
+}
+
+.large-molecule p
+{
+	color: #9E9F9F;
+	font-size: 12px;
+	font-family: @altFontFamily;
+	line-height: 13px;
+	height: 40px;
+}
+
+.large-molecule:hover h1
+{
+	color: @blueLight;
+}
+
 .small-molecule
 {
 	background-color: @white;
-	height: 130px;
+	width: 100%;
+	height: 125px;
+	margin-bottom: 20px;
+
+}
+
+.small-molecule .inner
+{
+	padding: 15px 10px;
+	height: 93px;
+	overflow: hidden;
+	position: relative;
+}
+
+.small-molecule .inner .arrow
+{
+	width: 22px;
+	height: 22px;
+	background-image: url(../images/bg_small_molecule.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	position: absolute;
+	right: 10px;
+	bottom: 7px;
+}
+
+.small-molecule:hover .inner .arrow
+{
+	background-position: 0px -23px;
+}
+
+.small-molecule:hover .inner h1
+{
+	color: @blueLight;
+}
+
+.small-molecule h1
+{
+	color: @blue;
+	font-size: 24px;
+	letter-spacing: -1px;
+	line-height: 24px;
+	margin-bottom: 8px;
+	width: 178px;
+}
+
+.small-molecule p
+{
+	color: #9E9F9F;
+	font-size: 12px;
+	font-family: @altFontFamily;
+	line-height: 13px;
+	width: 180px;
+	height: 40px;
+	overflow: hidden;
+}
+
+
+// Share Molecules
+// -----------------------------------------
+
+.share-molecule
+{
+	background-color: @greyDark;
+	color: @white;
+}
+
+.share-molecule .stripe
+{
+	background-color: #707372;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.share-molecule .inner
+{
+	padding: 5px 0px 5px 0px;
+}
+
+.share-molecule .share-headline
+{
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.share-molecule .share-headline img
+{
+	margin-bottom: 3px;
+}
+
+.share-molecule input, .share-molecule textarea
+{
+	color: @grey;
+	background-color: @greyLighter;
+	border: 0px solid #000000;
+	margin-bottom: 7px;
+	padding-left: 10px;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.share-molecule input
+{
+	height: 22px;
+	width: 285px;
+}
+
+.share-molecule textarea
+{
+	height: 59px;
+	width: 365px;
+}
+
+.share-molecule label
+{
+	color: @white;
+}
+
+.share-molecule label, .share-molecule input, .share-molecule textarea
+{
+	font-family: @altFontFamily;
+	font-size: 12px;
+}
+
+.share-molecule .share-email-btn
+{
+	float: right;
+	display: block;
+	width: 141px;
+	height: 30px;
+	background-color: @yellow;
+	color: @white;
+	font-size: 16px;
+	line-height: 28px;
+	padding: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border: none;
+}
+
+.share-molecule .share-email-btn:hover
+{
+	background-color: @yellowLight;
+}
+
+.share-molecule .close-btn
+{
+	
+}
+
+
+// News Molecules
+// -----------------------------------------
+
+.news-molecules
+{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.news-molecule, .email-molecule
+{
+	position: relative;
+	color: @white;
+	height: 100px;
+	margin-bottom: 20px;
+	border-bottom: 5px solid @white;
+}
+
+.news-molecule a
+{
+	color: @white;
+}
+
+.news-molecule a:hover
+{
+	color: @blueLight;
+}
+
+.news-molecule .bg
+{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.news-molecule .inner
+{
+	padding: 12px 15px;
+}
+
+.email-molecule .inner
+{
+	padding: 12px 10px;
+}
+
+.news-molecule h1
+{
+	font-size: 24px;
+	width: 375px;
+	float: left;
+	line-height: 24px;
+	letter-spacing: -1px;
+}
+
+.news-molecule .date
+{
+	float: left;
+	width: 35px;
+	margin-right: 20px;
+	text-transform: uppercase;
+}
+
+.news-molecule .date .month, .news-molecule .date .year
+{
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.news-molecule .date .day
+{
+	font-size: 31px;
+	margin-bottom: 3px;
+}
+
+.email-molecule .at
+{
+	float: left;
+	width: 35px;
+	margin-right: 10px;
+}
+
+.email-molecule .content
+{
+	color: @white;
+	float: left;
+}
+
+.email-molecule .content h1
+{
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: -1px;
+	margin-bottom: 3px;
+}
+
+.email-molecule .content p
+{
+	font-family: @altFontFamily;
+	font-size: 12px;
+}
+
+
+// Stats, Events Molecules
+// ---------------------------------------------------------------------
+
+.stats-events-molecules
+{
+	margin-bottom: 20px;
+}
+
+.stats-molecule, .email-molecule
+{
+	margin-bottom: 10px;
+}
+
+.stats-molecule .header, .events-molecule .header
+{
+	border-bottom: 5px solid @white;
+	height: 31px;
+}
+
+.stats-molecule .header
+{
+	margin-bottom: 70px;
+}
+
+.stats-molecule .header h1, .events-molecule .header h1
+{
+	color: @greyDark;
+	font-size: 24px;
+	line-height: 24px;
+	float: left;
+}
+
+.stats-molecule .header .more-link, .events-molecule .header .more-link
+{
+	float: right;
+	margin-right: 10px;
+	font-family: @altFontFamily;
+	font-size: 12px;
+}
+
+.stats-molecule .header .more-link .arrow, .events-molecule .header .more-link .arrow
+{
+	width: 22px;
+	height: 22px;
+	background-image: url(../images/arrow_stats_events.png);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+.stats-molecule .header .more-link:hover .arrow, .events-molecule .header .more-link:hover .arrow
+{
+	background-position: 0px -23px;
+}
+
+.stats-molecule .header img, .events-molecule .header img
+{
+	// left-padding: 12px;
+}
+
+
+/* inside of the carousel */
+.stat
+{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	vertical-align: middle;
+	width: 237px;
+	height: 139px;
+}
+
+.stat h1
+{
+	font-size: 80px;
+	line-height: 80px;
+	text-align: center;
+}
+
+.stat p
+{
+	margin-top: 10px;
+	color: @greyDark;
+	font-size: 18px;
+	line-height: 18px;
+	font-family: @altFontFamily;
+	text-align: center;
+}
+
+.events-molecule .event
+{
+	margin-top: 10px;
+	border-bottom: 1px solid @white;
+}
+
+.events-molecule .event.last
+{
+	border-bottom: 0px solid @white;
+}
+
+.events-molecule .date
+{
+	width: 61px;
+	height: 61px;
+	text-align: center;
+	color: @white;
+	margin-right: 12px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.events-molecule .date .month
+{
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	margin-top: 7px;
+}
+
+.events-molecule .date .day
+{
+	font-size: 31px;
+	line-height: 31px;
+}
+
+.events-molecule .content
+{
+	font-family: Arial, sans-serif;
+}
+
+.events-molecule .content h1
+{
+	font-size: 15px;
+	line-height: 15px;
+	font-weight: normal;
+}
+
+.events-molecule time, .events-molecule p
+{
+	color: @greyDark;
+	font-size: 12px;
+	line-height: 12px;
+	font-family: Arial, sans-serif;
+}
+
+
+// Footer
+// ------------------------------------------------------------------
+
+#footer
+{
+	background-color: @white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+#footer .footer-ul
+{
+	float: left;
+	font-family: @altFontFamily;
+	font-size: 12px;
+	
+}
+
+#footer .footer-ul li
+{
+	line-height: 20px;
+}
+
+#footer .footer-ul .desc
+{
+	color: @blueLighter;
+	font-family: @baseFontFamily;
+	font-size: 15px;
+}
+
+#footer .footer-ul .bold
+{
+	font-weight: bold;
+}
+
+#footer .email-molecule
+{
+	color: @greyDark;
+	position: relative;
+	height: auto;
+	margin-bottom: 20px;
+	border-bottom: 0px solid @white;
+}
+
+#footer .email-molecule .inner
+{
+	padding: 12px 0 0 10px;
+}
+
+#footer .email-molecule .inner .at
+{
+	float: left;
+	width: 35px;
+	margin-right: 10px;
+}
+
+#footer .email-molecule .content
+{
+	color: @greyDark;
+}
+
+#footer .email-molecule .content h1
+{
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: -1px;
+	margin-bottom: 3px;
+}
+
+#footer .email-molecule .content p
+{
+	font-family: @altFontFamily;
+	font-size: 12px;
+}
+
+#footer .email-molecule .qualitest
+{
+	float: right;
+	margin-left: 7px;
+}
+
+#footer .email-molecule .ams
+{
+	float: right;
+	margin-top: 3px;
+	margin-left: 10px;
+}
+
+#footer .email-molecule .endo
+{
+	float: right;
+	margin-top: 3px;
+}
+
+#footer .hr
+{
+	height: 1px;
+	background-image: url("../images/hr.png");
+	background-repeat: repeat-x;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#footer .legal
+{
+	font-family: @altFontFamily;
+	font-size: 12px;
+	color: @greyDark;
+}
+
+#footer .bottom-links a
+{
+	float: right;
+	margin-left: 25px;
+	font-family: @altFontFamily;
+	font-size: 12px;
+	line-height: 12px;
+}
+
+
+// Colors
+// ------------------------------------------------------------------
+
+// Molecule bottom border colors
+// -----------------------------------------
+.mol-border-green
+{
+	border-bottom: 5px solid @green;
+}
+
+.mol-border-orange
+{
+	border-bottom: 5px solid @orange;
+}
+
+.mol-border-blue
+{
+	border-bottom: 5px solid @blue;
+}
+
+.mol-border-purple
+{
+	border-bottom: 5px solid @purple;
+}
+
+.mol-border-yellow
+{
+	border-bottom: 5px solid @yellow;
+}
+
+.mol-border-grey
+{
+	border-bottom: 5px solid @greyDark;
+}
+
+// Rollover colors
+// -----------------------------------------
+
+.small-molecule:hover.mol-border-green
+{
+	border-bottom: 5px solid @greenLight;
+}
+
+.small-molecule:hover.mol-border-orange
+{
+	border-bottom: 5px solid @orangeLight;
+}
+
+.small-molecule:hover.mol-border-blue
+{
+	border-bottom: 5px solid @blueLight;
+}
+
+.small-molecule:hover.mol-border-purple
+{
+	border-bottom: 5px solid @purpleLight;
+}
+
+.small-molecule:hover.mol-border-yellow
+{
+	border-bottom: 5px solid @yellowLight;
+}
+
+.small-molecule:hover.mol-border-grey
+{
+	border-bottom: 5px solid @grey;
+}
+
+// Background Colors
+// -----------------------------------------
+
+.mol-color-green
+{
+	background-color: @green;
+}
+
+.mol-color-orange
+{
+	background-color: @orange;
+}
+
+.mol-color-orangelight
+{
+	background-color: @orangeLight;
+}
+
+.mol-color-blue
+{
+	background-color: @blue;
+}
+
+.mol-color-purple
+{
+	background-color: @purple;
+}
+
+.mol-color-yellow
+{
+	background-color: @yellow;
+}
+
+.mol-color-grey
+{
+	background-color: @grey;
+}
+
+// Font Colors
+// -----------------------------------------
+
+.color-green
+{
+	color: @green;
+}
+
+.color-orange
+{
+	color: @orange;
+}
+
+.color-orangelight
+{
+	color: @orangeLight;
+}
+
+.color-blue
+{
+	color: @blue;
+}
+
+.color-purple
+{
+	color: @purple;
+}
+
+.color-yellow
+{
+	color: @yellow;
+}
+
+.color-grey
+{
+	color: @grey;
+}
+
+
+// Forms
+// ------------------------------------------------------------------
+
+.search-field
+{
+	width: 269px;
+	border: 1px solid #DADADA;
+	border-right: 0px;
+	background-color: @greyLighter;
+	color: @grey;
+	font-family: @altFontFamily;
+	font-size: 12px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.search-btn
+{
+	border: 1px solid #DADADA;
+	border-left: 0px;
+	background-color: @greyLighter;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	padding: 4px;
+}
+
+.email-field
+{
+	height: 22px;
+	color: @grey;
+	background-color: @greyLighter;
+	font-family: @altFontFamily;
+	font-size: 12px;
+	border: 0px solid #000000;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.submit-btn
+{
+	width: 77px;
+	height: 30px;
+	background-color: @blueLighter;
+	color: @white;
+	font-size: 16px;
+	line-height: 28px;
+	border: 0px solid #000000;
+}
+
+.submit-btn:hover
+{
+	background-color: @blueLight;
 }
 
 
@@ -112,4 +936,26 @@
 ul, ol
 {
 	margin: 0;
+}
+
+a:hover
+{
+	text-decoration: none;
+}
+
+.input-prepend, .input-append
+{
+	margin-bottom: 0;
+}
+
+.input-append input, .input-append select .uneditable-input
+{
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+input, textarea, select, .uneditable-input
+{
+	margin-bottom: 0;
 }
