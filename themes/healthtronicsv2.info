@@ -1,0 +1,25 @@
+name = Healthtronics V2
+description = Default theme for Healthtronics Site
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = css/bootstrap-responsive.css
+stylesheets[all][] = css/bootstrap.css
+
+scripts[] = js/jquery.js
+
+regions[sidebar_left] = Sidebar Left
+regions[sidebar_right] = Sidebar Right
+regions[announcement] = Announcement Area
+regions[content] = Main Content
+regions[leaderboard] = Leaderboard
+regions[main_nav] = Main Navigation Region
+regions[expanded_footer] = Footer
+regions[utility_bar] = Utility Bar
+regions[footer] = Footer
+regions[footer_col1] = Footer Column 1
+regions[footer_col2] = Footer Column 2
+regions[footer_col3] = Footer Column 3
+regions[footer_col4] = Footer Column 4
+regions[footer_bottom] = Footer Bottom
+regions[resource_library_filters] = Resource Library Filters
