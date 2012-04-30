@@ -52,6 +52,7 @@
   .visible-desktop   { display: none; }
 }
 
+
 // Tablets & small desktops only
 @media (min-width: 768px) and (max-width: 979px) {
   // Show
@@ -62,6 +63,7 @@
   .hidden-desktop    { display: block; }
   .visible-desktop   { display: none; }
 }
+
 
 
 // UP TO LANDSCAPE PHONE
@@ -138,8 +140,8 @@
 
   // Padding to set content in a bit
   body {
-    padding-left: 20px;
-    padding-right: 20px;
+    // padding-left: 20px;
+    // padding-right: 20px;
   }
   .navbar-fixed-top {
     margin-left: -20px;
@@ -169,6 +171,42 @@
     margin: 0;
   }
 
+// S&R
+// ------------------------------------------------------------------
+#footer .footer-links
+{
+	margin-bottom: 20px;
+	// margin-left: 20px;
+}
+
+#footer .footer-ul .desc
+{
+	font-size: 13px;
+	line-height: 22px;
+}
+
+#footer .footer-ul li
+{
+	float: left;
+	margin-right: 7px;
+	font-size: 11px;
+}
+
+#footer .logos
+{
+	text-align: left;
+}
+
+#footer .bottom-links a
+{
+	float: left;
+	margin-left: 0px;
+	margin-right: 25px;
+}
+
+// ------------------------------------------------------------------
+	
+
   // THUMBNAILS
   // ----------
   .thumbnails [class*="span"] {
@@ -197,6 +235,9 @@
 // PORTRAIT TABLET TO DEFAULT DESKTOP
 // ----------------------------------
 
+// Smith & Robot - need to edit this
+// ------------------------------------------------------------------
+
 @media (min-width: 768px) and (max-width: 979px) {
 
   // Fixed grid
@@ -209,6 +250,7 @@
   #grid > .input(42px, 20px);
 
 }
+
 
 
 
@@ -327,8 +369,8 @@
 
   // Hide everything in the navbar save .brand and toggle button */
   .nav-collapse {
-    overflow: hidden;
-    height: 0;
+    // overflow: hidden;
+    // height: 0;
   }
 }
 
@@ -350,6 +392,7 @@
 // ------------------
 
 // Smith & Robot - no need for this size
+// ------------------------------------------------------------------
 /*
 @media (min-width: 1200px) {
 
@@ -369,6 +412,6 @@
   .thumbnails > li {
     margin-left: 30px;
   }
-
 }
 */
+
