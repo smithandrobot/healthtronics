@@ -49,7 +49,7 @@
 	background-color: @yellow;
 	background-image: url("../images/logo_endo_header_bg.png");
 	background-repeat: no-repeat;
-	background-position: 666px 27px;
+	background-position: right bottom;
 }
 
 .header-bg h1
@@ -68,7 +68,6 @@
 	font-family: @altFontFamily;
 	font-size: 19px;
 	line-height: 22px;
-	margin-left: 30px;
 	width: 330px;
 	font-weight: 100;
 }
@@ -87,162 +86,28 @@
 
 .header-bg .share .image
 {
+	width: 45px;
+	height: 10px;
+	background-image: url("../images/share.png");
+	background-repeat: none;
+	background-position: 0px 0px;
 	position: absolute;
 	top: 75px;
-	right: 5px;
+	right: 8px;
 }
 
-
-// Page Content
-// ------------------------------------------------------------------
-
-#services .large-mol-container
+.header-bg .share .image:hover
 {
-	height: 390px;
-	background-color: @red;
-	float: left;
+	background-position: 0px -11px;
 }
 
-#services .small-mol-container
+.header-bg .share a:active .image
 {
-	width: 460px;
-	height: 390px;
-	background-color: @blue;
-	margin-left: 20px;
-	float: left;
-}
-
-.large-molecule
-{
-	position: relative;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	overflow: hidden;
-}
-
-.large-molecule-copy
-{
-	background-color: rgb(255, 255, 255);
-	background-color: rgba(255, 255, 255, .9);
-	height: 130px;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-}
-
-.large-molecule .inner
-{
-	padding: 20px 23px 20px 15px;
-	height: 93px;
-	overflow: hidden;
-	position: relative;
-}
-
-.large-molecule .inner .arrow
-{
-	height: 22px;
-	width: 22px;
-	background-image: url(../images/bg_small_molecule.png);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	position: absolute;
-	right: 10px;
-	bottom: 17px;
-}
-
-.large-molecule:hover .inner .arrow
-{
-	background-position: 0px -23px;
-}
-
-.large-molecule h1
-{
-	color: @blue;
-	font-size: 24px;
-	line-height: 24px;
-	letter-spacing: -1px;
-	margin-bottom: 8px;
-	width: 420px;
-}
-
-.large-molecule p
-{
-	color: #9E9F9F;
-	font-size: 12px;
-	font-family: @altFontFamily;
-	line-height: 13px;
-	height: 40px;
-}
-
-.large-molecule:hover h1
-{
-	color: @blueLight;
-}
-
-.small-molecule
-{
-	background-color: @white;
-	width: 100%;
-	height: 125px;
-	margin-bottom: 20px;
-
-}
-
-.small-molecule .inner
-{
-	padding: 15px 10px;
-	height: 93px;
-	overflow: hidden;
-	position: relative;
-}
-
-.small-molecule .inner .arrow
-{
-	width: 22px;
-	height: 22px;
-	background-image: url(../images/bg_small_molecule.png);
-	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	position: absolute;
-	right: 10px;
-	bottom: 7px;
-}
-
-.small-molecule:hover .inner .arrow
-{
-	background-position: 0px -23px;
-}
-
-.small-molecule:hover .inner h1
-{
-	color: @blueLight;
-}
-
-.small-molecule h1
-{
-	color: @blue;
-	font-size: 24px;
-	letter-spacing: -1px;
-	line-height: 24px;
-	margin-bottom: 8px;
-	width: 178px;
-}
-
-.small-molecule p
-{
-	color: #9E9F9F;
-	font-size: 12px;
-	font-family: @altFontFamily;
-	line-height: 13px;
-	width: 180px;
-	height: 40px;
-	overflow: hidden;
+	background-position: 0px -11px;
 }
 
 
-// Share Molecules
+// Share Molecule
 // -----------------------------------------
 
 .share-molecule
@@ -341,7 +206,169 @@
 }
 
 
-// News Molecules
+// Page Content
+// ------------------------------------------------------------------
+
+#yellow-stripe
+{
+	background-color: #F1B434;
+	width: 100%;
+}
+
+#yellow-stripe .inner
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#grey-stripe
+{
+	background-color: #ECECEC;
+	width: 100%;
+	padding-top: 20px;
+}
+
+#grey-stripe .inner
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.large-molecule
+{
+	position: relative;
+	width: 100%;
+	// margin-left: auto;
+	// margin-right: auto;
+	overflow: hidden;
+	margin-bottom: 20px;
+	background-image: url(../images/bg_large_molecule.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+	height: 430px;
+}
+
+.large-molecule-copy
+{
+	background-color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, .9);
+	height: 130px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.large-molecule-copy .inner
+{
+	padding: 20px 35px 20px 15px;
+	// height: 93px;
+	overflow: hidden;
+	position: relative;
+}
+
+.large-molecule-copy .inner .arrow
+{
+	height: 22px;
+	width: 22px;
+	background-image: url(../images/bg_small_molecule.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	position: absolute;
+	right: 10px;
+	bottom: 17px;
+}
+
+.large-molecule:hover .inner .arrow
+{
+	background-position: 0px -23px;
+}
+
+.large-molecule h1
+{
+	color: @blue;
+	font-size: 24px;
+	line-height: 24px;
+	letter-spacing: -1px;
+	margin-bottom: 8px;
+	width: 420px;
+}
+
+.large-molecule p
+{
+	color: #9E9F9F;
+	font-size: 12px;
+	font-family: @altFontFamily;
+	line-height: 13px;
+	height: 40px;
+}
+
+.large-molecule:hover h1
+{
+	color: @blueLight;
+}
+
+.small-molecule
+{
+	background-color: @white;
+	width: 100%;
+	height: 125px;
+	margin-bottom: 20px;
+}
+
+.small-molecule .inner
+{
+	padding: 15px 35px 15px 10px;
+	height: 93px;
+	overflow: hidden;
+	position: relative;
+}
+
+.small-molecule .inner .arrow
+{
+	width: 22px;
+	height: 22px;
+	background-image: url(../images/bg_small_molecule.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	position: absolute;
+	right: 10px;
+	bottom: 7px;
+}
+
+.small-molecule:hover .inner .arrow
+{
+	background-position: 0px -23px;
+}
+
+.small-molecule:hover .inner h1
+{
+	color: @blueLight;
+}
+
+.small-molecule h1
+{
+	color: @blue;
+	font-size: 24px;
+	letter-spacing: -1px;
+	line-height: 24px;
+	margin-bottom: 8px;
+	width: 178px;
+}
+
+.small-molecule p
+{
+	color: #9E9F9F;
+	font-size: 12px;
+	font-family: @altFontFamily;
+	line-height: 13px;
+	// width: 180px;
+	height: 40px;
+	overflow: hidden;
+}
+
+
+// News and Email Molecules
 // -----------------------------------------
 
 .news-molecules
@@ -369,28 +396,49 @@
 	color: @blueLight;
 }
 
-.news-molecule .bg
+.news-molecule .more-link
 {
+	margin-right: 10px;
+	font-family: @altFontFamily;
+	font-size: 12px;
 	position: absolute;
-	bottom: 10px;
-	right: 10px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.news-molecule .more-link .arrow
+{
+	width: 22px;
+	height: 22px;
+	background-image: url(../images/arrow_news_molecule.png);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+.news-molecule .more-link:hover a
+{
+	color: @blueLight;
+}
+
+.news-molecule .more-link:hover .arrow
+{
+	background-position: 0px -23px;
 }
 
 .news-molecule .inner
 {
 	padding: 12px 15px;
-}
-
-.email-molecule .inner
-{
-	padding: 12px 10px;
+	position: relative;
 }
 
 .news-molecule h1
 {
 	font-size: 24px;
-	width: 375px;
-	float: left;
+	// width: 375px;
+	// float: left;
 	line-height: 24px;
 	letter-spacing: -1px;
 }
@@ -417,6 +465,11 @@
 	margin-bottom: 3px;
 }
 
+.email-molecule .inner
+{
+	padding: 12px 10px;
+}
+
 .email-molecule .at
 {
 	float: left;
@@ -427,7 +480,7 @@
 .email-molecule .content
 {
 	color: @white;
-	float: left;
+	// float: left;
 }
 
 .email-molecule .content h1
@@ -500,11 +553,6 @@
 .stats-molecule .header .more-link:hover .arrow, .events-molecule .header .more-link:hover .arrow
 {
 	background-position: 0px -23px;
-}
-
-.stats-molecule .header img, .events-molecule .header img
-{
-	// left-padding: 12px;
 }
 
 
@@ -603,12 +651,19 @@
 	width: 100%;
 }
 
+#footer .inner
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 #footer .footer-ul
 {
-	float: left;
+	// float: left;
 	font-family: @altFontFamily;
 	font-size: 12px;
-	
+	// width: 140px;
+	// display: inline-block;
 }
 
 #footer .footer-ul li
@@ -668,22 +723,24 @@
 	font-size: 12px;
 }
 
-#footer .email-molecule .qualitest
+#footer .logos
 {
-	float: right;
+	text-align: right;
+}
+
+#footer .logos .qualitest
+{
 	margin-left: 7px;
 }
 
-#footer .email-molecule .ams
+#footer .logos .ams
 {
-	float: right;
 	margin-top: 3px;
-	margin-left: 10px;
+	margin-left: 8px;
 }
 
-#footer .email-molecule .endo
+#footer .logos .endo
 {
-	float: right;
 	margin-top: 3px;
 }
 
@@ -703,9 +760,13 @@
 	color: @greyDark;
 }
 
+#footer .bottom-links
+{
+	text-align: right;
+}
+
 #footer .bottom-links a
 {
-	float: right;
 	margin-left: 25px;
 	font-family: @altFontFamily;
 	font-size: 12px;
