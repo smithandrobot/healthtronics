@@ -4026,7 +4026,7 @@ a.thumbnail:hover {
 .header-bg {
   padding: 17px 0px 33px 0px;
   background-color: #f1b434;
-  background-image: url("../images/logo_endo_header_bg.png");
+  background-image: url("/sites/all/themes/healthtronicsv2/images/logo_endo_header_bg.png");
   background-repeat: no-repeat;
   background-position: right bottom;
 }
@@ -4057,7 +4057,7 @@ a.thumbnail:hover {
 .header-bg .share .image {
   width: 45px;
   height: 10px;
-  background-image: url("../images/share.png");
+  background-image: url("/sites/all/themes/healthtronicsv2/images/share.png");
   background-repeat: none;
   background-position: 0px 0px;
   position: absolute;
@@ -4161,7 +4161,7 @@ a.thumbnail:hover {
   width: 100%;
   overflow: hidden;
   margin-bottom: 20px;
-  background-image: url(../images/bg_large_molecule.jpg);
+  background-image: url(/sites/all/themes/healthtronicsv2/images/bg_large_molecule.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   height: 430px;
@@ -4183,7 +4183,7 @@ a.thumbnail:hover {
 .large-molecule-copy .inner .arrow {
   height: 22px;
   width: 22px;
-  background-image: url(../images/bg_small_molecule.png);
+  background-image: url(/sites/all/themes/healthtronicsv2/images/bg_small_molecule.png);
   background-repeat: no-repeat;
   background-position: 0px 0px;
   position: absolute;
@@ -4226,7 +4226,7 @@ a.thumbnail:hover {
 .small-molecule .inner .arrow {
   width: 22px;
   height: 22px;
-  background-image: url(../images/bg_small_molecule.png);
+  background-image: url(/sites/all/themes/healthtronicsv2/images/bg_small_molecule.png);
   background-repeat: no-repeat;
   background-position: 0px 0px;
   position: absolute;
@@ -4284,7 +4284,7 @@ a.thumbnail:hover {
 .news-molecule .more-link .arrow {
   width: 22px;
   height: 22px;
-  background-image: url(../images/arrow_news_molecule.png);
+  background-image: url(/sites/all/themes/healthtronicsv2/images/arrow_news_molecule.png);
   background-position: 0px 0px;
   background-repeat: no-repeat;
   display: inline-block;
@@ -4377,7 +4377,7 @@ a.thumbnail:hover {
 .events-molecule .header .more-link .arrow {
   width: 22px;
   height: 22px;
-  background-image: url(../images/arrow_stats_events.png);
+  background-image: url(/sites/all/themes/healthtronicsv2/images/arrow_stats_events.png);
   background-position: 0px 0px;
   background-repeat: no-repeat;
   display: inline-block;
@@ -4518,7 +4518,7 @@ a.thumbnail:hover {
 }
 #footer .hr {
   height: 1px;
-  background-image: url("../images/hr.png");
+  background-image: url("sites/all/themes/healthtronicsv2/images/hr.png");
   background-repeat: repeat-x;
   margin-top: 10px;
   margin-bottom: 10px;
