@@ -1,4 +1,2 @@
-#!/usr/bin/env coffee
-watcher = require("#{__dirname}/../lib/watchr.coffee")
-watcher.watch process.cwd(), ->
-	console.log 'giggity'
+require('coffee-script');
+module.exports = require(__dirname+'/../lib/watchr');

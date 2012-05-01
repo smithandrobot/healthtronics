@@ -1,5 +1,8 @@
 ## History
 
+- v1.1 April 19, 2012
+	- CoffeeScript dependency is now included within watchr
+
 - v1.0 February 11, 2012
 	- Better support for ignoring hidden files
 	- Improved documentation, readme
