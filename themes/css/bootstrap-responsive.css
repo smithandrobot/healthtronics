@@ -154,6 +154,9 @@
     width: auto;
     margin: 0;
   }
+  .span6.hidden-phone {
+    display: none;
+  }
   #footer .footer-links {
     margin-bottom: 20px;
   }
