@@ -2549,8 +2549,8 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > li > a,
 .nav-pills > li > a {
   font-size: 15px;
-  width: 150px;
-  margin-right: 4px;
+  width: 120px;
+  margin-left: 4px;
   line-height: 14px;
 }
 .nav-tabs {
@@ -4006,13 +4006,19 @@ a.thumbnail:hover {
 .nav-primary {
   position: absolute;
   bottom: 0;
-  left: 475px;
+  left: 443px;
 }
-.nav-primary .contact {
+.nav-primary .contact a {
   float: left;
-  font-size: 15px;
-  width: 154px;
-  padding-top: 5px;
+  font-size: 16px;
+  width: 120px;
+  height: 30px;
+  color: #ffffff;
+  background-color: #007296;
+  margin-left: 4px;
+  margin-right: 68px;
+  text-align: center;
+  line-height: 31px;
 }
 .nav-primary .search {
   margin-bottom: 20px;
@@ -4620,6 +4626,7 @@ a.thumbnail:hover {
 }
 .search-field {
   width: 269px;
+  height: 20px;
   border: 1px solid #DADADA;
   border-right: 0px;
   background-color: #ececec;
@@ -4634,6 +4641,7 @@ a.thumbnail:hover {
   box-shadow: none;
 }
 .search-btn {
+  height: 30px;
   border: 1px solid #DADADA;
   border-left: 0px;
   background-color: #ececec;
