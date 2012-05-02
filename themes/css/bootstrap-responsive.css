@@ -177,6 +177,12 @@
     margin-left: 0px;
     margin-right: 25px;
   }
+  .nav-secondary {
+    display: hidden;
+  }
+  .nav-secondary li {
+    display: hidden;
+  }
   .thumbnails [class*="span"] {
     width: auto;
   }
