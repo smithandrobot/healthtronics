@@ -2549,7 +2549,7 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > li > a,
 .nav-pills > li > a {
   font-size: 15px;
-  width: 150px;
+  width: 145px;
   margin-right: 4px;
   line-height: 14px;
 }
@@ -3994,6 +3994,20 @@ a.thumbnail:hover {
 .invisible {
   visibility: hidden;
 }
+/*
+*/
+ul li.leaf {
+  list-style-image: none;
+  list-style-type: none;
+}
+li.expanded,
+li.collapsed,
+li.leaf {
+  padding: 0;
+}
+li a.active {
+  color: #007296;
+}
 .page-top {
   position: relative;
   background-color: #ffffff;
@@ -4006,12 +4020,12 @@ a.thumbnail:hover {
 .nav-primary {
   position: absolute;
   bottom: 0;
-  left: 475px;
+  left: 344px;
 }
 .nav-primary .contact {
   float: left;
   font-size: 15px;
-  width: 154px;
+  width: 290px;
   padding-top: 5px;
 }
 .nav-primary .search {
@@ -4019,9 +4033,22 @@ a.thumbnail:hover {
 }
 .nav-secondary li {
   float: left;
-  padding-right: 53px;
-  font-size: 19px;
+  padding-left: 45px;
+  font-size: 18px;
   margin-bottom: 23px;
+}
+.nav-secondary li.first.leaf {
+  padding-left: 0;
+}
+/*override Drupal*/
+.nav-primary ul li.leaf {
+  list-style-image: none;
+  list-style-type: none;
+  padding: 0;
+}
+.subnav-bg {
+  padding: 17px 0px 0px 0px;
+  background-color: #f1b434;
 }
 .header-bg {
   padding: 17px 0px 33px 0px;
@@ -4139,11 +4166,11 @@ a.thumbnail:hover {
 .share-molecule .share-email-btn:hover {
   background-color: #ffc72c;
 }
-#yellow-stripe {
+.yellow-stripe {
   background-color: #F1B434;
   width: 100%;
 }
-#yellow-stripe .inner {
+.yellow-stripe .inner {
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -4467,7 +4494,8 @@ a.thumbnail:hover {
 #footer .footer-ul li {
   line-height: 20px;
 }
-#footer .footer-ul .desc {
+#footer .footer-ul .desc,
+#footer p .desc {
   color: #147197;
   font-family: LeituraSans-Italic2, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
@@ -4518,7 +4546,7 @@ a.thumbnail:hover {
 }
 #footer .hr {
   height: 1px;
-  background-image: url("sites/all/themes/healthtronicsv2/images/hr.png");
+  background-image: url("/sites/all/themes/healthtronicsv2/images/hr.png");
   background-repeat: repeat-x;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -4620,6 +4648,7 @@ a.thumbnail:hover {
 }
 .search-field {
   width: 269px;
+  height: 19px;
   border: 1px solid #DADADA;
   border-right: 0px;
   background-color: #ececec;
@@ -4679,6 +4708,15 @@ a.thumbnail:hover {
 }
 #subpage-body-copy {
   margin-bottom: 20px;
+}
+/*
+** Sub-navigation Menu
+*/
+#subpage-menu li {
+  list-style: none;
+  padding: 12px 0;
+  font-size: 16px;
+  border-bottom: 1px dotted #9DA1A1;
 }
 /*
 ** Video Molecule

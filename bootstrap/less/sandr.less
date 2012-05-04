@@ -1,3 +1,18 @@
+/*
+*/
+ul li.leaf {
+list-style-image: none;
+list-style-type: none;
+}
+
+li.expanded, li.collapsed, li.leaf {
+padding: 0;
+}
+
+li a.active {
+color: #007296;
+}
+
 // SandR.less
 // CSS from Smith & Robot
 // ------------------------------------------------------------------
@@ -19,14 +34,14 @@
 {
 	position: absolute;
 	bottom: 0;
-	left: 475px;
+	left: 344px;
 }
 
 .nav-primary .contact
 {
 	float: left;
 	font-size: 15px;
-	width: 154px;
+    width: 290px;
 	padding-top: 5px;
 }
 
@@ -38,9 +53,27 @@
 .nav-secondary li
 {
 	float: left;
-	padding-right: 53px;
-	font-size: 19px;
+	padding-left: 45px;
+    font-size: 18px;
 	margin-bottom: 23px;
+}
+
+.nav-secondary li.first.leaf
+{
+	padding-left: 0;
+}
+/*override Drupal*/
+.nav-primary ul li.leaf
+{
+    list-style-image: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+.subnav-bg
+{
+	padding: 17px 0px 0px 0px;
+	background-color: @yellow;
 }
 
 .header-bg
@@ -209,13 +242,13 @@
 // Page Content
 // ------------------------------------------------------------------
 
-#yellow-stripe
+.yellow-stripe
 {
 	background-color: #F1B434;
 	width: 100%;
 }
 
-#yellow-stripe .inner
+.yellow-stripe .inner
 {
 	padding-left: 10px;
 	padding-right: 10px;
@@ -671,7 +704,8 @@
 	line-height: 20px;
 }
 
-#footer .footer-ul .desc
+#footer .footer-ul .desc,
+#footer p .desc
 {
 	color: @blueLighter;
 	font-family: @baseFontFamily;
@@ -747,7 +781,7 @@
 #footer .hr
 {
 	height: 1px;
-	background-image: url("sites/all/themes/healthtronicsv2/images/hr.png");
+	background-image: url("/sites/all/themes/healthtronicsv2/images/hr.png");
 	background-repeat: repeat-x;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -930,6 +964,7 @@
 .search-field
 {
 	width: 269px;
+    height: 19px;
 	border: 1px solid #DADADA;
 	border-right: 0px;
 	background-color: @greyLighter;
@@ -1005,6 +1040,28 @@
 {
 	margin-bottom:20px;
 }
+
+/*
+** Sub-navigation Menu
+*/
+#subpage-menu
+{
+
+}
+
+#subpage-menu li
+{
+	list-style:none;
+	padding:12px 0;
+	font-size:16px;
+	border-bottom:1px dotted #9DA1A1;
+}
+
+#subpage-menu li a
+{
+
+}
+
 /*
 ** Video Molecule
 */

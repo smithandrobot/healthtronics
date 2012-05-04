@@ -6,8 +6,10 @@ engine = phptemplate
 stylesheets[all][] = css/bootstrap-responsive.css
 stylesheets[all][] = css/bootstrap.css
 
+
 scripts[] = js/jquery.js
 scripts[] = js/bootstrap.min.js
+scripts[] = js/jquery.dotdotdot-1.4.0-packed.js
 
 regions[sidebar_left] = Sidebar Left
 regions[sidebar_right] = Sidebar Right
@@ -15,6 +17,7 @@ regions[announcement] = Announcement Area
 regions[content] = Main Content
 regions[leaderboard] = Leaderboard
 regions[main_nav] = Main Navigation Region
+regions[sub_nav] = Main Subnavigation Region
 regions[expanded_footer] = Footer
 regions[utility_bar] = Utility Bar
 regions[footer] = Footer

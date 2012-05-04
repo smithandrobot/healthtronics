@@ -1,67 +1,11 @@
-<!-- 
-<p>Nav</p>
-<?php print render($page['main_nav']); ?>
-<?php print '<br /> This is the utility bar.<br />' . render($page['utility_bar']); ?>
--->
-
-<?php
-	// var_dump($page['main_nav']['system_main-menu']);
-	// var_dump($page['main_nav']['system_main-menu']);
-	// var_dump($page['main_nav']['system_main-menu'][399]['#title']);
-	// var_dump($page['main_nav']['system_main-menu'][399]['#href']);
-	// var_dump($page['main_nav']['system_main-menu'][218]);
-	// var_dump($page['main_nav']['system_main-menu'][400]);
-	// print $page['main_nav']['system_main-menu'][399]['#theme'];
-	
-?>
-
-<div class="container" style="background-color: #FFFFFF; width: 100%;">
-	<div class="container">
-		<div class="row-fluid">
-			<div class="span12 page-top">
-				<a href="#"><img class="logo" src="/sites/all/themes/healthtronicsv2/images/logo_ht.png"></a>
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-primary">
-					<div class="icon-bar"></div>
-					<div class="icon-bar"></div>
-					<div class="icon-bar"></div>
-				</a>
-				<div id="nav-primary-move" class="nav-primary">
-					<div class="contact">
-						<a href="<?php print $page['main_nav']['system_main-menu'][497]['#href']; ?>"><?php print $page['main_nav']['system_main-menu'][497]['#title']; ?></a>
-					</div>
-					<div class="search">
-						<div class="input-append">
-							<input type="search" placeholder="Keyword Search" class="search-field"><button class="search-btn" type="button"><img src="/sites/all/themes/healthtronicsv2/images/search.png"></button>
-						</div>
-					</div>
-					<ul class="nav nav-pills">
-						<li class="active"><a href="<?php print $page['main_nav']['system_main-menu'][399]['#href']; ?>"><?php print $page['main_nav']['system_main-menu'][399]['#title']; ?></a></li>
-						<li><a href="<?php print $page['main_nav']['system_main-menu'][218]['#href']; ?>"><?php print $page['main_nav']['system_main-menu'][218]['#title']; ?></a></li>
-						<li><a href="<?php print $page['main_nav']['system_main-menu'][400]['#href']; ?>"><?php print $page['main_nav']['system_main-menu'][400]['#title']; ?></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 <!-- /white-stripe> -->
 
-<div id="yellow-stripe">
+<div class="yellow-stripe">
 	<div class="inner">
 		<div class="container">
 			<div class="row">
 				<div class="span12">
 					<div class="header-bg clearfix">
-						<div class="row">
-							<div class="span12">
-								<ul class="nav nav-secondary clearfix">
-									<li class="active"><a href="#">Services</a></li>
-									<li><a href="#">Resources</a></li>
-									<li><a href="#">Events</a></li>
-									<li><a href="#">Careers</a></li>
-								</ul>
-							</div>
-						</div>
 						<div class="row">
 							<div class="span6">
 								<h1 id="header-resize">Working for Urologists.<br/>Committed to patients.</h1>
@@ -126,24 +70,6 @@
 <!-- /grey share -->
 
 
-
-
-<br/>
-<br/>
-<br/>
-
-<!--
-<?php print '<br />This is sidebar left <br />' . render($page['sidebar_left']); ?>
-<?php print '<br />This is sidebar right <br />' . render($page['sidebar_right']); ?>
-    
-<?php print '<br />this is content <br />' . render($page['content']) . '<br />'; ?>
-<?php print '<br />this is the footer col 1<br />' .render($page['footer_col1']); ?>
-<?php print '<br />this is the footer col 2<br />' .render($page['footer_col2']); ?>
-<?php print '<br />this is the footer col 3<br />' .render($page['footer_col3']); ?>
-<?php print '<br />this is the footer col 4<br />' .render($page['footer_col4']); ?>
--->
-
-
 <script>
 	// DOCUMENT READY
 	// ----------------------------------------------------------
@@ -151,13 +77,13 @@
 	{
 		// ellipsis
 		// ----------------------------------
-    	$(".small-molecule p").dotdotdot({
-			wrap: 'word'
-		});
-		
-		$(".large-molecule p").dotdotdot({
-			wrap: 'word'
-		});
+		//     	$(".small-molecule p").dotdotdot({
+		// 	wrap: 'word'
+		// });
+		// 
+		// $(".large-molecule p").dotdotdot({
+		// 	wrap: 'word'
+		// });
 		
 		
 		// carousel
