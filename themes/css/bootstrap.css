@@ -2594,6 +2594,7 @@ input[type="submit"].btn.btn-mini {
   color: #ffffff;
   background-color: #f1b434;
 }
+.nav-pills > li > a.active,
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: #ffffff;
@@ -4020,12 +4021,15 @@ li a.active {
 .nav-primary {
   position: absolute;
   bottom: 0;
-  left: 344px;
+  left: 444px;
+}
+.nav-primary li a {
+  display: block;
 }
 .nav-primary .contact a {
   float: left;
   font-size: 15px;
-  width: 290px;
+  width: 120px;
   padding-top: 5px;
   height: 30px;
   color: #ffffff;
@@ -4053,6 +4057,10 @@ li a.active {
   list-style-type: none;
   padding: 0;
 }
+ul.menu li {
+  margin: 0;
+}
+/* end overrides */
 .subnav-bg {
   padding: 17px 0px 0px 0px;
   background-color: #f1b434;
@@ -4088,7 +4096,12 @@ li a.active {
 .header-bg .share {
   position: relative;
 }
-.header-bg .share .image {
+.sub-page-header {
+  /*    height:110px;*/
+
+}
+.header-bg .share .image,
+.sub-page-header .share .image {
   width: 45px;
   height: 10px;
   background-image: url("/sites/all/themes/healthtronicsv2/images/share.png");
@@ -4098,11 +4111,18 @@ li a.active {
   top: 75px;
   right: 8px;
 }
-.header-bg .share .image:hover {
+.header-bg .share .image:hover,
+.sub-page-header .share .image:hover {
   background-position: 0px -11px;
 }
 .header-bg .share a:active .image {
   background-position: 0px -11px;
+}
+.sub-page-nav {
+  margin: 17px 0 10px 0;
+}
+.sub-page-nav li a.active {
+  color: white;
 }
 .share-molecule {
   background-color: #707372;
@@ -4501,6 +4521,9 @@ li a.active {
 #footer .footer-ul li {
   line-height: 20px;
 }
+#footer ul li.leaf {
+  margin-left: 0;
+}
 #footer .footer-ul .desc,
 #footer p .desc {
   color: #147197;
@@ -4655,7 +4678,7 @@ li a.active {
 }
 .search-field {
   width: 269px;
-  height: 19px;
+  height: 20px;
   border: 1px solid #DADADA;
   border-right: 0px;
   background-color: #ececec;

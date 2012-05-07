@@ -34,14 +34,19 @@ color: #007296;
 {
 	position: absolute;
 	bottom: 0;
-	left: 344px;
+	left: 444px;
+}
+
+.nav-primary li a
+{
+    display:block;
 }
 
 .nav-primary .contact a
 {
 	float: left;
 	font-size: 15px;
-    width: 290px;
+    width: 120px;
 	padding-top: 5px;
 	height: 30px;
 	color: @white;
@@ -76,7 +81,12 @@ color: #007296;
     list-style-type: none;
     padding: 0;
 }
+ul.menu li
+{
+    margin:0;
+}
 
+/* end overrides */
 .subnav-bg
 {
 	padding: 17px 0px 0px 0px;
@@ -123,8 +133,13 @@ color: #007296;
 {
 	position: relative;
 }
+.sub-page-header
+{
+/*    height:110px;*/
+}
 
-.header-bg .share .image
+.header-bg .share .image,
+.sub-page-header .share .image
 {
 	width: 45px;
 	height: 10px;
@@ -136,7 +151,8 @@ color: #007296;
 	right: 8px;
 }
 
-.header-bg .share .image:hover
+.header-bg .share .image:hover,
+.sub-page-header .share .image:hover
 {
 	background-position: 0px -11px;
 }
@@ -146,6 +162,18 @@ color: #007296;
 	background-position: 0px -11px;
 }
 
+// Subpage Nav
+// -----------------------------------------
+
+.sub-page-nav
+{
+    margin: 17px 0 10px 0;
+}
+
+.sub-page-nav li a.active
+{
+    color:white;
+}
 
 // Share Molecule
 // -----------------------------------------
@@ -711,6 +739,8 @@ color: #007296;
 	line-height: 20px;
 }
 
+#footer ul li.leaf{margin-left:0;}
+
 #footer .footer-ul .desc,
 #footer p .desc
 {
@@ -971,7 +1001,7 @@ color: #007296;
 .search-field
 {
 	width: 269px;
-    height: 19px;
+	height: 20px;
 	border: 1px solid #DADADA;
 	border-right: 0px;
 	background-color: @greyLighter;

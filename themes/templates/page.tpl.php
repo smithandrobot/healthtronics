@@ -28,21 +28,50 @@
 		</div>
 	</div>
 </div>
+
+<!-- Left side bar exsits -->
+<?php if($page['sidebar_left'] && !$page['sidebar_right']): ?>
+<?php if ($page['header']): ?>
 <div class="yellow-stripe">
 	<div class="inner">
 		<div class="container">
 			<div class="row">
 				<div class="span12">
-					<div class="subnav-bg clearfix">
-						<div class="row">
-							<div class="span12">
-								<?php 
-								if($page['sub_nav'])
-								{
-									print render($page['sub_nav']);
+			   		<div class="sub-page-nav">
+			   			<?php print render($page['sub_nav']); ?>
+			   		</div>
+			   		<div class="sub-page-header">
+			   			<h1 id="header-resize"><?php print render($page['header']); ?></h1>
+			   		</div>
+			   		<div class="sub-page share">
+			   			<a href="javascript: return false;" data-toggle="collapse" data-target="#share">
+			   				<div class="image"></div>
+			   			</a>
+			   		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php print render($page['share_module']); ?>
+<?php endif?>
+<div id="grey-stripe">
+	<div class="inner">
+		<div class="container">		
+			<div class="row">
+				<div class="span12">							
+					<div class="row">
+						<div id="" class="span3">
+							<?php if( $page['sidebar_left'] ){
+								print render($page['sidebar_left']);
 								}
-								?>
-							</div>
+							?>
+						</div>
+						<div id="subpage-body-copy" class="span6">
+							<?php print render($page['content']); ?>
+						</div>
+						<div id="subpage-right-sidebar" class="span3">
+							
 						</div>
 					</div>
 				</div>
@@ -50,10 +79,20 @@
 		</div>
 	</div>
 </div>
-<?php 
-print render($page['content']);
-?>
-		
+<?php endif ?>
+<!-- /Left side bar exsits -->
+
+<!-- Left side bar and Right Side Bar Exsits -->
+<?php if($page['sidebar_left'] && $page['sidebar_right']): ?>
+	<!-- print render($page['sidebar_left']);
+	print render($page['content']);
+	print render($page['sidebar_right']); -->
+<?php endif ?>
+
+<?php if(!$page['sidebar_left'] && !$page['sidebar_right']): ?>
+	<?php print render($page['content']); ?>
+<?php endif ?>
+	
 <div id="footer">
 	<div class="inner">
 		<div class="container">
@@ -65,40 +104,14 @@ print render($page['content']);
 						<div class="span2 clearfix">
 							<p class="desc">For Professionals</p>
 							<?php print render($page['footer_col1']); ?>
-							<!-- <ul class="unstyled footer-ul">
-								<li class="desc">For Professionals</li>
-								<li><a href="#">Lithotripsy</a></li>
-								<li><a href="#">Laser Treatment</a></li>
-								<li><a href="#">Technology Solutions</a></li>
-								<li class="bold"><a href="#">Resources</a></li>
-								<li class="bold"><a href="#">Events</a></li>
-								<li class="bold"><a href="#">Careers</a></li>
-							</ul> -->
 						</div>
 						<div class="span2 clearfix">
 							<p class="desc">For Patients</p>
 							<?php print render($page['footer_col2']); ?>
-							<!-- <ul class="unstyled footer-ul">
-								<li class="desc">For Patients</li>
-								<li><a href="#">What We Do</a></li>
-								<li><a href="#">Prostate Cancer</a></li>
-								<li><a href="#">Kidney &amp; Bladder Stones</a></li>
-								<li><a href="#">Enlarged Prostate</a></li>
-							</ul> -->
 						</div>
 						<div class="span2 clearfix">
-								<p class="desc">Our Company</p>
-							<!-- <ul class="unstyled footer-ul"> -->
-								<?php print render($page['footer_col3']); ?>
-								<!-- <li class="desc">Our Company</li>
-								<li><a href="#">Overview</a></li>
-								<li><a href="#">Our Story</a></li>
-								<li><a href="#">Our Vision</a></li>
-								<li><a href="#">Total Care&trade;</a></li>
-								<li><a href="#">Leadership</a></li>
-								<li><a href="#">Investors</a></li>
-								<li><a href="#">Endo Companies</a></li> -->
-							<!-- </ul> -->
+							<p class="desc">Our Company</p>
+							<?php print render($page['footer_col3']); ?>
 						</div>
 					</div>
 				</div>

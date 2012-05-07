@@ -1,0 +1,6 @@
+; $Id$
+name = Healthtronics Core
+description = Top Level Hooks
+package = Healthtronics V2
+core = 7.x
+version = 7.x-1.0

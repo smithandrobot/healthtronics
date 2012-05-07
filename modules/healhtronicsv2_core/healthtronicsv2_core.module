@@ -1,0 +1,13 @@
+<?php
+function healthtronicsv2_block_view_alter(&$data, $block) {
+	
+    if($block->delta == 3)
+    {
+	    $node = menu_get_object();
+	    if($node && $node->nid)
+	    {
+            $data['content'] = '<h2>' . $node->field_resource_category->taxonomy_term->name . '</h2>';
+	    }
+    }
+}
+?>
