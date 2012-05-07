@@ -3267,7 +3267,7 @@ input[type="submit"].btn.btn-mini {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -3283,20 +3283,17 @@ input[type="submit"].btn.btn-mini {
   left: 50%;
   z-index: 1050;
   overflow: auto;
-  width: 560px;
-  margin: -250px 0 0 -280px;
+  width: 820px;
+  margin: -250px 0 0 -350px;
   background-color: #ffffff;
   border: 1px solid #999;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   *border: 1px solid #999;
   /* IE6-7 */
 
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box;
@@ -3313,14 +3310,25 @@ input[type="submit"].btn.btn-mini {
   top: 50%;
 }
 .modal-header {
-  padding: 9px 15px;
+  padding: 19px 15px 10px 15px;
   border-bottom: 1px solid #eee;
+  color: #9ea0a0;
 }
 .modal-header .close {
-  margin-top: 2px;
+  margin-top: 0px;
+}
+.modal-header h3 {
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+.modal-header p {
+  margin-top: 8px;
+  font-size: 19px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
 .modal-body {
-  overflow-y: auto;
   max-height: 400px;
   padding: 15px;
 }
@@ -3355,6 +3363,14 @@ input[type="submit"].btn.btn-mini {
 }
 .modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
+}
+.modal-footer .share-image {
+  width: 45px;
+  height: 10px;
+  background-image: url("/sites/all/themes/healthtronicsv2/images/share.png"), url("../images/share.png");
+  background-repeat: none;
+  background-position: 0px 0px;
+  float: right;
 }
 .tooltip {
   position: absolute;
@@ -3843,16 +3859,24 @@ a.thumbnail:hover {
 }
 .accordion {
   margin-bottom: 18px;
+  background-color: #f1b434;
 }
 .accordion-group {
-  margin-bottom: 2px;
-  border: 1px solid #e5e5e5;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  margin-bottom: 0;
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .accordion-heading {
   border-bottom: 0;
+  background-color: #ececec;
+  font-size: 14px;
+  height: 40px;
+  line-height: 26px;
+}
+.accordion-heading a.accordion-heading-white-top:hover {
+  color: #ffffff;
 }
 .accordion-heading .accordion-toggle {
   display: block;
@@ -3860,7 +3884,19 @@ a.thumbnail:hover {
 }
 .accordion-inner {
   padding: 9px 15px;
-  border-top: 1px solid #e5e5e5;
+}
+.accordion-menu-ul {
+  list-style: none;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+}
+.accordion-menu-ul li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.accordion-heading-white-top {
+  background-color: #f1b434;
+  color: #ffffff;
 }
 .carousel {
   position: relative;
@@ -4080,7 +4116,7 @@ ul.menu li {
   letter-spacing: -1px;
 }
 .header-bg p {
-  color: #707372;
+  color: #707272;
   float: left;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 19px;
@@ -4125,7 +4161,7 @@ ul.menu li {
   color: white;
 }
 .share-molecule {
-  background-color: #707372;
+  background-color: #707272;
   color: #ffffff;
 }
 .share-molecule .stripe {
@@ -4415,7 +4451,7 @@ ul.menu li {
 }
 .stats-molecule .header h1,
 .events-molecule .header h1 {
-  color: #707372;
+  color: #707272;
   font-size: 24px;
   line-height: 24px;
   float: left;
@@ -4458,7 +4494,7 @@ ul.menu li {
 }
 .stat p {
   margin-top: 10px;
-  color: #707372;
+  color: #707272;
   font-size: 18px;
   line-height: 18px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -4499,7 +4535,7 @@ ul.menu li {
 }
 .events-molecule time,
 .events-molecule p {
-  color: #707372;
+  color: #707272;
   font-size: 12px;
   line-height: 12px;
   font-family: Arial, sans-serif;
@@ -4534,7 +4570,7 @@ ul.menu li {
   font-weight: bold;
 }
 #footer .email-molecule {
-  color: #707372;
+  color: #707272;
   position: relative;
   height: auto;
   margin-bottom: 20px;
@@ -4549,7 +4585,7 @@ ul.menu li {
   margin-right: 10px;
 }
 #footer .email-molecule .content {
-  color: #707372;
+  color: #707272;
 }
 #footer .email-molecule .content h1 {
   font-size: 16px;
@@ -4584,7 +4620,7 @@ ul.menu li {
 #footer .legal {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 12px;
-  color: #707372;
+  color: #707272;
 }
 #footer .bottom-links {
   text-align: right;
@@ -4611,7 +4647,7 @@ ul.menu li {
   border-bottom: 5px solid #f1b434;
 }
 .mol-border-grey {
-  border-bottom: 5px solid #707372;
+  border-bottom: 5px solid #707272;
 }
 .mol-border-white {
   border-bottom: 5px solid #ffffff;

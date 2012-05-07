@@ -83,41 +83,101 @@
 		</div>
 		
 		
+		<!-- ACCORDION -->			
+		<div class="accordion" id="accordion2">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse1">Physicians</a>
+				</div>
+				<div id="collapse1" class="accordion-body collapse" style="height: 0px;">
+					<div class="accordion-inner">
+						<ul class="accordion-menu-ul">
+							<li><a href="#">Lithotripsy</a></li>
+							<li><a href="#">Laser Treatment</a></li>
+							<li><a href="#">Cryotherapy</a></li>
+							<li><a href="#">IT Solutions</a></li>
+							<li><a href="#">Laboratory Solutions</a></li>
+							<li><a href="#">Equipment Services</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse2">Patients</a>
+				</div>
+				<div id="collapse2" class="accordion-body collapse" style="height: 0px;">
+					<div class="accordion-inner">
+						<ul class="accordion-menu-ul">
+							<li><a href="#">What We Do</a></li>
+							<li><a href="#">For Cancer</a></li>
+							<li><a href="#">For Stones</a></li>
+							<li><a href="#">For Enlarged Prostate</a></li>
+							<li><a href="#">Find an M.D.</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse3" onclick="fetchFacilitiesURL()">Facilities</a>
+				</div>
+				<div id="collapse3" class="accordion-body collapse" style="height: 0px;"></div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse4">Our Company</a>
+				</div>
+				<div id="collapse4" class="accordion-body collapse" style="height: 0px;">
+					<div class="accordion-inner">
+						<ul class="accordion-menu-ul">
+							<li><a href="#">Overview</a></li>
+							<li><a href="#">TotalCare&trade;</a></li>
+							<li><a href="#">News</a></li>
+							<li><a href="#">Events</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /ACCORDION -->
+		
+		
+		<!-- VIDEO MODAL -->
+		<a class="btn" data-toggle="modal" href="#videoModal" >Launch Modal</a>
+		
+		<div id="videoModal" class="modal hide fade" style="display: none;">
+			<div class="modal-header">
+				<button class="close" data-dismiss="modal">×</button>
+				<h3>Video Title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+			</div>
+			<div class="modal-body">
+				<iframe width="794" height="404" src="http://www.youtube.com/embed/VGRQGm4-A4k?rel=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="modal-footer">
+				<a href="#modalCollapse" class="share-image"></a>
+			</div>
+		</div>
+		<!-- /VIDEO MODAL -->
+			
+		
+		
 		
 	</body>
 	
 		
 	<!-- JS -->
 	<script src="../js/jquery.js"></script>
-	<script src="../js/bootstrap-transition.js"></script>
-	<script src="../js/bootstrap-alert.js"></script>
-	<script src="../js/bootstrap-modal.js"></script>
-	<script src="../js/bootstrap-dropdown.js"></script>
-	<script src="../js/bootstrap-scrollspy.js"></script>
-	<script src="../js/bootstrap-tab.js"></script>
-	<script src="../js/bootstrap-tooltip.js"></script>
-	<script src="../js/bootstrap-popover.js"></script>
-	<script src="../js/bootstrap-button.js"></script>
-	
-	<script src="../js/bootstrap-carousel.js"></script>
-	<script src="../js/bootstrap-typeahead.js"></script>
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/jquery.dotdotdot-1.4.0-packed.js"></script>
+	<script src="../js/jquery.fitvids.js"></script>
+	<script src="../js/accordion.js"></script>
 	
 	<script>
-		$(document).ready(function()
-		{
-			// ellipsis
-			// ----------------------------------
-	    	$(".small-molecule p").dotdotdot({
-				wrap: 'word'
-			});
-			
-			// carousel
-			// ----------------------------------
-			$('.carousel').carousel();
-			
-			
-		});
+		$(document).ready(function(){
+			$("#videoModal").fitVids();
+		})
 	</script>
 </html>
