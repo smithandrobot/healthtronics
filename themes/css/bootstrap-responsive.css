@@ -183,6 +183,20 @@
   .nav-secondary li {
     display: hidden;
   }
+  .filter-header {
+    margin: 0 0 20px 0;
+    margin-bottom: 20px;
+  }
+  .share-molecule a.share-email-btn {
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .header-bg h1 {
+    font-size: 26px;
+    color: blue;
+    line-height: 1.1;
+  }
   .thumbnails [class*="span"] {
     width: auto;
   }
@@ -501,12 +515,27 @@
   .btn-navbar {
     display: block;
   }
+  .nav-tabs > li > a,
+  .nav-pills > li > a {
+    width: 100px;
+    margin-left: 4px;
+  }
+  .share-molecule input {
+    height: 22px;
+    width: 215px;
+  }
+  .share-molecule textarea {
+    height: 59px;
+    width: 282px;
+  }
+  .header-bg h1 {
+    font-size: 36px;
+    color: red;
+    line-height: 1.1;
+  }
 }
 @media (min-width: 980px) {
-  .nav-collapse.collapse {
-    height: auto !important;
-    overflow: visible !important;
-  }
+  
 }
 /*
 @media (min-width: 1200px) {
