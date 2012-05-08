@@ -3,26 +3,73 @@
 
 
 // Parent container
-.accordion {
+.accordion
+{
   margin-bottom: @baseLineHeight;
+	background-color: @yellow;
 }
 
 // Group == heading + body
-.accordion-group {
-  margin-bottom: 2px;
-  border: 1px solid #e5e5e5;
-  .border-radius(4px);
+.accordion-group
+{
+  // margin-bottom: 2px;
+  // border: 1px solid #e5e5e5;
+  // .border-radius(4px);
+
+	margin-bottom: 0;
+	border: 1px solid @white;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
 }
-.accordion-heading {
+
+.accordion-heading
+{
   border-bottom: 0;
+	background-color: @greyLighter;
+	font-size: 14px;
+	height: 40px;
+	line-height: 26px;
 }
-.accordion-heading .accordion-toggle {
+
+.accordion-heading a.accordion-heading-white-top:hover
+{
+	color: @white;
+}
+
+.accordion-heading .accordion-toggle
+{
   display: block;
   padding: 8px 15px;
 }
 
 // Inner needs the styles because you can't animate properly with any styles on the element
-.accordion-inner {
+.accordion-inner
+{
   padding: 9px 15px;
-  border-top: 1px solid #e5e5e5;
+  // border-top: 1px solid #e5e5e5;
+}
+
+
+
+
+
+.accordion-menu-ul
+{
+	list-style: none;
+	font-family: @altFontFamily;
+	font-size: 14px;
+}
+
+.accordion-menu-ul li
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+.accordion-heading-white-top
+{
+	background-color: @yellow;
+	color: @white;
 }
