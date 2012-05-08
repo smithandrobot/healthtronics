@@ -1,12 +1,40 @@
 <?php
 function healthtronicsv2_block_view_alter(&$data, $block) {
 	
+	// Header Block for subpages that shows section.
     if($block->delta == 3)
     {
 	    $node = menu_get_object();
 	    if($node && $node->nid)
 	    {
-            $data['content'] = '<h2>' . $node->field_resource_category->taxonomy_term->name . '</h2>';
+	        if($node->type == 'event' or $node->type == 'event_listings')
+	        {
+                $data['content'] = '<h1>Events</h1>';
+                return;
+	        }
+	        
+	        if($node->type == 'news' or $node->type == 'news_listings')
+	        {
+                $data['content'] = '<h1>News</h1>';
+                return;
+	        }
+	        
+            $data['content'] = '<h1>' . $node->field_resource_category['und'][0]['taxonomy_term']->name . '</h1>';
+	    }
+    }
+    
+    // Pull Quote Block for subpages. 
+    // This lives under the sub_page content types left navigation
+    if($block->delta == 4)
+    {
+	    $node = menu_get_object();
+        $quote = $node->field_pull_quote['und'][0]['value'];
+	    if($node && $node->nid && $quote !== NULL)
+	    {
+            $data['content'] = '<p class="quote">&ldquo;' . $node->field_pull_quote['und'][0]['value'] . '&rdquo;</p>';
+            $data['content'] .= '<p class="citation">&mdash;' . $node->field_pull_quote_author['und'][0]['value'] . '</p>';
+	    }else{
+            $data['content'] = '';
 	    }
     }
 }

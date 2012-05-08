@@ -1,5 +1,12 @@
 <?php
-// intercept menu building
+
+/*
+ * Intercept menu building using menu_tree hook.
+ * Drupal does note add classes to <ul>
+ * so we need to add them here for each menu.
+ * #TODO - Look into better approach to modifying <ul> class attributes.
+*/
+
 function healthtronicsv2_menu_tree__main_menu($menu)
 {
 	return '<ul class="nav nav-pills">' . $menu['tree'] . '</ul>';

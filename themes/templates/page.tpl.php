@@ -28,9 +28,6 @@
 		</div>
 	</div>
 </div>
-
-<!-- Left side bar exsits -->
-<?php if($page['sidebar_left'] && !$page['sidebar_right']): ?>
 <?php if ($page['header']): ?>
 <div class="yellow-stripe">
 	<div class="inner">
@@ -41,7 +38,7 @@
 			   			<?php print render($page['sub_nav']); ?>
 			   		</div>
 			   		<div class="sub-page-header">
-			   			<h1 id="header-resize"><?php print render($page['header']); ?></h1>
+			   			<?php print render($page['header']); ?>
 			   		</div>
 			   		<div class="sub-page share">
 			   			<a href="javascript: return false;" data-toggle="collapse" data-target="#share">
@@ -55,23 +52,32 @@
 </div>
 <?php print render($page['share_module']); ?>
 <?php endif?>
+<!-- if Right and Left side bar exsits -->
+
+<?php if($page['sidebar_left'] && $page['sidebar_right']): ?>
 <div id="grey-stripe">
 	<div class="inner">
-		<div class="container">		
+		<div class="container">
 			<div class="row">
-				<div class="span12">							
+				<div class="span12">
 					<div class="row">
-						<div id="" class="span3">
+						<div id="sidebar-left" class="span3">
 							<?php if( $page['sidebar_left'] ){
 								print render($page['sidebar_left']);
 								}
 							?>
+							<div id="sub-page-pull-quote">
+							<?php if( $page['pull_quote'] ){
+								print render($page['pull_quote']);
+								}
+							?>
+							</div>
 						</div>
 						<div id="subpage-body-copy" class="span6">
 							<?php print render($page['content']); ?>
 						</div>
 						<div id="subpage-right-sidebar" class="span3">
-							
+							<?php print render($page['sidebar_right']); ?>
 						</div>
 					</div>
 				</div>
@@ -80,7 +86,8 @@
 	</div>
 </div>
 <?php endif ?>
-<!-- /Left side bar exsits -->
+
+<!-- / if Right and Left side bar exsits -->
 
 <!-- Left side bar and Right Side Bar Exsits -->
 <?php if($page['sidebar_left'] && $page['sidebar_right']): ?>
@@ -89,6 +96,7 @@
 	print render($page['sidebar_right']); -->
 <?php endif ?>
 
+<!-- Home page -->
 <?php if(!$page['sidebar_left'] && !$page['sidebar_right']): ?>
 	<?php print render($page['content']); ?>
 <?php endif ?>
