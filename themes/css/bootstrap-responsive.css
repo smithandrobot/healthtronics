@@ -192,11 +192,6 @@
     display: block;
     margin-bottom: 10px;
   }
-  .header-bg h1 {
-    font-size: 26px;
-    color: blue;
-    line-height: 1.1;
-  }
   .thumbnails [class*="span"] {
     width: auto;
   }
@@ -527,11 +522,6 @@
   .share-molecule textarea {
     height: 59px;
     width: 282px;
-  }
-  .header-bg h1 {
-    font-size: 36px;
-    color: red;
-    line-height: 1.1;
   }
 }
 @media (min-width: 980px) {
