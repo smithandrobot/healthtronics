@@ -11,6 +11,7 @@ stylesheets[all][] = css/MyFontsWebfontsKit.css
 scripts[] = js/jquery.js
 scripts[] = js/bootstrap.min.js
 scripts[] = js/jquery.dotdotdot-1.4.0-packed.js
+scripts[] = js/accordion.js
 
 regions[sidebar_left] = Sidebar Left
 regions[sidebar_right] = Sidebar Right

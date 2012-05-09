@@ -13,11 +13,7 @@
 		<div class="small-molecule mol-border-grey">
 			<div class="inner">
 				<h1><?php print $node->title; ?></h1>
-				<p>
-					<div class="dotdotdot" style="height: auto; width: auto; ">
-						<?php print $node->field_summary['und'][0]['value']; ?>
-					</div>
-				</p>
+				<?php print $node->field_summary['und'][0]['value']; ?>
 				<div class="arrow"></div>
 			</div>
 		</div>
