@@ -32,7 +32,7 @@
 <div class="yellow-stripe">
 	<div class="inner">
 		<div class="container">
-			<div class="row">
+			<div class="row header">
 				<div class="span12">
 			   		<div class="sub-page-nav">
 			   			<?php print render($page['sub_nav']); ?>
@@ -42,7 +42,7 @@
 			   		</div>
 			   		<div class="sub-page share">
 			   			<a href="javascript: return false;" data-toggle="collapse" data-target="#share">
-			   				<div class="image"></div>
+			   				<div class="image">HI</div>
 			   			</a>
 			   		</div>
 				</div>
@@ -149,7 +149,7 @@
 			<div class="row">
 				<div class="span12">
 					<div class="row">
-						<div class="span4 legal">© 2012 HealthTronics, Inc. All Rights Reserved.</div>
+						<div class="span4 legal">© <?php print date("Y");?> HealthTronics, Inc. All Rights Reserved.</div>
 						<div class="span8 bottom-links">
 							<a href="#">Sitemap</a>
 							<a href="#">Corporate Compliance</a>

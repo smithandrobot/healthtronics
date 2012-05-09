@@ -31,11 +31,34 @@ function healthtronicsv2_menu_tree__menu_footer_for_professionals($menu)
 
 function healthtronicsv2_menu_tree__menu_physicians_menu($menu)
 {
+    //var_dump($menu);
 	return '<ul class="nav nav-secondary clearfix">' . $menu['tree'] . '</ul>';
 }
 
 function healthtronicsv2_menu_tree__menu_subnav_patients_menu($menu)
 {
 	return '<ul class="nav nav-secondary clearfix">' . $menu['tree'] . '</ul>';
+}
+
+function healthtronicsv2_menu_link(array $variables)
+{
+    $element = $variables['element'];
+    
+    if($variables["element"]["#theme"] == 'menu_link__menu_physicians_menu')
+    {
+        $sectionURI = explode('/', $_SERVER['REQUEST_URI']);
+        $section = $sectionURI[1];
+        if($section == strtolower(str_replace(" ", "-", $element['#title'])))
+        {
+            $element['#localized_options']['attributes']['class'][] = 'active';   
+        }
+    }
+
+    $sub_menu = '';
+    if ($element['#below']) {
+        $sub_menu = drupal_render($element['#below']);
+    }
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 ?>

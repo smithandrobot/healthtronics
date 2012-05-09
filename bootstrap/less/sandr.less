@@ -34,7 +34,7 @@ color: #007296;
 {
 	position: absolute;
 	bottom: 0;
-	left: 444px;
+	left: 440px;
 }
 
 .nav-primary li a
@@ -47,14 +47,14 @@ color: #007296;
 	float: left;
 	font-size: 15px;
     width: 120px;
-	padding-top: 5px;
-	height: 30px;
+	/*padding-top: 5px;*/
+	height: 35px;
 	color: @white;
 	background-color: @blue;
 	margin-left: 4px;
 	margin-right: 68px;
 	text-align: center;
-	line-height: 31px;
+	line-height: 33px;
 }
 
 .nav-primary .search
@@ -102,6 +102,12 @@ ul.menu li
 	background-position: right bottom;
 }
 
+.yellow-stripe .row.header
+{
+	background-image: url("/sites/all/themes/healthtronicsv2/images/logo_endo_header_mall_bg.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
 .header-bg h1
 {
 	color: @white;
@@ -744,6 +750,13 @@ ul.menu li
 	// display: inline-block;
 }
 
+#footer .footer-links .desc
+{
+    margin:0;
+    font-size:19px;
+    color:@blueLighter;
+}
+
 #footer .footer-ul li
 {
 	line-height: 20px;
@@ -1039,6 +1052,7 @@ ul.menu li
 	-moz-box-shadow: none;
 	box-shadow: none;
 	padding: 4px;
+    margin-left: -1px;
 }
 
 .email-field
@@ -1155,10 +1169,16 @@ ul.menu li
     font-family:@altFontFamily;
     text-transform:uppercase;
     display:block;
-    margin:5px 0 10px 0;
+    margin: 6px 0 0px 0;
 }
 
-#event-detail-content #date-square .day { font-size:31px; }
+#event-detail-content #date-square .day 
+{
+    font-size:31px;
+    line-height:normal;
+    margin-top:-7px;
+    display:block;
+}
 
 #event-map-container
 {
@@ -1166,14 +1186,24 @@ ul.menu li
     width:206px;
     height:355px;
     margin:20px 0 20px 0;
+    text-align:center;
+}
+
+#event-map-container p
+{
+    margin: 160px 0 0 0;
 }
 
 #back-button
 {
     display:inline-block;
+/*    display:*inline;*/
+    zoom:1;
     background:url(/sites/all/themes/healthtronicsv2/images/sub-page-back-button.png) no-repeat;
-    height:22px;
-    padding:4px 0 0 27px;
+    height:17px;
+    padding:5px 0 0 27px;
+/*    background-color:red;*/
+    line-height:13px;
 }
 /*
 ** Video Molecule

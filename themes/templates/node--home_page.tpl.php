@@ -79,12 +79,12 @@
 		
 		function respond()
 		{
-			console.log($(window).width());
+			// console.log($(window).width());
 			
 			
 			if($(window).width() <= 979)
 			{
-				console.log("resize for <= 979");
+				// console.log("resize for <= 979");
 				$("nav-primary-move").css("left", 400);
 				
 				$("#header-resize").css("font-size", 36);
@@ -110,7 +110,7 @@
 			
 			if($(window).width() >= 980)
 			{
-				console.log("resize for >= 980");
+				// console.log("resize for >= 980");
 				
 				$("#header-resize").css("font-size", 46);
 				$("#header-resize").css("line-height", 1.1);
