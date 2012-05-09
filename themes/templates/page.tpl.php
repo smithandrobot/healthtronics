@@ -42,7 +42,7 @@
 			   		</div>
 			   		<div class="sub-page share">
 			   			<a href="javascript: return false;" data-toggle="collapse" data-target="#share">
-			   				<div class="image">HI</div>
+			   				<div class="image"></div>
 			   			</a>
 			   		</div>
 				</div>

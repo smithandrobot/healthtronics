@@ -145,7 +145,7 @@ ul.menu li
 }
 
 .header-bg .share .image,
-.sub-page-header .share .image
+.sub-page.share .image
 {
 	width: 45px;
 	height: 10px;
@@ -157,8 +157,15 @@ ul.menu li
 	right: 8px;
 }
 
+.sub-page.share .image
+{
+    float:right;
+    top:-20px;
+    position:relative;
+}
+
 .header-bg .share .image:hover,
-.sub-page-header .share .image:hover
+.sub-page.share .image:hover
 {
 	background-position: 0px -11px;
 }
@@ -1103,6 +1110,32 @@ ul.menu li
 	margin-bottom:20px;
 }
 
+#subpage-body-copy #title
+{
+    font-size:32px;
+    color:@greyDark;
+    padding-bottom:10px;
+}
+#subpage-body-copy #subpage-body-summary
+{
+    margin-bottom:20px;
+}
+#subpage-body-copy #subpage-body-summary p
+{
+    font-size:19px;
+    font-family:@altFontFamily;
+}
+
+#subpage-body h3
+{
+    font-size:20px;
+}
+
+#subpage-body p
+{
+    font-size:14px;
+    font-family:@altFontFamily;
+}
 /*
 ** Sub-navigation Menu
 */
