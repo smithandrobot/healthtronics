@@ -5,7 +5,7 @@
 // Parent container
 .accordion
 {
-  margin-bottom: @baseLineHeight;
+  // margin-bottom: @baseLineHeight;
 	background-color: @yellow;
 }
 
@@ -17,7 +17,8 @@
   // .border-radius(4px);
 
 	margin-bottom: 0;
-	border: 1px solid @white;
+	border-top: 1px solid @white;
+	border-bottom: 1px solid @white;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
@@ -52,7 +53,8 @@
 
 
 
-
+// S&R Accordion Menu
+// ------------------------------------------------------------------
 
 .accordion-menu-ul
 {
@@ -72,4 +74,23 @@
 {
 	background-color: @yellow;
 	color: @white;
+}
+
+.accordion-menu-btn a
+{
+	display: block;
+	font-size: 15px;
+    width: 60px;
+	height: 28px;
+	color: @white;
+	background-color: @blue;
+	text-align: center;
+	line-height: 31px;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.accordion-menu-btn a:hover
+{
+	background-color: @blueLight;
 }

@@ -1,6 +1,6 @@
-<div class="container" style="background-color: #FFFFFF; width: 100%;">
+<div id="white-stripe" class="container">
 	<div class="container">
-		<div class="row-fluid">
+		<div class="row">
 			<div class="span12 page-top">
 				<a href="/"><img class="logo" src="<?php print '/' . path_to_theme() . '/images/logo_ht.png'; ?>"></a>
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-primary">
@@ -10,7 +10,7 @@
 				</a>
 				<div id="nav-primary-move" class="nav-primary">
 					<div class="contact">
-						<a href="#">Contact Us</a>
+						<a href="#">contact us</a>
 					</div>
 					<div class="search">
 						<div class="input-append">
