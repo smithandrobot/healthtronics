@@ -3974,14 +3974,14 @@ a.thumbnail:hover {
   font-weight: 100;
   line-height: 30px;
   color: #ffffff;
-  background-image: url("../images/arrow_carousel.png");
+  background-image: url("/sites/all/themes/healthtronicsv2/images/arrow_carousel.png");
   background-repeat: no-repeat;
   background-position: 0px 0px;
 }
 .carousel-control.right {
   left: auto;
   right: 15px;
-  background-image: url("../images/arrow_carousel.png");
+  background-image: url("/sites/all/themes/healthtronicsv2/images/arrow_carousel.png");
   background-repeat: no-repeat;
   background-position: -39px 0px;
 }
@@ -4281,17 +4281,16 @@ ul.menu li {
   overflow: hidden;
   position: relative;
 }
-.large-molecule-copy .inner .arrow {
+.large-molecule-copy .inner .icon {
   height: 22px;
   width: 22px;
-  background-image: url("/sites/all/themes/healthtronicsv2/images/bg_small_molecule.png");
   background-repeat: no-repeat;
   background-position: 0px 0px;
   position: absolute;
   right: 10px;
   bottom: 17px;
 }
-.large-molecule:hover .inner .arrow {
+.large-molecule:hover .inner .icon {
   background-position: 0px -23px;
 }
 .large-molecule h1 {
@@ -4324,17 +4323,16 @@ ul.menu li {
   overflow: hidden;
   position: relative;
 }
-.small-molecule .inner .arrow {
+.small-molecule .inner .icon {
   width: 22px;
   height: 22px;
-  background-image: url("/sites/all/themes/healthtronicsv2/images/bg_small_molecule.png");
   background-repeat: no-repeat;
   background-position: 0px 0px;
   position: absolute;
   right: 10px;
   bottom: 7px;
 }
-.small-molecule:hover .inner .arrow {
+.small-molecule:hover .inner .icon {
   background-position: 0px -23px;
 }
 .small-molecule:hover .inner h1 {
@@ -4478,7 +4476,6 @@ ul.menu li {
 .events-molecule .header .more-link .arrow {
   width: 22px;
   height: 22px;
-  background-image: url("/sites/all/themes/healthtronicsv2/images/arrow_stats_events.png");
   background-position: 0px 0px;
   background-repeat: no-repeat;
   display: inline-block;
@@ -4723,6 +4720,24 @@ ul.menu li {
 .color-grey {
   color: #9ea2a2;
 }
+.icon-00 {
+  background-image: url("/sites/all/themes/healthtronicsv2/images/molecule_icon_00.png");
+}
+.icon-01 {
+  background-image: url("/sites/all/themes/healthtronicsv2/images/molecule_icon_01.png");
+}
+.icon-02 {
+  background-image: url("/sites/all/themes/healthtronicsv2/images/molecule_icon_02.png");
+}
+.icon-03 {
+  background-image: url("/sites/all/themes/healthtronicsv2/images/molecule_icon_03.png");
+}
+.icon-04 {
+  background-image: url("/sites/all/themes/healthtronicsv2/images/molecule_icon_04.png");
+}
+.icon-05 {
+  background-image: url("/sites/all/themes/healthtronicsv2/images/molecule_icon_05.png");
+}
 .search-field {
   width: 269px;
   height: 20px;
@@ -4823,14 +4838,10 @@ ul.menu li {
 /*
 ** Sub-navigation Menu
 */
-<<<<<<< HEAD
-#subpage-menu {
+#sidebar-left {
   margin-bottom: 20px;
 }
-#subpage-menu li {
-=======
 #sidebar-left li {
->>>>>>> 99f6f53f6ad4349fc99b2fa590e7387cf406728c
   list-style: none;
   padding: 12px 0;
   font-size: 16px;
