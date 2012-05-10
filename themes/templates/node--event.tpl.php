@@ -14,7 +14,7 @@
 			<div class="inner">
 				<h1><?php print $node->title; ?></h1>
 				<?php print $node->field_summary['und'][0]['value']; ?>
-				<div class="arrow"></div>
+				<div class="icon icon-02"></div>
 			</div>
 		</div>
 	</a>

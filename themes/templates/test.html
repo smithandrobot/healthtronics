@@ -123,22 +123,25 @@
 									<div class="span12">
 	   									<ul class="nav nav-secondary clearfix">
 											<li class="first leaf"><a href="/lithotripsy" title="Lithotripsy">Lithotripsy</a></li>
-	   										<li class="leaf"><a href="#" title="Services">Services</a></li>
-	   										<li class="leaf"><a href="#" title="Resources">Resources</a></li>
-	   										<li class="leaf"><a href="#" title="Events">Events</a></li>
-	   										<li class=" last leaf"><a href="#" title="Careers">Careers</a></li>
+	   										<li class="leaf"><a href="#" title="Laser Treatments">Laser Treatments</a></li>
+	   										<li class="leaf"><a href="#" title="Cryotherapy">Cryotherapy</a></li>
+	   										<li class="leaf"><a href="#" title="IT Solutions">IT Solutions</a></li>
+	   										<li class="leaf"><a href="#" title="Lab Solutions">Lab Solutions</a></li>
+											<li class="last leaf"><a href="#" title="Equipment Services">Equipment Services</a></li>
 	   									</ul>
 									</div>
 								</div>
 								<div class="row">
-									<div class="span6">
-										<h1 id="header-resize">
-											Working for Urologists<br/>Committed to patients.
-										</h1>
+									<div id="header-bg-h1-resize" class="span7">
+										<div>
+											<h1>
+												Working for urology professionals.<br/>Dedicated to great outcomes.
+											</h1>
+										</div>
 									</div>
-									<div class="span6">
-										<p id="header-p-resize">
-											Meet the company built by Urologists. We’re focused on two things, better economics for Urologists and better outcomes for patients. <a href="#">See how we work.</a>
+									<div id="header-bg-p-resize" class="span5">
+										<p>
+											HealthTronics is the urology solutions company built by urologists. Like you, we’re working for better economics, better patient care and better outcomes. <a href="#">More about our company.</a>
 										</p>
 										<div class="share">
 											<a href="javascript: return false;" data-toggle="collapse" data-target="#share"><div class="image"></div></a>
@@ -154,7 +157,7 @@
 		<!-- /submenu -->
 		
 		<!-- grey share -->
-		<div id="share" class="share-molecule collapse in">
+		<div id="share" class="share-molecule collapse">
 			<div class="inner">
 				<div class="container">
 					<div class="row">
@@ -365,14 +368,13 @@
 			if($(window).width() <= 979)
 			{
 				console.log("resize for <= 979");
-				$("#nav-primary-move").css("left", 300);
+				// $("#nav-primary-move").css("left", 300);
 				$(".contact a").css("width", 100);
 				$(".search-field").css("width", 209);
 				
-				$("#header-resize").css("font-size", 36);
-				$("#header-resize").css("line-height", 1.1);
-				$("#header-p-resize").css("font-size", 16);
-				$("#header-p-resize").css("width", 290);
+				$("#header-bg-h1-resize").removeClass("span7").addClass("span12");
+				$("#header-bg-p-resize").removeClass("span5").addClass("span12");
+				
 				
 				$("#filter-header-resize").removeClass("span9").addClass("span8");
 				$(".small-mol-resize-c").removeClass("span3").addClass("span4");
@@ -386,14 +388,13 @@
 			{
 				console.log("resize for >= 980");
 				
-				$("#nav-primary-move").css("left", 444);
+				// $("#nav-primary-move").css("left", 444);
 				$(".contact a").css("width", 120);
 				$(".search-field").css("width", 269);
 				
-				$("#header-resize").css("font-size", 46);
-				$("#header-resize").css("line-height", 1.1);
-				$("#header-p-resize").css("font-size", 19);
-				$("#header-p-resize").css("width", 330);
+				$("#header-bg-h1-resize").removeClass("span12").addClass("span7");
+				$("#header-bg-p-resize").removeClass("span12").addClass("span5");
+				
 				
 				$("#filter-header-resize").removeClass("span8").addClass("span9");
 				$(".small-mol-resize-c").removeClass("span4").addClass("span3");

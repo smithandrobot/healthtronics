@@ -4062,11 +4062,13 @@ li a.active {
 .page-top .logo {
   position: relative;
   top: 36px;
+  width: 262px;
+  height: 43px;
 }
 .nav-primary {
   position: absolute;
   bottom: 0;
-  left: 440px;
+  left: 444px;
 }
 .nav-primary li a {
   display: block;
@@ -4080,7 +4082,7 @@ li a.active {
   color: #ffffff;
   background-color: #007296;
   margin-left: 4px;
-  margin-right: 68px;
+  margin-right: 69px;
   text-align: center;
   line-height: 21px;
 }
@@ -4127,24 +4129,23 @@ ul.menu li {
 }
 .header-bg h1 {
   color: #ffffff;
-  float: left;
-  font-size: 46px;
+  font-size: 36px;
   line-height: 50px;
   letter-spacing: -1px;
 }
 .header-bg p {
   color: #707272;
-  float: left;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 22px;
-  width: 330px;
   font-weight: 100;
+  letter-spacing: 1px;
 }
 .header-bg p a {
   color: #ffffff;
-  text-decoration: underline;
-  font-style: italic;
+}
+.header-bg p a:hover {
+  color: #0093b2;
 }
 .header-bg .share {
   position: relative;
@@ -4811,7 +4812,7 @@ ul.menu li {
   background-color: #0093b2;
 }
 .filter-header {
-  border-bottom: 5px solid #f1b434;
+  border-bottom: 5px solid #ffffff;
   margin-bottom: 20px;
 }
 .filter-header h1 {
