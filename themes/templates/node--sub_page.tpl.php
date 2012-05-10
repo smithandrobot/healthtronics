@@ -1,8 +1,3 @@
-<?php
-
-?>
-
-
 <?php 
 	// $block = block_load('block', 2);
 	// $output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));

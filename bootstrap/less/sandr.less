@@ -316,6 +316,7 @@ ul.menu li
 	background-color: @greyLighter;
 	width: 100%;
 	padding-top: 20px;
+	min-height:600px;
 }
 
 #grey-stripe .inner
@@ -1251,22 +1252,31 @@ ul.menu li
     color:#AC1359;
     line-height: 45px;
 }
-
+#sub-page-pull-quote .quote.orange
+{
+    color:@orange;
+}
 #sub-page-pull-quote .citation
 {
     width:100%;
     text-align:right;
 }
 
-// Event Detail Page CSS
+// Event Detail Page CSS Also handles News Detail Page
 // ------------------------------------------------------------------
-#event-detail-content{}
-#event-detail-content h2{ float:left;}
-#event-detail-content h3 { font-size:16px; margin-top:10px;}
-#event-detail-content p { font-size:14px;}
-#event-detail-content h3,
-#event-detail-content p
+#event-detail-content{margin-bottom:20px;}
+#event-detail-content h2
 {
+    float:left;
+    width: 380px;
+    line-height: 30px;
+    color:@greyDark;
+}
+#event-detail-content h3 { font-size:16px; margin-top:10px;}
+#event-detail-content h3,
+#event-detail-body p, #event-detail-body div
+{
+    font-size:14px;
     font-family:@altFontFamily;
 }
 

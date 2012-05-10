@@ -8,8 +8,8 @@
 	print $output;
 ?>
 <?php if($teaser): ?>
-<div class="small-mol-resize span3">
-	<a href="#">
+<div class="small-mol-resize">
+	<a href="<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
 		<div class="small-molecule mol-border-grey">
 			<div class="inner">
 				<h1><?php print $node->title; ?></h1>
@@ -52,7 +52,9 @@
 								print $node->field_physical_address['und'][0]['value'];
 							?>
 							</h3>
+							<div id="event-detail-body">
 							<?php print $node->field_summary['und'][0]['value']; ?>
+							</div>
 						</div>
 						<div id="subpage-right-sidebar" class="span3">
 							<p>Right Sidebar</p>

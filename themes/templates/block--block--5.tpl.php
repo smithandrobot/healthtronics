@@ -53,6 +53,11 @@
 ?>
 <?php if(count($nodes)  > 0) : ?>
 	<?php foreach($nodes as $n): ?>
-		<?php print($n['node']->title) . '<br />'; ?>
+		<?php 
+			if($n['node']->nid)
+			{
+				print render( node_view( node_load($n['node']->nid), 'teaser') ); 
+			}
+		?>
 	<?php endforeach ?>
 <?php endif?>

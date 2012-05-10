@@ -1,3 +1,4 @@
+<!-- Header -->
 <div id="white-stripe">
 	<div class="container">
 		<div class="row">
@@ -28,9 +29,9 @@
 		</div>
 	</div>
 </div>
-<!-- end white stripe -->
+<!-- /Header -->
 
-<!-- ACCORDION -->
+<!-- ACCORDION Menu for mobile layout-->
 <div class="accordion collapse visible-phone" id="accordion2">
 	<div class="accordion-group">
 		<div class="accordion-heading">
@@ -122,6 +123,7 @@
 </div>
 <!-- /ACCORDION -->
 
+<!-- Content Inside Orange Area + Share Module -->
 <?php if ($page['header']): ?>
 <div class="yellow-stripe">
 	<div class="inner">
@@ -146,8 +148,9 @@
 </div>
 <?php print render($page['share_module']); ?>
 <?php endif?>
-<!-- if Right and Left side bar exsits -->
+<!-- End Content Inside Orange Area + Share Module -->
 
+<!-- if Right and Left side bar exsits -->
 <?php if($page['sidebar_left'] && $page['sidebar_right']): ?>
 <div id="grey-stripe">
 	<div class="inner">
@@ -155,23 +158,29 @@
 			<div class="row">
 				<div class="span12">
 					<div class="row">
-						<div id="sidebar-left" class="span3">
-							<?php if( $page['sidebar_left'] ){
-								print render($page['sidebar_left']);
-								}
-							?>
-							<div id="sub-page-pull-quote">
-							<?php if( $page['pull_quote'] ){
-								print render($page['pull_quote']);
-								}
-							?>
+						<div class="span3">
+							<div id="sidebar-left">
+								<?php if( $page['sidebar_left'] ){
+									print render($page['sidebar_left']);
+									}
+								?>
+								<div id="sub-page-pull-quote">
+								<?php if( $page['pull_quote'] ){
+									print render($page['pull_quote']);
+									}
+								?>
+								</div>
 							</div>
 						</div>
-						<div id="subpage-body-copy" class="span6">
-							<?php print render($page['content']); ?>
+						<div class="span6">
+							<div id="subpage-body-copy">
+								<?php print render($page['content']); ?>
+							</div>
 						</div>
-						<div id="subpage-right-sidebar" class="span3">
-							<?php print render($page['sidebar_right']); ?>
+						<div class="span3">
+							<div id="subpage-right-sidebar" class="">
+								<?php print render($page['sidebar_right']); ?>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -182,13 +191,6 @@
 <?php endif ?>
 
 <!-- / if Right and Left side bar exsits -->
-
-<!-- Left side bar and Right Side Bar Exsits -->
-<?php if($page['sidebar_left'] && $page['sidebar_right']): ?>
-	<!-- print render($page['sidebar_left']);
-	print render($page['content']);
-	print render($page['sidebar_right']); -->
-<?php endif ?>
 
 <!-- Home page -->
 <?php if(!$page['sidebar_left'] && !$page['sidebar_right']): ?>

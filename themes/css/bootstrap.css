@@ -4262,6 +4262,7 @@ ul.menu li {
   background-color: #ececec;
   width: 100%;
   padding-top: 20px;
+  min-height: 600px;
 }
 #grey-stripe .inner {
   padding-left: 10px;
@@ -4896,22 +4897,30 @@ ul.menu li {
   color: #AC1359;
   line-height: 45px;
 }
+#sub-page-pull-quote .quote.orange {
+  color: #e87722;
+}
 #sub-page-pull-quote .citation {
   width: 100%;
   text-align: right;
 }
+#event-detail-content {
+  margin-bottom: 20px;
+}
 #event-detail-content h2 {
   float: left;
+  width: 380px;
+  line-height: 30px;
+  color: #707272;
 }
 #event-detail-content h3 {
   font-size: 16px;
   margin-top: 10px;
 }
-#event-detail-content p {
-  font-size: 14px;
-}
 #event-detail-content h3,
-#event-detail-content p {
+#event-detail-body p,
+#event-detail-body div {
+  font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 #event-detail-content #date-square {
