@@ -45,11 +45,7 @@
 								</div>
 								<h2><?php print $node->title; ?></h2>
 							</div>
-							<h3 class="date-location">
-							<?php
-								print $time;
-							?>
-							</h3>
+							<p class="news-summary">Hi<?php print $node->body['und'][0]['summary']; ?></p>
 							<div id="event-detail-body">
 							<?php print $node->body['und'][0]['value']; ?>
 							</div>

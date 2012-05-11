@@ -56,7 +56,7 @@
 		<?php 
 			if($n['node']->nid)
 			{
-				print render( node_view( node_load($n['node']->nid), 'teaser') ); 
+				print render( node_view( node_load($n['node']->nid), 'list_view') ); 
 			}
 		?>
 	<?php endforeach ?>

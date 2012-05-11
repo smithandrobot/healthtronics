@@ -1,7 +1,7 @@
 <?php
 function healthtronicsv2_block_view_alter(&$data, $block) {
 	
-	// Header Block for subpages that shows section.
+	// Subpage Title Block
     if($block->delta == 3)
     {
 	    $node = menu_get_object();
@@ -21,10 +21,12 @@ function healthtronicsv2_block_view_alter(&$data, $block) {
 	        
             $data['content'] = '<h1>' . $node->field_resource_category['und'][0]['taxonomy_term']->name . '</h1>';
 	    }
+        
+        $data['content'] = '<h1>Events</h1>';	    
     }
     
     // Pull Quote Block for subpages. 
-    // This lives under the sub_page content types left navigation
+    // This lives under the sub_page & news content types left navigation
     if($block->delta == 4)
     {
 	    $node = menu_get_object();
@@ -38,4 +40,19 @@ function healthtronicsv2_block_view_alter(&$data, $block) {
 	    }
     }
 }
+
+// Set up custom display modes to be used by event and news nodes
+function healthtronicsv2_core_entity_info_alter(&$entity_info) 
+{
+    print('healthtronicsv2_entity_info_alter called');
+    $entity_info['node']['view modes']['list_view'] = array(
+      'label' => t('List View'),
+      'custom settings' => TRUE,
+    );
+  
+    $entity_info['node']['view modes']['feature_view'] = array(
+      'label' => t('Feature View'),
+      'custom settings' => TRUE,
+    );
+} 
 ?>
