@@ -28,13 +28,15 @@ color: #007296;
 {
 	position: relative;
 	top: 36px;
+	width: 262px;
+	height: 43px;
 }
 
 .nav-primary
 {
 	position: absolute;
 	bottom: 0;
-	left: 440px;
+	left: 444px;
 }
 
 .nav-primary li a
@@ -52,7 +54,7 @@ color: #007296;
 	color: @white;
 	background-color: @blue;
 	margin-left: 4px;
-	margin-right: 68px;
+	margin-right: 69px;
 	text-align: center;
 	line-height: 21px;
 }
@@ -113,11 +115,11 @@ ul.menu li
 	background-repeat: no-repeat;
 	background-position: right bottom;
 }
+
 .header-bg h1
 {
 	color: @white;
-	float: left;
-	font-size: 46px;
+	font-size: 36px;
 	line-height: 50px;
 	letter-spacing: -1px;
 }
@@ -125,19 +127,21 @@ ul.menu li
 .header-bg p
 {
 	color: @greyDark;
-	float: left;
 	font-family: @altFontFamily;
-	font-size: 19px;
+	font-size: 17px;
 	line-height: 22px;
-	width: 330px;
 	font-weight: 100;
+	letter-spacing: 1px;
 }
 
 .header-bg p a
 {
 	color: @white;
-	text-decoration: underline;
-	font-style: italic;
+}
+
+.header-bg p a:hover
+{
+	color: @blueLight;
 }
 
 .header-bg .share
@@ -912,7 +916,7 @@ ul.menu li
 	border-bottom: 5px solid @white;
 }
 
-// Rollover colors
+// Rollover border colors
 // -----------------------------------------
 
 .small-molecule:hover.mol-border-green
@@ -971,6 +975,11 @@ ul.menu li
 .mol-color-purple
 {
 	background-color: @purple;
+}
+
+.mol-color-purpleLight
+{
+	background-color: @purpleLight;
 }
 
 .mol-color-yellow
@@ -1131,7 +1140,7 @@ ul.menu li
 
 .filter-header
 {
-	border-bottom: 5px solid @yellow;
+	border-bottom: 5px solid @white;
 	margin-bottom: 20px;
 }
 
@@ -1173,6 +1182,122 @@ ul.menu li
 .filter-header ul li a:hover, .filter-header ul li a:active
 {
 	background-color: @white;
+}
+
+
+// News Page
+// ------------------------------------------------------------------
+
+.news-header
+{
+	border-bottom: 5px solid @white;
+	margin-bottom: 10px;
+}
+
+.news-header h1
+{
+	color: @greyDark;
+	font-size: 24px;
+	letter-spacing: -1px;
+}
+
+.news-filter
+{
+	border-bottom: 5px solid @white;
+	margin-bottom: 20px;
+}
+
+.news-filter ul
+{
+	list-style: none;
+	font-size: 16px;
+	color: @greyDark;
+	display: block;
+}
+
+.news-filter ul li
+{
+	margin-top: 7px;
+	margin-bottom: 7px;
+	margin-right: 10px;
+	float: left;
+}
+
+.news-filter ul li.first
+{
+	display: block;
+	padding: 5px 0px 5px 0px;
+}
+
+.news-filter ul li a
+{
+	display: block;
+	padding: 5px 10px 5px 10px;
+}
+
+.news-filter ul li a:hover, .news-filter ul li a:active
+{
+	background-color: @white;
+}
+
+.news-large-molecule
+{
+	width: 100%;
+	height: 125px;
+	margin-bottom: 20px;
+}
+
+#grey-stripe .news-large-molecule .inner
+{
+	padding-top: 20px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	height: 93px;
+	overflow: hidden;
+	position: relative;
+}
+
+#grey-stripe .news-large-molecule .inner .icon
+{
+	width: 38px;
+	height: 38px;
+	background-image: url("../images/arrow_news.png");
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	position: absolute;
+	right: 10px;
+	bottom: 7px;
+}
+
+#grey-stripe .news-large-molecule:hover .inner .icon
+{
+	background-position: 0px -39px;
+}
+
+#grey-stripe .news-large-molecule:hover .inner h1
+{
+	color: @blueLight;
+}
+
+.news-large-molecule h1
+{
+	color: @white;
+	font-size: 24px;
+	letter-spacing: -1px;
+	line-height: 30px;
+	margin-bottom: 8px;
+}
+
+.news-large-molecule p
+{
+	color: @white;
+	font-size: 14px;
+	font-family: @altFontFamily;
+	line-height: 13px;
+	// width: 180px;
+	height: 40px;
+	overflow: hidden;
 }
 
 
