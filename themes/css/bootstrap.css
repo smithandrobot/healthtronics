@@ -4082,7 +4082,7 @@ li a.active {
   color: #ffffff;
   background-color: #007296;
   margin-left: 4px;
-  margin-right: 69px;
+  margin-right: 67px;
   text-align: center;
   line-height: 21px;
 }
@@ -4126,6 +4126,7 @@ ul.menu li {
   background-image: url("/sites/all/themes/healthtronicsv2/images/logo_endo_header_mall_bg.png");
   background-repeat: no-repeat;
   background-position: right bottom;
+  min-height: 115px;
 }
 .header-bg h1 {
   color: #ffffff;
@@ -4775,18 +4776,38 @@ ul.menu li {
   box-shadow: none;
 }
 .search-btn {
-  height: 30px;
+  height: 28px;
   border: 1px solid #DADADA;
   border-left: 0px;
-  background-color: #ececec;
+  /*background-color: @greyLighter;*/
+
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  padding: 4px;
-  margin-left: -1px;
+  padding: 0;
+  margin: 0 0 0 -3px;
+  display: inline-block;
+  background: url(/sites/all/themes/healthtronicsv2/images/search.png) #ececec no-repeat center center;
+  position: relative;
+  top: 1px;
+  /*for ie 7*/
+
+  *left: -5px;
+  *top: 0px;
+  *display: inline;
+  zoom: 1;
+}
+.search-btn input {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  width: 26px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
 }
 .email-field {
   height: 22px;

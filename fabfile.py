@@ -6,8 +6,8 @@
 
 # Staging
 #
-# logon staging ssh deply@srsc.us r0b0tsk1llz
-# empty database on staging: mysql -u root -pSup3rfr34k dump database drupal_cms
+# logon dev - ssh Administrator@dev.healthtronics.smithandrobot.com
+# mysql login: mysql -uroot -p sm1thr0b0t
 # import database on staging: mysql -u root -pSup3rfr34k drupal_cms < /path/to/file.sql
 
 # deploy to production: fab ec2 deploy
@@ -17,7 +17,7 @@
 # flush staging : fab flush
 # ssh -i ~/.ssh/[keypair name] ec2-user@[ec2 instance ip]
 # depoy to production fab ec2 deploy
-
+from datetime import datetime, date, time
 from fabric.api import *
 from fabric.contrib import files, project
 import os
@@ -25,13 +25,8 @@ import os
 
 env.roledefs = {
     'production'    : ['ec2-user@k12lab.com'],
-    'dev'           : ['Administrator@50.56.251.109'],
-    'cache'         : ['ec2-user@ec2-75-101-253-121.compute-1.amazonaws.com']
+    'dev'           : ['Administrator@dev.healthtronics.smithandrobot.com']
 }
-
-def ec2():
-    env.key_filename = os.path.join(os.getenv("HOME"), '.ssh', 'k12lab.pem')
-    env.disable_known_hosts = True
 
 @roles('dev','production')
 def uptime():
@@ -42,6 +37,6 @@ def deploy():
     run('cd /var/www/healthtronics/healthtronics && git pull origin master')
 
 @roles('dev')
-def dev_deploy():
-    run('cd /var/www/healthtronics/healthtronics && git pull')
+def stage():
+    run('cd /var/www/healthtronics/healthtronics && git pull origin master')
 

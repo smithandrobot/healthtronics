@@ -15,6 +15,7 @@ scripts[] = js/accordion.js
 regions[sidebar_left] = Sidebar Left
 regions[sidebar_right] = Sidebar Right
 regions[header] = Header
+regions[search_bar] = Search Bar
 regions[content] = Main Content
 regions[main_nav] = Main Navigation
 regions[sub_nav] = Sub Navigation

@@ -14,7 +14,7 @@
 	   	   	  			</div>
 	   	   	  			<div class="search">
 	   	   	  	   			<div class="input-append">
-	   	   	  	   				<input type="search" placeholder="Keyword Search" class="search-field"><button class="search-btn" type="button"><img src="<?php print '/' . path_to_theme(); ?>/images/search.png"></button>
+								<?php print render($page['search_bar']); ?>
 	   	   	  	   			</div>
 	   	   	  			</div>
 				   		<?php 
@@ -151,7 +151,7 @@
 <!-- End Content Inside Orange Area + Share Module -->
 
 <!-- if Right and Left side bar exsits -->
-<?php if($page['sidebar_left'] && $page['sidebar_right']): ?>
+<?php if($page['sidebar_left'] || $page['sidebar_right']): ?>
 <div id="grey-stripe">
 	<div class="inner">
 		<div class="container">
