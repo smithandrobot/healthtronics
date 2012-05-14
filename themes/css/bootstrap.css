@@ -4630,6 +4630,34 @@ ul.menu li {
 .events-molecule .event-large:hover .inner .icon {
   background-position: 0px -39px;
 }
+.small-molecule.news-teaser h1 {
+  font-size: 16px;
+  line-height: 22px;
+}
+.small-molecule.events-teaser .date {
+  text-align: center;
+  color: #e87722;
+  margin-right: 12px;
+  margin-bottom: 10px;
+  float: left;
+}
+.small-molecule.events-teaser .date .month,
+.small-molecule.events-teaser .date .year {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+.small-molecule.events-teaser .date .day {
+  font-size: 31px;
+  line-height: 31px;
+}
+.small-molecule.events-teaser h1 {
+  font-size: 15px;
+  line-height: 21px;
+}
+.small-molecule.events-teaser p {
+  height: auto;
+  margin: 0 0 0 0;
+}
 #footer {
   background-color: #ffffff;
   padding-top: 20px;
