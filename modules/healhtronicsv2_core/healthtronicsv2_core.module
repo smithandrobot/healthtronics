@@ -45,7 +45,7 @@ function healthtronicsv2_core_entity_info_alter(&$entity_info)
 function healthtronicsv2_form_search_form_alter(&$form, &$form_state, $form_id) {
     switch ($form_id) { // not $form['#id']
         case 'search_form':
-            $form['#access'] = FALSE;
+            //$form['#access'] = FALSE;
             break;
     }
 } 

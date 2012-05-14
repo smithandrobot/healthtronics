@@ -41,25 +41,19 @@
  * @see template_preprocess_block()
  * @see template_process()
  */
-	$node = menu_get_object();
-	$nodes = array();
-	if($node && $node->nid )
-	{
-		//print 'node id: ' . $node->nid;
-		//print 'Number of related items: ' . count($node->field_related_items['und']);
-		if(isset($node->field_related_items['und'])){
-			$nodes = $node->field_related_items['und'];
-		}
-		//print 'Number of related items: ' . count($node->field_related_items['und']);
-	}
 ?>
-<?php if(count($nodes)  > 0) : ?>
-	<?php foreach($nodes as $n): ?>
-		<?php 
-			if($n['node']->nid)
-			{
-				print render( node_view( node_load($n['node']->nid), 'list_view') ); 
-			}
-		?>
-	<?php endforeach ?>
-<?php endif?>
+<div id="find-physician-form">
+<form action="/patients/find-an-md" method="post">
+	<select name="physician_type">		
+	  <option value="BPH_YN">Enlarged Prostate</option>
+	  <option value="KidneyCancer_YN">Kidney Cancer</option>
+	  <option value="LiverCancer_YN">Liver Cancer</option>
+	  <option value="LungCancer_YN">Lung Cancer</option>
+	  <option value="PALLINT_YN">PALLINT_YN</option>
+	</select>
+	<input id="find-physician-zip" type="text" name="zip" value="Type in your zipcode" 
+				onblur="if (this.value == '') {this.value = 'Type in your zipcode';}"
+                onfocus="if (this.value == 'Type in your zipcode') {this.value = '';}">
+	<input type="submit" value="Find">
+</form>
+</div>

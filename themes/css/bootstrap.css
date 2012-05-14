@@ -5101,6 +5101,9 @@ ul.menu li {
 ** Sub-navigation Menu
 */
 #sidebar-left {
+  min-height: 1px;
+}
+#sidebar-left .menu {
   margin-bottom: 20px;
 }
 #sidebar-left li {
@@ -5115,13 +5118,10 @@ ul.menu li {
 #sidebar-left li a.active {
   color: #9ea2a2;
 }
-#sub-page-pull-quote {
-  margin-top: 20px;
-}
 #sub-page-pull-quote .quote {
   font-size: 32px;
   color: #AC1359;
-  line-height: 45px;
+  line-height: 1.1em;
 }
 #sub-page-pull-quote .quote.orange {
   color: #e87722;
@@ -5182,6 +5182,7 @@ ul.menu li {
   height: 355px;
   margin: 20px 0 20px 0;
   text-align: center;
+  line-height: 340px;
 }
 #event-map-container p {
   margin: 160px 0 0 0;
@@ -5225,6 +5226,95 @@ ul.menu li {
   padding: 5px 50px 0 10px;
   height: 35px;
   overflow: hidden;
+}
+#find-physician-form input[type="submit"] {
+  padding: 7px 25px 5px 25px;
+  background-color: #007296;
+  color: white;
+  font-size: 16px;
+  margin-top: 15px;
+  float: right;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: none;
+}
+#find-physician-form input,
+#find-physician-form select {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+#find-physician-form #find-physician-zip {
+  margin-top: 10px;
+}
+.find-a-md-map {
+  height: 125px;
+  border: solid white 5px;
+  width: 210px;
+  margin-bottom: 20px;
+  line-height: 128px;
+  text-align: center;
+}
+#contact-site-form input,
+#contact-site-form select,
+#contact-site-form textarea {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+#contact-site-form #edit-cid {
+  width: 460px;
+}
+#contact-site-form #edit-first-name,
+#contact-site-form #edit-last-name {
+  float: left;
+  margin-top: 20px;
+}
+#contact-site-form #edit-first-name.error,
+#contact-site-form #edit-last-name.error {
+  width: 208px;
+}
+#contact-site-form #edit-last-name {
+  margin-left: 20px;
+}
+#contact-site-form #edit-mail {
+  margin-top: 20px;
+  width: 450px;
+}
+#contact-site-form #edit-message {
+  margin-top: 20px;
+}
+#contact-site-form .form-item,
+#contact-site-form .form-actions {
+  margin: 0 0;
+}
+#contact-site-form .form-actions {
+  padding-right: 0;
+}
+#contact-site-form #edit-submit {
+  float: right;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  background-color: #007296;
+  color: white;
+  width: 140px;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 2px solid #e87722;
 }
 .nav {
   margin-bottom: 0;

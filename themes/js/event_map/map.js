@@ -26,13 +26,17 @@ function EventMap($)
 
         for(i;i <= total; i++)
         {
-            codeAddress($(maps[i]).attr('data-location'), $(maps[i]));
+            if($(maps[i]).attr('data-location') != '')
+            {
+                codeAddress($(maps[i]).attr('data-location'), $(maps[i]));
+            }else{
+                $(maps[i]).css({display:'none'});
+            }
         }
         
     };
     
     function codeAddress( a, mapElement) {
-        
         var address = a
           , map     = new google.maps.Map(mapElement[0], mapOptions);
           
@@ -47,7 +51,8 @@ function EventMap($)
                         position: results[0].geometry.location
                     });
             } else {
-                mapElement.find('.map-loading-status').text('Error loading this map');
+                mapElement.text('This map could not be displayed.');
+                mapElement.css({display:'none'});
             }
         });
     }

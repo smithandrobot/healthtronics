@@ -76,92 +76,85 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
+	if($_POST)
+	{
+		$action = 'http://labs.healthtronics.com/physicianfinder/physicianfinder.asmx/PhysicianFinder';
+		$type = $_POST['physician_type'];
+		$zip  = $_POST['zip'];
+		$formVars = "zipcode=". $zip ."&results=3&condition=" . $type;
+		$handle = curl_init($action);
+		
+		curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
+		curl_setopt($handle, CURLOPT_POST, TRUE);
+		curl_setopt($handle, CURLOPT_POSTFIELDS, $formVars);
+		try
+		{
+			// the response is returned as xml with a node <string>
+			// which has a json response in it
+			// so we need to grab the value out of the xml
+			// before processing as json
+			$doc  	 = new SimpleXMLElement(curl_exec($handle));
+			$json 	 = json_decode($doc);
+			$success = TRUE;
+		}catch(Exception $e){
+			$success = FALSE;
+			$errorMessage = 'Caught exception: ' . $e->getMessage();
+		}
+		curl_close($handle);
+	}
 
-	$block 			= block_load('block', 2);
-	$output 		= drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-	$location_name	= $node->field_location_name['und'][0]['value'];
-	$time 			= date('M j, Y', $node->field_date_unix_timestamp['und'][0]['value']);
-	$address 		= $node->field_physical_address['und'][0]['value'];
-	//print $output;
-	//print $view_mode;
+	// { "Physician": "James C. Vestal, M.D.", 
+	// "Address": "801 West I-20 Suite 1", 
+	// "City": "Arlington", 
+	// "State": "TX ", 
+	// "Zip": "76017", 
+	// "Country": "US ", 
+	// "EmailAddress": "cvestal@uant.com", 
+	// "Website": "www.uant.com", 
+	// "Phone": "817-784-0818", 
+	// "cmp_code": "3768001", 
+	// "Latitude": 32.65540, 
+	// "Longitude": -97.15990, 
+	// "condition": "KidneyCancer_YN", 
+	// "Distance": "163.2 miles"
+	// }
 ?>
 
-<?php if($teaser): ?>
-<div class="small-mol-resize">
-	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
-		<div class="small-molecule mol-border-orange">
-			<div class="inner">
-				<h1><?php print $node->title; ?></h1>
-				<?php print $node->field_summary['und'][0]['value']; ?>
-				<div class="arrow"></div>
-			</div>
-		</div>
-	</a>
-</div>
-<?php endif?>
-
-<?php if($view_mode == 'list_view'): ?>
-<div class="small-mol-resize">
-	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
-		<div class="small-molecule mol-border-orange">
-			<div class="inner">
-				<h1><?php print $node->title; ?></h1>
-				<?php print $node->field_summary['und'][0]['value']; ?>
-				<div class="icon icon-02"></div>
-			</div>
-		</div>
-	</a>
-</div>
-<?php endif?>
+<h2 id="title">Find a Healthtronics Affliated Physician</h2>
+<div id="find-a-physician-result-summary"><?php print count($json); ?> Healthrtonic Physicians found near you.</div>
 
 
-<?php if($view_mode == 'full'): ?>
-<div id="grey-stripe">
-	<div class="inner">
-		<div class="container">
+<!-- Body  -->
+<div class="find-a-md-result-container">
+	<?php if ($success) :?>
+		<?php foreach($json as $physician):?>
+			<?php
+			 	$address = $physician->Address;
+				$city = $physician->City;
+				$state = $physician->State;
+				$zip = $physician->Zip;
+				$addressString = $address.', '.$city.', '.$state.''.$zip;
+			?>
 			<div class="row">
-				<div class="span12">
-					<div class="row">
-						<div class="span3">
-							<a id="back-button" href="/events">Back to Events</a>
-							<div id="event-map-container" class="map" data-location="<?php print $node->field_physical_address['und'][0]['value']; ?>">
-								<p id="map-loading-status">Loading Map...</p>
-							</div>
-						</div>
-						<div id="event-detail-content" class="span6">
-							<div id="date-title-container" class="clearfix">
-								<div id="date-square">
-									<span class="month"><?php print date('M', $node->field_date_unix_timestamp['und'][0]['value']); ?></span>
-									<span class="day"><?php print date('j', $node->field_date_unix_timestamp['und'][0]['value']); ?></span>
-								</div>
-								<h2><?php print $node->title; ?></h2>
-							</div>
-							<h3 class="date-location">
-							<?php
-								print $time . '<br />';
-								if($location_name !== NULL)
-								{ 
-									print $location_name . ' ';
-								}
-								print $node->field_physical_address['und'][0]['value'];
-							?>
-							</h3>
-							<div id="event-detail-body">
-							<?php if(isset($node->field_summary['und']))
-							{
-								print $node->field_summary['und'][0]['value'];
-							}?>
-							</div>
-						</div>
-						<div id="subpage-right-sidebar" class="span3">
-							<p>Right Sidebar</p>
-						</div>
-					</div>
+				<div data-location="<?php print $addressString; ?>" class="map find-a-md-map span3">
+					Loading Map...
+				</div>
+				<div class="find-a-md-result span6">
+					<h3><?php print $physician->Physician; ?></h3>
+					<p class="address">
+						<?php print $addressString ?><br />
+						<?php print $physician->Phone; ?><br />
+						<a href="http://maps.google.com/maps?q=<?php print $addressString; ?>" class="map-link">Map it.</a>
+					</p>
 				</div>
 			</div>
-		</div>
-	</div>
+		<?php endforeach ?>
+	<?php endif?>
+	<?php if(!$success) :?>
+		<h3>Error</h3>
+		<p class="address"><?php print $errorMessage; ?></p>
+	<?php endif?>
 </div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="/sites/all/themes/healthtronicsv2/js/event_map/map.js"></script>
-<?php endif?>
+<!-- /Body -->

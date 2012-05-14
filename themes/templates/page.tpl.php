@@ -150,8 +150,8 @@
 <?php endif?>
 <!-- End Content Inside Orange Area + Share Module -->
 
-<!-- if Right and Left side bar exsits -->
-<?php if($page['sidebar_left'] || $page['sidebar_right']): ?>
+<!-- if it is not the front page AND not the physician finder page-->
+<?php if(!$is_front && $node->type != 'find_a_physician'): ?>
 <div id="grey-stripe">
 	<div class="inner">
 		<div class="container">
@@ -164,12 +164,11 @@
 									print render($page['sidebar_left']);
 									}
 								?>
+								<?php if( $page['pull_quote']): ?>
 								<div id="sub-page-pull-quote">
-								<?php if( $page['pull_quote'] ){
-									print render($page['pull_quote']);
-									}
-								?>
+									<?php print render($page['pull_quote']);?>
 								</div>
+								<?php endif ?>
 							</div>
 						</div>
 						<div class="span6">
@@ -190,10 +189,36 @@
 </div>
 <?php endif ?>
 
-<!-- / if Right and Left side bar exsits -->
+<?php if(!$is_front && $node->type == 'find_a_physician'): ?>
+<div id="grey-stripe">
+	<div class="inner">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<div class="row">
+						<div class="span3">
+							<div id="sidebar-left">
+								<?php if( $page['sidebar_left'] ){
+									print render($page['sidebar_left']);
+									}
+								?>
+							</div>
+						</div>
+						<div class="span9">
+							<div id="subpage-body-copy">
+								<?php print render($page['content']); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php endif?>
 
 <!-- Home page -->
-<?php if(!$page['sidebar_left'] && !$page['sidebar_right']): ?>
+<?php if($is_front): ?>
 	<?php print render($page['content']); ?>
 <?php endif ?>
 	

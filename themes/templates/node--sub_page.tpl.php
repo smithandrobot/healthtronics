@@ -7,6 +7,8 @@
 	$colors 	= array('color-purple', 'color-orange', 'color-green');
 	$colorIndex	= 0;
 	$activeClass = '';
+	$block = block_load('block', 'healthtronicsv2_contact_form');
+	$contactForm = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
 ?>
 
 <?php if($teaser): ?>
@@ -56,5 +58,12 @@
 	
 	<!-- Body  -->
 	<?php print '<div id="subpage-body">' . $node->body['und'][0]["value"] . '</div>'; ?>
+	<!-- healthtronicsv2_contact_form -->
+	
+	<?php 	if($contactForm)
+			{
+				print $contactForm;	
+			} 
+	?>
 	<!-- /Body -->
 <?php endif ?>

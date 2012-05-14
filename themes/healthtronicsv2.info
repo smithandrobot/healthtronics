@@ -19,6 +19,7 @@ regions[search_bar] = Search Bar
 regions[content] = Main Content
 regions[main_nav] = Main Navigation
 regions[sub_nav] = Sub Navigation
+regions[find_a_phycisian] = Find a Physician Search Form
 regions[pull_quote] = Pull Quote
 regions[share_module] = Share Module
 regions[footer_col1] = Footer Column 1
