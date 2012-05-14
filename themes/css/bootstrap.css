@@ -3277,8 +3277,8 @@ input[type="submit"].btn.btn-mini {
   left: 50%;
   z-index: 1050;
   overflow: auto;
-  width: 820px;
-  margin: -250px 0 0 -350px;
+  width: 720px;
+  margin: -250px 0 0 -410px;
   background-color: #ffffff;
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -4163,7 +4163,6 @@ ul.menu li {
   background-repeat: none;
   background-position: 0px 0px;
   position: absolute;
-  top: 75px;
   right: 8px;
 }
 .sub-page.share .image {
@@ -4247,6 +4246,12 @@ ul.menu li {
 }
 .share-molecule .close-btn {
   text-align: right;
+}
+.share-molecule.video-modal input {
+  width: 212px;
+}
+.share-molecule.video-modal textarea {
+  width: 292px;
 }
 #white-stripe {
   background-color: #ffffff;
