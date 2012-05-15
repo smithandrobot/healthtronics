@@ -4861,6 +4861,9 @@ ul.menu li {
 .icon-05 {
   background-image: url("/sites/all/themes/healthtronicsv2/images/molecule_icon_05.png");
 }
+.icon-06 {
+  background-image: url("/sites/all/themes/healthtronicsv2/images/arrow_stats_events.png");
+}
 .search-field {
   width: 269px;
   height: 20px;
