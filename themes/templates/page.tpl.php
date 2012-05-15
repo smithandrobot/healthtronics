@@ -24,12 +24,7 @@
 								<?php print render($page['search_bar']); ?>
 	   	   	  	   			</div>
 	   	   	  			</div>
-				   		<?php 
-				   		if($page['main_nav'])
-				   		{
-				   			print render($page['main_nav']);
-				   		}
-				   		?>
+				   		<?php print 'main nav: ' . render($page['main_nav']); ?>
 	   	   	  		</div>
 	   	   	  	</div>
 	   	   	</div>
@@ -254,6 +249,7 @@
 
 <!-- Home page or default render-->
 <?php if($is_front): ?>
+	<?php $contentRendered = TRUE; ?>
 	<?php print render($page['content']); ?>
 <?php  endif ?>
 
