@@ -1,0 +1,6 @@
+; $Id$
+name = Healthtronics Contact Form
+description = Contact Form
+package = Healthtronics V2
+core = 7.x
+version = 7.x-1.0

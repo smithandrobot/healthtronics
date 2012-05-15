@@ -150,8 +150,8 @@
 <?php endif?>
 <!-- End Content Inside Orange Area + Share Module -->
 
-<!-- if it is not the front page AND not the physician finder page-->
-<?php if(!$is_front && $node->type != 'find_a_physician'): ?>
+<!--  Subpage Nodes-->
+<?php if($node->type == 'sub_page'): ?>
 <div id="grey-stripe">
 	<div class="inner">
 		<div class="container">
@@ -189,21 +189,42 @@
 </div>
 <?php endif ?>
 
-<?php if(!$is_front && $node->type == 'find_a_physician'): ?>
+<!-- Event Nodes -->
+<?php if($node->type == 'event'): ?>
 <div id="grey-stripe">
 	<div class="inner">
 		<div class="container">
 			<div class="row">
 				<div class="span12">
 					<div class="row">
+						<?php print render($page['content']); ?>
 						<div class="span3">
-							<div id="sidebar-left">
-								<?php if( $page['sidebar_left'] ){
-									print render($page['sidebar_left']);
-									}
-								?>
+							<div id="subpage-right-sidebar" class="">
+								<?php print render($page['sidebar_right']); ?>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php endif ?>
+<!--  Find a Physician Node-->
+<?php if($node->type == 'find_a_physician'): ?>
+<div id="grey-stripe">
+	<div class="inner">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<div class="row">
+						<?php if($page['sidebar_left']):?>
+						<div class="span3">
+							<div id="sidebar-left">
+								<?php print render($page['sidebar_left']);?>
+							</div>
+						</div>
+						<?php endif ?>
 						<div class="span9">
 							<div id="subpage-body-copy">
 								<?php print render($page['content']); ?>
@@ -216,6 +237,44 @@
 	</div>
 </div>
 <?php endif?>
+
+<!-- Catch All -->
+<div id="grey-stripe">
+	<div class="inner">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<div class="row">
+						<div class="span3">
+							<div id="sidebar-left">
+								<?php if( $page['sidebar_left'] ){
+									print render($page['sidebar_left']);
+									}
+								?>
+								<?php if( $page['pull_quote']): ?>
+								<div id="sub-page-pull-quote">
+									<?php print render($page['pull_quote']);?>
+								</div>
+								<?php endif ?>
+							</div>
+						</div>
+						<div class="span6">
+							<div id="subpage-body-copy">
+								<?php print render($page['content']); ?>
+							</div>
+						</div>
+						<div class="span3">
+							<div id="subpage-right-sidebar" class="">
+								<?php print render($page['sidebar_right']); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Catch All -->
 
 <!-- Home page -->
 <?php if($is_front): ?>

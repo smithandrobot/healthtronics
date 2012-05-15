@@ -1,0 +1,98 @@
+<?php
+/**
+ * Implements hook_block_info().
+ *
+ * This hook declares what blocks are provided by the module.
+ */
+function healthtronicsv2_contact_form_block_info() {
+
+  $blocks['contact_block_form'] = array(
+    'info' => t('Contact Form'),
+    );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ *
+ * This hook generates the contents of the blocks themselves.
+ */
+function healthtronicsv2_contact_form_block_view($delta = '') {
+  //The $delta parameter tells us which block is being requested.
+  switch ($delta) {
+        case 'contact_block_form':
+            // Load contact pages inc as the form definition sits there.
+            module_load_include('inc', 'contact', 'contact.pages');
+            $block['content'] = drupal_get_form('contact_site_form');
+            break;
+  }
+  return $block;
+}
+
+function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id)
+{
+    if( $form_id == 'contact_site_form')
+    {   
+        unset($form['name']);
+        unset($form['copy']);
+        unset($form['subject']);
+        //
+        $form['mail']['#title_display'] = 'invisible';
+        $form['mail']['#default_value'] = t('Email Address');
+        
+        $form['cid']['#title_display'] = 'invisible';
+        
+        $form['message']['#title_display'] = 'invisible';
+        $form['message']['#resizable'] = FALSE;
+        $form['message']['#default_value'] = 'Message (optional)';
+        $form['cid']['#weight'] = -3;
+        $form['actions']['submit']['#value'] = 'send';
+        
+        $form['first_name'] = array(
+            '#type' => 'textfield',
+            '#size' => 30,
+            '#weight' => -2,
+            '#title' => 'First Name' ,
+            '#title_display' => 'invisible',
+            '#default_value' => t('First Name'),
+            '#required' => TRUE);
+            
+        $form['last_name'] = array(
+            '#type' => 'textfield',
+            '#size' => 30,
+            '#weight' => -1,
+            '#title' => 'Last Name' ,
+            '#title_display' => 'invisible',
+            '#default_value' => t('Last Name'),
+            '#attributes' => array('class="clearfix"'),
+            '#required' => TRUE);
+
+       $form["#validate"][]='healthtronicsv2_contact_form_form_validate';
+       return $form;
+    }
+}
+
+function healthtronicsv2_contact_form_form_validate($form, &$form_state) {
+    //var_dump($form);
+  if (!$form_state['values']['first_name'] || $form_state['values']['first_name'] == $form['first_name']['#default_value'] ) {
+      form_set_error("first_name", t("You must enter a first name."));
+      $form_state['rebuild'] = TRUE;
+     }
+     
+  if (!$form_state['values']['last_name'] || $form_state['values']['last_name'] == $form['last_name']['#default_value'] ) {
+      form_set_error("last_name", t("You must enter a last name."));
+      $form_state['rebuild'] = TRUE;
+     }
+}
+
+/*
+function contact_site_form_validate($form, &$form_state) {
+  if (!$form_state['values']['cid']) {
+    form_set_error('cid', t('You must select a valid category.'));
+  }
+  if (!valid_email_address($form_state['values']['mail'])) {
+    form_set_error('mail', t('You must enter a valid e-mail address.'));
+  }
+}
+*/

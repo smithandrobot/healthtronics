@@ -56,7 +56,7 @@
 <?php if(count($nodes)  > 0) : ?>
 	<?php foreach($nodes as $n): ?>
 		<?php 
-			if($n['node']->nid)
+			if(isset($n['node']->nid))
 			{
 				print render( node_view( node_load($n['node']->nid), 'list_view') ); 
 			}

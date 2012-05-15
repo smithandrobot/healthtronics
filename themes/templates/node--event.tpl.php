@@ -116,52 +116,39 @@
 
 
 <?php if($view_mode == 'full'): ?>
-<div id="grey-stripe">
-	<div class="inner">
-		<div class="container">
-			<div class="row">
-				<div class="span12">
-					<div class="row">
-						<div class="span3">
-							<a id="back-button" href="/events">Back to Events</a>
-							<div id="event-map-container" class="map" data-location="<?php print $node->field_physical_address['und'][0]['value']; ?>">
-								<p id="map-loading-status">Loading Map...</p>
-							</div>
-						</div>
-						<div id="event-detail-content" class="span6">
-							<div id="date-title-container" class="clearfix">
-								<div id="date-square">
-									<span class="month"><?php print date('M', $node->field_date_unix_timestamp['und'][0]['value']); ?></span>
-									<span class="day"><?php print date('j', $node->field_date_unix_timestamp['und'][0]['value']); ?></span>
-								</div>
-								<h2><?php print $node->title; ?></h2>
-							</div>
-							<h3 class="date-location">
-							<?php
-								print $time . '<br />';
-								if($location_name !== NULL)
-								{ 
-									print $location_name . ' ';
-								}
-								print $node->field_physical_address['und'][0]['value'];
-							?>
-							</h3>
-							<div id="event-detail-body">
-							<?php if(isset($node->field_summary['und']))
-							{
-								print $node->field_summary['und'][0]['value'];
-							}?>
-							</div>
-						</div>
-						<div id="subpage-right-sidebar" class="span3">
-							<p>Right Sidebar</p>
-						</div>
-					</div>
-				</div>
-			</div>
+
+	<div class="span3">
+		<a id="back-button" href="/events">Back to Events</a>
+		<div id="event-map-container" class="map" data-location="<?php print $node->field_physical_address['und'][0]['value']; ?>">
+			<p id="map-loading-status">Loading Map...</p>
 		</div>
 	</div>
-</div>
+	<div id="event-detail-content" class="span6">
+		<div id="date-title-container" class="clearfix">
+			<div id="date-square">
+				<span class="month"><?php print date('M', $node->field_date_unix_timestamp['und'][0]['value']); ?></span>
+				<span class="day"><?php print date('j', $node->field_date_unix_timestamp['und'][0]['value']); ?></span>
+			</div>
+			<h2><?php print $node->title; ?></h2>
+		</div>
+		<h3 class="date-location">
+		<?php
+			print $time . '<br />';
+			if($location_name !== NULL)
+			{ 
+				print $location_name . ' ';
+			}
+			print $node->field_physical_address['und'][0]['value'];
+		?>
+		</h3>
+		<div id="event-detail-body">
+		<?php if(isset($node->field_summary['und']))
+		{
+			print $node->field_summary['und'][0]['value'];
+		}?>
+		</div>
+	</div>
+
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="/sites/all/themes/healthtronicsv2/js/event_map/map.js"></script>
 <?php endif?>

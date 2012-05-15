@@ -60,10 +60,10 @@
 	<?php print '<div id="subpage-body">' . $node->body['und'][0]["value"] . '</div>'; ?>
 	<!-- healthtronicsv2_contact_form -->
 	
-	<?php 	if($contactForm)
-			{
-				print $contactForm;	
-			} 
+	<?php 	//if($contactForm)
+			//{
+			//	print $contactForm;	
+			//} 
 	?>
 	<!-- /Body -->
 <?php endif ?>
