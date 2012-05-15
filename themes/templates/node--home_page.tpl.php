@@ -278,6 +278,10 @@
 				wrap: 'word'
 			});
 			
+			$(".large-molecule h1").dotdotdot({
+				wrap: 'word'
+			});
+			
 			$(".large-molecule p").dotdotdot({
 				wrap: 'word'
 			});

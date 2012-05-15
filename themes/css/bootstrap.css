@@ -4294,21 +4294,25 @@ ul.menu li {
   bottom: 0;
   left: 0;
 }
-.large-molecule-copy .inner {
-  padding: 20px 35px 20px 15px;
+#grey-stripe .large-molecule-copy .inner {
+  padding-top: 10px;
+  padding-right: 35px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  height: 93px;
   overflow: hidden;
   position: relative;
 }
-.large-molecule-copy .inner .icon {
+#grey-stripe .large-molecule-copy .inner .icon {
   height: 22px;
   width: 22px;
   background-repeat: no-repeat;
   background-position: 0px 0px;
   position: absolute;
   right: 10px;
-  bottom: 17px;
+  bottom: 7px;
 }
-.large-molecule:hover .inner .icon {
+#grey-stripe .large-molecule:hover .inner .icon {
   background-position: 0px -23px;
 }
 .large-molecule h1 {
@@ -4317,7 +4321,7 @@ ul.menu li {
   line-height: 24px;
   letter-spacing: -1px;
   margin-bottom: 8px;
-  width: 420px;
+  height: 48px;
 }
 .large-molecule p {
   color: #9E9F9F;
@@ -4335,13 +4339,16 @@ ul.menu li {
   height: 125px;
   margin-bottom: 20px;
 }
-.small-molecule .inner {
-  padding: 15px 35px 15px 10px;
+#grey-stripe .small-molecule .inner {
+  padding-top: 10px;
+  padding-right: 35px;
+  padding-bottom: 15px;
+  padding-left: 10px;
   height: 93px;
   overflow: hidden;
   position: relative;
 }
-.small-molecule .inner .icon {
+#grey-stripe .small-molecule .inner .icon {
   width: 22px;
   height: 22px;
   background-repeat: no-repeat;
@@ -4350,10 +4357,10 @@ ul.menu li {
   right: 10px;
   bottom: 7px;
 }
-.small-molecule:hover .inner .icon {
+#grey-stripe .small-molecule:hover .inner .icon {
   background-position: 0px -23px;
 }
-.small-molecule:hover .inner h1 {
+#grey-stripe .small-molecule:hover .inner h1 {
   color: #0093b2;
 }
 .small-molecule h1 {
@@ -4414,7 +4421,7 @@ ul.menu li {
 .news-molecule .more-link:hover .arrow {
   background-position: 0px -23px;
 }
-.news-molecule .inner {
+#grey-stripe .news-molecule .inner {
   padding: 12px 15px;
   position: relative;
 }
@@ -4440,7 +4447,7 @@ ul.menu li {
   font-size: 31px;
   margin-bottom: 3px;
 }
-.email-molecule .inner {
+#grey-stripe .email-molecule .inner {
   padding: 12px 10px;
 }
 .email-molecule .at {
@@ -4574,7 +4581,7 @@ ul.menu li {
   text-align: center;
   position: relative;
 }
-.events-molecule .event-large .inner {
+#grey-stripe .events-molecule .event-large .inner {
   height: 220px;
   padding: 20px 10px 15px 10px;
 }
@@ -4622,7 +4629,7 @@ ul.menu li {
 .events-molecule .event-large time {
   margin-right: 20px;
 }
-.events-molecule .event-large .inner .icon {
+#grey-stripe .events-molecule .event-large .inner .icon {
   width: 38px;
   height: 38px;
   background-image: url("../images/arrow_news.png");
@@ -4632,7 +4639,7 @@ ul.menu li {
   right: 10px;
   bottom: 10px;
 }
-.events-molecule .event-large:hover .inner .icon {
+#grey-stripe .events-molecule .event-large:hover .inner .icon {
   background-position: 0px -39px;
 }
 .small-molecule.news-teaser h1 {
