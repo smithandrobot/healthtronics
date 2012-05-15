@@ -239,41 +239,7 @@
 <?php endif?>
 
 <!-- Catch All -->
-<div id="grey-stripe">
-	<div class="inner">
-		<div class="container">
-			<div class="row">
-				<div class="span12">
-					<div class="row">
-						<div class="span3">
-							<div id="sidebar-left">
-								<?php if( $page['sidebar_left'] ){
-									print render($page['sidebar_left']);
-									}
-								?>
-								<?php if( $page['pull_quote']): ?>
-								<div id="sub-page-pull-quote">
-									<?php print render($page['pull_quote']);?>
-								</div>
-								<?php endif ?>
-							</div>
-						</div>
-						<div class="span6">
-							<div id="subpage-body-copy">
-								<?php print render($page['content']); ?>
-							</div>
-						</div>
-						<div class="span3">
-							<div id="subpage-right-sidebar" class="">
-								<?php print render($page['sidebar_right']); ?>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+
 <!-- /Catch All -->
 
 <!-- Home page -->
