@@ -1,9 +1,16 @@
+<?php
+	// set this so that at the end of the 
+	// the conditionals we know whether we should
+	// render a deault view
+	// we set it to true if a node type or home page is rendered that we know 
+	$contentRendered = FALSE;
+?>
 <!-- Header -->
 <div id="white-stripe">
 	<div class="container">
 		<div class="row">
 	   		<div class="span12 page-top">
-	   	   		<a href="#"><img class="logo" src="<?php print '/' . path_to_theme() . '/images/logo_ht.png'; ?>"></a>
+	   	   		<a href="/"><img class="logo" src="<?php print '/' . path_to_theme() . '/images/logo_ht.png'; ?>"></a>
 	   	   		<div id="nav-primary-move" class="nav-primary">
 	   	   	  		<div class="accordion-menu-btn visible-phone">
 	   	   	  	   		<a href="#" data-toggle="collapse" data-target="#accordion2">menu</a>
@@ -152,6 +159,7 @@
 
 <!--  Subpage Nodes-->
 <?php if($node->type == 'sub_page'): ?>
+	<?php $contentRendered = TRUE; ?>
 <div id="grey-stripe">
 	<div class="inner">
 		<div class="container">
@@ -191,6 +199,7 @@
 
 <!-- Event Nodes -->
 <?php if($node->type == 'event'): ?>
+	<?php $contentRendered = TRUE; ?>
 <div id="grey-stripe">
 	<div class="inner">
 		<div class="container">
@@ -212,6 +221,7 @@
 <?php endif ?>
 <!--  Find a Physician Node-->
 <?php if($node->type == 'find_a_physician'): ?>
+		<?php $contentRendered = TRUE; ?>
 <div id="grey-stripe">
 	<div class="inner">
 		<div class="container">
@@ -242,11 +252,11 @@
 
 <!-- /Catch All -->
 
-<!-- Home page -->
-<?php if($is_front): ?>
+<!-- Home page or default render-->
+<?php if($is_front || !$contentRendered): ?>
 	<?php print render($page['content']); ?>
-<?php endif ?>
-	
+<?php  endif ?>
+
 <div id="footer">
 	<div class="inner">
 		<div class="container">
