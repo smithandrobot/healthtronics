@@ -253,10 +253,37 @@
 <!-- /Catch All -->
 
 <!-- Home page or default render-->
-<?php if($is_front || !$contentRendered): ?>
+<?php if($is_front): ?>
 	<?php print render($page['content']); ?>
 <?php  endif ?>
 
+<?php if(!$contentRendered): ?>
+<div id="grey-stripe">
+	<div class="inner">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<div class="row">
+						<div class="span3">
+							<div id="sidebar-left">
+							</div>
+						</div>
+						<div class="span6">
+							<div id="subpage-body-copy">
+								<?php print render($page['content']); ?>
+							</div>
+						</div>
+						<div class="span3">
+							<div id="subpage-right-sidebar" class="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php endif?>
 <div id="footer">
 	<div class="inner">
 		<div class="container">
