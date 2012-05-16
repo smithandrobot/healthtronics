@@ -331,6 +331,7 @@
 <!-- default view render -->
 <?php if(!$contentRendered): ?>
 <?php if($view) : ?>
+	<?php $contentRendered = TRUE; ?>
 	<?php if($view->name=='news_listing'); ?>
 		<div id="grey-stripe">
 			<div class="inner">
@@ -346,6 +347,20 @@
 	<?php endif ?>
 <?php endif?>
 
+<?php if(!$contentRendered): ?>
+	<?php $contentRendered = TRUE; ?>
+	<div id="grey-stripe">
+		<div class="inner">
+			<div class="container">
+				<div class="row">
+					<div class="news-header-resize span12">
+						<?php print render($page['content']); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php endif?>
 
 <div id="footer">
 	<div class="inner">
