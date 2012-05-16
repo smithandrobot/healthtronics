@@ -26,7 +26,8 @@
  * @ingroup views_templates
  */
 	// Get the two most recent news items
-	$most_recent_news_result = views_get_view_result('news_listing','news_two_most_recent');
+	$most_recent_news_result = views_get_view_result('news_two_results','news_two_result');
+	//var_dump($most_recent_news_result);
 ?>
 <div class="news-header clearfix">
 	<h1>Latest News</h1>
