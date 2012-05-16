@@ -2,7 +2,9 @@
 	$block 			= block_load('block', 2);
 	$output 		= drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
 	$time 			= date('M j, Y', $node->field_news_date['und'][0]['value']);
-	
+	$month 			= date('M', $node->field_news_date['und'][0]['value']);
+	$day 			= date('j', $node->field_news_date['und'][0]['value']);
+	$year 			= date('Y', $node->field_news_date['und'][0]['value']);
 	print $output;
 ?>
 <?php if($teaser): ?>
@@ -18,6 +20,24 @@
 	</a>
 </div>
 <?php endif?>
+
+<?php if($view_mode == 'homepage_molecule'): ?>
+<div class="span6">
+	<div class="news-molecule mol-color-orangelight">
+		<div class="inner clearfix">
+			<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
+				<div class="date">
+					<div class="month"><?php print $month; ?></div>
+					<div class="day"><?php print $day; ?></div>
+					<div class="year"><?php print $year; ?></div>
+				</div>
+				<h1><?php print $node->title; ?></h1>
+			</a>
+			<div class="more-link"><a href="/news/news-results/all">More News <div class="arrow"></div></a></div>
+		</div>
+	</div>
+</div>
+<?php endif ?>
 
 <?php if($view_mode=="feature_view"): ?>
 <div class="span6">

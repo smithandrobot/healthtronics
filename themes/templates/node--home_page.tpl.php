@@ -1,8 +1,6 @@
-<!-- /white-stripe> -->
-<!-- 
-	<?php  print render(module_invoke( 'menu', 'block_view', 'menu-physicians-menu') ); ?>
- -->
-
+<?php
+	$most_recent_news_result = views_get_view_result('news_one_result','news_one_block');
+?>
 <div class="yellow-stripe">
 	<div class="inner">
 		<div class="container">
@@ -145,21 +143,7 @@
 		
 		<div class="container">
 			<div class="row news-molecules">
-				<div class="span6">
-					<div class="news-molecule mol-color-orangelight">
-						<div class="inner clearfix">
-							<a href="#">
-								<div class="date">
-									<div class="month">JAN</div>
-									<div class="day">21</div>
-									<div class="year">2012</div>
-								</div>
-								<h1>HealthTronics has joined Endo Health Solutions</h1>
-							</a>
-							<div class="more-link"><a href="/news/news-results/all">More News <div class="arrow"></div></a></div>
-						</div>
-					</div>
-				</div>
+				<?php print render(node_view( node_load($most_recent_news_result[0]->nid), 'homepage_molecule')); ?>
 				<div class="span6">
 					<div class="email-molecule mol-color-grey">
 						<div class="inner clearfix">
