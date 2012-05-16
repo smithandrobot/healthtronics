@@ -65,5 +65,5 @@
 </div>
 <?php
 	print theme('pager');
-	drupal_set_message('<pre>' . var_export(theme('pager'), true) . '</pre>');
+	// drupal_set_message('<pre>' . var_export(theme('pager'), true) . '</pre>');
 ?>
