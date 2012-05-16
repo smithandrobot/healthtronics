@@ -4658,10 +4658,11 @@ ul.menu li {
 .small-molecule.events-teaser .date .year {
   font-family: Arial, sans-serif;
   font-size: 13px;
+  margin-bottom: 4px;
 }
 .small-molecule.events-teaser .date .day {
   font-size: 31px;
-  line-height: 31px;
+  line-height: 24px;
 }
 .small-molecule.events-teaser h1 {
   font-size: 15px;
