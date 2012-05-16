@@ -47,39 +47,40 @@
 		//print 'node id: ' . $node->nid;
 	}
 ?>
+
 <div id="share" class="share-molecule collapse">
-	<div class="container stripe">
+	<div class="inner">
 		<div class="container">
 			<div class="row">
 				<div class="span12">
 					<div class="share-headline">
-						<div class="inner">
-							<img src="/sites/all/themes/healthtronicsv2/images/arrow_share.png"> Share this page
-						</div>
+						<img src="<?php print '/' . path_to_theme() . '/images/arrow_share.png'; ?>"> Share this page
 					</div>
 					<div class="row">
 						<div class="span4">
-							<div class="inner">
-								<label>Email to humans.</label>
-								<input type="text" placeholder="To (email address)">
-								<input type="text" placeholder="Sender's Email">
-							</div>
+							<label>Email to humans.</label>
+							<input type="text" placeholder="To (email address)">
+							<input type="text" placeholder="Sender's Email">						
 						</div>
 						<div class="span5">
-							<div class="inner clearfix">
-								<label>Message &amp; Preview:</label>
-								<textarea>Hello, Here is the resources I mentioned at our last meeting. HealthTronics Technology Resources Library</textarea>
-								<button class="share-email-btn">submit</button>
-							</div>
+							<label>Message &amp; Preview:</label>
+							<textarea>ivy@smithandrobot.com has shared a link with you: Hello, Here is the resources I mentioned at our last meeting. HealthTronics Technology Resources Library</textarea>
+							<a class="share-email-btn">submit</a>
 						</div>
 						<div class="span2">
-							<div class="inner">
-								share links go here
+							<!-- AddThis Button BEGIN -->
+							<div class="addthis_toolbox addthis_default_style ">
+							<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+							<a class="addthis_button_tweet"></a>
+							<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+							<a class="addthis_counter addthis_pill_style"></a>
 							</div>
+							<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4faab0d16ed7d203"></script>
+							<!-- AddThis Button END -->
 						</div>
 						<div class="span1">
 							<div class="close-btn">
-								<a href="#" data-toggle="collapse" data-target="#share"><img src="/sites/all/themes/healthtronicsv2/images/close_btn.png"></a>
+								<a href="javascript: return false;" data-toggle="collapse" data-target="#share"><img src="<?php print '/' . path_to_theme() . '/images/close_btn.png'; ?>"></a>
 							</div>
 						</div>
 					</div>

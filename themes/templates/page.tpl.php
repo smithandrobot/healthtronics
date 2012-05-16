@@ -102,7 +102,7 @@
 </div>
 <!-- /Header -->
 
-<!-- ACCORDION Menu for mobile layout-->
+<!-- Accordion for mobile menu -->
 <div class="accordion collapse visible-phone" id="accordion2">
 	<div class="accordion-group">
 		<div class="accordion-heading">
@@ -111,24 +111,12 @@
 		<div id="collapse1" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<ul class="accordion-menu-ul">
-					<li>
-						<a href="#">Lithotripsy</a>
-					</li>
-					<li>
-						<a href="#">Laser Treatment</a>
-					</li>
-					<li>
-						<a href="#">Cryotherapy</a>
-					</li>
-					<li>
-						<a href="#">IT Solutions</a>
-					</li>
-					<li>
-						<a href="#">Laboratory Solutions</a>
-					</li>
-					<li>
-						<a href="#">Equipment Services</a>
-					</li>
+					<li><a href="#">Lithotripsy</a></li>
+					<li><a href="#">Laser Treatment</a></li>
+					<li><a href="#">Cryotherapy</a></li>
+					<li><a href="#">IT Solutions</a></li>
+					<li><a href="#">Laboratory Solutions</a></li>
+					<li><a href="#">Equipment Services</a></li>
 				</ul>
 			</div>
 		</div>
@@ -140,21 +128,11 @@
 		<div id="collapse2" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<ul class="accordion-menu-ul">
-					<li>
-						<a href="#">What We Do</a>
-					</li>
-					<li>
-						<a href="#">For Cancer</a>
-					</li>
-					<li>
-						<a href="#">For Stones</a>
-					</li>
-					<li>
-						<a href="#">For Enlarged Prostate</a>
-					</li>
-					<li>
-						<a href="#">Find an M.D.</a>
-					</li>
+					<li><a href="#">What We Do</a></li>
+					<li><a href="#">For Cancer</a></li>
+					<li><a href="#">For Stones</a></li>
+					<li><a href="#">For Enlarged Prostate</a></li>
+					<li><a href="#">Find an M.D.</a></li>
 				</ul>
 			</div>
 		</div>
@@ -172,27 +150,17 @@
 		<div id="collapse4" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<ul class="accordion-menu-ul">
-					<li>
-						<a href="#">Overview</a>
-					</li>
-					<li>
-						<a href="#">TotalCare™</a>
-					</li>
-					<li>
-						<a href="#">News</a>
-					</li>
-					<li>
-						<a href="#">Events</a>
-					</li>
-					<li>
-						<a href="#">Careers</a>
-					</li>
+					<li><a href="#">Overview</a></li>
+					<li><a href="#">TotalCare&trade;</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Events</a></li>
+					<li><a href="#">Careers</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- /ACCORDION -->
+<!-- /Accordion for mobile menu -->
 
 <!-- Content Inside Orange Area + Share Module -->
 <?php if ($page['header']): ?>
