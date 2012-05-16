@@ -73,6 +73,11 @@
  * we set it to true if a node type or home page is rendered that we know
  */ 
 	$contentRendered = FALSE;
+	
+	// set this so we can check later how to render
+	$view = views_get_page_view();
+	//print 'view: '.$view;
+	//print ' node: '.$node;
 ?>
 <!-- Header -->
 <div id="white-stripe">
@@ -324,10 +329,6 @@
 	<?php endif?>
 <?php endif?>
 
-<!-- See if we are rendering a view -->
-<?php
-	$view = views_get_page_view();
-?>
 
 <!-- news view render -->
 <?php if(!$contentRendered): ?>
