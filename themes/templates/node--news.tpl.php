@@ -6,20 +6,36 @@
 	print $output;
 ?>
 <?php if($teaser): ?>
-<div class="small-mol-resize span3">
-	<a href="#">
-		<div class="small-molecule mol-border-grey">
+<div class="span3 small-mol-resize-c">
+	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
+		<div class="small-molecule mol-border-green">
 			<div class="inner">
 				<h1><?php print $node->title; ?></h1>
-				<?php print $node->field_summary['und'][0]['value']; ?>
-				<div class="arrow"></div>
+				<p><?php print $time . ' ' . $node->field_summary['und'][0]['value']; ?></p>
+				<div class="icon icon-00"></div>
 			</div>
 		</div>
 	</a>
 </div>
 <?php endif?>
 
-<?php if(!$teaser): ?>
+<?php if($view_mode=="feature_view"): ?>
+<div class="span6">
+	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
+		<div class="news-large-molecule mol-color-yellow mol-border-white">
+			<div class="inner">
+				<h1><?php print $node->title; ?></h1>
+				<p>
+					<?php print $time; ?>
+				</p>
+				<div class="icon"></div>
+			</div>
+		</div>
+	</a>
+</div>
+<?php endif ?>
+
+<?php if($view_mode=="full"): ?>
 <div id="grey-stripe">
 	<div class="inner">
 		<div class="container">
