@@ -1554,12 +1554,20 @@ ul.menu li
 
 .news-molecules-nav
 {
-	margin-bottom: 20px;
+	list-style: none;
+}
+
+.news-molecules-nav li
+{
+	width: 50%;
+	float: left;
 }
 
 .news-molecules-nav a
 {
 	font-size: 16px;
+	display: block;
+	margin-bottom: 20px;
 }
 
 .news-molecules-nav .next
@@ -1902,4 +1910,20 @@ a:hover
 input, textarea, select, .uneditable-input
 {
 	margin-bottom: 0;
+}
+
+
+// Drupal Overrides
+// ------------------------------------------------------------------
+
+.item-list ul
+{
+	margin: 0 0 0 0;
+	padding: 0;
+}
+
+.item-list ul li
+{
+	margin: 0 0 0 0;
+	padding: 0;
 }
