@@ -4806,6 +4806,15 @@ ul.menu li {
 .small-molecule:hover.mol-border-grey {
   border-bottom: 5px solid #9ea2a2;
 }
+.date-color-orange .date {
+  background-color: #e87722;
+}
+.date-color-orangelight .date {
+  background-color: #ed8b00;
+}
+.date-color-yellow .date {
+  background-color: #f1b434;
+}
 .mol-color-green {
   background-color: #a8ad00;
 }

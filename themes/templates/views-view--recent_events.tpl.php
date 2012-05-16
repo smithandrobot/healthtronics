@@ -26,50 +26,84 @@
  * @ingroup views_templates
  */
 	// Get the last 5 events in the past
-	$past_events = views_get_view('past_events', 'block');
-	$past_events->set_display('block');
-    $past_events->pre_execute();
-    $past_events->execute();
-	$past_events->result;
+	// $past_events = views_get_view('past_events', 'block');
+	// $past_events->set_display('block');
+	//     $past_events->pre_execute();
+	//     $past_events->execute();
+	// $past_events->result;
 	
-	$featured_event_result = views_get_view_result('recent_events', 'block');
-	$featured_event = node_view( node_load($featured_event_result[0]->nid), 'list_view')
+	//past_events = views_get_view_result('past_events', 'block');
+	//featured_event_result = views_get_view_result('recent_events', 'block');
+	//featured_event = node_view( node_load($featured_event_result[0]->nid), 'list_view')
 	// Get the most recent event closes to today's date
+	//print render($content["my_view_machine_name_entity_view_1"]);
+	//print var_dump($attachment_before);
+	$upcoming_event = views_get_view_result('single_upcoming_event','block_1');
+	$past_events = views_get_view_result('past_events', 'block');
+	$i = 0;
+	$class = array('date-color-orange', 'date-color-orangelight', 'date-color-yellow');
 ?>
-<div id="grey-stripe">
-	<div class="inner">
-		<div class="container">
-			<div class="row">
-				<div class="span12">
-					<div class="row">
-						<div class="span6">
-							<h2>Past Events</h2>
-							<ul>
-							<?php print $past_events->preview(); ?>
-							</ul>
-						</div>
-						<div class="span6">
-							<h2>Featured</h2>
-							<?php print render($featured_event); ?>
-						</div>
-					</div>
-				</div>
+<div class="row">
+	<div class="span6">
+		<div class="events-molecule">
+			<div class="header clearfix">
+				<h1>Recent Events</h1>
 			</div>
+			<?php foreach($past_events as $event):?>
+				<?php $colorClass=$class[$i]?>
+			<div class="event clearfix <?php print $colorClass; ?>">
+				<?php print render(node_view( node_load($event->nid), 'list_view')); ?>
+			</div>
+				<?php ++$i; ?>
+			<?php endforeach ?>
+		</div>
+	</div>
+	<div class="span6">
+		<div class="events-molecule">
+			<div class="header clearfix">
+				<h1>Upcoming Events</h1>
+			</div>
+			<?php print render(node_view( node_load($upcoming_event[0]->nid), 'feature_view')); ?>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="span12">
+		<div class="news-filter clearfix">
+			<ul>
+				<li class="first">SHOW:</li>
+				<li><a href="#">All</a></li>
+				<li><a href="#">Urology</a></li>
+				<li><a href="#">Lithotripsy</a></li>
+				<li><a href="#">Technology</a></li>
+				<li><a href="#">Treatment</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="span12">
+		<div class="news-molecules-container clearfix">
 			<div class="row">
-				<div class="span12">
-					<div class="row">
-						<div class="span6">
-							<div class="view-content">
-							<h2>Most recent Nodes</h2>
-							<?php if ($rows)
-							{
-								print '<li>' . $rows . '</li>';
-							}
-							?>
-							</div>
-						</div>
-					</div>
-				</div>
+			<?php if ($rows)
+			{
+				print $rows;
+			}
+			?>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="news-molecules-nav clearfix">
+		<div class="span6">
+			<div class="prev">
+				<a href="#">Previous</a>
+			</div>
+		</div>
+		<div class="span6">
+			<div class="next">
+				<a href="#">Next</a>
 			</div>
 		</div>
 	</div>

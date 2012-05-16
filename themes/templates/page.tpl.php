@@ -233,7 +233,7 @@
 
 <!-- Event Nodes -->
 <?php if(isset($node)):?>
-<?php if($node->type == 'event'): ?>
+<?php if($node->type == 'event' || $node->type == 'news'): ?>
 	<?php $contentRendered = TRUE; ?>
 <div id="grey-stripe">
 	<div class="inner">
@@ -328,7 +328,8 @@
 <?php
 	$view = views_get_page_view();
 ?>
-<!-- default view render -->
+
+<!-- news view render -->
 <?php if(!$contentRendered): ?>
 <?php if($view) : ?>
 	<?php $contentRendered = TRUE; ?>
@@ -347,6 +348,21 @@
 	<?php endif ?>
 <?php endif?>
 
+<!-- Events view renderer -->
+<?php if(!$contentRendered): ?>
+<?php if($view) : ?>
+	<?php $contentRendered = TRUE; ?>
+	<?php if($view->name=='recent_events'); ?>
+		<div id="grey-stripe">
+			<div class="inner">
+				<div class="container">
+					<?php print render($page['content']); ?>
+				</div>
+			</div>
+		</div>
+	<?php endif ?>
+<?php endif?>
+<!-- Default Render -->
 <?php if(!$contentRendered): ?>
 	<?php $contentRendered = TRUE; ?>
 	<div id="grey-stripe">

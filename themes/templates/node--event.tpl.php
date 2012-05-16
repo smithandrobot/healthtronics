@@ -80,35 +80,59 @@
 	$block 			= block_load('block', 2);
 	$output 		= drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
 	$location_name	= $node->field_location_name['und'][0]['value'];
+	$preview_address= $node->field_location_preview['und'][0]['value'];
 	$time 			= date('M j, Y', $node->field_date_unix_timestamp['und'][0]['value']);
 	$address 		= $node->field_physical_address['und'][0]['value'];
-	//print $output;
-	//print $view_mode;
+	$month 			= date('M', $node->field_date_unix_timestamp['und'][0]['value']);
+	$day 			= date('j', $node->field_date_unix_timestamp['und'][0]['value']);
+	$end_day 		= date('j', $node->field_date_unix_timestamp['und'][0]['value2']);
+	$year 			= date('Y', $node->field_date_unix_timestamp['und'][0]['value']);
+	$date_range 	= (isset($end_day)) ? $day . ' - ' . $end_day : $day;
 ?>
 
 <?php if($teaser): ?>
-<div class="small-mol-resize">
+<div class="span3 small-mol-resize-c">
 	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
-		<div class="small-molecule mol-border-orange">
+		<div class="small-molecule mol-border-grey">
 			<div class="inner">
 				<h1><?php print $node->title; ?></h1>
-				<?php print $node->field_summary['und'][0]['value']; ?>
-				<div class="arrow"></div>
+				<p><?php print $time; ?></p>
+				<div class="icon icon-00"></div>
 			</div>
 		</div>
 	</a>
 </div>
 <?php endif?>
 
+
 <?php if($view_mode == 'list_view'): ?>
-<div class="small-mol-resize">
+<div class="date">
+	<div class="month"><?php print $month; ?></div>
+	<div class="day"><?php print $day; ?></div>
+</div>
+<div class="content">
+	<h1>
+		<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
+			<?php print $node->title; ?>
+		</a>
+	</h1>
+	<!-- Mar 3-6 -->
+	<time><?php print $month . ' ' . $date_range; ?></time>
+	<p><?php print $location_name . ', ' . $preview_address; ?></p>
+</div>
+<?php endif?>
+
+
+<?php if($view_mode == 'feature_view'): ?>
+<div class="event-large mol-color-orange mol-border-white clearfix">
 	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
-		<div class="small-molecule mol-border-orange">
-			<div class="inner">
-				<h1><?php print $node->title; ?></h1>
-				<?php print $node->field_summary['und'][0]['value']; ?>
-				<div class="icon icon-02"></div>
-			</div>
+		<div class="inner clearfix">
+			<div class="month"><?php print $month; ?></div>
+			<div class="day"><?php print $day; ?></div>
+			<div class="year"><?php print $year; ?></div>
+			<h1><?php print $node->title; ?></h1>
+			<p><time><?php print $month . ' ' . $date_range; ?></time><?php print $location_name . ', ' . $preview_address; ?></p>
+			<div class="icon"></div>
 		</div>
 	</a>
 </div>
@@ -118,7 +142,7 @@
 <?php if($view_mode == 'full'): ?>
 
 	<div class="span3">
-		<a id="back-button" href="/events">Back to Events</a>
+		<a id="back-button" href="/events/all">Back to Events</a>
 		<div id="event-map-container" class="map" data-location="<?php print $node->field_physical_address['und'][0]['value']; ?>">
 			<p id="map-loading-status">Loading Map...</p>
 		</div>
@@ -126,8 +150,8 @@
 	<div id="event-detail-content" class="span6">
 		<div id="date-title-container" class="clearfix">
 			<div id="date-square">
-				<span class="month"><?php print date('M', $node->field_date_unix_timestamp['und'][0]['value']); ?></span>
-				<span class="day"><?php print date('j', $node->field_date_unix_timestamp['und'][0]['value']); ?></span>
+				<span class="month"><?php print $month; ?></span>
+				<span class="day"><?php print $date_range; ?></span>
 			</div>
 			<h2><?php print $node->title; ?></h2>
 		</div>

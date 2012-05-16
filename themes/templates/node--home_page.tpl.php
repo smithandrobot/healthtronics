@@ -1,5 +1,6 @@
 <?php
 	$most_recent_news_result = views_get_view_result('news_one_result','news_one_block');
+	$most_recent_events_result = views_get_view_result('events_home','news_two_result');
 ?>
 <div class="yellow-stripe">
 	<div class="inner">

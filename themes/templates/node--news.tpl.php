@@ -63,7 +63,7 @@
 				<div class="span12">
 					<div class="row">
 						<div class="span3">
-							<a id="back-button" href="/news">Back to News</a>
+							<a id="back-button" href="/news/news-results/all">Back to News</a>
 							<!--  -->
 							<?php if(!empty($node->field_pull_quote['und'][0]['value'])): ?>
 							<div id="sub-page-pull-quote">
@@ -81,7 +81,7 @@
 								</div>
 								<h2><?php print $node->title; ?></h2>
 							</div>
-							<p class="news-summary">Hi<?php print $node->body['und'][0]['summary']; ?></p>
+							<p class="news-summary"><?php print $node->body['und'][0]['summary']; ?></p>
 							<div id="event-detail-body">
 							<?php print $node->body['und'][0]['value']; ?>
 							</div>
