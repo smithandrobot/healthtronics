@@ -96,7 +96,7 @@
 										<div class="small-molecule mol-border-blue">
 											<div class="inner">
 												<h1>Cryotherapy</h1>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 												<div class="icon icon-00"></div>
 											</div>
 										</div>
@@ -333,18 +333,10 @@
 				$("#email-mol-bottom-resize").removeClass("span5").removeClass("offset1").addClass("span6");
 				$("#email-field-bottom").css("width", 247);
 				
-				
-				// $("#large-mol-resize").removeClass("span6").addClass("span12");
-				// $("#small-mol-resize").removeClass("span6").addClass("span12");
-				// $("#stats-mol-resize").removeClass("span6").addClass("span12");
-				// $("#events-mol-resize").removeClass("span6").addClass("span12");
-				
-				// $(".small-mol-resize-c").removeClass("span3").addClass("span6");
-				
-				// $("#email-field-top").css("width", 247);
-				// $("#email-field-bottom").css("width", 247);
-				
-				// $("#email-mol-bottom-resize").removeClass("span5").removeClass("offset1").addClass("span6");
+				// trigger dotdotdot
+				$(".small-molecule p").trigger("update");
+				$(".large-molecule h1").trigger("update");
+				$(".large-molecule p").trigger("update");
 			}
 			
 			
@@ -370,17 +362,10 @@
 				$("#email-mol-bottom-resize").removeClass("span6").addClass("offset1").addClass("span5");
 				$("#email-field-bottom").css("width", 285);
 				
-				// $("#large-mol-resize").removeClass("span12").addClass("span6");
-				// $("#small-mol-resize").removeClass("span12").addClass("span6");
-				// $("#stats-mol-resize").removeClass("span12").addClass("span6");
-				// $("#events-mol-resize").removeClass("span12").addClass("span6");
-				
-				// $(".small-mol-resize-c").removeClass("span6").addClass("span3");
-				
-				// $("#email-field-top").css("width", 310);
-				// $("#email-field-bottom").css("width", 285);
-				
-				// $("#email-mol-bottom-resize").removeClass("span6").addClass("offset1").addClass("span5");
+				// trigger dotdotdot
+				$(".small-molecule p").trigger("update");
+				$(".large-molecule h1").trigger("update");
+				$(".large-molecule p").trigger("update");
 			}
 		}
 	</script>
