@@ -60,9 +60,9 @@ function healthtronicsv2_form_search_form_alter(&$form, &$form_state, $form_id) 
 } 
 
 
-// Style mimi pager
+// Style mini pager
 function healthtronicsv2__views_mini_pager(&$vars) {
-  print('custom pager');
+  //print('custom pager');
   // Calculate various markers within this pager piece:
   // Middle is used to "center" pages around the current page.
   $pager_middle = ceil($quantity / 2);
@@ -96,4 +96,12 @@ function healthtronicsv2__views_mini_pager(&$vars) {
   }
 } // end function
 
+
+function healthtronicsv2_pager(&$variables)
+{
+    //var_dump($variables);
+    //print 'total: ' . $total . ' element: ' . $element;
+    //pager_default_initialize($total, 1, $element = 0);
+    //$output = theme('pager', array('quantity' => $total));
+}
 ?>

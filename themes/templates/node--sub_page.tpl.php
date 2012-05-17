@@ -8,7 +8,16 @@
 	$colorIndex	= 0;
 	$activeClass = '';
 	$block = block_load('block', 'healthtronicsv2_contact_form');
-	$contactForm = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+	$showContact = $node->field_show_contact_form['und'][0]["value"];
+	$contactForm = NULL;
+	
+	if($showContact) 
+	{
+		print 'show contact TRUE';
+		$contactForm = drupal_get_form('contact_site_form', $node);
+		//drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));	
+	}
+	
 ?>
 
 <?php if($teaser): ?>
@@ -60,8 +69,12 @@
 	<?php print '<div id="subpage-body">' . $node->body['und'][0]["value"] . '</div>'; ?>
 	<!-- healthtronicsv2_contact_form -->
 	
-	<?php 
-		//print $contactForm;	
+	<?php
+		if($contactForm) 
+		{
+			print 'show contact form';
+			print $contactForm;	
+		}
 	?>
 	<!-- /Body -->
 <?php endif ?>

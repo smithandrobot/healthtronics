@@ -57,6 +57,8 @@
 			<?php if ($rows)
 			{
 				print $rows;
+			}else{
+				print '<h3 class="span6">No results found</h3>';
 			}
 			?>
 			</div>

@@ -20,7 +20,7 @@ function healthtronicsv2_contact_form_block_info() {
  */
 function healthtronicsv2_contact_form_block_view($delta = '') {
   //The $delta parameter tells us which block is being requested.
-  var_dump($node);
+ // print 'delta: '.$delta;
   switch ($delta) {
         case 'contact_block_form':
             // Load contact pages inc as the form definition sits there.
@@ -33,7 +33,7 @@ function healthtronicsv2_contact_form_block_view($delta = '') {
 
 function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id, &$node = NULL)
 {
-    var_dump($node);
+    //var_dump($node);
     if( $form_id == 'contact_site_form')
     {   
         unset($form['name']);
