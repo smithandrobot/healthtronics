@@ -22,10 +22,18 @@
  */
 ?>
 <?php if ($search_results): ?>
-  <h2><?php print t('Search results');?></h2>
-  <ol class="search-results <?php print $module; ?>-results">
-    <?php print $search_results; ?>
-  </ol>
+<div class="news-header clearfix">
+	<h1>Search Results</h1>
+</div>
+<div class="row">
+	<div class="span12">
+		<div class="news-molecules-container clearfix">
+			<div class="row">
+    			<?php print $search_results; ?>
+			</div>
+		</div>
+	</div>
+</div>
   <?php print $pager; ?>
 <?php else : ?>
   <h2><?php print t('We couldn\t find anything that matched your term');?></h2>

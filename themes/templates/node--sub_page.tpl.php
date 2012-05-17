@@ -14,7 +14,7 @@
 <?php if($teaser): ?>
 <div class="small-mol-resize">
 	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
-		<div class="small-molecule mol-border-grey">
+		<div class="small-molecule mol-border-yellow">
 			<div class="inner">
 				<h1><?php print $node->title; ?></h1>
 				<?php print $node->field_sub_page_summary_title['und'][0]["value"]; ?>

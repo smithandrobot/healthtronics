@@ -63,6 +63,4 @@
  */
 //var_dump($result);
 ?>
-<li class="<?php print $classes; ?>"<?php print $attributes; ?>>
-	<?php print render( node_view($result['node'], 'teaser') ); ?>
-</li>
+<?php print render( node_view($result['node'], 'teaser') ); ?>

@@ -40,6 +40,11 @@ function healthtronicsv2_menu_tree__menu_subnav_patients_menu($menu)
 	return '<ul class="nav nav-secondary clearfix">' . $menu['tree'] . '</ul>';
 }
 
+function healthtronicsv2_menu_tree__menu_subnav_our_company_menu($menu)
+{
+	return '<ul class="nav nav-secondary clearfix">' . $menu['tree'] . '</ul>';
+}
+
 /*
  * This set the sub nav menu links class to 
  * active 

@@ -198,6 +198,7 @@
 <?php if(isset($node)):?>
 <?php if($node->type == 'sub_page'): ?>
 	<?php $contentRendered = TRUE; ?>
+	<!-- <?php print $node->nid; ?> -->
 <div id="grey-stripe">
 	<div class="inner">
 		<div class="container">
@@ -441,3 +442,4 @@
 	</div>
 </div>
 		
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4faab0d16ed7d203"></script>
