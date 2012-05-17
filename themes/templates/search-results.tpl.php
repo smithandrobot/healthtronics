@@ -39,3 +39,15 @@
   <h2><?php print t('We couldn\t find anything that matched your term');?></h2>
   <?php // print search_help('search#noresults', drupal_help_arg()); ?>
 <?php endif; ?>
+
+<script>
+	
+	// If there isn't a 'Previous' link,
+	// push the 'Next' link to the right
+	
+	if(!$(".news-molecules-nav li").hasClass("prev"))
+	{
+		$(".news-molecules-nav li").css("width", "100%");
+	}
+
+</script>

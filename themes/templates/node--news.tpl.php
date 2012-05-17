@@ -42,7 +42,7 @@
 <?php if($view_mode=="feature_view"): ?>
 <div class="span6">
 	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
-		<div class="news-large-molecule mol-color-yellow mol-border-white">
+		<div class="news-large-molecule mol-color-orange mol-border-white">
 			<div class="inner">
 				<h1><?php print $node->title; ?></h1>
 				<p>
