@@ -76,8 +76,7 @@
 	
 	// set this so we can check later how to render
 	$view = views_get_page_view();
-	//print 'view: '.$view;
-	//print ' node: '.$node;
+
 ?>
 <!-- Header -->
 <div id="white-stripe">

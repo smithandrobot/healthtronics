@@ -43,14 +43,15 @@
  */
 	$node = menu_get_object();
 	$nodes = array();
-	if($node && $node->nid )
+	
+	if(isset($node))
 	{
-		//print 'node id: ' . $node->nid;
-		//print 'Number of related items: ' . count($node->field_related_items['und']);
-		if(isset($node->field_related_items['und'])){
-			$nodes = $node->field_related_items['und'];
+		if($node && $node->nid )
+		{
+			if(isset($node->field_related_items['und'])){
+				$nodes = $node->field_related_items['und'];
+			}
 		}
-		//print 'Number of related items: ' . count($node->field_related_items['und']);
 	}
 ?>
 <?php if(count($nodes)  > 0) : ?>

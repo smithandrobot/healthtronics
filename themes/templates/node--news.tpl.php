@@ -7,7 +7,7 @@
 	$year 			= date('Y', $node->field_news_date['und'][0]['value']);
 	print $output;
 ?>
-<?php if($teaser): ?>
+<?php if($teaser && isset($node)): ?>
 <div class="span3 small-mol-resize-c">
 	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
 		<div class="small-molecule mol-border-orange news-teaser">

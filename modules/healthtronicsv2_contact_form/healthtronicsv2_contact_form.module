@@ -20,6 +20,7 @@ function healthtronicsv2_contact_form_block_info() {
  */
 function healthtronicsv2_contact_form_block_view($delta = '') {
   //The $delta parameter tells us which block is being requested.
+  var_dump($node);
   switch ($delta) {
         case 'contact_block_form':
             // Load contact pages inc as the form definition sits there.
@@ -30,8 +31,9 @@ function healthtronicsv2_contact_form_block_view($delta = '') {
   return $block;
 }
 
-function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id)
+function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id, &$node = NULL)
 {
+    var_dump($node);
     if( $form_id == 'contact_site_form')
     {   
         unset($form['name']);
@@ -85,14 +87,3 @@ function healthtronicsv2_contact_form_form_validate($form, &$form_state) {
       $form_state['rebuild'] = TRUE;
      }
 }
-
-/*
-function contact_site_form_validate($form, &$form_state) {
-  if (!$form_state['values']['cid']) {
-    form_set_error('cid', t('You must select a valid category.'));
-  }
-  if (!valid_email_address($form_state['values']['mail'])) {
-    form_set_error('mail', t('You must enter a valid e-mail address.'));
-  }
-}
-*/

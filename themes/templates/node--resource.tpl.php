@@ -2,7 +2,7 @@
 
 	$summary = $node->field_summary['und'][0]['value'];
 	$resource_type = taxonomy_term_load($node->field_resource_type['und'][0]['tid']);
-	$file = $node->field_file_reference['und'][0]['uri'];
+	$file = '/sites/default/files/' . file_uri_target($node->field_file_reference['und'][0]['uri']);
 	$resource = strtolower($resource_type->name);
 
 	switch($resource)
@@ -42,7 +42,7 @@ Image = molecule_icon_04.png - mol-border-grey
 ?>
 <?php if($teaser): ?>
 <div class="span3 small-mol-resize-c">
-	<a href="/<?php print $file; ?>">
+	<a href="<?php print $file; ?>">
 		<div class="small-molecule news-teaser <?php print $color; ?>">
 			<div class="inner">
 				<h1><?php print $resource .' '.$node->title; ?></h1>

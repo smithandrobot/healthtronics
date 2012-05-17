@@ -87,7 +87,7 @@
 	$day 			= date('j', $node->field_date_unix_timestamp['und'][0]['value']);
 	$end_day 		= date('j', $node->field_date_unix_timestamp['und'][0]['value2']);
 	$year 			= date('Y', $node->field_date_unix_timestamp['und'][0]['value']);
-	$date_range 	= (isset($end_day)) ? $day . ' - ' . $end_day : $day;
+	$date_range 	= (isset($end_day)) ? $day . '-' . $end_day : $day;
 ?>
 
 <?php if($teaser): ?>
@@ -158,13 +158,13 @@
 		<div id="date-title-container" class="clearfix">
 			<div id="date-square">
 				<span class="month"><?php print $month; ?></span>
-				<span class="day"><?php print $date_range; ?></span>
+				<span class="day"><?php print $day; ?></span>
 			</div>
 			<h2><?php print $node->title; ?></h2>
 		</div>
 		<h3 class="date-location">
 		<?php
-			print $time . '<br />';
+			print $month . ' ' . $date_range . ', ' .$year. '<br />';
 			if($location_name !== NULL)
 			{ 
 				print $location_name . ' ';
