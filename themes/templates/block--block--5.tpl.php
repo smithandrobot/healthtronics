@@ -55,6 +55,7 @@
 	}
 ?>
 <?php if(count($nodes)  > 0) : ?>
+	<div class="row">
 	<?php foreach($nodes as $n): ?>
 		<?php 
 			if(isset($n['node']->nid))
@@ -63,4 +64,5 @@
 			}
 		?>
 	<?php endforeach ?>
+	</div>
 <?php endif?>
