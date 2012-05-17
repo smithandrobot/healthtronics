@@ -93,10 +93,17 @@
 <?php if($teaser): ?>
 <div class="span3 small-mol-resize-c">
 	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
-		<div class="small-molecule mol-border-grey news-teaser">
+		<div class="small-molecule mol-border-orange events-teaser">
 			<div class="inner">
-				<h1><?php print $node->title; ?></h1>
-				<p><?php print $time; ?></p>
+				<div class="clearfix">
+					<div class="date">
+						<div class="month"><?php print $month; ?></div>
+						<div class="day"><?php print $day; ?></div>
+						<div class="year"><?php print $year; ?></div>
+					</div>
+					<h1><?php print $node->title; ?></h1>
+				</div>
+				<p><?php print $preview_address; ?></p>
 				<div class="icon icon-00"></div>
 			</div>
 		</div>
