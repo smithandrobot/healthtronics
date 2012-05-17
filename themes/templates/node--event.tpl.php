@@ -93,7 +93,7 @@
 <?php if($teaser): ?>
 <div class="span3 small-mol-resize-c">
 	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
-		<div class="small-molecule mol-border-grey events-teaser">
+		<div class="small-molecule mol-border-orange events-teaser">
 			<div class="inner">
 				<div class="clearfix">
 					<div class="date">
@@ -109,18 +109,6 @@
 		</div>
 	</a>
 </div>
-	
-<!-- <div class="span3 small-mol-resize-c">
-	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
-		<div class="small-molecule mol-border-grey news-teaser">
-			<div class="inner">
-				<h1><?php print $node->title; ?></h1>
-				<p><?php print $time; ?></p>
-				<div class="icon icon-00"></div>
-			</div>
-		</div>
-	</a>
-</div> -->
 <?php endif?>
 
 
