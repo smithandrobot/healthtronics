@@ -162,21 +162,27 @@
 			</div>
 			<h2><?php print $node->title; ?></h2>
 		</div>
-		<h3 class="date-location">
-		<?php
-			print $month . ' ' . $date_range . ', ' .$year. '<br />';
-			if($location_name !== NULL)
-			{ 
-				print $location_name . ' ';
-			}
-			print $node->field_physical_address['und'][0]['value'];
-		?>
-		</h3>
+		<div id="subpage-body-copy">
+			<div id="subpage-body-summary">
+				<p>
+					<?php
+						print $month . ' ' . $date_range . ', ' .$year. '<br />';
+						if($location_name !== NULL)
+						{ 
+							print $location_name . ' ';
+						}
+						print $node->field_physical_address['und'][0]['value'];
+					?>
+				</p>
+			</div>
+		</div>
 		<div id="event-detail-body">
-		<?php if(isset($node->field_summary['und']))
-		{
-			print $node->field_summary['und'][0]['value'];
-		}?>
+			<p>
+				<?php if(isset($node->field_summary['und']))
+				{
+					print $node->field_summary['und'][0]['value'];
+				}?>
+			</p>
 		</div>
 	</div>
 

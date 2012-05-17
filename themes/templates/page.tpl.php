@@ -440,5 +440,137 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	// DOCUMENT READY
+	// ----------------------------------------------------------
+	$(document).ready(function()
+	{
+		// ellipsis
+		// ----------------------------------
+		$(".date h1").dotdotdot({
+			wrap: 'word'
+		});
+		
+		$(".small-molecule h1").dotdotdot({
+			wrap: 'word'
+		});
+		
+    	$(".small-molecule p").dotdotdot({
+			wrap: 'word'
+		});
+		
+		$(".large-molecule h1").dotdotdot({
+			wrap: 'word'
+		});
+		
+		$(".large-molecule p").dotdotdot({
+			wrap: 'word'
+		});
+		
+		
+		// carousel
+		// ----------------------------------
+		$('.carousel').carousel();
+		
+		
+		// respond
+		// ----------------------------------
+		respond();
+		
+		
+		// trigger dotdotdot
+		// ----------------------------------
+		$(".small-molecule h1").trigger("update");
+		$(".small-molecule p").trigger("update");
+		$(".large-molecule h1").trigger("update");
+		$(".large-molecule p").trigger("update");
+	});
+	
+	
+	// WINDOW RESIZE
+	// ----------------------------------------------------------
+	$(window).resize(function()
+	{
+		respond();
+	});
+	
+	
+	function respond()
+	{
+		// console.log($(window).width());
+		
+		
+		if($(window).width() <= 979)
+		{
+			// console.log("resize for <= 979");
+			
+			$(".contact a").css("width", 100);
+			$(".search-field").css("width", 209);
+			
+			$("#header-bg-h1-resize").removeClass("span7").addClass("span12");
+			$("#header-bg-p-resize").removeClass("span5").addClass("span12");
+			
+			$("#large-mol-resize").removeClass("span6").addClass("span12");
+			$("#small-mol-resize").removeClass("span6").addClass("span12");
+			$("#stats-mol-resize").removeClass("span6").addClass("span12");
+			$("#events-mol-resize").removeClass("span6").addClass("span12");
+			
+			$(".small-mol-resize-c").removeClass("span3").addClass("span6");
+			
+			$("#email-field-top").css("width", 247);
+			
+			$("#email-mol-bottom-resize").removeClass("span5").removeClass("offset1").addClass("span6");
+			$("#email-field-bottom").css("width", 247);
+			
+			// trigger dotdotdot
+			// ----------------------------------
+			$(".small-molecule h1").trigger("update");
+			$(".small-molecule p").trigger("update");
+			$(".large-molecule h1").trigger("update");
+			$(".large-molecule p").trigger("update");
+		}
+		
+		
+		if($(window).width() >= 980)
+		{
+			// console.log("resize for >= 980");
+			
+			$(".contact a").css("width", 120);
+			$(".search-field").css("width", 269);
+			
+			$("#header-bg-h1-resize").removeClass("span12").addClass("span7");
+			$("#header-bg-p-resize").removeClass("span12").addClass("span5");
+			
+			$("#large-mol-resize").removeClass("span12").addClass("span6");
+			$("#small-mol-resize").removeClass("span12").addClass("span6");
+			$("#stats-mol-resize").removeClass("span12").addClass("span6");
+			$("#events-mol-resize").removeClass("span12").addClass("span6");
+			
+			$(".small-mol-resize-c").removeClass("span6").addClass("span3");
+			
+			$("#email-field-top").css("width", 310);
+			
+			$("#email-mol-bottom-resize").removeClass("span6").addClass("offset1").addClass("span5");
+			$("#email-field-bottom").css("width", 285);
+			
+			// trigger dotdotdot
+			// ----------------------------------
+			$(".small-molecule h1").trigger("update");
+			$(".small-molecule p").trigger("update");
+			$(".large-molecule h1").trigger("update");
+			$(".large-molecule p").trigger("update");
+		}
+		
+		
+		// If there isn't a 'Previous' link,
+		// push the 'Next' link to the right
+		// ----------------------------------
+		if(!$(".news-molecules-nav li").hasClass("prev"))
+		{
+			$(".news-molecules-nav li").css("width", "100%");
+		}
+	}
+</script>
 		
 <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4faab0d16ed7d203"></script>

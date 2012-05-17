@@ -4131,7 +4131,7 @@ ul.menu li {
 .header-bg h1 {
   color: #ffffff;
   font-size: 36px;
-  line-height: 50px;
+  line-height: 1.1em;
 }
 .header-bg p {
   color: #707272;
@@ -4318,9 +4318,9 @@ ul.menu li {
 .large-molecule h1 {
   color: #007296;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1.1em;
   margin-bottom: 8px;
-  height: 48px;
+  height: 55px;
 }
 .large-molecule p {
   color: #9E9F9F;
@@ -4343,7 +4343,7 @@ ul.menu li {
   padding-right: 35px;
   padding-bottom: 15px;
   padding-left: 10px;
-  height: 93px;
+  height: 100px;
   overflow: hidden;
   position: relative;
 }
@@ -4365,7 +4365,7 @@ ul.menu li {
 .small-molecule h1 {
   color: #007296;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1.1em;
   margin-bottom: 8px;
   width: 178px;
 }
@@ -4393,7 +4393,7 @@ ul.menu li {
   color: #ffffff;
 }
 .news-molecule a:hover {
-  color: #0093b2;
+  color: #ffc72c;
 }
 .news-molecule .more-link {
   margin-right: 10px;
@@ -4401,7 +4401,7 @@ ul.menu li {
   font-size: 12px;
   position: absolute;
   right: 0px;
-  bottom: 0px;
+  bottom: 13px;
 }
 .news-molecule .more-link .arrow {
   width: 22px;
@@ -4425,13 +4425,14 @@ ul.menu li {
 }
 .news-molecule h1 {
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1.1em;
 }
 .news-molecule .date {
   float: left;
   width: 35px;
   margin-right: 20px;
   text-transform: uppercase;
+  text-align: center;
 }
 .news-molecule .date .month,
 .news-molecule .date .year {
@@ -4457,7 +4458,7 @@ ul.menu li {
 }
 .email-molecule .content h1 {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1.1em;
   margin-bottom: 3px;
 }
 .email-molecule .content p {
@@ -4483,7 +4484,7 @@ ul.menu li {
 .events-molecule .header h1 {
   color: #707272;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1.1em;
   float: left;
 }
 .stats-molecule .header .more-link,
@@ -4518,7 +4519,7 @@ ul.menu li {
 }
 .stat h1 {
   font-size: 80px;
-  line-height: 80px;
+  line-height: 1.1em;
   text-align: center;
 }
 .stat p {
@@ -4548,7 +4549,9 @@ ul.menu li {
 .events-molecule .date .month {
   font-family: Arial, sans-serif;
   font-size: 13px;
+  font-weight: bold;
   margin-top: 7px;
+  text-transform: uppercase;
 }
 .events-molecule .date .day {
   font-size: 31px;
@@ -4559,7 +4562,7 @@ ul.menu li {
 }
 .events-molecule .content h1 {
   font-size: 15px;
-  line-height: 15px;
+  line-height: 1.1em;
   font-weight: normal;
 }
 .events-molecule time,
@@ -4585,6 +4588,8 @@ ul.menu li {
   font-family: Arial, sans-serif;
   font-weight: bold;
   font-size: 24px;
+  margin-bottom: 9px;
+  text-transform: uppercase;
 }
 .events-molecule .event-large .day {
   font-size: 76px;
@@ -4600,7 +4605,7 @@ ul.menu li {
 .events-molecule .event-large h1 {
   font-family: LeituraSans-Italic2, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1.1em;
 }
 .events-molecule .event-large a {
   color: #ffffff;
@@ -4639,8 +4644,8 @@ ul.menu li {
   background-position: 0px -39px;
 }
 .small-molecule.news-teaser h1 {
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 1.1em;
 }
 .small-molecule.events-teaser .date {
   text-align: center;
@@ -4653,15 +4658,17 @@ ul.menu li {
 .small-molecule.events-teaser .date .year {
   font-family: Arial, sans-serif;
   font-size: 13px;
+  font-weight: bold;
   margin-bottom: 4px;
+  text-transform: uppercase;
 }
 .small-molecule.events-teaser .date .day {
   font-size: 31px;
   line-height: 24px;
 }
 .small-molecule.events-teaser h1 {
-  font-size: 15px;
-  line-height: 21px;
+  font-size: 18px;
+  line-height: 1.1em;
 }
 .small-molecule.events-teaser p {
   height: auto;
@@ -4681,6 +4688,7 @@ ul.menu li {
 #footer .footer-ul {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 12px;
+  margin-bottom: 10px;
 }
 #footer .footer-links .desc {
   margin: 0;
@@ -4723,7 +4731,7 @@ ul.menu li {
 }
 #footer .email-molecule .content h1 {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1.1em;
   margin-bottom: 3px;
 }
 #footer .email-molecule .content p {
@@ -5091,7 +5099,7 @@ ul.menu li {
 .news-large-molecule h1 {
   color: #ffffff;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 1.1em;
   margin-bottom: 8px;
 }
 .news-large-molecule p {
@@ -5151,6 +5159,10 @@ ul.menu li {
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
+#subpage-body ol,
+#subpage-body ul {
+  margin-left: 20px;
+}
 /*
 ** Sub-navigation Menu
 */
@@ -5190,8 +5202,10 @@ ul.menu li {
 #event-detail-content h2 {
   float: left;
   width: 380px;
-  line-height: 30px;
+  line-height: 1.1em;
   color: #707272;
+  font-size: 32px;
+  padding-bottom: 10px;
 }
 #event-detail-content h3 {
   font-size: 16px;

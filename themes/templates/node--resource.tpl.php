@@ -45,7 +45,7 @@ Image = molecule_icon_04.png - mol-border-grey
 	<a href="<?php print $file; ?>">
 		<div class="small-molecule news-teaser <?php print $color; ?>">
 			<div class="inner">
-				<h1><?php print $resource .' '.$node->title; ?></h1>
+				<h1><?php print $node->title; ?></h1>
 				<p><?php print $summary; ?></p>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
