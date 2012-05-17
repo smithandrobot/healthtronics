@@ -1,6 +1,9 @@
 <?php
 	$most_recent_news_result = views_get_view_result('news_one_result','news_one_block');
 	$most_recent_events_result = views_get_view_result('events_home','news_two_result');
+	$upcoming_events = views_get_view_result('events_home_page_events_list', 'block');
+	$i = 0;
+	$class = array('date-color-orange', 'date-color-orangelight', 'date-color-yellow');
 ?>
 <div class="yellow-stripe">
 	<div class="inner">
@@ -208,40 +211,13 @@
 							<h1>Events</h1>
 							<div class="more-link"><a href="/events/all">More Events <div class="arrow icon-06"></div></a></div>
 						</div>
-						<div class="event clearfix">
-							<div class="date mol-color-orange">
-								<div class="month">MAR</div>
-								<div class="day">3</div>
-							</div>
-							<div class="content">
-								<h1><a href="#">16th Annual Scottsdale Prostate Cancer Symposium</a></h1>
-								<time>Mar 3-6</time>
-								<p>JW Marriott Camelback Inn, Scottsdale, AZ</p>
-							</div>
+						<?php foreach($upcoming_events as $event):?>
+							<?php $colorClass=$class[$i]?>
+						<div class="event clearfix <?php print $colorClass; ?>">
+							<?php print render(node_view( node_load($event->nid), 'list_view')); ?>
 						</div>
-						<div class="event clearfix">
-							<div class="date mol-color-orangelight">
-								<div class="month">MAR</div>
-								<div class="day">4</div>
-							</div>
-							<div class="content">
-								<h1><a href="#">Oklahoma State Urological Association</a></h1>
-								<time>Mar 4-5</time>
-								<p>Doubletree Warren Place, Tulsa, OK</p>
-							</div>
-						</div>
-						
-						<div class="event last clearfix">
-							<div class="date mol-color-yellow">
-								<div class="month">MAR</div>
-								<div class="day">5</div>
-							</div>
-							<div class="content">
-								<h1><a href="#">Utah Urological Society Annual CME-Accredited Symposium</a></h1>
-								<time>Mar 5-6</time>
-								<p>Utah Urological Society Annual CME-Accredited Symposium 2011</p>
-							</div>
-						</div>
+							<?php ++$i; ?>
+						<?php endforeach ?>
 					</div>
 				</div>
 			</div>
