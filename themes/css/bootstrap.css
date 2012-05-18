@@ -4186,7 +4186,6 @@ ul.menu li {
 .sub-page-header h1 {
   color: white;
   font-size: 32px;
-  padding-bottom: 10px;
 }
 .share-molecule {
   background-color: #707272;
@@ -4268,7 +4267,7 @@ ul.menu li {
 #grey-stripe {
   background-color: #ececec;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 30px;
   min-height: 600px;
 }
 #grey-stripe .inner {
@@ -4514,11 +4513,11 @@ ul.menu li {
   margin-right: auto;
   text-align: center;
   vertical-align: middle;
-  width: 237px;
+  width: 260px;
   height: 139px;
 }
 .stat h1 {
-  font-size: 80px;
+  font-size: 65px;
   line-height: 1.1em;
   text-align: center;
 }

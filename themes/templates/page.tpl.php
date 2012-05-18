@@ -78,6 +78,7 @@
 	$view = views_get_page_view();
 
 ?>
+
 <!-- Header -->
 <div id="white-stripe">
 	<div class="container">
@@ -105,6 +106,7 @@
 	</div>
 </div>
 <!-- /Header -->
+
 
 <!-- Accordion for mobile menu -->
 <div class="accordion collapse visible-phone" id="accordion2">
@@ -223,7 +225,7 @@
 							</div>
 						</div>
 						<div class="span3">
-							<div id="subpage-right-sidebar" class="">
+							<div id="subpage-right-sidebar">
 								<?php print render($page['sidebar_right']); ?>
 							</div>
 						</div>
