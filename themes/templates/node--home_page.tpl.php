@@ -37,6 +37,7 @@
 		</div>
 	</div>
 </div>
+<!-- /yellow-stripe -->
 
 <!-- Share module block (block--block-2.tpl.php) -->
 <?php 
@@ -44,9 +45,15 @@
 	$output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
 	print $output;
 ?>
-<!-- /yellow-stripe -->
-<!-- grey share -->
-<!-- /grey share -->
+
+<!--[if lte IE 7]>
+<style>
+.stats-molecule .header .more-link .arrow, .events-molecule .header .more-link .arrow
+{
+	display: inline;
+}
+</style>
+<![endif]-->
 
 <div id="grey-stripe">
 	<div class="inner">
@@ -59,7 +66,8 @@
 								<a href="/our-story/totalcare">
 								<div class="large-molecule-copy">
 									<div class="inner">
-										<h1>Urologists call it top-to-bottom, worry-free service. We call it Total Care.</h1>
+										<h1>Urologists call it top-to-bottom, worry-free service. We call it Total Care&trade;.</h1>
+										<p><a href="#">More about TotalCare&trade;.</a></p>
 										<div class="icon icon-00"></div>
 									</div>
 								</div>
@@ -70,7 +78,7 @@
 							<div id="small-mol-row" class="row">
 								<div class="small-mol-resize-c span3">
 									<a href="/lithotripsy/lithotripsy-overview">
-										<div class="small-molecule mol-border-orange">
+										<div class="small-molecule mol-border-orange large-font">
 											<div class="inner">
 												<h1>Lithotripsy</h1>
 												<p>The largest fleet in the U.S., backed by the best service in the business.</p>
@@ -81,7 +89,7 @@
 								</div>
 								<div class="small-mol-resize-c span3">
 									<a href="/laser-treatments/laser-treatment-overview">
-										<div class="small-molecule mol-border-green">
+										<div class="small-molecule mol-border-green large-font">
 											<div class="inner">
 												<h1>Laser Treatments</h1>
 												<p>Effective and accurate laser surgery for treating prostate enlargement.</p>
@@ -92,7 +100,7 @@
 								</div>
 								<div class="small-mol-resize-c span3">
 									<a href="/cryotherapy/cryotherapy-overview">
-										<div class="small-molecule mol-border-blue">
+										<div class="small-molecule mol-border-blue large-font">
 											<div class="inner">
 												<h1>Cryotherapy</h1>
 												<p>The innovative oncology solution urologists and interventional radiologists can agree on.</p>
@@ -103,7 +111,7 @@
 								</div>
 								<div class="small-mol-resize-c span3">
 									<a href="/it-solutions/overview-it-solutions">
-										<div class="small-molecule mol-border-purple">
+										<div class="small-molecule mol-border-purple large-font">
 											<div class="inner">
 												<h1>IT Solutions</h1>
 												<p>Software built exclusively for the way urologists work.</p>
@@ -114,7 +122,7 @@
 								</div>
 								<div class="small-mol-resize-c span3">
 									<a href="/lab-solutions/laboratory-solutions-overview">
-										<div class="small-molecule mol-border-yellow">
+										<div class="small-molecule mol-border-yellow large-font">
 											<div class="inner">
 												<h1>Laboratory Solutions</h1>
 												<p>Uropathology expertise and business solutions for better outcomes.</p>
@@ -125,7 +133,7 @@
 								</div>
 								<div class="small-mol-resize-c span3">
 									<a href="/equipment-services/equipment-services-overview">
-										<div class="small-molecule mol-border-grey">
+										<div class="small-molecule mol-border-grey large-font">
 											<div class="inner">
 												<h1>Equipment Services</h1>
 												<p>Worry-free equipment support, where and when you need it.</p>
