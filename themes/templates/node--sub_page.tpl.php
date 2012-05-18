@@ -12,7 +12,7 @@
 	{
 		$block = module_invoke('healthtronicsv2_contact_form', 'block_view', 'contact_block_form');
 	}
-	print '<p><a href="/node/' . $node->nid . '/edit?destination=' . drupal_lookup_path('alias','node/'.$node->nid) . '">Edit this page</a></p>';
+	// print '<p><a href="/node/' . $node->nid . '/edit?destination=' . drupal_lookup_path('alias','node/'.$node->nid) . '">Edit this page</a></p>';
 ?>
 
 <?php if($teaser): ?>
