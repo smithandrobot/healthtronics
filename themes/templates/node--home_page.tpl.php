@@ -63,7 +63,7 @@
 					<div class="row">
 						<div id="large-mol-resize" class="span6">
 							<div class="large-molecule">
-								<a href="/our-story/totalcare">
+								<a href="physicians/our-story/totalcare">
 								<div class="large-molecule-copy">
 									<div class="inner">
 										<h1>Urologists call it top-to-bottom, worry-free service. We call it Total Care&trade;.</h1>
@@ -77,7 +77,7 @@
 						<div id="small-mol-resize" class="span6">
 							<div id="small-mol-row" class="row">
 								<div class="small-mol-resize-c span3">
-									<a href="/lithotripsy/lithotripsy-overview">
+									<a href="physicians/lithotripsy/lithotripsy-overview">
 										<div class="small-molecule mol-border-orange large-font">
 											<div class="inner">
 												<h1>Lithotripsy</h1>
@@ -88,7 +88,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/laser-treatments/laser-treatment-overview">
+									<a href="physicians/laser-treatments/laser-treatment-overview">
 										<div class="small-molecule mol-border-green large-font">
 											<div class="inner">
 												<h1>Laser Treatments</h1>
@@ -99,7 +99,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/cryotherapy/cryotherapy-overview">
+									<a href="physicians/cryotherapy/cryotherapy-overview">
 										<div class="small-molecule mol-border-blue large-font">
 											<div class="inner">
 												<h1>Cryotherapy</h1>
@@ -110,7 +110,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/it-solutions/overview-it-solutions">
+									<a href="physicians/it-solutions/overview-it-solutions">
 										<div class="small-molecule mol-border-purple large-font">
 											<div class="inner">
 												<h1>IT Solutions</h1>
@@ -121,7 +121,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/lab-solutions/laboratory-solutions-overview">
+									<a href="physicians/lab-solutions/laboratory-solutions-overview">
 										<div class="small-molecule mol-border-yellow large-font">
 											<div class="inner">
 												<h1>Laboratory Solutions</h1>
@@ -132,7 +132,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/equipment-services/equipment-services-overview">
+									<a href="physicians/equipment-services/equipment-services-overview">
 										<div class="small-molecule mol-border-grey large-font">
 											<div class="inner">
 												<h1>Equipment Services</h1>
