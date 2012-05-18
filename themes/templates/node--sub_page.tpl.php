@@ -1,14 +1,18 @@
 <?php 
-	// $block = block_load('block', 2);
-	// $output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-	// print $output;
-	//var_dump($node->field_info_graphics['und']);
 	$i 			= 0;
 	$colors 	= array('color-purple', 'color-orange', 'color-green');
 	$colorIndex	= 0;
 	$activeClass = '';
-	$block = block_load('block', 'healthtronicsv2_contact_form');
-	$contactForm = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+	//('block', 'healthtronicsv2_contact_form');
+	$showContact = $node->field_show_contact_form['und'][0]["value"];
+	$contactForm = NULL;
+	
+	//var_dump($block);
+	if($showContact) 
+	{
+		$block = module_invoke('healthtronicsv2_contact_form', 'block_view', 'contact_block_form');
+	}
+	
 ?>
 
 <?php if($teaser): ?>
@@ -69,9 +73,11 @@
 		</div>
 	</div>
 	
-	<!-- healthtronicsv2_contact_form -->
-	<?php 
-		// print $contactForm;	
+	<?php
+		if($showContact) 
+		{
+			print render($block);	
+		}
 	?>
 	<!-- /Body -->
 <?php endif ?>

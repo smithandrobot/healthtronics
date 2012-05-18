@@ -20,22 +20,25 @@ function healthtronicsv2_contact_form_block_info() {
  */
 function healthtronicsv2_contact_form_block_view($delta = '') {
   //The $delta parameter tells us which block is being requested.
-  var_dump($node);
+ // print 'delta: '.$delta;
   switch ($delta) {
         case 'contact_block_form':
             // Load contact pages inc as the form definition sits there.
             module_load_include('inc', 'contact', 'contact.pages');
-            $block['content'] = drupal_get_form('contact_site_form');
+            $contact_form = drupal_get_form('contact_site_form');
+            $block['content'] = $contact_form;//drupal_get_form('contact_site_form');
             break;
   }
   return $block;
 }
 
-function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id, &$node = NULL)
+function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id)
 {
-    var_dump($node);
+    $node = node_load(arg(1));
+    
     if( $form_id == 'contact_site_form')
     {   
+        //var_dump($form);
         unset($form['name']);
         unset($form['copy']);
         unset($form['subject']);
@@ -49,12 +52,14 @@ function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id,
         $form['message']['#resizable'] = FALSE;
         $form['message']['#default_value'] = 'Message (optional)';
         $form['cid']['#weight'] = -3;
+        $form['cid']["#default_value"] = 0;
         $form['actions']['submit']['#value'] = 'send';
         
         $form['first_name'] = array(
             '#type' => 'textfield',
             '#size' => 30,
             '#weight' => -2,
+            //'#attributes'=array('onblur' => 'if (this.value \=\= "") {this.value \="Type in your zipcode";}'),
             '#title' => 'First Name' ,
             '#title_display' => 'invisible',
             '#default_value' => t('First Name'),
@@ -70,20 +75,73 @@ function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id,
             '#attributes' => array('class="clearfix"'),
             '#required' => TRUE);
 
+       $form['actions']['submit']['#id'] = 'edit-submit';
        $form["#validate"][]='healthtronicsv2_contact_form_form_validate';
+       if(isset($node))
+       {
+           map_taxonomy_to_select($form, $node->field_site_section['und'][0]['taxonomy_term']->name);
+       }
        return $form;
     }
 }
 
+
 function healthtronicsv2_contact_form_form_validate($form, &$form_state) {
-    //var_dump($form);
-  if (!$form_state['values']['first_name'] || $form_state['values']['first_name'] == $form['first_name']['#default_value'] ) {
+  if (!$form_state['values']['first_name'] || $form_state['values']['first_name'] == $form['first_name']['#default_value'] ) 
+  {
       form_set_error("first_name", t("You must enter a first name."));
       $form_state['rebuild'] = TRUE;
-     }
+  }
      
-  if (!$form_state['values']['last_name'] || $form_state['values']['last_name'] == $form['last_name']['#default_value'] ) {
+  if (!$form_state['values']['last_name'] || $form_state['values']['last_name'] == $form['last_name']['#default_value'] ) 
+  {
       form_set_error("last_name", t("You must enter a last name."));
       $form_state['rebuild'] = TRUE;
-     }
+  }
 }
+
+function map_taxonomy_to_select(&$form, $name)
+{
+    //print('name: '.$name);
+    //var_dump($form['cid']);
+    $map = get_option_map();
+    //index starts
+    $count = 1;
+    //print $map[$name];
+    foreach($form['cid']['#options'] as $option)
+    {   //
+        if($form['cid']['#options'][$count] == $map[$name])
+        {
+           $form['cid']["#default_value"] = $count;
+           print('<br />found select at index: ' . $count);
+           //break;
+        }
+        print '<br />' . $form['cid']['#options'][$count] . ' == ' . $map[$name] . ' at index ' . $count;
+        ++$count;
+    }
+}
+//Website feedback, Software Request
+function get_option_map()
+{ 
+    return array(
+        'Resources'=> 'Website  feedback',
+        'Patients'=> 'Software Request',
+        'Prostate'=> 'Software Request',
+        'Why Healthtronics'=> 'Software Request',
+        'Our Company'=> 'Website  feedback',
+        'News'=> 'Software Request',
+        'Events'=> 'Software Request',
+        'Facilities'=> 'Software Request',
+        'Equipment Services'=> 'Software Request',
+        'Cryotherapy'=> 'Software Request',
+        'Careers'=> 'Software Request',
+        'Laser Treatments'=> 'Software Request',
+        'Lithotripsy'=> 'Software Request',
+        'Lab Solutions'=> 'Software Request',
+        'IT Solutions'=> 'Software Request',
+        'Investors'=> 'Software Request',
+        'Cancer'=> 'Software Request',
+    );
+}
+
+
