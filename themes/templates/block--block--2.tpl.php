@@ -58,13 +58,13 @@
 					</div>
 					<div class="row">
 						<div class="span4">
-							<label>Email to humans.</label>
+							<!-- <label>Email to humans.</label> -->
 							<input type="text" placeholder="To (email address)">
 							<input type="text" placeholder="Sender's Email">						
 						</div>
 						<div class="span5">
-							<label>Message &amp; Preview:</label>
-							<textarea>ivy@smithandrobot.com has shared a link with you: Hello, Here is the resources I mentioned at our last meeting. HealthTronics Technology Resources Library</textarea>
+							<!-- <label>Message &amp; Preview:</label> -->
+							<textarea>Your Message.</textarea>
 							<a class="share-email-btn">submit</a>
 						</div>
 						<div class="span2">

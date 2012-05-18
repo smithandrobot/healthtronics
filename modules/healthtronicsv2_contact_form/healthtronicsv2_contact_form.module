@@ -102,21 +102,20 @@ function healthtronicsv2_contact_form_form_validate($form, &$form_state) {
 
 function map_taxonomy_to_select(&$form, $name)
 {
-    //print('name: '.$name);
-    //var_dump($form['cid']);
-    $map = get_option_map();
-    //index starts
+    $map   = get_option_map();
     $count = 1;
-    //print $map[$name];
+    
     foreach($form['cid']['#options'] as $option)
-    {   //
-        if($form['cid']['#options'][$count] == $map[$name])
+    {
+        if($map[$name] == $option)
         {
            $form['cid']["#default_value"] = $count;
-           print('<br />found select at index: ' . $count);
-           //break;
+           //print('<br />found select at index: ' . $count);
+           break;
+        }else{
+            //print '<br />No match - \'' . $option . '\' != \'' . $map[$name] . '\' at index ' . $count;
         }
-        print '<br />' . $form['cid']['#options'][$count] . ' == ' . $map[$name] . ' at index ' . $count;
+        
         ++$count;
     }
 }

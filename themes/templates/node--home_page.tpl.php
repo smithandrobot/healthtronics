@@ -60,9 +60,6 @@
 								<div class="large-molecule-copy">
 									<div class="inner">
 										<h1>Urologists call it top-to-bottom, worry-free service. We call it Total Care.</h1>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 										<div class="icon icon-00"></div>
 									</div>
 								</div>
@@ -76,7 +73,7 @@
 										<div class="small-molecule mol-border-orange">
 											<div class="inner">
 												<h1>Lithotripsy</h1>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+												<p>The largest fleet in the U.S., backed by the best service in the business.</p>
 												<div class="icon icon-00"></div>
 											</div>
 										</div>
@@ -87,7 +84,7 @@
 										<div class="small-molecule mol-border-green">
 											<div class="inner">
 												<h1>Laser Treatments</h1>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+												<p>Effective and accurate laser surgery for treating prostate enlargement.</p>
 												<div class="icon icon-00"></div>
 											</div>
 										</div>
@@ -98,7 +95,7 @@
 										<div class="small-molecule mol-border-blue">
 											<div class="inner">
 												<h1>Cryotherapy</h1>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+												<p>The innovative oncology solution urologists and interventional radiologists can agree on.</p>
 												<div class="icon icon-00"></div>
 											</div>
 										</div>
@@ -108,8 +105,8 @@
 									<a href="/it-solutions/overview-it-solutions">
 										<div class="small-molecule mol-border-purple">
 											<div class="inner">
-												<h1>Technology Solutions</h1>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+												<h1>IT Solutions</h1>
+												<p>Software built exclusively for the way urologists work.</p>
 												<div class="icon icon-00"></div>
 											</div>
 										</div>
@@ -120,7 +117,7 @@
 										<div class="small-molecule mol-border-yellow">
 											<div class="inner">
 												<h1>Laboratory Solutions</h1>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+												<p>Uropathology expertise and business solutions for better outcomes.</p>
 												<div class="icon icon-00"></div>
 											</div>
 										</div>
@@ -131,7 +128,7 @@
 										<div class="small-molecule mol-border-grey">
 											<div class="inner">
 												<h1>Equipment Services</h1>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+												<p>Worry-free equipment support, where and when you need it.</p>
 												<div class="icon icon-00"></div>
 											</div>
 										</div>
@@ -173,7 +170,7 @@
 					<div class="stats-molecule">
 						<div class="header clearfix">
 							<h1>Stats</h1>
-							<div class="more-link"><a href="#">More Company Info <div class="arrow icon-06"></div></a></div>
+							<div class="more-link"><a href="/our-company/our-story/overview">More Company Info <div class="arrow icon-06"></div></a></div>
 						</div>
 						<div id="carousel" class="carousel">
 							<div class="carousel-inner">
@@ -209,7 +206,7 @@
 					<div class="events-molecule">
 						<div class="header clearfix">
 							<h1>Events</h1>
-							<div class="more-link"><a href="/events/all">More Events <div class="arrow icon-06"></div></a></div>
+							<div class="more-link"><a href="/our-company/events/all">More Events <div class="arrow icon-06"></div></a></div>
 						</div>
 						<?php foreach($upcoming_events as $event):?>
 							<?php $colorClass=$class[$i]?>
