@@ -416,9 +416,9 @@
 							</form>
 						</div>
 						<div class="logos clearfix">
-							<a href="#"><img src="<?php print '/' . path_to_theme() . '/images/logo_bottom_endo.png'; ?>" class="endo"></a>
-							<a href="#"><img src="<?php print '/' . path_to_theme() . '/images/logo_bottom_ams.png'; ?>" class="ams"></a>
-							<a href="#"><img src="<?php print '/' . path_to_theme() . '/images/logo_bottom_qualitest.png'; ?>" class="qualitest"></a>
+							<a href="http://www.endo.com/"><img src="<?php print '/' . path_to_theme() . '/images/logo_bottom_endo.png'; ?>" class="endo"></a>
+							<a href="http://www.visitams.com/"><img src="<?php print '/' . path_to_theme() . '/images/logo_bottom_ams.png'; ?>" class="ams"></a>
+							<a href="http://www.qualitestrx.com/"><img src="<?php print '/' . path_to_theme() . '/images/logo_bottom_qualitest.png'; ?>" class="qualitest"></a>
 						</div>
 					</div>
 				</div>
@@ -431,7 +431,6 @@
 					<div class="row">
 						<div class="span4 legal">© <?php print date("Y");?> HealthTronics, Inc. All Rights Reserved.</div>
 						<div class="span8 bottom-links">
-							<a href="#">Sitemap</a>
 							<a href="#">Corporate Compliance</a>
 							<a href="#">Code of Conduct</a>
 							<a href="#">Privacy Policy</a>

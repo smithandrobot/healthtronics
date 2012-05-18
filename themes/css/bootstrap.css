@@ -4406,7 +4406,8 @@ ul.menu li {
   font-size: 12px;
   position: absolute;
   right: 0px;
-  bottom: 13px;
+  bottom: 12px;
+  display: block;
 }
 .news-molecule .more-link .arrow {
   width: 22px;
@@ -4427,6 +4428,7 @@ ul.menu li {
 #grey-stripe .news-molecule .inner {
   padding: 12px 15px;
   position: relative;
+  height: 81px;
 }
 .news-molecule h1 {
   font-size: 24px;
