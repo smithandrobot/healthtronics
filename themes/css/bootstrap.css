@@ -4653,9 +4653,9 @@ ul.menu li {
   background-position: 0px -39px;
 }
 .small-molecule.news-teaser h1 {
-  font-size: 16px;
   line-height: 1.2em;
   font-size: 18px;
+  max-height: 83px;
 }
 .small-molecule.events-teaser .date {
   text-align: center;
@@ -4677,10 +4677,9 @@ ul.menu li {
   line-height: 1.2em;
 }
 .small-molecule.events-teaser h1 {
-  font-size: 15px;
-  line-height: 1.2em;
   font-size: 18px;
   line-height: 1.1em;
+  max-height: 75px;
 }
 .small-molecule.events-teaser p {
   height: auto;
