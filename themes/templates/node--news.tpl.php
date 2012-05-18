@@ -76,17 +76,11 @@
 								</div>
 								<h2><?php print $node->title; ?></h2>
 							</div>
-<<<<<<< HEAD
-							<p class="news-summary"><?php print $node->body['und'][0]['summary']; ?></p>
-							<div id="subpage-body-summary">
-							<?php print $node->body['und'][0]['value']; ?>
-=======
 							<p class="subpage-body-summary">
 								<?php print $node->body['und'][0]['summary']; ?>
 							</p>
 							<div id="event-detail-body">
 								<?php print $node->body['und'][0]['value']; ?>
->>>>>>> fad61c445208c74c8553761e49604f7a606b9799
 							</div>
 						</div>
 						<div id="subpage-right-sidebar" class="span3">
