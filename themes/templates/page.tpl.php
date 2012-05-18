@@ -454,9 +454,7 @@
 			wrap: 'word'
 		});
 		
-		$(".small-molecule h1").dotdotdot({
-			wrap: 'word'
-		});
+		
 		
     	$(".small-molecule p").dotdotdot({
 			wrap: 'word'
@@ -483,7 +481,6 @@
 		
 		// trigger dotdotdot
 		// ----------------------------------
-		$(".small-molecule h1").trigger("update");
 		$(".small-molecule p").trigger("update");
 		$(".large-molecule h1").trigger("update");
 		$(".large-molecule p").trigger("update");
@@ -527,7 +524,6 @@
 			
 			// trigger dotdotdot
 			// ----------------------------------
-			$(".small-molecule h1").trigger("update");
 			$(".small-molecule p").trigger("update");
 			$(".large-molecule h1").trigger("update");
 			$(".large-molecule p").trigger("update");
@@ -558,7 +554,6 @@
 			
 			// trigger dotdotdot
 			// ----------------------------------
-			$(".small-molecule h1").trigger("update");
 			$(".small-molecule p").trigger("update");
 			$(".large-molecule h1").trigger("update");
 			$(".large-molecule p").trigger("update");

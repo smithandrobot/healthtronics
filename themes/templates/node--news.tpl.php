@@ -56,12 +56,7 @@
 <?php endif ?>
 
 <?php if($view_mode=="full"): ?>
-<div id="grey-stripe">
-	<div class="inner">
-		<div class="container">
-			<div class="row">
-				<div class="span12">
-					<div class="row">
+
 						<div class="span3">
 							<a id="back-button" href="/news/news-results/all">Back to News</a>
 							<!--  -->
@@ -81,9 +76,11 @@
 								</div>
 								<h2><?php print $node->title; ?></h2>
 							</div>
-							<p class="news-summary"><?php print $node->body['und'][0]['summary']; ?></p>
+							<p class="subpage-body-summary">
+								<?php print $node->body['und'][0]['summary']; ?>
+							</p>
 							<div id="event-detail-body">
-							<?php print $node->body['und'][0]['value']; ?>
+								<?php print $node->body['und'][0]['value']; ?>
 							</div>
 						</div>
 						<div id="subpage-right-sidebar" class="span3">

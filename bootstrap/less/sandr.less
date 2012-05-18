@@ -352,17 +352,17 @@ ul.menu li
 	// margin-left: auto;
 	// margin-right: auto;
 	overflow: hidden;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	background-image: url("/sites/all/themes/healthtronicsv2/images/bg_large_molecule.jpg");
 	background-repeat: no-repeat;
 	background-position: top center;
-	height: 430px;
+	height: 450px;
 }
 
 .large-molecule-copy
 {
-	background-color: rgb(255, 255, 255);
-	background-color: rgba(255, 255, 255, .9);
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, .9);
 	height: 130px;
 	width: 100%;
 	position: absolute;
@@ -428,7 +428,7 @@ ul.menu li
 	background-color: @white;
 	width: 100%;
 	height: 125px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 #grey-stripe .small-molecule .inner
@@ -473,15 +473,24 @@ ul.menu li
 	width: 178px;
 }
 
+.small-molecule.large-font h1
+{
+	font-size: 24px;
+}
+
 .small-molecule p
 {
 	color: #9E9F9F;
 	font-size: 12px;
 	font-family: @altFontFamily;
-	line-height: 13px;
 	// width: 180px;
-	height: 40px;
+	height: 45px;
 	overflow: hidden;
+}
+
+.small-molecule.large-font p
+{
+	height: 60px;
 }
 
 
@@ -491,7 +500,7 @@ ul.menu li
 .news-molecules
 {
 	margin-top: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .news-molecule, .email-molecule
@@ -499,7 +508,7 @@ ul.menu li
 	position: relative;
 	color: @white;
 	height: 100px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	border-bottom: 5px solid @white;
 }
 
@@ -623,7 +632,7 @@ ul.menu li
 
 .stats-events-molecules
 {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .stats-molecule, .email-molecule
@@ -654,10 +663,13 @@ ul.menu li
 .stats-molecule .header .more-link, .events-molecule .header .more-link
 {
 	float: right;
-	margin-right: 10px;
+	padding-right: 10px;
 	font-family: @altFontFamily;
 	font-size: 12px;
+	height: 22px;
+	display: block;
 }
+
 
 .stats-molecule .header .more-link .arrow, .events-molecule .header .more-link .arrow
 {
@@ -665,9 +677,9 @@ ul.menu li
 	height: 22px;
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
-	display: inline-block;
 	vertical-align: middle;
 	margin-left: 5px;
+	display: inline-block;
 }
 
 .stats-molecule .header .more-link:hover .arrow, .events-molecule .header .more-link:hover .arrow
@@ -799,7 +811,7 @@ ul.menu li
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 9px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .events-molecule .event-large h1
@@ -975,7 +987,7 @@ ul.menu li
 	color: @greyDark;
 	position: relative;
 	height: auto;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	border-bottom: 0px solid @white;
 }
 
@@ -1429,7 +1441,7 @@ ul.menu li
 .events-filter
 {
 	border-bottom: 5px solid @white;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .events-filter ul
@@ -1485,7 +1497,7 @@ ul.menu li
 .news-filter
 {
 	border-bottom: 5px solid @white;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .news-filter ul
@@ -1525,7 +1537,7 @@ ul.menu li
 {
 	width: 100%;
 	height: 125px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 #grey-stripe .news-large-molecule .inner
@@ -1601,7 +1613,7 @@ ul.menu li
 {
 	font-size: 16px;
 	display: block;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .news-molecules-nav .next
@@ -1623,7 +1635,7 @@ ul.menu li
 
 #subpage-body-copy
 {
-	margin-bottom:20px;
+	margin-bottom: 30px;
 }
 
 #subpage-body-copy #title
@@ -1636,7 +1648,7 @@ ul.menu li
 
 #subpage-body-copy #subpage-body-summary
 {
-    margin-bottom:20px;
+    margin-bottom: 30px;
 }
 #subpage-body-copy #subpage-body-summary p
 {
@@ -1669,7 +1681,7 @@ ul.menu li
 #sidebar-left{min-height:1px;}
 #sidebar-left .menu
 {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 #sidebar-left li
@@ -1693,9 +1705,10 @@ ul.menu li
 #sub-page-pull-quote {}
 #sub-page-pull-quote .quote
 {
-    font-size: 24px;
+    font-size: 20px;
     color: @purple;
     line-height: 1.4em;
+	margin-top: 30px;
 }
 #sub-page-pull-quote .quote.orange
 {
@@ -1709,7 +1722,7 @@ ul.menu li
 
 // Event Detail Page CSS Also handles News Detail Page
 // ------------------------------------------------------------------
-#event-detail-content{margin-bottom:20px;}
+#event-detail-content{margin-bottom: 30px;}
 #event-detail-content h2
 {
     float: left;
@@ -1727,6 +1740,11 @@ ul.menu li
 {
     font-size: 14px;
     font-family: @altFontFamily;
+}
+
+#event-detail-body ol, #event-detail-body ul
+{
+	margin-left: 20px;
 }
 
 #event-detail-content .news-summary
@@ -1857,7 +1875,7 @@ ul.menu li
     height:125px;
     border:solid white 5px;
     width:210px;
-    margin-bottom:20px;
+    margin-bottom: 30px;
     line-height: 128px;
     text-align: center;
 }
