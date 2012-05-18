@@ -82,7 +82,7 @@
 								<h2><?php print $node->title; ?></h2>
 							</div>
 							<p class="news-summary"><?php print $node->body['und'][0]['summary']; ?></p>
-							<div id="event-detail-body">
+							<div id="subpage-body-summary">
 							<?php print $node->body['und'][0]['value']; ?>
 							</div>
 						</div>

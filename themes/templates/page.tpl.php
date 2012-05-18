@@ -197,7 +197,7 @@
 
 <!--  Subpage Nodes-->
 <?php if(isset($node)):?>
-<?php if($node->type == 'sub_page'): ?>
+<?php if($node->type == 'sub_page' || $node->type == 'bio_listing'): ?>
 	<?php $contentRendered = TRUE; ?>
 	<!-- <?php print $node->nid; ?> -->
 <div id="grey-stripe">
@@ -432,9 +432,9 @@
 						<div class="span4 legal">© <?php print date("Y");?> HealthTronics, Inc. All Rights Reserved.</div>
 						<div class="span8 bottom-links">
 							<a href="#">Sitemap</a>
-							<a href="#">Corporate Compliance</a>
-							<a href="#">Code of Conduct</a>
-							<a href="#">Privacy Policy</a>
+							<a href="/sites/default/files/resources/complianceplan.pdf">Corporate Compliance</a>
+							<a href="/code-of-conduct">Code of Conduct</a>
+							<a href="/privacy-policy">Privacy Policy</a>
 						</div>
 					</div>
 				</div>
