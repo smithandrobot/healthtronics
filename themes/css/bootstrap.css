@@ -4364,7 +4364,7 @@ ul.menu li {
 }
 .small-molecule h1 {
   color: #007296;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.1em;
   margin-bottom: 8px;
   width: 178px;
@@ -4644,13 +4644,9 @@ ul.menu li {
   background-position: 0px -39px;
 }
 .small-molecule.news-teaser h1 {
-<<<<<<< HEAD
   font-size: 16px;
   line-height: 1.2em;
-=======
   font-size: 18px;
-  line-height: 1.1em;
->>>>>>> 82b4d57c64b831851d0384c2011bdbae75681876
 }
 .small-molecule.events-teaser .date {
   text-align: center;
@@ -4672,13 +4668,10 @@ ul.menu li {
   line-height: 1.2em;
 }
 .small-molecule.events-teaser h1 {
-<<<<<<< HEAD
   font-size: 15px;
   line-height: 1.2em;
-=======
   font-size: 18px;
   line-height: 1.1em;
->>>>>>> 82b4d57c64b831851d0384c2011bdbae75681876
 }
 .small-molecule.events-teaser p {
   height: auto;
@@ -4741,11 +4734,7 @@ ul.menu li {
 }
 #footer .email-molecule .content h1 {
   font-size: 16px;
-<<<<<<< HEAD
-  line-height: 1.2em;
-=======
   line-height: 1.1em;
->>>>>>> 82b4d57c64b831851d0384c2011bdbae75681876
   margin-bottom: 3px;
 }
 #footer .email-molecule .content p {
@@ -5113,11 +5102,7 @@ ul.menu li {
 .news-large-molecule h1 {
   color: #ffffff;
   font-size: 24px;
-<<<<<<< HEAD
-  line-height: 1.2em;
-=======
   line-height: 1.1em;
->>>>>>> 82b4d57c64b831851d0384c2011bdbae75681876
   margin-bottom: 8px;
 }
 .news-large-molecule p {
@@ -5181,6 +5166,7 @@ ul.menu li {
 #subpage-body ol,
 #subpage-body ul {
   margin-left: 20px;
+  margin-bottom: .8em;
 }
 /*
 ** Sub-navigation Menu
@@ -5221,11 +5207,7 @@ ul.menu li {
 #event-detail-content h2 {
   float: left;
   width: 380px;
-<<<<<<< HEAD
-  line-height: 1.2em;
-=======
   line-height: 1.1em;
->>>>>>> 82b4d57c64b831851d0384c2011bdbae75681876
   color: #707272;
   font-size: 32px;
   padding-bottom: 10px;
