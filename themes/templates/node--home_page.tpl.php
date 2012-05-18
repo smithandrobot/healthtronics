@@ -81,7 +81,7 @@
 										<div class="small-molecule mol-border-orange large-font">
 											<div class="inner">
 												<h1>Lithotripsy</h1>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+												<p>The largest fleet in the U.S., backed by the best service in the business.</p>
 												<div class="icon icon-00"></div>
 											</div>
 										</div>
@@ -178,30 +178,26 @@
 					<div class="stats-molecule">
 						<div class="header clearfix">
 							<h1>Stats</h1>
-							<div class="more-link"><a href="#">More Company Info <div class="arrow icon-06"></div></a></div>
+							<div class="more-link"><a href="/our-company/our-story/overview">More Company Info <div class="arrow icon-06"></div></a></div>
 						</div>
-						<div id="carousel" class="carousel">
+						<div id="carousel" class="carousel carousel-top-margin mol-border-white">
 							<div class="carousel-inner">
+								<div class="item">
+									<div class="stat">
+										<h1 class="color-purple">12</h1>
+										<p>average years experience for a HealthTronics technician</p>
+									</div>
+								</div>
+								<div class="item">
+									<div class="stat">
+										<h1 class="color-orange">100+</h1>
+										<p>HealthTronics-managed lithotripters in the United States</p>
+									</div>
+								</div>
 								<div class="item active">
 									<div class="stat">
-										<h1 class="color-purple">5,000</h1>
-										<p>Lithotripsy procedures conducted in 2011</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="stat">
-										<div class="stat">
-											<h1 class="color-orange">4,000</h1>
-											<p>Lithotripsy procedures conducted in 2011</p>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="stat">
-										<div class="stat">
-											<h1 class="color-green">3,000</h1>
-											<p>Lithotripsy procedures conducted in 2011</p>
-										</div>
+										<h1 class="color-green">50,000+</h1>
+										<p>lithotripsy procedures performed in 2011</p>
 									</div>
 								</div>
 							</div>
@@ -214,7 +210,7 @@
 					<div class="events-molecule">
 						<div class="header clearfix">
 							<h1>Events</h1>
-							<div class="more-link"><a href="/events/all">More Events <div class="arrow icon-06"></div></a></div>
+							<div class="more-link"><a href="/our-company/events/all">More Events <div class="arrow icon-06"></div></a></div>
 						</div>
 						<?php foreach($upcoming_events as $event):?>
 							<?php $colorClass=$class[$i]?>

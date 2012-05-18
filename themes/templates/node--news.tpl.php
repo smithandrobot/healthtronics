@@ -33,7 +33,7 @@
 				</div>
 				<h1><?php print $node->title; ?></h1>
 			</a>
-			<div class="more-link"><a href="/news/news-results/all">More News <div class="arrow"></div></a></div>
+			<div class="more-link"><a href="/our-company/news/all">More News <div class="arrow"></div></a></div>
 		</div>
 	</div>
 </div>
@@ -58,7 +58,7 @@
 <?php if($view_mode=="full"): ?>
 
 						<div class="span3">
-							<a id="back-button" href="/news/news-results/all">Back to News</a>
+							<a id="back-button" href="/our-company/news/all">Back to News</a>
 							<!--  -->
 							<?php if(!empty($node->field_pull_quote['und'][0]['value'])): ?>
 							<div id="sub-page-pull-quote">
