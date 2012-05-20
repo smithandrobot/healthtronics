@@ -8,7 +8,7 @@ function healthtronicsv2_block_view_alter(&$data, $block) {
         $section = $sectionURI[2];
         $replacements = array('-', '_');
         $section = ucwords(str_replace($replacements, " ", $section));
-        if($section == 'Search') $section = t('search results');
+        if($section == 'Search') $section = t('Search Results');
         if($section == 'It Solutions') $section = 'IT Solutions';
         
         $data['content'] = '<h1> ' .  $section . '</h1>';	    

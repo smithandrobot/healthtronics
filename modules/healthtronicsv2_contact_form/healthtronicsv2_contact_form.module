@@ -130,11 +130,11 @@ function map_taxonomy_to_select(&$form, $name)
     {
         if($map[$name] == $option)
         {
-           //$form['cid']["#default_value"] = $count;
-           print('<br />found select at index: ' . $count);
+           $form['cid']["#default_value"] = $count;
+           //print('<br />found select at index: ' . $count);
            break;
         }else{
-            print '<br />No match - \'' . $option . '\' != \'' . $map[$name] . '\' at index ' . $count;
+            //print '<br />No match - \'' . $option . '\' != \'' . $map[$name] . '\' at index ' . $count;
         }
         
         ++$count;
