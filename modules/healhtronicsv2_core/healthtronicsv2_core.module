@@ -5,7 +5,7 @@ function healthtronicsv2_block_view_alter(&$data, $block) {
     if($block->delta == 3)
     {
         $sectionURI = explode('/', $_SERVER['REQUEST_URI']);
-        $section = $sectionURI[1];
+        $section = $sectionURI[2];
         $replacements = array('-', '_');
         $section = strtolower(str_replace($replacements, " ", $section));
         if($section == 'search') $section = t('search results');
@@ -50,13 +50,18 @@ function healthtronicsv2_core_entity_info_alter(&$entity_info)
 } 
 
 
-// Removes the advnaced Search form from the search pages.
+// Removes the advanced Search form from the search pages.
 function healthtronicsv2_form_search_form_alter(&$form, &$form_state, $form_id) {
     switch ($form_id) { // not $form['#id']
         case 'search_form':
             $form['#access'] = FALSE;
             break;
     }
+} 
+
+function healthtronicsv2_query_alter(QueryAlterableInterface $query) {
+    $name = $query->getArguments();
+    //var_dump($name);
 } 
 
 ?>

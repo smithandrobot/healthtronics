@@ -52,20 +52,14 @@ function healthtronicsv2_menu_tree__menu_subnav_our_company_menu($menu)
  */
 function healthtronicsv2_menu_link(array $variables)
 {
+    // var_dump(menu_get_active_trail());
     $element = $variables['element'];
     $sectionURI = explode('/', $_SERVER['REQUEST_URI']);
     $section = $sectionURI[1];
-    
     if( $variables["element"]["#theme"] == 'menu_link__main_menu')
     {
-        //print 'seg: ' . $sectionURI[1] . ' ' . $element['#href'];
         $href = explode('/', drupal_get_path_alias($element['#href']));
-        //print 'href: ' . $href[0];
-        //if($element['#href'] == '/')
-        // if the href maps to the section set active 
-        // (e.g href'' maps to segments 'lithotripsy, cryo, laser etc )
-        // href 'patients' maps to segment 'patients
-        
+        print($sectionURI[1] . '->' . $sectionURI[2] . '->'.$sectionURI[3] . ' ' . $element['#title'] . '<br />');
     }
     
     if($variables["element"]["#theme"] == 'menu_link__menu_physicians_menu')
@@ -73,7 +67,7 @@ function healthtronicsv2_menu_link(array $variables)
         //print 'section: ' . $section . '<br/> uri: ' . strtolower(str_replace(" ", "-", $element['#title'])) . '<br .>';
         if($section === strtolower(str_replace(" ", "-", $element['#title'])))
         {
-            $element['#localized_options']['attributes']['class'][] = 'active';   
+            //$element['#localized_options']['attributes']['class'][] = 'active';   
         }
     }
 

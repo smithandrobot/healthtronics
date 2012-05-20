@@ -31,10 +31,10 @@
 
 <?php if($view_mode == 'full'): ?>
 	<h2 id="title">
-		<?php print $node->field_sub_page_summary_title['und'][0]["value"]; ?>
+		<?php print $field_sub_page_summary_title[0]['value']; ?>
 	</h2>
 	<div id="subpage-body-summary">
-		<?php print $node->body['und'][0]["summary"]; ?>
+		<?php print $body[0]["summary"]; ?>
 	</div>
 			
 	<?php if(count($node->field_info_graphics) > 0): ?>

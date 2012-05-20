@@ -5402,6 +5402,26 @@ ul.menu li {
 .form-item select.error {
   border: 2px solid #e87722;
 }
+.bio-listing-container {
+  margin-bottom: 30px;
+  border-bottom: 5px white solid;
+  padding-bottom: 20px;
+}
+.bio-listing-container p {
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+.bio-listing-container h3 {
+  font-size: 23px;
+  line-height: 1em;
+}
+.bio-listing-container img {
+  float: left;
+  padding: 0 10px 5px 0;
+}
+.bio-listing-container name-title-container {
+  display: inline-block;
+}
 .nav {
   margin-bottom: 0;
 }

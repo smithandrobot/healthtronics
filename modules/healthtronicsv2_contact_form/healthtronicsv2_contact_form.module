@@ -59,29 +59,50 @@ function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id)
             '#type' => 'textfield',
             '#size' => 30,
             '#weight' => -2,
-            //'#attributes'=array('onblur' => 'if (this.value \=\= "") {this.value \="Type in your zipcode";}'),
+            // 'onfocus' => "if (this.value == 'Enter Search') {this.value = '';}"
+            '#attributes'=>array(
+                'onblur' => 'if (this.value == "") {this.value = "First Name";}',
+                'onfocus' => 'if (this.value == "First Name") {this.value = "";}'
+                ),
             '#title' => 'First Name' ,
             '#title_display' => 'invisible',
             '#default_value' => t('First Name'),
             '#required' => TRUE);
-            
+     
         $form['last_name'] = array(
             '#type' => 'textfield',
             '#size' => 30,
             '#weight' => -1,
+            '#attributes'=>array(
+                'onblur' => 'if (this.value == "") {this.value = "Last Name";}',
+                'onfocus' => 'if (this.value == "Last Name") {this.value = "";}'
+                ),
             '#title' => 'Last Name' ,
             '#title_display' => 'invisible',
             '#default_value' => t('Last Name'),
             '#attributes' => array('class="clearfix"'),
             '#required' => TRUE);
-
-       $form['actions']['submit']['#id'] = 'edit-submit';
-       $form["#validate"][]='healthtronicsv2_contact_form_form_validate';
-       if(isset($node))
-       {
-           map_taxonomy_to_select($form, $node->field_site_section['und'][0]['taxonomy_term']->name);
-       }
-       return $form;
+            
+        $form['mail']['#attributes'] = array(
+                'onblur' => 'if (this.value == "") {this.value = "Email Address";}',
+                'onfocus' => 'if (this.value == "Email Address") {this.value = "";}'
+                );
+                
+        $form['message']['#attributes'] = array(
+                'onblur' => 'if (this.value == "") {this.value = "Message (optional)";}',
+                'onfocus' => 'if (this.value == "Message (optional)") {this.value = "";}'
+                );
+                
+        $form['actions']['submit']['#id'] = 'edit-submit';
+        $form["#validate"][]='healthtronicsv2_contact_form_form_validate';
+        
+        
+        if(isset($node))
+        {
+            map_taxonomy_to_select($form, $node->field_site_section['und'][0]['taxonomy_term']->name);
+        }
+        
+        return $form;
     }
 }
 
@@ -109,11 +130,11 @@ function map_taxonomy_to_select(&$form, $name)
     {
         if($map[$name] == $option)
         {
-           $form['cid']["#default_value"] = $count;
-           //print('<br />found select at index: ' . $count);
+           //$form['cid']["#default_value"] = $count;
+           print('<br />found select at index: ' . $count);
            break;
         }else{
-            //print '<br />No match - \'' . $option . '\' != \'' . $map[$name] . '\' at index ' . $count;
+            print '<br />No match - \'' . $option . '\' != \'' . $map[$name] . '\' at index ' . $count;
         }
         
         ++$count;
