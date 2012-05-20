@@ -77,11 +77,8 @@
  * @see template_process()
  */
 	$nodes = $node->field_bio_list['und'];
-	//var_dump($nodes);
-	
+	// sort the nodes by weight
 	function sortByOrder($a, $b) {
-		print $a['node']->field_weight['und'][0]['value'];
-
 	    return $a['node']->field_weight['und'][0]['value'] - $b['node']->field_weight['und'][0]['value'];
 	}
 	
