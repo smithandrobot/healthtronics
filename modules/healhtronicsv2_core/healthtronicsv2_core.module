@@ -5,10 +5,11 @@ function healthtronicsv2_block_view_alter(&$data, $block) {
     if($block->delta == 3)
     {
         $sectionURI = explode('/', $_SERVER['REQUEST_URI']);
+        $search_section = $sectionURI[1];
         $section = $sectionURI[2];
         $replacements = array('-', '_');
         $section = ucwords(str_replace($replacements, " ", $section));
-        if($section == 'Search') $section = t('Search Results');
+        if($search_section == 'search') $section = t('Search Results');
         if($section == 'It Solutions') $section = 'IT Solutions';
         
         $data['content'] = '<h1> ' .  $section . '</h1>';	    

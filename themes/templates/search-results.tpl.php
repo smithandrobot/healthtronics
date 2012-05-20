@@ -23,7 +23,7 @@
 ?>
 <?php if ($search_results): ?>
 <div class="news-header clearfix">
-	<h1>Search Results</h1>
+	<h1>&nbsp;</h1>
 </div>
 <div class="row">
 	<div class="span12">

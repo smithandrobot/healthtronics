@@ -43,7 +43,7 @@
  */
 	$node = menu_get_object();
 	$nodes = array();
-	
+	var_dump(variable_get('multiselector'));
 	if(isset($node))
 	{
 		if($node && $node->nid )
