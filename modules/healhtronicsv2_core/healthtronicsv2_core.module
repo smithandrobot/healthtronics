@@ -7,9 +7,11 @@ function healthtronicsv2_block_view_alter(&$data, $block) {
         $sectionURI = explode('/', $_SERVER['REQUEST_URI']);
         $section = $sectionURI[2];
         $replacements = array('-', '_');
-        $section = strtolower(str_replace($replacements, " ", $section));
-        if($section == 'search') $section = t('search results');
-        $data['content'] = '<h1>' .  ucwords(strtolower($section)) . '</h1>';	    
+        $section = ucwords(str_replace($replacements, " ", $section));
+        if($section == 'Search') $section = t('search results');
+        if($section == 'It Solutions') $section = 'IT Solutions';
+        
+        $data['content'] = '<h1> ' .  $section . '</h1>';	    
     }
     
     // Pull Quote Block for subpages. 

@@ -50,6 +50,7 @@
 		{
 			if(isset($node->field_related_items['und'])){
 				$nodes = $node->field_related_items['und'];
+				//var_dump($nodes);
 			}
 		}
 	}

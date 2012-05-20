@@ -76,7 +76,7 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
-	if($_POST)
+	if($_POST['zip'])
 	{
 		$action = 'http://labs.healthtronics.com/physicianfinder/physicianfinder.asmx/PhysicianFinder';
 		$type = $_POST['physician_type'];
@@ -97,36 +97,18 @@
 			$json 	 = json_decode($doc);
 			$success = TRUE;
 		}catch(Exception $e){
-			$success = FALSE;
+			$erro = TRUE;
 			$errorMessage = 'Caught exception: ' . $e->getMessage();
 		}
 		curl_close($handle);
 	}
-
-	// { "Physician": "James C. Vestal, M.D.", 
-	// "Address": "801 West I-20 Suite 1", 
-	// "City": "Arlington", 
-	// "State": "TX ", 
-	// "Zip": "76017", 
-	// "Country": "US ", 
-	// "EmailAddress": "cvestal@uant.com", 
-	// "Website": "www.uant.com", 
-	// "Phone": "817-784-0818", 
-	// "cmp_code": "3768001", 
-	// "Latitude": 32.65540, 
-	// "Longitude": -97.15990, 
-	// "condition": "KidneyCancer_YN", 
-	// "Distance": "163.2 miles"
-	// }
 ?>
 
 <h2 id="title">Find a Healthtronics Affliated Physician</h2>
+<?php if ($success) :?>
 <div id="find-a-physician-result-summary"><?php print count($json); ?> Healthrtonic Physicians found near you.</div>
-
-
 <!-- Body  -->
 <div class="find-a-md-result-container">
-	<?php if ($success) :?>
 		<?php foreach($json as $physician):?>
 			<?php
 			 	$address = $physician->Address;
@@ -150,10 +132,14 @@
 			</div>
 		<?php endforeach ?>
 	<?php endif?>
-	<?php if(!$success) :?>
+	<?php if($error) :?>
 		<h3>Error</h3>
 		<p class="address"><?php print $errorMessage; ?></p>
+	<?php else: ?>
+		<h3>Welcome to the physician finder.</h3>
+		<p class="address">Select a medical condition, enter the zip code and click search to find a physician closest to you.</p>
 	<?php endif?>
+
 </div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="/sites/all/themes/healthtronicsv2/js/event_map/map.js"></script>
