@@ -43,7 +43,7 @@
  */
 ?>
 <div id="find-physician-form">
-<form action="/patients/find-an-md" method="post">
+<form action="/patients/find-an-md/search" method="post">
 	<select name="physician_type">		
 	  <option value="BPH_YN">Enlarged Prostate</option>
 	  <option value="KidneyCancer_YN">Kidney Cancer</option>
