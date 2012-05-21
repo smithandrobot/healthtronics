@@ -3,15 +3,16 @@
 	$colors 	= array('color-purple', 'color-orange', 'color-green');
 	$colorIndex	= 0;
 	$activeClass = '';
-	//('block', 'healthtronicsv2_contact_form');
 	$showContact = $node->field_show_contact_form['und'][0]["value"];
 	$contactForm = NULL;
 	
-	//var_dump($block);
 	if($showContact) 
 	{
 		$block = module_invoke('healthtronicsv2_contact_form', 'block_view', 'contact_block_form');
 	}
+	
+	// output a link to edit this node if user is an admin, 
+	// and we're not looking at a teaser view
 	if($is_admin && $view_mode == 'full' )
 	{
 		print '<p><a href="/node/' . $node->nid . '/edit?destination=' . drupal_lookup_path('alias','node/'.$node->nid) . '">Edit this page</a></p>';

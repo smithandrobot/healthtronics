@@ -76,6 +76,8 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
+	$submitted = FALSE;
+	
 	if($_POST['zip'])
 	{
 		$action = 'http://labs.healthtronics.com/physicianfinder/physicianfinder.asmx/PhysicianFinder';
@@ -83,6 +85,7 @@
 		$zip  = $_POST['zip'];
 		$formVars = "zipcode=". $zip ."&results=3&condition=" . $type;
 		$handle = curl_init($action);
+		$submitted = TRUE;
 		
 		curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($handle, CURLOPT_POST, TRUE);
@@ -102,6 +105,8 @@
 		}
 		curl_close($handle);
 		$total = count($json);
+	}else{
+		$no_search_yet = TRUE;
 	}
 ?>
 
@@ -132,7 +137,7 @@
 			</div>
 		</div>
 	<?php endforeach ?>
-<?php else: ?>
+<?php elseif($submitted && $total < 1): ?>
 	<div id="find-a-physician-result-summary">Sorry, we couldn't find any doctors that matched your zipcode.</div>
 <?php endif ?>
 
@@ -141,7 +146,9 @@
  	<p class="address"><?php print $errorMessage; ?></p>
  <?php else: ?>
  	<h3>Welcome to the physician finder.</h3>
- 	<p class="address">Select a medical condition, enter the zip code and click search to find a physician closest to you.</p>
+	<div id="find-a-physician-result-summary">
+		HealthTronics helps physicians provide better care for you. Use the short form on the left to locate the HealthTronics affiliated physician closest to you.
+	</div>
  <?php endif?>
 
 </div>

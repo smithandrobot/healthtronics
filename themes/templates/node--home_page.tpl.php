@@ -81,6 +81,8 @@
 	$upcoming_events = views_get_view_result('events_home_page_events_list', 'block');
 	$i = 0;
 	$class = array('date-color-orange', 'date-color-orangelight', 'date-color-yellow');
+	$large_molecule = $node->field_hero_banner['und'][0]['node'];
+	$info_graphics = $node->field_info_graphics['und'];
 ?>
 <div class="yellow-stripe">
 	<div class="inner">
@@ -96,8 +98,7 @@
 						<div class="row">
 							<div id="header-bg-h1-resize" class="span7">
 								<h1>
-									<!-- <?php var_dump($node); ?> -->
-									<?php print $node->body['und'][0]['summary']; ?>
+									<?php print strip_tags($node->body['und'][0]['summary'], array('<br />')); ?>
 									<!-- Working for urology professionals.<br/>Dedicated to great outcomes. -->
 								</h1>
 							</div>
@@ -141,19 +142,11 @@
 			<div class="row">
 				<div class="span12">
 					<div class="row">
-						<div id="large-mol-resize" class="span6">
-							<div class="large-molecule">
-								<a href="physicians/our-story/totalcare">
-								<div class="large-molecule-copy">
-									<div class="inner">
-										<h1>Urologists call it top-to-bottom, worry-free service. We call it Total Care&trade;.</h1>
-										<p><a href="#">More about TotalCare&trade;.</a></p>
-										<div class="icon icon-00"></div>
-									</div>
-								</div>
-								</a>
-							</div>
-						</div>
+						
+						<!-- Start Large Molecule -->
+						<?php print  render( node_view( $large_molecule, 'full') ); ?> 
+						<!-- End Large Molecule -->
+						
 						<div id="small-mol-resize" class="span6">
 							<div id="small-mol-row" class="row">
 								<div class="small-mol-resize-c span3">
@@ -241,7 +234,7 @@
 								<h1>Sign up to receive email alerts.</h1>
 								<p>Your address will stay private. Unsubscribe any time.</p>
 								<form class="form-inline">
-									<input id="email-field-top" type="text" class="email-field" style="width: 310px;" placeholder="Enter Your email address"><button type="submit" class="submit-btn">submit</button>
+									<input id="email-field-top" type="text" class="email-field" style="width: 310px;" value="Enter Your email address" onblur="if (this.value == '') {this.value = 'Enter Your email address';}" onfocus="if (this.value == 'Enter Your email address') {this.value = '';}"><button type="submit" class="submit-btn">submit</button>
 								</form>
 							</div>
 						</div>
@@ -250,8 +243,6 @@
 			</div>
 		</div>
 		<!-- /news-molecules -->
-		
-		
 		<div class="container">
 			<div class="row stats-events-molecules" >
 				<div id="stats-mol-resize" class="span6">
@@ -260,30 +251,20 @@
 							<h1>Stats</h1>
 							<div class="more-link"><a href="/our-company/our-story/overview">More Company Info <div class="arrow icon-06"></div></a></div>
 						</div>
+						
+						<?php if(count($node->field_info_graphics) > 0): ?>
+						<!-- Carousel -->
 						<div id="carousel" class="carousel carousel-top-margin mol-border-white">
-							<div class="carousel-inner">
-								<div class="item">
-									<div class="stat">
-										<h1 class="color-purple">12</h1>
-										<p>average years experience for a HealthTronics technician</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="stat">
-										<h1 class="color-orange">100+</h1>
-										<p>HealthTronics-managed lithotripters in the United States</p>
-									</div>
-								</div>
-								<div class="item active">
-									<div class="stat">
-										<h1 class="color-green">50,000+</h1>
-										<p>lithotripsy procedures performed in 2011</p>
-									</div>
-								</div>
-							</div>
-							<a class="left carousel-control" href="#carousel" data-slide="prev"></a>
-							<a class="right carousel-control" href="#carousel" data-slide="next"></a>
+					   		<div class="carousel-inner">
+								<?php foreach($info_graphics as $info_graphic): ?>
+									<?php print render( node_view($info_graphic['node'], 'teaser') ); ?>
+								<?php endforeach ?>
+					   		</div>
+					   		<a class="left carousel-control" href="#carousel" data-slide="prev"></a>
+					   		<a class="right carousel-control" href="#carousel" data-slide="next"></a>
 						</div>
+						<!-- /Carousel -->
+						<?php endif ?>
 					</div>
 				</div>
 				<div id="events-mol-resize" class="span6">

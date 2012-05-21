@@ -4138,7 +4138,7 @@ ul.menu li {
   color: #707272;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 17px;
-  line-height: 22px;
+  line-height: 1.1em;
   font-weight: 100;
   letter-spacing: 1px;
 }
@@ -4151,9 +4151,8 @@ ul.menu li {
 .header-bg .share {
   position: relative;
 }
-.sub-page-header {
-  /*    height:110px;*/
-
+.sub-page-header h1 {
+  line-height: 1.2em;
 }
 .header-bg .share .image,
 .sub-page.share .image {
@@ -5413,9 +5412,10 @@ ul.menu li {
   border: 2px solid #e87722;
 }
 .bio-listing-container {
-  margin-bottom: 30px;
+  /*    margin-bottom: 30px;*/
+
   border-bottom: 5px white solid;
-  padding-bottom: 20px;
+  padding: 30px 0 20px 0;
 }
 .bio-listing-container p {
   font-size: 14px;
