@@ -61,10 +61,13 @@ function healthtronicsv2_menu_link(array $variables)
             $element['#localized_options']['attributes']['class'][] = 'active';
         }
     }else{
-        $top_nav =strtolower(str_replace('-', ' ', $sectionURI[2]));
-        if($top_nav == strtolower($element['#title']))
+        if(isset($sectionURI[2]))
         {
-            $element['#localized_options']['attributes']['class'][] = 'active';
+            $top_nav =strtolower(str_replace('-', ' ', $sectionURI[2]));
+            if($top_nav == strtolower($element['#title']))
+            {
+                $element['#localized_options']['attributes']['class'][] = 'active';
+            }
         }
     }
 

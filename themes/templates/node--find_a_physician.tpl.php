@@ -97,48 +97,52 @@
 			$json 	 = json_decode($doc);
 			$success = TRUE;
 		}catch(Exception $e){
-			$erro = TRUE;
+			$error = TRUE;
 			$errorMessage = 'Caught exception: ' . $e->getMessage();
 		}
 		curl_close($handle);
+		$total = count($json);
 	}
 ?>
 
-<h2 id="title">Find a Healthtronics Affliated Physician</h2>
-<?php if ($success) :?>
-<div id="find-a-physician-result-summary"><?php print count($json); ?> Healthrtonic Physicians found near you.</div>
+<h2 id="title" class="find-a-md-title">Find a Healthtronics Affliated Physician</h2>
+<?php if ($success && $total > 0) :?>
+<div id="find-a-physician-result-summary"><?php print count($json); ?> Healthtronics Physicians found near you.</div>
 <!-- Body  -->
 <div class="find-a-md-result-container">
-		<?php foreach($json as $physician):?>
-			<?php
-			 	$address = $physician->Address;
-				$city = $physician->City;
-				$state = $physician->State;
-				$zip = $physician->Zip;
-				$addressString = $address.', '.$city.', '.$state.''.$zip;
-			?>
-			<div class="row">
-				<div data-location="<?php print $addressString; ?>" class="map find-a-md-map span3">
-					Loading Map...
-				</div>
-				<div class="find-a-md-result span6">
-					<h3><?php print $physician->Physician; ?></h3>
-					<p class="address">
-						<?php print $addressString ?><br />
-						<?php print $physician->Phone; ?><br />
-						<a href="http://maps.google.com/maps?q=<?php print $addressString; ?>" class="map-link">Map it.</a>
-					</p>
-				</div>
+	<?php foreach($json as $physician):?>
+		<?php
+		 	$address = $physician->Address;
+			$city = $physician->City;
+			$state = $physician->State;
+			$zip = $physician->Zip;
+			$addressString = $address.', '.$city.', '.$state.''.$zip;
+		?>
+		<div class="row">
+			<div data-location="<?php print $addressString; ?>" class="map find-a-md-map span3">
+				Loading Map...
 			</div>
-		<?php endforeach ?>
-	<?php endif?>
-	<?php if($error) :?>
-		<h3>Error</h3>
-		<p class="address"><?php print $errorMessage; ?></p>
-	<?php else: ?>
-		<h3>Welcome to the physician finder.</h3>
-		<p class="address">Select a medical condition, enter the zip code and click search to find a physician closest to you.</p>
-	<?php endif?>
+			<div class="find-a-md-result span6">
+				<h3><?php print $physician->Physician; ?></h3>
+				<p class="address">
+					<?php print $addressString ?><br />
+					<?php print $physician->Phone; ?><br />
+					<a href="http://maps.google.com/maps?q=<?php print $addressString; ?>" class="map-link">Map it.</a>
+				</p>
+			</div>
+		</div>
+	<?php endforeach ?>
+<?php else: ?>
+	<div id="find-a-physician-result-summary">Sorry, we couldn't find any doctors that matched your zipcode.</div>
+<?php endif ?>
+
+ <?php if($error) :?>
+ 	<h3>Error</h3>
+ 	<p class="address"><?php print $errorMessage; ?></p>
+ <?php else: ?>
+ 	<h3>Welcome to the physician finder.</h3>
+ 	<p class="address">Select a medical condition, enter the zip code and click search to find a physician closest to you.</p>
+ <?php endif?>
 
 </div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>

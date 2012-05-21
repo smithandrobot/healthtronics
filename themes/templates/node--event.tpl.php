@@ -149,7 +149,7 @@
 <?php if($view_mode == 'full'): ?>
 
 	<div class="span3">
-		<a id="back-button" href="/events/all">Back to Events</a>
+		<a id="back-button" href="/our-company/events/all">Back to Events</a>
 		<div id="event-map-container" class="map" data-location="<?php print $node->field_physical_address['und'][0]['value']; ?>">
 			<p id="map-loading-status">Loading Map...</p>
 		</div>

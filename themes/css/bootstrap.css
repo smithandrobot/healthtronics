@@ -5346,6 +5346,16 @@ ul.menu li {
   line-height: 128px;
   text-align: center;
 }
+#subpage-body-copy #title.find-a-md-title {
+  padding: 0;
+}
+#subpage-body-copy #find-a-physician-result-summary {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 19px;
+  margin-bottom: 30px;
+  font-weight: lighter;
+  color: #707272;
+}
 #contact-site-form input,
 #contact-site-form select,
 #contact-site-form textarea {
