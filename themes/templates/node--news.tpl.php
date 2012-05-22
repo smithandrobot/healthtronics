@@ -5,7 +5,7 @@
 	$month 			= date('M', $node->field_news_date['und'][0]['value']);
 	$day 			= date('j', $node->field_news_date['und'][0]['value']);
 	$year 			= date('Y', $node->field_news_date['und'][0]['value']);
-	print $output;
+	// print $output;
 ?>
 <?php if($teaser): ?>
 <div class="span3 small-mol-resize-c">
