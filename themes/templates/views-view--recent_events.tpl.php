@@ -97,5 +97,6 @@
 	</div>
 </div>
 <?php
-	print theme('pager');
+	// print theme('pager');
+	print $pager;
 ?>
