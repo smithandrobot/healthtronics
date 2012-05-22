@@ -1405,10 +1405,13 @@ ul.menu li
 	float: left;
 }
 
-.filter-header ul li.first
+.filter-header p#filter-label
 {
-	display: block;
-	padding: 5px 0px 5px 0px;
+	padding: 12px 0px 5px 0px;
+	float:left;
+	color:@greyDark;
+    font-size: 16px;
+    margin-right: 10px;
 }
 
 .filter-header ul li a
@@ -1417,7 +1420,7 @@ ul.menu li
 	padding: 5px 10px 5px 10px;
 }
 
-.filter-header ul li a:hover, .filter-header ul li a:active
+.filter-header ul li a:hover, .filter-header ul li a.active
 {
 	background-color: @white;
 }

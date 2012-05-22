@@ -278,13 +278,11 @@
    					<div class="row">
    						<div class="span12">
    							<div class="row">
-   								<?php if($page['sidebar_left']):?>
    								<div class="span3">
    									<div id="sidebar-left">
-   										<?php print render($page['sidebar_left']);?>
+										&nbsp;
    									</div>
    								</div>
-   								<?php endif ?>
    								<div class="span9">
    									<div id="subpage-body-copy">
    										<?php print render($page['content']); ?>
