@@ -71,11 +71,9 @@
 	<?php endif ?>
 	
 	<!-- Body  -->
-	<div class="row">
-		<div class="span6">
+	
 			<?php print '<div id="subpage-body">' . $node->body['und'][0]["value"] . '</div>'; ?>
-		</div>
-	</div>
+		
 	
 	<?php
 		if($showContact) 

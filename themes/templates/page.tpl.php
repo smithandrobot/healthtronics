@@ -206,29 +206,34 @@
 			<div class="row">
 				<div class="span12">
 					<div class="row">
+						<?php if( $page['sidebar_left'] || $page['pull_quote'] ): ?>
 						<div class="span3">
 							<div id="sidebar-left">
-								<?php if( $page['sidebar_left'] ){
-									print render($page['sidebar_left']);
-									}
-								?>
-								<?php if( $page['pull_quote']): ?>
+								<?php print render($page['sidebar_left']); ?>
+								<?php if( $page['pull_quote'] ): ?>
 								<div id="sub-page-pull-quote">
 									<?php print render($page['pull_quote']);?>
 								</div>
-								<?php endif ?>
+								<?php endif; ?>
 							</div>
 						</div>
-						<div class="span6">
+						<?php endif; ?>
+						<?php if( $page['sidebar_left'] || $page['pull_quote'] ): ?>
+						<div id="subpage-span6-resize" class="span6">
+						<?php elseif ( !$page['sidebar_left'] && !$page['pull_quote'] ): ?>
+						<div id="subpage-span9-resize" class="span9">
+						<?php endif; ?>
 							<div id="subpage-body-copy">
 								<?php print render($page['content']); ?>
 							</div>
 						</div>
-						<div class="span3">
+						<?php if( $page['sidebar_right'] ): // this isn't actually working '?>
+						<div class="span3 subpage-span3-resize">
 							<div id="subpage-right-sidebar">
 								<?php print render($page['sidebar_right']); ?>
 							</div>
 						</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
@@ -555,6 +560,11 @@
 			$("#email-mol-bottom-resize").removeClass("span5").removeClass("offset1").addClass("span6");
 			$("#email-field-bottom").css("width", 247);
 			
+			// subpage
+			// ----------------------------------
+			$("#subpage-span6-resize").removeClass("span6").addClass("span9");
+			$(".subpage-span3-resize").removeClass("span3").addClass("span12");
+			
 			// trigger dotdotdot
 			// ----------------------------------
 			$(".small-molecule h1").trigger("update");
@@ -585,6 +595,11 @@
 			
 			$("#email-mol-bottom-resize").removeClass("span6").addClass("offset1").addClass("span5");
 			$("#email-field-bottom").css("width", 285);
+			
+			// subpage
+			// ----------------------------------
+			$("#subpage-span6-resize").removeClass("span9").addClass("span6");
+			$(".subpage-span3-resize").removeClass("span12").addClass("span3");
 			
 			// trigger dotdotdot
 			// ----------------------------------
