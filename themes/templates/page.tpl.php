@@ -334,28 +334,26 @@
 
 <!-- news view render -->
 <?php if(!$contentRendered): ?>
-<?php if($view) : ?>
-	<?php $contentRendered = TRUE; ?>
-	<?php if($view->name=='news_listing'); ?>
-		<div id="grey-stripe">
-			<div class="inner">
-				<div class="container">
-					<div class="row">
-						<div class="news-header-resize span12">
-							<?php print render($page['content']); ?>
+	<?php if($view && $view->name=='news_listing') : ?>
+		<?php $contentRendered = TRUE; ?>
+			<div id="grey-stripe">
+				<div class="inner">
+					<div class="container">
+						<div class="row">
+							<div class="news-header-resize span12">
+								<?php print render($page['content']); ?>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	<?php endif ?>
+	<?php endif?>
 <?php endif?>
 
 <!-- Events view renderer -->
 <?php if(!$contentRendered): ?>
-<?php if($view) : ?>
+<?php if($view && $view->name=='recent_events') : ?>
 	<?php $contentRendered = TRUE; ?>
-	<?php if($view->name=='recent_events'); ?>
 		<div id="grey-stripe">
 			<div class="inner">
 				<div class="container">
@@ -365,6 +363,38 @@
 		</div>
 	<?php endif ?>
 <?php endif?>
+
+<!-- Resources subpage view renderer -->
+<?php if(!$contentRendered): ?>
+<?php if($view && $view->name == 'resources_physicians_section') : ?>
+	<?php $contentRendered = TRUE; ?>
+<div id="grey-stripe">
+	<div class="inner">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<div class="row">
+						<div class="span3">
+							<div id="sidebar-left">
+								<?php if( $page['sidebar_left'] ){
+									print render($page['sidebar_left']);
+									}
+								?>
+							</div>
+						</div>
+						<div class="span9">
+							<?php print render($page['content']); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<?php endif ?>
+<?php endif?>
+
+
 <!-- Default Render -->
 <?php if(!$contentRendered): ?>
 	<?php $contentRendered = TRUE; ?>

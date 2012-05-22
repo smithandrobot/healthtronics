@@ -77,18 +77,27 @@
  * @see template_process()
  */
 	$nodes = $node->field_bio_list['und'];
+	// sort the nodes by weight
+	function sortByOrder($a, $b) {
+	    return $a['node']->field_weight['und'][0]['value'] - $b['node']->field_weight['und'][0]['value'];
+	}
+	
+	usort($nodes, 'sortByOrder');
 ?>
 <?php if(isset($nodes)): ?>
 <h2><?php print $node->title; ?></h2>
 <?php foreach($nodes as $bio_node): ?>
 <div class="row">
-	<div class="span6">
+	<div class="span6 bio-listing-container">
 		<?php if( isset($bio_node['node']->field_bio_image['und'][0]['filename']) ):?>
 		<img src="<?php print '/sites/default/files/bio_images/' . $bio_node['node']->field_bio_image['und'][0]['filename'];?>">
 		<?php endif ?>
-		<h3><?php print $bio_node['node']->title; ?></h3>
-		<p class="job-title"><?php print $bio_node['node']->field_job_title['und'][0]['value']; ?></p>
-		<p><?php print $bio_node['node']->body['und'][0]['value']; ?><p>
+		<div class="name-title-container">		
+			<h3><?php print $bio_node['node']->title; ?></h3>
+			<p class="job-title"><?php print $bio_node['node']->field_job_title['und'][0]['value']; ?></p>
+		</div>
+		<?php print $bio_node['node']->body['und'][0]['value']; ?>
+		<!-- <?php var_dump($bio_node); ?> -->
 	</div>
 </div>
 <?php endforeach ?>

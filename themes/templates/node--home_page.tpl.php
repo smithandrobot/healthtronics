@@ -1,9 +1,88 @@
 <?php
+/**
+ * @file
+ * Default theme implementation to display a node.
+ *
+ * Available variables:
+ * - $title: the (sanitized) title of the node.
+ * - $content: An array of node items. Use render($content) to print them all,
+ *   or print a subset such as render($content['field_example']). Use
+ *   hide($content['field_example']) to temporarily suppress the printing of a
+ *   given element.
+ * - $user_picture: The node author's picture from user-picture.tpl.php.
+ * - $date: Formatted creation date. Preprocess functions can reformat it by
+ *   calling format_date() with the desired parameters on the $created variable.
+ * - $name: Themed username of node author output from theme_username().
+ * - $node_url: Direct url of the current node.
+ * - $display_submitted: Whether submission information should be displayed.
+ * - $submitted: Submission information created from $name and $date during
+ *   template_preprocess_node().
+ * - $classes: String of classes that can be used to style contextually through
+ *   CSS. It can be manipulated through the variable $classes_array from
+ *   preprocess functions. The default values can be one or more of the
+ *   following:
+ *   - node: The current template type, i.e., "theming hook".
+ *   - node-[type]: The current node type. For example, if the node is a
+ *     "Blog entry" it would result in "node-blog". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node-teaser: Nodes in teaser form.
+ *   - node-preview: Nodes in preview mode.
+ *   The following are controlled through the node publishing options.
+ *   - node-promoted: Nodes promoted to the front page.
+ *   - node-sticky: Nodes ordered above other non-sticky nodes in teaser
+ *     listings.
+ *   - node-unpublished: Unpublished nodes visible only to administrators.
+ * - $title_prefix (array): An array containing additional output populated by
+ *   modules, intended to be displayed in front of the main title tag that
+ *   appears in the template.
+ * - $title_suffix (array): An array containing additional output populated by
+ *   modules, intended to be displayed after the main title tag that appears in
+ *   the template.
+ *
+ * Other variables:
+ * - $node: Full node object. Contains data that may not be safe.
+ * - $type: Node type, i.e. story, page, blog, etc.
+ * - $comment_count: Number of comments attached to the node.
+ * - $uid: User ID of the node author.
+ * - $created: Time the node was published formatted in Unix timestamp.
+ * - $classes_array: Array of html class attribute values. It is flattened
+ *   into a string within the variable $classes.
+ * - $zebra: Outputs either "even" or "odd". Useful for zebra striping in
+ *   teaser listings.
+ * - $id: Position of the node. Increments each time it's output.
+ *
+ * Node status variables:
+ * - $view_mode: View mode, e.g. 'full', 'teaser'...
+ * - $teaser: Flag for the teaser state (shortcut for $view_mode == 'teaser').
+ * - $page: Flag for the full page state.
+ * - $promote: Flag for front page promotion state.
+ * - $sticky: Flags for sticky post setting.
+ * - $status: Flag for published status.
+ * - $comment: State of comment settings for the node.
+ * - $readmore: Flags true if the teaser content of the node cannot hold the
+ *   main body content.
+ * - $is_front: Flags true when presented in the front page.
+ * - $logged_in: Flags true when the current user is a logged-in member.
+ * - $is_admin: Flags true when the current user is an administrator.
+ *
+ * Field variables: for each field instance attached to the node a corresponding
+ * variable is defined, e.g. $node->body becomes $body. When needing to access
+ * a field's raw values, developers/themers are strongly encouraged to use these
+ * variables. Otherwise they will have to explicitly specify the desired field
+ * language, e.g. $node->body['en'], thus overriding any language negotiation
+ * rule that was previously applied.
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_node()
+ * @see template_process()
+ */
 	$most_recent_news_result = views_get_view_result('news_one_result','news_one_block');
 	$most_recent_events_result = views_get_view_result('events_home','news_two_result');
 	$upcoming_events = views_get_view_result('events_home_page_events_list', 'block');
 	$i = 0;
 	$class = array('date-color-orange', 'date-color-orangelight', 'date-color-yellow');
+	$large_molecule = $node->field_hero_banner['und'][0]['node'];
+	$info_graphics = $node->field_info_graphics['und'];
 ?>
 <div class="yellow-stripe">
 	<div class="inner">
@@ -19,13 +98,15 @@
 						<div class="row">
 							<div id="header-bg-h1-resize" class="span7">
 								<h1>
-									Working for urology professionals.<br/>Dedicated to great outcomes.
+									<?php print strip_tags($node->body['und'][0]['summary'], array('<br />')); ?>
+									<!-- Working for urology professionals.<br/>Dedicated to great outcomes. -->
 								</h1>
 							</div>
 							<div id="header-bg-p-resize" class="span5">
-								<p>
+								<?php print $node->body['und'][0]['value']; ?>
+								<!-- <p>
 									HealthTronics is the urology solutions company built by urologists. Like you, we’re working for better economics, better patient care and better outcomes. <a href="/our-company/overview">More about our company.</a>
-								</p>
+								</p> -->
 								<div class="share">
 									<a href="javascript: return false;" data-toggle="collapse" data-target="#share"><div class="image"></div></a>
 								</div>
@@ -61,23 +142,15 @@
 			<div class="row">
 				<div class="span12">
 					<div class="row">
-						<div id="large-mol-resize" class="span6">
-							<div class="large-molecule">
-								<a href="/our-story/totalcare">
-								<div class="large-molecule-copy">
-									<div class="inner">
-										<h1>Urologists call it top-to-bottom, worry-free service. We call it Total Care&trade;.</h1>
-										<p><a href="#">More about TotalCare&trade;.</a></p>
-										<div class="icon icon-00"></div>
-									</div>
-								</div>
-								</a>
-							</div>
-						</div>
+						
+						<!-- Start Large Molecule -->
+						<?php print  render( node_view( $large_molecule, 'full') ); ?> 
+						<!-- End Large Molecule -->
+						
 						<div id="small-mol-resize" class="span6">
 							<div id="small-mol-row" class="row">
 								<div class="small-mol-resize-c span3">
-									<a href="/lithotripsy/lithotripsy-overview">
+									<a href="physicians/lithotripsy/lithotripsy-overview">
 										<div class="small-molecule mol-border-orange large-font">
 											<div class="inner">
 												<h1>Lithotripsy</h1>
@@ -88,7 +161,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/laser-treatments/laser-treatment-overview">
+									<a href="physicians/laser-treatments/laser-treatment-overview">
 										<div class="small-molecule mol-border-green large-font">
 											<div class="inner">
 												<h1>Laser Treatments</h1>
@@ -99,7 +172,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/cryotherapy/cryotherapy-overview">
+									<a href="physicians/cryotherapy/cryotherapy-overview">
 										<div class="small-molecule mol-border-blue large-font">
 											<div class="inner">
 												<h1>Cryotherapy</h1>
@@ -110,7 +183,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/it-solutions/overview-it-solutions">
+									<a href="physicians/it-solutions/overview-it-solutions">
 										<div class="small-molecule mol-border-purple large-font">
 											<div class="inner">
 												<h1>IT Solutions</h1>
@@ -121,7 +194,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/lab-solutions/laboratory-solutions-overview">
+									<a href="physicians/lab-solutions/laboratory-solutions-overview">
 										<div class="small-molecule mol-border-yellow large-font">
 											<div class="inner">
 												<h1>Laboratory Solutions</h1>
@@ -132,7 +205,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/equipment-services/equipment-services-overview">
+									<a href="physicians/equipment-services/equipment-services-overview">
 										<div class="small-molecule mol-border-grey large-font">
 											<div class="inner">
 												<h1>Equipment Services</h1>
@@ -161,7 +234,7 @@
 								<h1>Sign up to receive email alerts.</h1>
 								<p>Your address will stay private. Unsubscribe any time.</p>
 								<form class="form-inline">
-									<input id="email-field-top" type="text" class="email-field" style="width: 310px;" placeholder="Enter Your email address"><button type="submit" class="submit-btn">submit</button>
+									<input id="email-field-top" type="text" class="email-field" style="width: 310px;" value="Enter Your email address" onblur="if (this.value == '') {this.value = 'Enter Your email address';}" onfocus="if (this.value == 'Enter Your email address') {this.value = '';}"><button type="submit" class="submit-btn">submit</button>
 								</form>
 							</div>
 						</div>
@@ -170,8 +243,6 @@
 			</div>
 		</div>
 		<!-- /news-molecules -->
-		
-		
 		<div class="container">
 			<div class="row stats-events-molecules" >
 				<div id="stats-mol-resize" class="span6">
@@ -180,30 +251,20 @@
 							<h1>Stats</h1>
 							<div class="more-link"><a href="/our-company/our-story/overview">More Company Info <div class="arrow icon-06"></div></a></div>
 						</div>
+						
+						<?php if(count($node->field_info_graphics) > 0): ?>
+						<!-- Carousel -->
 						<div id="carousel" class="carousel carousel-top-margin mol-border-white">
-							<div class="carousel-inner">
-								<div class="item">
-									<div class="stat">
-										<h1 class="color-purple">12</h1>
-										<p>average years experience for a HealthTronics technician</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="stat">
-										<h1 class="color-orange">100+</h1>
-										<p>HealthTronics-managed lithotripters in the United States</p>
-									</div>
-								</div>
-								<div class="item active">
-									<div class="stat">
-										<h1 class="color-green">50,000+</h1>
-										<p>lithotripsy procedures performed in 2011</p>
-									</div>
-								</div>
-							</div>
-							<a class="left carousel-control" href="#carousel" data-slide="prev"></a>
-							<a class="right carousel-control" href="#carousel" data-slide="next"></a>
+					   		<div class="carousel-inner">
+								<?php foreach($info_graphics as $info_graphic): ?>
+									<?php print render( node_view($info_graphic['node'], 'teaser') ); ?>
+								<?php endforeach ?>
+					   		</div>
+					   		<a class="left carousel-control" href="#carousel" data-slide="prev"></a>
+					   		<a class="right carousel-control" href="#carousel" data-slide="next"></a>
 						</div>
+						<!-- /Carousel -->
+						<?php endif ?>
 					</div>
 				</div>
 				<div id="events-mol-resize" class="span6">

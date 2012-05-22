@@ -23,7 +23,7 @@
 ?>
 <?php if ($search_results): ?>
 <div class="news-header clearfix">
-	<h1>Search Results</h1>
+	<h1>&nbsp;</h1>
 </div>
 <div class="row">
 	<div class="span12">
@@ -36,6 +36,6 @@
 </div>
   <?php print $pager; ?>
 <?php else : ?>
-  <h2><?php print t('We couldn\t find anything that matched your term');?></h2>
+  <h2><?php print t('We couldn\'t find anything that matched your term');?></h2>
   <?php // print search_help('search#noresults', drupal_help_arg()); ?>
 <?php endif; ?>

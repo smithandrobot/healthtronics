@@ -4138,7 +4138,7 @@ ul.menu li {
   color: #707272;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 17px;
-  line-height: 22px;
+  line-height: 1.1em;
   font-weight: 100;
   letter-spacing: 1px;
 }
@@ -4151,9 +4151,8 @@ ul.menu li {
 .header-bg .share {
   position: relative;
 }
-.sub-page-header {
-  /*    height:110px;*/
-
+.sub-page-header h1 {
+  line-height: 1.2em;
 }
 .header-bg .share .image,
 .sub-page.share .image {
@@ -5346,6 +5345,16 @@ ul.menu li {
   line-height: 128px;
   text-align: center;
 }
+#subpage-body-copy #title.find-a-md-title {
+  padding: 0;
+}
+#subpage-body-copy #find-a-physician-result-summary {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 19px;
+  margin-bottom: 30px;
+  font-weight: lighter;
+  color: #707272;
+}
 #contact-site-form input,
 #contact-site-form select,
 #contact-site-form textarea {
@@ -5401,6 +5410,28 @@ ul.menu li {
 .form-item textarea.error,
 .form-item select.error {
   border: 2px solid #e87722;
+}
+.bio-listing-container {
+  /*    margin-bottom: 30px;*/
+
+  border-bottom: 5px white solid;
+  padding: 30px 0 20px 0;
+}
+.bio-listing-container p {
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: lighter;
+}
+.bio-listing-container h3 {
+  font-size: 23px;
+  line-height: 1em;
+}
+.bio-listing-container img {
+  float: left;
+  padding: 0 10px 5px 0;
+}
+.bio-listing-container name-title-container {
+  display: inline-block;
 }
 .nav {
   margin-bottom: 0;

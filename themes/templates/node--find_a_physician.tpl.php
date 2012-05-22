@@ -76,13 +76,16 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
-	if($_POST)
+	$submitted = FALSE;
+	
+	if($_POST['zip'])
 	{
 		$action = 'http://labs.healthtronics.com/physicianfinder/physicianfinder.asmx/PhysicianFinder';
 		$type = $_POST['physician_type'];
 		$zip  = $_POST['zip'];
 		$formVars = "zipcode=". $zip ."&results=3&condition=" . $type;
 		$handle = curl_init($action);
+		$submitted = TRUE;
 		
 		curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($handle, CURLOPT_POST, TRUE);
@@ -97,63 +100,57 @@
 			$json 	 = json_decode($doc);
 			$success = TRUE;
 		}catch(Exception $e){
-			$success = FALSE;
+			$error = TRUE;
 			$errorMessage = 'Caught exception: ' . $e->getMessage();
 		}
 		curl_close($handle);
+		$total = count($json);
+	}else{
+		$no_search_yet = TRUE;
 	}
-
-	// { "Physician": "James C. Vestal, M.D.", 
-	// "Address": "801 West I-20 Suite 1", 
-	// "City": "Arlington", 
-	// "State": "TX ", 
-	// "Zip": "76017", 
-	// "Country": "US ", 
-	// "EmailAddress": "cvestal@uant.com", 
-	// "Website": "www.uant.com", 
-	// "Phone": "817-784-0818", 
-	// "cmp_code": "3768001", 
-	// "Latitude": 32.65540, 
-	// "Longitude": -97.15990, 
-	// "condition": "KidneyCancer_YN", 
-	// "Distance": "163.2 miles"
-	// }
 ?>
 
-<h2 id="title">Find a Healthtronics Affliated Physician</h2>
-<div id="find-a-physician-result-summary"><?php print count($json); ?> Healthrtonic Physicians found near you.</div>
-
-
+<h2 id="title" class="find-a-md-title">Find a Healthtronics Affliated Physician</h2>
+<?php if ($success && $total > 0) :?>
+<div id="find-a-physician-result-summary"><?php print count($json); ?> Healthtronics Physicians found near you.</div>
 <!-- Body  -->
 <div class="find-a-md-result-container">
-	<?php if ($success) :?>
-		<?php foreach($json as $physician):?>
-			<?php
-			 	$address = $physician->Address;
-				$city = $physician->City;
-				$state = $physician->State;
-				$zip = $physician->Zip;
-				$addressString = $address.', '.$city.', '.$state.''.$zip;
-			?>
-			<div class="row">
-				<div data-location="<?php print $addressString; ?>" class="map find-a-md-map span3">
-					Loading Map...
-				</div>
-				<div class="find-a-md-result span6">
-					<h3><?php print $physician->Physician; ?></h3>
-					<p class="address">
-						<?php print $addressString ?><br />
-						<?php print $physician->Phone; ?><br />
-						<a href="http://maps.google.com/maps?q=<?php print $addressString; ?>" class="map-link">Map it.</a>
-					</p>
-				</div>
+	<?php foreach($json as $physician):?>
+		<?php
+		 	$address = $physician->Address;
+			$city = $physician->City;
+			$state = $physician->State;
+			$zip = $physician->Zip;
+			$addressString = $address.', '.$city.', '.$state.''.$zip;
+		?>
+		<div class="row">
+			<div data-location="<?php print $addressString; ?>" class="map find-a-md-map span3">
+				Loading Map...
 			</div>
-		<?php endforeach ?>
-	<?php endif?>
-	<?php if(!$success) :?>
-		<h3>Error</h3>
-		<p class="address"><?php print $errorMessage; ?></p>
-	<?php endif?>
+			<div class="find-a-md-result span6">
+				<h3><?php print $physician->Physician; ?></h3>
+				<p class="address">
+					<?php print $addressString ?><br />
+					<?php print $physician->Phone; ?><br />
+					<a href="http://maps.google.com/maps?q=<?php print $addressString; ?>" class="map-link">Map it.</a>
+				</p>
+			</div>
+		</div>
+	<?php endforeach ?>
+<?php elseif($submitted && $total < 1): ?>
+	<div id="find-a-physician-result-summary">Sorry, we couldn't find any doctors that matched your zipcode.</div>
+<?php endif ?>
+
+ <?php if($error) :?>
+ 	<h3>Error</h3>
+ 	<p class="address"><?php print $errorMessage; ?></p>
+ <?php else: ?>
+ 	<h3>Welcome to the physician finder.</h3>
+	<div id="find-a-physician-result-summary">
+		HealthTronics helps physicians provide better care for you. Use the short form on the left to locate the HealthTronics affiliated physician closest to you.
+	</div>
+ <?php endif?>
+
 </div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="/sites/all/themes/healthtronicsv2/js/event_map/map.js"></script>

@@ -23,22 +23,23 @@ function healthtronicsv2_contact_form_block_view($delta = '') {
  // print 'delta: '.$delta;
   switch ($delta) {
         case 'contact_block_form':
-            // Load contact pages inc as the form definition sits there.
+            // Load contact pages inc where the form definition is.
             module_load_include('inc', 'contact', 'contact.pages');
             $contact_form = drupal_get_form('contact_site_form');
-            $block['content'] = $contact_form;//drupal_get_form('contact_site_form');
+            $block['content'] = $contact_form;
             break;
   }
   return $block;
 }
 
+// Site Contact Form altered here.
+// Used in a block on all pages.
 function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id)
 {
     $node = node_load(arg(1));
     
     if( $form_id == 'contact_site_form')
     {   
-        //var_dump($form);
         unset($form['name']);
         unset($form['copy']);
         unset($form['subject']);
@@ -59,33 +60,54 @@ function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id)
             '#type' => 'textfield',
             '#size' => 30,
             '#weight' => -2,
-            //'#attributes'=array('onblur' => 'if (this.value \=\= "") {this.value \="Type in your zipcode";}'),
+            // 'onfocus' => "if (this.value == 'Enter Search') {this.value = '';}"
+            '#attributes'=>array(
+                'onblur' => 'if (this.value == "") {this.value = "First Name";}',
+                'onfocus' => 'if (this.value == "First Name") {this.value = "";}'
+                ),
             '#title' => 'First Name' ,
             '#title_display' => 'invisible',
             '#default_value' => t('First Name'),
             '#required' => TRUE);
-            
+     
         $form['last_name'] = array(
             '#type' => 'textfield',
             '#size' => 30,
             '#weight' => -1,
+            '#attributes'=>array(
+                'onblur' => 'if (this.value == "") {this.value = "Last Name";}',
+                'onfocus' => 'if (this.value == "Last Name") {this.value = "";}'
+                ),
             '#title' => 'Last Name' ,
             '#title_display' => 'invisible',
             '#default_value' => t('Last Name'),
             '#attributes' => array('class="clearfix"'),
             '#required' => TRUE);
-
-       $form['actions']['submit']['#id'] = 'edit-submit';
-       $form["#validate"][]='healthtronicsv2_contact_form_form_validate';
-       if(isset($node))
-       {
-           map_taxonomy_to_select($form, $node->field_site_section['und'][0]['taxonomy_term']->name);
-       }
-       return $form;
+            
+        $form['mail']['#attributes'] = array(
+                'onblur' => 'if (this.value == "") {this.value = "Email Address";}',
+                'onfocus' => 'if (this.value == "Email Address") {this.value = "";}'
+                );
+                
+        $form['message']['#attributes'] = array(
+                'onblur' => 'if (this.value == "") {this.value = "Message (optional)";}',
+                'onfocus' => 'if (this.value == "Message (optional)") {this.value = "";}'
+                );
+                
+        $form['actions']['submit']['#id'] = 'edit-submit';
+        $form["#validate"][]='healthtronicsv2_contact_form_form_validate';
+        
+        // autoselect the form select option based on the pages site category
+        if(isset($node))
+        {
+            map_taxonomy_to_select($form, $node->field_site_section['und'][0]['taxonomy_term']->name);
+        }
+        
+        return $form;
     }
 }
 
-
+// Custom contact form validation - since we have added a few fields.
 function healthtronicsv2_contact_form_form_validate($form, &$form_state) {
   if (!$form_state['values']['first_name'] || $form_state['values']['first_name'] == $form['first_name']['#default_value'] ) 
   {
@@ -100,46 +122,42 @@ function healthtronicsv2_contact_form_form_validate($form, &$form_state) {
   }
 }
 
+// loop through options and set the default select index
 function map_taxonomy_to_select(&$form, $name)
 {
     $map   = get_option_map();
-    $count = 1;
-    
-    foreach($form['cid']['#options'] as $option)
+    foreach($form['cid']['#options'] as $key => $option)
     {
         if($map[$name] == $option)
         {
-           $form['cid']["#default_value"] = $count;
-           //print('<br />found select at index: ' . $count);
-           break;
-        }else{
-            //print '<br />No match - \'' . $option . '\' != \'' . $map[$name] . '\' at index ' . $count;
-        }
         
-        ++$count;
+           $form['cid']["#default_value"] = $key;
+           return;
+        }
     }
+    
 }
-//Website feedback, Software Request
+
+/**
+ * Map for auto selecting the dropdown on the contact form
+ * The array key here is the taxonomy value, the value is the option string in the contact form
+ * Option Stringsd in the contact form can be edted at /admin/structure/contact
+ */ 
+
 function get_option_map()
 { 
     return array(
-        'Resources'=> 'Website  feedback',
-        'Patients'=> 'Software Request',
-        'Prostate'=> 'Software Request',
+        'Our Company'=> 'Contact Us',
+        'Lithotripsy'=> 'Lithotripsy',
         'Why Healthtronics'=> 'Software Request',
-        'Our Company'=> 'Website  feedback',
-        'News'=> 'Software Request',
-        'Events'=> 'Software Request',
-        'Facilities'=> 'Software Request',
-        'Equipment Services'=> 'Software Request',
-        'Cryotherapy'=> 'Software Request',
+        'Facilities'=> 'Facilities',
+        'What We Offer'=> 'Equipment Services',
+        'Cryotherapy'=> 'Cryotherapy',
         'Careers'=> 'Software Request',
-        'Laser Treatments'=> 'Software Request',
-        'Lithotripsy'=> 'Software Request',
+        'Laser Treatments'=> 'Laser Treatments',
         'Lab Solutions'=> 'Software Request',
-        'IT Solutions'=> 'Software Request',
-        'Investors'=> 'Software Request',
-        'Cancer'=> 'Software Request',
+        'IT Solutions'=> 'IT Solutions',
+        'Investors'=> 'Investors',
     );
 }
 

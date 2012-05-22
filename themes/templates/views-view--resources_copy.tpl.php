@@ -1,4 +1,6 @@
-<?php ?>
+<?php
+//print render(module_invoke( 'menu', 'block_view', 'menu-physicians-menu') );
+?>
 <div class="news-header clearfix">
 	<h1>Resources</h1>
 </div>

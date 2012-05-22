@@ -56,40 +56,30 @@
 <?php endif ?>
 
 <?php if($view_mode=="full"): ?>
-
-						<div class="span3">
-							<a id="back-button" href="/our-company/news/all">Back to News</a>
-							<!--  -->
-							<?php if(!empty($node->field_pull_quote['und'][0]['value'])): ?>
-							<div id="sub-page-pull-quote">
-							    <p class="quote orange">“Very cool marketing quote.”</p>
-								<p class="citation">—Dr. Urology Austin</p>
-							</div>
-							<?php endif ?>
-							<!--  -->
-						</div>
-						<div id="event-detail-content" class="span6">
-							<div id="date-title-container" class="clearfix">
-								<div id="date-square">
-									<span class="month"><?php print date('M', $node->field_news_date['und'][0]['value']); ?></span>
-									<span class="day"><?php print date('j', $node->field_news_date['und'][0]['value']); ?></span>
-								</div>
-								<h2><?php print $node->title; ?></h2>
-							</div>
-							<p class="subpage-body-summary">
-								<?php print $node->body['und'][0]['summary']; ?>
-							</p>
-							<div id="event-detail-body">
-								<?php print $node->body['und'][0]['value']; ?>
-							</div>
-						</div>
-						<div id="subpage-right-sidebar" class="span3">
-							<p>Right Sidebar</p>
-						</div>
-					</div>
-				</div>
+	<div class="span3">
+		<a id="back-button" href="/our-company/news/all">Back to News</a>
+		<!--  -->
+		<?php if(!empty($node->field_pull_quote['und'][0]['value'])): ?>
+		<div id="sub-page-pull-quote">
+		    <p class="quote orange">“Very cool marketing quote.”</p>
+			<p class="citation">—Dr. Urology Austin</p>
+		</div>
+		<?php endif ?>
+		<!--  -->
+	</div>
+	<div id="event-detail-content" class="span6">
+		<div id="date-title-container" class="clearfix">
+			<div id="date-square">
+				<span class="month"><?php print date('M', $node->field_news_date['und'][0]['value']); ?></span>
+				<span class="day"><?php print date('j', $node->field_news_date['und'][0]['value']); ?></span>
 			</div>
+			<h2><?php print $node->title; ?></h2>
+		</div>
+		<p class="subpage-body-summary">
+			<?php print $node->body['und'][0]['summary']; ?>
+		</p>
+		<div id="event-detail-body">
+			<?php print $node->body['und'][0]['value']; ?>
 		</div>
 	</div>
-</div>
 <?php endif?>

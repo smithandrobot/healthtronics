@@ -1,13 +1,19 @@
+<?php
+	$colors = array('color-purple', 
+					'color-orange',
+					'color-green',
+					'color-orangelight',
+					'color-blue',
+					'color-yellow',
+					'color-grey'
+					);	
+	$index = rand(0, count($colors)-1);
+?>
 <?php if($teaser): ?>
-<div class="span3 small-mol-resize-c">
-	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
-		<div class="small-molecule mol-border-yellow">
-			<div class="inner">
-				<h1><?php print $node->title; ?></h1>
-				<p><?php print $node->field_sub_page_summary_title['und'][0]["value"]; ?></p>
-				<div class="icon icon-00"></div>
-			</div>
-		</div>
-	</a>
+<div class="item">
+	<div class="stat">
+		<h1 class="<?php print $colors[$index]; ?>"><?php print $node->field_info_graphic_statistic['und'][0]['value']; ?></h1>
+		<p><?php print $node->title; ?></p>
+	</div>
 </div>
 <?php endif?>

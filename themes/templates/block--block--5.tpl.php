@@ -43,13 +43,14 @@
  */
 	$node = menu_get_object();
 	$nodes = array();
-	
+	//var_dump(variable_get('multiselector', array('fulltext','title', '4', '8')));
 	if(isset($node))
 	{
 		if($node && $node->nid )
 		{
 			if(isset($node->field_related_items['und'])){
 				$nodes = $node->field_related_items['und'];
+				//var_dump($nodes);
 			}
 		}
 	}

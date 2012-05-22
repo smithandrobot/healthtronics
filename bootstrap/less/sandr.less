@@ -131,7 +131,7 @@ ul.menu li
 	color: @greyDark;
 	font-family: @altFontFamily;
 	font-size: 17px;
-	line-height: 22px;
+	line-height: 1.1em;
 	font-weight: 100;
 	letter-spacing: 1px;
 }
@@ -150,9 +150,9 @@ ul.menu li
 {
 	position: relative;
 }
-.sub-page-header
+.sub-page-header h1
 {
-/*    height:110px;*/
+    line-height:1.2em;
 }
 
 .header-bg .share .image,
@@ -1880,7 +1880,19 @@ ul.menu li
     line-height: 128px;
     text-align: center;
 }
+#subpage-body-copy #title.find-a-md-title
+{
+    padding:0;
+}
 
+#subpage-body-copy #find-a-physician-result-summary
+{
+    font-family:@altFontFamily;
+    font-size:19px;
+    margin-bottom: 30px;
+    font-weight: lighter;
+    color:@greyDark;
+}
 // Contact Site Form (Override Drupal Styles)
 // ------------------------------------------------------------------
 #contact-site-form input, 
@@ -1943,6 +1955,36 @@ ul.menu li
 
 .form-item input.error, .form-item textarea.error, .form-item select.error {
     border: 2px solid @orange;
+}
+
+// Bio Page
+// ------------------------------------------------------------------
+.bio-listing-container
+{
+/*    margin-bottom: 30px;*/
+    border-bottom: 5px white solid;
+    padding:30px 0 20px 0;
+}
+
+.bio-listing-container p
+{
+    font-size:14px;
+    font-family:@altFontFamily;
+    font-weight: lighter;
+}
+.bio-listing-container h3
+{
+    font-size:23px;
+    line-height:1em;
+}
+.bio-listing-container img
+{
+    float: left;
+    padding: 0 10px 5px 0;
+}
+.bio-listing-container name-title-container
+{
+    display: inline-block;
 }
 // Overrides
 // ------------------------------------------------------------------
