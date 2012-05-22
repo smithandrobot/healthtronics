@@ -41,8 +41,16 @@
  * @see template_preprocess_block()
  * @see template_process()
  */
+	$section = explode('/', $_SERVER['REQUEST_URI']);
+	$show_headline = strpos($_SERVER['REQUEST_URI'], 'find-an-md') === FALSE;
+	
+	
+	//print('show headline' . $show_headline);
 ?>
 <div id="find-physician-form">
+	<?php if($show_headline): ?>
+	<h2>Find an M.D.</h2>
+	<?php endif ?>
 <form action="/patients/find-an-md/search" method="post">
 	<select name="physician_type">		
 	  <option value="BPH_YN">Enlarged Prostate</option>
