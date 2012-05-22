@@ -280,7 +280,7 @@
    							<div class="row">
    								<div class="span3">
    									<div id="sidebar-left">
-										&nbsp;
+   										<?php print render($page['sidebar_right']);?>
    									</div>
    								</div>
    								<div class="span9">

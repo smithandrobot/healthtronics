@@ -6,7 +6,7 @@
 	$replacements = array('-', '_');
 	$section = strtolower(str_replace($replacements, " ", $section));
 	$section = ucwords(strtolower($section));
-	if($section === 'It Solutions') $section = 'IT Solution&rsquo;s';
+	if($section === 'It Solutions') $section = 'IT Solutions';
 	if($section === 'Equipment Services') $section = 'Equipment Services&rsquo;';
 	
 	switch($sectionURI[2])
@@ -35,7 +35,7 @@
 
 <div id="filter-header-resize" class="span9">
 	<div class="filter-header clearfix">
-		<h1><?php print  $section; ?> Resources</h1>
+		<h1>Resources</h1>
 		<?php if($menu): ?>
 		<p id="filter-label">SHOW:</p><?php print render(module_invoke( 'menu', 'block_view', $menu) ); ?>
 		<?php endif ?>
