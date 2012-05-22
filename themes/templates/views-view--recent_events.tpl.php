@@ -88,23 +88,14 @@
 			<?php if ($rows)
 			{
 				print $rows;
+			} else {
+					print '<h3 class="span6">No results found</h3>';
 			}
 			?>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="row">
-	<div class="news-molecules-nav clearfix">
-		<div class="span6">
-			<div class="prev">
-				<a href="#">Previous</a>
-			</div>
-		</div>
-		<div class="span6">
-			<div class="next">
-				<a href="#">Next</a>
-			</div>
-		</div>
-	</div>
-</div>
+<?php
+	print theme('pager');
+?>
