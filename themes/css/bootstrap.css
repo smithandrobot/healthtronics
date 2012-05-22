@@ -3916,7 +3916,7 @@ a.thumbnail:hover {
 .carousel-inner {
   overflow: hidden;
   width: 100%;
-  height: 150px;
+  height: 170px;
   position: relative;
 }
 .carousel .item {
@@ -4381,10 +4381,6 @@ ul.menu li {
 .small-molecule.large-font p {
   height: 60px;
 }
-.news-molecules {
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
 .news-molecule,
 .email-molecule {
   position: relative;
@@ -4471,12 +4467,9 @@ ul.menu li {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 12px;
 }
-.stats-events-molecules {
-  margin-bottom: 30px;
-}
 .stats-molecule,
-.email-molecule {
-  margin-bottom: 10px;
+.events-molecule {
+  margin-bottom: 30px;
 }
 .stats-molecule .header,
 .events-molecule .header {
@@ -4686,7 +4679,6 @@ ul.menu li {
 }
 #footer {
   background-color: #ffffff;
-  margin-top: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
   width: 100%;
@@ -5125,7 +5117,7 @@ ul.menu li {
 }
 .news-molecules-container {
   border-bottom: 5px solid #ffffff;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .news-molecules-nav {
   list-style: none;
@@ -5459,6 +5451,7 @@ a:hover {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
+  -webkit-appearance: none;
 }
 input,
 textarea,
