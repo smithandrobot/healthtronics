@@ -4992,16 +4992,19 @@ ul.menu li {
   margin-right: 10px;
   float: left;
 }
-.filter-header ul li.first {
-  display: block;
-  padding: 5px 0px 5px 0px;
+.filter-header p#filter-label {
+  padding: 12px 0px 5px 0px;
+  float: left;
+  color: #707272;
+  font-size: 16px;
+  margin-right: 10px;
 }
 .filter-header ul li a {
   display: block;
   padding: 5px 10px 5px 10px;
 }
 .filter-header ul li a:hover,
-.filter-header ul li a:active {
+.filter-header ul li a.active {
   background-color: #ffffff;
 }
 .events-header {

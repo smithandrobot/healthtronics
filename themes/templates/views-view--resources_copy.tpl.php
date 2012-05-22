@@ -1,5 +1,4 @@
 <?php
-//print render(module_invoke( 'menu', 'block_view', 'menu-physicians-menu') );
 ?>
 <div class="news-header clearfix">
 	<h1>Resources</h1>
@@ -8,11 +7,12 @@
 	<div class="span12">
 		<div class="news-molecules-container clearfix">
 			<div class="row">
-			<?php if ($rows)
-			{
-				print $rows;
-			}
-			?>
+			<?php if ($rows): ?>
+				<?php print 'Rows'; ?>
+				<?php print $rows; ?>
+			<?php else: ?>
+				<p>Sorry, we couldn't find any resources that matched you filter.</p>
+			<?php endif?>
 			</div>
 		</div>
 	</div>
