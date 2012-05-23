@@ -70,14 +70,14 @@
 <div class="row">
 	<div class="span12">
 		<div class="news-filter clearfix">
-			<ul>
+			<!-- <ul>
 				<li class="first">SHOW:</li>
 				<li><a href="#">All</a></li>
 				<li><a href="#">Urology</a></li>
 				<li><a href="#">Lithotripsy</a></li>
 				<li><a href="#">Technology</a></li>
 				<li><a href="#">Treatment</a></li>
-			</ul>
+			</ul> -->
 		</div>
 	</div>
 </div>

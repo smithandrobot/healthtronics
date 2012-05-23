@@ -8,7 +8,6 @@
 		<div class="news-molecules-container clearfix">
 			<div class="row">
 			<?php if ($rows): ?>
-				<?php print 'Rows'; ?>
 				<?php print $rows; ?>
 			<?php else: ?>
 				<p>Sorry, we couldn't find any resources that matched you filter.</p>

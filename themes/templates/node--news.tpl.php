@@ -1,11 +1,8 @@
 <?php
-	$block 			= block_load('block', 2);
-	$output 		= drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
 	$time 			= date('M j, Y', $node->field_news_date['und'][0]['value']);
 	$month 			= date('M', $node->field_news_date['und'][0]['value']);
 	$day 			= date('j', $node->field_news_date['und'][0]['value']);
 	$year 			= date('Y', $node->field_news_date['und'][0]['value']);
-	print $output;
 ?>
 <?php if($teaser): ?>
 <div class="span3 small-mol-resize-c">

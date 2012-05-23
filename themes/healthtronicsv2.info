@@ -13,6 +13,7 @@ scripts[] = js/jquery.dotdotdot-1.4.0-packed.js
 scripts[] = js/jquery.fitvids.js
 scripts[] = js/accordion.js
 scripts[] = js/videomodal.js
+scripts[] = js/c_monitor.js
 
 regions[sidebar_left] = Sidebar Left
 regions[sidebar_right] = Sidebar Right

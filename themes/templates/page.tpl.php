@@ -441,13 +441,16 @@
 						<div class="inner clearfix">
 							<img src="<?php print '/' . path_to_theme() . '/images/symbol_footer_at.png'?>" class="at">
 							<div class="content">
-								<h1>Sign up to receive email alerts.</h1>
-								<p>Your address will stay private. Unsubscribe any time.</p>
+								<h1 class="email-footer-header">Sign up to receive email alerts.</h1>
+								<p class="email-footer-details">Your address will stay private. Unsubscribe any time.</p>
 							</div>
-							<form class="form-inline">
-								<input id="email-field-bottom" type="text" class="email-field" style="width: 285px;" placeholder="Enter Your email address"><button type="submit" class="submit-btn">submit</button>
+							<form id="footer-email-signup" class="form-inline" action="http://healthtronicsemail.createsend.com/t/j/s/eujkk/" >
+								<input name="cm-eujkk-eujkk" id="email-field-bottom" type="text" class="email-field" style="width: 285px;" placeholder="Enter Your email address"><button id="footer-email-btn" type="submit" class="submit-btn">submit</button>
 							</form>
 						</div>
+						<script type="text/javascript" charset="utf-8">
+							var cFooter=new CMonitorForm('#footer-email-signup', '#footer-email-btn', '#email-field-bottom', '.email-footer-header', '.email-footer-details');
+						</script>
 						<div class="logos clearfix">
 							<a href="http://www.endo.com/"><img src="<?php print '/' . path_to_theme() . '/images/logo_bottom_endo.png'; ?>" class="endo"></a>
 							<a href="http://www.visitams.com/"><img src="<?php print '/' . path_to_theme() . '/images/logo_bottom_ams.png'; ?>" class="ams"></a>
