@@ -234,7 +234,7 @@
 								<h1>Sign up to receive email alerts.</h1>
 								<p>Your address will stay private. Unsubscribe any time.</p>
 								<form class="form-inline">
-									<input id="email-field-top" type="text" class="email-field" style="width: 310px;" value="Enter Your email address" onblur="if (this.value == '') {this.value = 'Enter Your email address';}" onfocus="if (this.value == 'Enter Your email address') {this.value = '';}"><button type="submit" class="submit-btn">submit</button>
+									<input id="email-field-top" type="text" class="email-field" value="Enter Your email address" onblur="if (this.value == '') {this.value = 'Enter Your email address';}" onfocus="if (this.value == 'Enter Your email address') {this.value = '';}"><button type="submit" class="submit-btn">submit</button>
 								</form>
 							</div>
 						</div>

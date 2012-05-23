@@ -553,7 +553,6 @@
 			
 			$(".small-mol-resize-c").removeClass("span3").addClass("span6");
 			
-			$("#email-field-top").css("width", 247);
 			
 			$("#email-mol-bottom-resize").removeClass("span5").removeClass("offset1").addClass("span6");
 			$("#email-field-bottom").css("width", 247);
@@ -588,9 +587,7 @@
 			$("#events-mol-resize").removeClass("span12").addClass("span6");
 			
 			$(".small-mol-resize-c").removeClass("span6").addClass("span3");
-			
-			$("#email-field-top").css("width", 310);
-			
+						
 			$("#email-mol-bottom-resize").removeClass("span6").addClass("offset1").addClass("span5");
 			$("#email-field-bottom").css("width", 285);
 			

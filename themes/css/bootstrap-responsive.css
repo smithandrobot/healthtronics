@@ -160,6 +160,12 @@
   #footer .footer-links {
     margin-bottom: 20px;
   }
+  #footer .footer-ul {
+    margin-bottom: 10px;
+  }
+  #footer .footer-links .desc {
+    margin-bottom: 0px;
+  }
   #footer .footer-ul .desc {
     font-size: 13px;
     line-height: 22px;
@@ -522,7 +528,9 @@
   }
 }
 @media (min-width: 980px) {
-  
+  #email-field-top {
+    width: 310px;
+  }
 }
 @media (min-width: 768px) and (max-width: 979px) {
   .header-bg h1 {
@@ -538,6 +546,9 @@
     position: absolute;
     bottom: 0;
     left: 300px;
+  }
+  #email-field-top {
+    width: 247px;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
@@ -668,6 +679,9 @@
     display: block;
     width: auto;
     margin: 0px;
+  }
+  #email-field-top {
+    width: 230px;
   }
 }
 /*
