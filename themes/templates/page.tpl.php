@@ -79,33 +79,45 @@
 	
 ?>
 
-<!-- Header -->
-<div id="white-stripe">
+<!-- Header for tablet, desktop -->
+<div id="white-stripe" class="hidden-phone">
 	<div class="container">
 		<div class="row">
 	   		<div class="span12 page-top">
 	   	   		<a href="/"><img class="logo" src="<?php print '/' . path_to_theme() . '/images/logo_ht.png'; ?>"></a>
 	   	   		<div id="nav-primary-move" class="nav-primary">
-	   	   	  		<div class="accordion-menu-btn visible-phone">
-	   	   	  	   		<a href="#" data-toggle="collapse" data-target="#accordion2">menu</a>
-	   	   	  		</div>
-	   	   	  		<div class="hidden-phone">
-	   	   	  			<div class="contact">
-	   	   	  				<a href="/contact">contact us</a>
-	   	   	  			</div>
-	   	   	  			<div class="search">
-	   	   	  	   			<div class="input-append">
-								<?php print render($page['search_bar']); ?>
-	   	   	  	   			</div>
-	   	   	  			</div>
-				   		<?php print render($page['main_nav']); ?>
-	   	   	  		</div>
+					<div class="contact">
+						<a href="/contact">contact us</a>
+					</div>
+					<div class="search">
+						<div class="input-append">
+							<?php print render($page['search_bar']); ?>
+						</div>
+					</div>
+					<?php print render($page['main_nav']); ?>
 	   	   	  	</div>
 	   	   	</div>
 		</div>
 	</div>
 </div>
-<!-- /Header -->
+<!-- /Header for tablet, desktop -->
+
+<!-- Header for phone -->
+<div id="white-stripe" class="visible-phone">
+	<div class="container">
+		<div class="row">
+			<div class="span12 page-top">
+				<a href="/"><img class="logo" src="<?php print '/' . path_to_theme() . '/images/logo_ht.png'; ?>"></a>
+				<div class="nav-mobile">
+					<div class="accordion-menu-btn visible-phone">
+	   	   	  	   		<a href="#" data-toggle="collapse" data-target="#accordion2">menu</a>
+	   	   	  		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Header for phone -->
 
 
 <!-- Accordion for mobile menu -->
@@ -117,12 +129,12 @@
 		<div id="collapse1" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<ul class="accordion-menu-ul">
-					<li><a href="#">Lithotripsy</a></li>
-					<li><a href="#">Laser Treatment</a></li>
-					<li><a href="#">Cryotherapy</a></li>
-					<li><a href="#">IT Solutions</a></li>
-					<li><a href="#">Laboratory Solutions</a></li>
-					<li><a href="#">Equipment Services</a></li>
+					<li><a href="/physicians/lithotripsy/lithotripsy-overview">Lithotripsy</a></li>
+					<li><a href="/physicians/laser-treatments/laser-treatments-overview">Laser Treatment</a></li>
+					<li><a href="/physicians/cryotherapy/cryotherapy-overview">Cryotherapy</a></li>
+					<li><a href="/physicians/it-solutions/it-solutions-overview">IT Solutions</a></li>
+					<li><a href="/physicians/lab-solutions/laboratory-solutions-overview">Laboratory Solutions</a></li>
+					<li><a href="/physicians/equipment-services/equipment-services-overview">Equipment Services</a></li>
 				</ul>
 			</div>
 		</div>
@@ -134,11 +146,11 @@
 		<div id="collapse2" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<ul class="accordion-menu-ul">
-					<li><a href="#">What We Do</a></li>
-					<li><a href="#">For Cancer</a></li>
-					<li><a href="#">For Stones</a></li>
-					<li><a href="#">For Enlarged Prostate</a></li>
-					<li><a href="#">Find an M.D.</a></li>
+					<li><a href="/patients/what-we-do/what-we-do-overview">What We Do</a></li>
+					<li><a href="/patients/prostate-cancer/prostate-cancer-overview">Prostate Cancer</a></li>
+					<li><a href="/patients/kidney-stones/kidney-stones-overview">Kidney Stones</a></li>
+					<li><a href="/patients/enlarged-prostate/prostate-cancer-overview">Enlarged Prostate</a></li>
+					<li><a href="/patients/find-an-md/search">Find an M.D.</a></li>
 				</ul>
 			</div>
 		</div>
@@ -156,11 +168,12 @@
 		<div id="collapse4" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<ul class="accordion-menu-ul">
-					<li><a href="#">Overview</a></li>
-					<li><a href="#">TotalCare&trade;</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Events</a></li>
-					<li><a href="#">Careers</a></li>
+					<li><a href="/our-company/our-story/our-company-overview">Our Story</a></li>
+					<li><a href="/our-company/resources/all/all">Resources</a></li>
+					<li><a href="/our-company/events/all">Events</a></li>
+					<li><a href="/our-company/news/all">News</a></li>
+					<li><a href="/our-company/investors/investor-information-overview">Investors</a></li>
+					<li><a href="/our-company/careers/overview">Careers</a></li>
 				</ul>
 			</div>
 		</div>
@@ -218,11 +231,7 @@
 							</div>
 						</div>
 						<?php endif; ?>
-						<?php if( $page['sidebar_left'] || $page['pull_quote'] ): ?>
 						<div id="subpage-span6-resize" class="span6">
-						<?php elseif ( !$page['sidebar_left'] && !$page['pull_quote'] ): ?>
-						<div id="subpage-span9-resize" class="span9">
-						<?php endif; ?>
 							<div id="subpage-body-copy">
 								<?php print render($page['content']); ?>
 							</div>
@@ -283,11 +292,12 @@
    										<?php print render($page['sidebar_right']);?>
    									</div>
    								</div>
-   								<div class="span9">
-   									<div id="subpage-body-copy">
-   										<?php print render($page['content']); ?>
+							</div>
+   									<div class="span9">
+   										<div id="subpage-body-copy">
+   											<?php print render($page['content']); ?>
+   										</div>
    									</div>
-   								</div>
    							</div>
    						</div>
    					</div>
@@ -385,7 +395,7 @@
 								?>
 							</div>
 						</div>
-						<div class="span9">
+						<div class="span6">
 							<?php print render($page['content']); ?>
 						</div>
 					</div>
@@ -555,6 +565,7 @@
 			$("#events-mol-resize").removeClass("span6").addClass("span12");
 			
 			$(".small-mol-resize-c").removeClass("span3").addClass("span6");
+			$(".small-mol-resize-d").removeClass("span3").addClass("span4");
 			
 			$("#email-field-top").css("width", 247);
 			
@@ -563,8 +574,8 @@
 			
 			// subpage
 			// ----------------------------------
-			$("#subpage-span6-resize").removeClass("span6").addClass("span9");
-			$(".subpage-span3-resize").removeClass("span3").addClass("span12");
+			// $("#subpage-span6-resize").removeClass("span6").addClass("span9");
+			// $(".subpage-span3-resize").removeClass("span3").addClass("span12");
 			
 			// trigger dotdotdot
 			// ----------------------------------
@@ -591,6 +602,7 @@
 			$("#events-mol-resize").removeClass("span12").addClass("span6");
 			
 			$(".small-mol-resize-c").removeClass("span6").addClass("span3");
+			$(".small-mol-resize-d").removeClass("span4").addClass("span3");
 			
 			$("#email-field-top").css("width", 310);
 			
@@ -599,8 +611,8 @@
 			
 			// subpage
 			// ----------------------------------
-			$("#subpage-span6-resize").removeClass("span9").addClass("span6");
-			$(".subpage-span3-resize").removeClass("span12").addClass("span3");
+			// $("#subpage-span6-resize").removeClass("span9").addClass("span6");
+			// $(".subpage-span3-resize").removeClass("span12").addClass("span3");
 			
 			// trigger dotdotdot
 			// ----------------------------------

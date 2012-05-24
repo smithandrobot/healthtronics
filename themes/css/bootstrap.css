@@ -359,7 +359,7 @@ h6 small {
 }
 h1 {
   font-size: 30px;
-  line-height: 2.8em;
+  line-height: 1.4em;
 }
 h1 small {
   font-size: 18px;
@@ -5353,6 +5353,7 @@ ul.menu li {
   margin-bottom: 30px;
   font-weight: lighter;
   color: #707272;
+  line-height: 1.4em;
 }
 #contact-site-form input,
 #contact-site-form select,

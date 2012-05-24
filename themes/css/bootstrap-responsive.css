@@ -544,13 +544,16 @@
   .page-top .logo {
     top: 36px;
     left: 10px;
-    width: 262px;
-    height: 43px;
   }
   .nav-primary {
     position: absolute;
     bottom: 30px;
     left: 400px;
+  }
+  .nav-mobile {
+    float: right;
+    margin-top: 44px;
+    margin-right: 10px;
   }
   .header-bg {
     padding: 17px 0 10px 0;
@@ -609,15 +612,12 @@
 }
 @media (max-width: 480px) {
   .page-top .logo {
-    top: 36px;
-    left: 10px;
-    width: 262px;
-    height: 43px;
+    margin-left: 10px;
   }
-  .nav-primary {
-    position: absolute;
-    bottom: 30px;
-    left: 330px;
+  .nav-mobile {
+    float: right;
+    margin-top: 44px;
+    margin-right: 10px;
   }
   .header-bg {
     padding: 17px 0 17px 0;
@@ -651,6 +651,9 @@
     padding: 10px;
     margin: -10px;
   }
+  .sub-page-header h1 {
+    margin-top: 60px;
+  }
   .views-row {
     margin-left: 0px;
   }
@@ -668,6 +671,15 @@
     display: block;
     width: auto;
     margin: 0px;
+  }
+  .stat {
+    width: 190px;
+  }
+  .stat h1 {
+    font-size: 55px;
+  }
+  .stat p {
+    font-size: 16px;
   }
 }
 /*

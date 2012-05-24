@@ -41,7 +41,7 @@ Image = molecule_icon_04.png - mol-border-grey
 	*/
 ?>
 <?php if($teaser): ?>
-<div class="span3 small-mol-resize-c">
+<div class="span3 small-mol-resize-d">
 	<a href="<?php print $file; ?>">
 		<div class="small-molecule news-teaser <?php print $color; ?>">
 			<div class="inner">
