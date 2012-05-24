@@ -33,7 +33,6 @@ function CMonitorForm(form, btn, input, header, details)
     	
     	str = form.serialize();
     	final = str + "&action=" + formAction;
-    	log('final: '+final);
         emailHeader.text('Submitting...');
         emailDetails.text('Thanks for waiting.');
     	$.ajax({

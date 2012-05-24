@@ -84,22 +84,23 @@
 	
 	usort($nodes, 'sortByOrder');
 ?>
-<?php if(isset($nodes)): ?>
-<h2><?php print $node->title; ?></h2>
-<?php foreach($nodes as $bio_node): ?>
-<div class="row">
-	<div class="span6 bio-listing-container">
-		<?php if( isset($bio_node['node']->field_bio_image['und'][0]['filename']) ):?>
-		<img src="<?php print '/sites/default/files/bio_images/' . $bio_node['node']->field_bio_image['und'][0]['filename'];?>">
-		<?php endif ?>
-		<div class="name-title-container">		
-			<h3><?php print $bio_node['node']->title; ?></h3>
-			<p class="job-title"><?php print $bio_node['node']->field_job_title['und'][0]['value']; ?></p>
+<?php if($view_mode == 'full'): ?>
+	<?php if(isset($nodes)): ?>
+	<h2><?php print $node->title; ?></h2>
+	<?php foreach($nodes as $bio_node): ?>
+	<div class="row">
+		<div class="span6 bio-listing-container">
+			<?php if( isset($bio_node['node']->field_bio_image['und'][0]['filename']) ):?>
+			<img src="<?php print '/sites/default/files/bio_images/' . $bio_node['node']->field_bio_image['und'][0]['filename'];?>">
+			<?php endif ?>
+			<div id="<?php print $bio_node['node']->field_last_name['und'][0]["value"]; ?>" class="name-title-container">		
+				<h3><?php print $bio_node['node']->title; ?></h3>
+				<p class="job-title"><?php print $bio_node['node']->field_job_title['und'][0]['value']; ?></p>
+			</div>
+			<?php print $bio_node['node']->body['und'][0]['value']; ?>
 		</div>
-		<?php print $bio_node['node']->body['und'][0]['value']; ?>
-		<!-- <?php var_dump($bio_node); ?> -->
 	</div>
-</div>
-<?php endforeach ?>
+	<?php endforeach ?>
+	<?php endif ?>
 <?php endif ?>
 <!-- <?php var_dump($node->field_bio_list); ?> -->
