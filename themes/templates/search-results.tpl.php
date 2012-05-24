@@ -20,10 +20,16 @@
  *
  * @see template_preprocess_search_results()
  */
+$uri = explode('?', $_SERVER['REQUEST_URI']);
+$total = count($uri[0])-1;
+$uri = explode('/', $_SERVER['REQUEST_URI']);
+$total = count($uri)-1;
+$search_term = ucwords($uri[$total]);
 ?>
+
 <?php if ($search_results): ?>
 <div class="news-header clearfix">
-	<h1>&nbsp;</h1>
+	<h1>Showing search results for <?php print $search_term; ?></h1>
 </div>
 <div class="row">
 	<div class="span12">

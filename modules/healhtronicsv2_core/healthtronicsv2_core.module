@@ -67,4 +67,8 @@ function healthtronicsv2_query_alter(QueryAlterableInterface $query) {
     //var_dump($name);
 } 
 
+function healthtronicsv2_preprocess_search_results(&$variables)
+{
+    $variables['total_results'] = count($variables['results']);
+}
 ?>

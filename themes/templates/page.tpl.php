@@ -117,12 +117,12 @@
 		<div id="collapse1" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<ul class="accordion-menu-ul">
-					<li><a href="#">Lithotripsy</a></li>
-					<li><a href="#">Laser Treatment</a></li>
-					<li><a href="#">Cryotherapy</a></li>
-					<li><a href="#">IT Solutions</a></li>
-					<li><a href="#">Laboratory Solutions</a></li>
-					<li><a href="#">Equipment Services</a></li>
+					<li><a href="/physicians/lithotripsy/lithotripsy-overview">Lithotripsy</a></li>
+					<li><a href="/physicians/laser-treatments/laser-treatments-overview">Laser Treatment</a></li>
+					<li><a href="/physicians/cryotherapy/cryotherapy-overview">Cryotherapy</a></li>
+					<li><a href="/physicians/it-solutions/it-solutions-overview">IT Solutions</a></li>
+					<li><a href="/physicians/lab-solutions/laboratory-solutions-overview">Laboratory Solutions</a></li>
+					<li><a href="/equipment-services/equipment-services-overview">Equipment Services</a></li>
 				</ul>
 			</div>
 		</div>
@@ -134,11 +134,11 @@
 		<div id="collapse2" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<ul class="accordion-menu-ul">
-					<li><a href="#">What We Do</a></li>
-					<li><a href="#">For Cancer</a></li>
-					<li><a href="#">For Stones</a></li>
-					<li><a href="#">For Enlarged Prostate</a></li>
-					<li><a href="#">Find an M.D.</a></li>
+					<li><a href="/patients/what-we-do/what-we-do-overview">What We Do</a></li>
+					<li><a href="/patients/prostate-cancer/prostate-cancer-overview">For Cancer</a></li>
+					<li><a href="/patients/kidney-stones/kidney-stones-overview">For Stones</a></li>
+					<li><a href="/patients/enlarged-prostate/prostate-cancer-overview">For Enlarged Prostate</a></li>
+					<li><a href="/patients/find-an-md/search">Find an M.D.</a></li>
 				</ul>
 			</div>
 		</div>
@@ -156,11 +156,11 @@
 		<div id="collapse4" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<ul class="accordion-menu-ul">
-					<li><a href="#">Overview</a></li>
-					<li><a href="#">TotalCare&trade;</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Events</a></li>
-					<li><a href="#">Careers</a></li>
+					<li><a href="/our-company/our-story/our-company-overview">Overview</a></li>
+					<li><a href="/our-company/our-story/totalcare">TotalCare&trade;</a></li>
+					<li><a href="/our-company/news/all">News</a></li>
+					<li><a href="/our-company/events/all">Events</a></li>
+					<li><a href="/our-company/careers/overview">Careers</a></li>
 				</ul>
 			</div>
 		</div>
