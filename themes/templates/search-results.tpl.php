@@ -20,10 +20,16 @@
  *
  * @see template_preprocess_search_results()
  */
+$uri = explode('?', $_SERVER['REQUEST_URI']);
+$total = count($uri[0])-1;
+$uri = explode('/', $uri[0]);
+$total = count($uri)-1;
+$search_term = ucwords(urldecode($uri[$total]));
 ?>
+
 <?php if ($search_results): ?>
 <div class="news-header clearfix">
-	<h1>&nbsp;</h1>
+	<h1>Showing search results for <?php print $search_term; ?></h1>
 </div>
 <div class="row">
 	<div class="span12">
@@ -36,6 +42,5 @@
 </div>
   <?php print $pager; ?>
 <?php else : ?>
-  <h2><?php print t('We couldn\'t find anything that matched your term');?></h2>
-  <?php // print search_help('search#noresults', drupal_help_arg()); ?>
+  <h2><?php print t('We couldn\'t find anything that matched the term "' . $search_term) . '"';?></h2>
 <?php endif; ?>

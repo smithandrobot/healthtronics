@@ -88,6 +88,10 @@
 	$end_day 		= date('j', $node->field_date_unix_timestamp['und'][0]['value2']);
 	$year 			= date('Y', $node->field_date_unix_timestamp['und'][0]['value']);
 	$date_range 	= (isset($end_day)) ? $day . '-' . $end_day : $day;
+	if($is_admin && $view_mode == 'full' )
+	{
+ 		$edit_link='/node/' . $node->nid . '/edit?destination=' . drupal_lookup_path('alias','node/'.$node->nid);
+	}
 ?>
 
 <?php if($teaser): ?>
@@ -155,6 +159,9 @@
 		</div>
 	</div>
 	<div id="event-detail-content" class="span6">
+	<?php if($is_admin && $view_mode == 'full' ): ?>
+		<p><a href="<?php print $edit_link; ?>">Edit this page</a></p>
+	<?php endif ?>
 		<div id="date-title-container" class="clearfix">
 			<div id="date-square">
 				<span class="month"><?php print $month; ?></span>
@@ -171,7 +178,7 @@
 						{ 
 							print $location_name . ' ';
 						}
-						print $node->field_physical_address['und'][0]['value'];
+						print nl2br($node->field_physical_address['und'][0]['value']);
 					?>
 				</p>
 			</div>

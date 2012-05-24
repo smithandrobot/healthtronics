@@ -84,6 +84,21 @@
 	$large_molecule = $node->field_hero_banner['und'][0]['node'];
 	$info_graphics = $node->field_info_graphics['und'];
 ?>
+<?php if($teaser): ?>
+<div class="span3 small-mol-resize-c">
+	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
+		<div class="small-molecule mol-border-yellow">
+			<div class="inner">
+				<h1><?php print $node->title; ?></h1>
+				<p><?php print $node->field_sub_page_summary_title['und'][0]["value"]; ?></p>
+				<div class="arrow"></div>
+			</div>
+		</div>
+	</a>
+</div>
+<?php endif?>
+
+<?php if ($view_mode == 'full'): ?>
 <div class="yellow-stripe">
 	<div class="inner">
 		<div class="container">
@@ -161,7 +176,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="physicians/laser-treatments/laser-treatment-overview">
+									<a href="/physicians/laser-treatments/laser-treatments-overview">
 										<div class="small-molecule mol-border-green large-font">
 											<div class="inner">
 												<h1>Laser Treatments</h1>
@@ -172,7 +187,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="physicians/cryotherapy/cryotherapy-overview">
+									<a href="/physicians/cryotherapy/cryotherapy-overview">
 										<div class="small-molecule mol-border-blue large-font">
 											<div class="inner">
 												<h1>Cryotherapy</h1>
@@ -183,7 +198,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="physicians/it-solutions/overview-it-solutions">
+									<a href="/physicians/it-solutions/it-solutions-overview">
 										<div class="small-molecule mol-border-purple large-font">
 											<div class="inner">
 												<h1>IT Solutions</h1>
@@ -297,3 +312,4 @@
 	</div>
 </div>
 <!-- /grey stripe container -->
+<?php endif ?>
