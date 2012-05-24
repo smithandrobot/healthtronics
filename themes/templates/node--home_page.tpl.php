@@ -176,7 +176,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="physicians/laser-treatments/laser-treatment-overview">
+									<a href="/physicians/laser-treatments/laser-treatments-overview">
 										<div class="small-molecule mol-border-green large-font">
 											<div class="inner">
 												<h1>Laser Treatments</h1>
@@ -187,7 +187,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="physicians/cryotherapy/cryotherapy-overview">
+									<a href="/physicians/cryotherapy/cryotherapy-overview">
 										<div class="small-molecule mol-border-blue large-font">
 											<div class="inner">
 												<h1>Cryotherapy</h1>
@@ -198,7 +198,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="physicians/it-solutions/overview-it-solutions">
+									<a href="/physicians/it-solutions/it-solutions-overview">
 										<div class="small-molecule mol-border-purple large-font">
 											<div class="inner">
 												<h1>IT Solutions</h1>
