@@ -76,7 +76,7 @@
 	
 	// set this so we can check later how to render
 	$view = views_get_page_view();
-
+	
 ?>
 
 <!-- Header -->
