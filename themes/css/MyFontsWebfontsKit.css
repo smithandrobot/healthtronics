@@ -21,5 +21,9 @@
 
 
   
- @font-face {font-family: 'LeituraSans-Italic2';src: url('webfonts/202FC5_0_0.eot');src: url('webfonts/202FC5_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/202FC5_0_0.woff') format('woff'),url('webfonts/202FC5_0_0.ttf') format('truetype');}
+ @font-face {
+	font-family: 'LeituraSans-Italic2';
+	src: url('webfonts/202FC5_0_0.eot');
+	src: local('☺'), url('webfonts/202FC5_0_0.eot?#iefix') format('embedded-opentype'), url('webfonts/202FC5_0_0.woff') format('font/opentype'), url('webfonts/202FC5_0_0.ttf') format('font/opentype');
+}
  

@@ -14,18 +14,18 @@ function healthtronicsv2_menu_tree__main_menu($menu)
 
 function healthtronicsv2_menu_tree__menu_footer_our_company($menu)
 {
-	return '<ul class="unstyled footer-ul">' . $menu['tree'] . '</ul>';
+	return '<ul class="unstyled footer-ul clearfix">' . $menu['tree'] . '</ul>';
 }
 
 
 function healthtronicsv2_menu_tree__menu_footer_for_patients($menu)
 {
-	return '<ul class="unstyled footer-ul">' . $menu['tree'] . '</ul>';
+	return '<ul class="unstyled footer-ul clearfix">' . $menu['tree'] . '</ul>';
 }
 
 function healthtronicsv2_menu_tree__menu_footer_for_professionals($menu)
 {
-	return '<ul class="unstyled footer-ul">' . $menu['tree'] . '</ul>';
+	return '<ul class="unstyled footer-ul clearfix">' . $menu['tree'] . '</ul>';
 }
 
 

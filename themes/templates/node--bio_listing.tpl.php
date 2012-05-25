@@ -86,7 +86,7 @@
 ?>
 <?php if($view_mode == 'full'): ?>
 	<?php if(isset($nodes)): ?>
-	<h2><?php print $node->title; ?></h2>
+	<h3><?php print $node->title; ?></h3>
 	<?php foreach($nodes as $bio_node): ?>
 	<div class="row">
 		<div class="span6 bio-listing-container">

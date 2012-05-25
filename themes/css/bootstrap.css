@@ -359,7 +359,7 @@ h6 small {
 }
 h1 {
   font-size: 30px;
-  line-height: 2.8em;
+  line-height: 1.4em;
 }
 h1 small {
   font-size: 18px;
@@ -4601,12 +4601,16 @@ ul.menu li {
   font-weight: bold;
   font-size: 24px;
   line-height: 9px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .events-molecule .event-large h1 {
   font-family: LeituraSans-Italic2, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
-  line-height: 1.1em;
+  line-height: 1.2em;
+  width: 365px;
+  height: 58px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .events-molecule .event-large a {
   color: #ffffff;
@@ -5156,6 +5160,12 @@ ul.menu li {
   font-size: 19px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
+#subpage-body-copy h3 {
+  line-height: 1.1em;
+  font-size: 32px;
+  padding-bottom: 10px;
+  color: #707272;
+}
 #subpage-body h3 {
   font-size: 20px;
   margin-top: 30px;
@@ -5353,6 +5363,7 @@ ul.menu li {
   margin-bottom: 30px;
   font-weight: lighter;
   color: #707272;
+  line-height: 1.4em;
 }
 #contact-site-form input,
 #contact-site-form select,

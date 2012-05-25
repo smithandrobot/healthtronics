@@ -58,12 +58,10 @@
 					</div>
 					<div class="row">
 						<div class="span4">
-							<!-- <label>Email to humans.</label> -->
 							<input type="text" placeholder="To (email address)">
 							<input type="text" placeholder="Sender's Email">						
 						</div>
 						<div class="span5">
-							<!-- <label>Message &amp; Preview:</label> -->
 							<textarea>Your Message.</textarea>
 							<a class="share-email-btn">submit</a>
 						</div>

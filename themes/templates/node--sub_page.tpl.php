@@ -43,7 +43,7 @@
 			
 	<?php if(count($node->field_info_graphics) > 0): ?>
 	<!-- Carousel -->
-	<div id="carousel" class="carousel carousel-top-margin mol-border-white">
+	<div id="carousel" class="carousel carousel-top-margin">
 		<div class="carousel-inner">
 		<?php foreach($node->field_info_graphics['und'] as $infoGraphic): ?>
 			<?php $activeClass = ($i === 0) ? 'active' : ''; ?>
@@ -69,7 +69,7 @@
 	</div>
 	<!-- /Carousel -->
 	<?php endif ?>
-	
+	<div class="mol-border-white"></div>
 	<!-- Body  -->
 	
 			<?php print '<div id="subpage-body">' . $node->body['und'][0]["value"] . '</div>'; ?>

@@ -72,11 +72,13 @@
 			</div>
 			<h2><?php print $node->title; ?></h2>
 		</div>
-		<p class="subpage-body-summary">
-			<?php print $node->body['und'][0]['summary']; ?>
-		</p>
-		<div id="event-detail-body">
-			<?php print $node->body['und'][0]['value']; ?>
+		<div id="subpage-body-copy">
+			<div id="subpage-body-summary">
+				<?php print $node->body['und'][0]['summary']; ?>
+			</div>
+			<div id="event-detail-body">
+				<?php print $node->body['und'][0]['value']; ?>
+			</div>
 		</div>
 	</div>
 <?php endif?>

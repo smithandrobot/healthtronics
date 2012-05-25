@@ -32,19 +32,23 @@
 	}
 
 ?>
-
-<div id="filter-header-resize" class="span9">
-	<div class="filter-header clearfix">
-		<h1>Resources</h1>
-		<?php if($menu): ?>
-		<p id="filter-label">SHOW:</p><?php print render(module_invoke( 'menu', 'block_view', $menu) ); ?>
-		<?php endif ?>
-	</div>
-	<div class="row">
-	<?php if ($rows): ?>
-		<?php print $rows; ?>
-	<?php else: ?>
-		<p class="span9">Sorry, we couldn't find any resources that matched your filter.</p>
-		<?php endif ?>
+<div class="row">
+	<div id="filter-header-resize" class="span9">
+		<div class="filter-header clearfix">
+			<h1>Resources</h1>
+			<?php if($menu): ?>
+			<p id="filter-label">SHOW:</p><?php print render(module_invoke( 'menu', 'block_view', $menu) ); ?>
+			<?php endif ?>
+		</div>
+		<div class="row">
+		<?php if ($rows): ?>
+			<?php print $rows; ?>
+		<?php else: ?>
+			<p class="span9">Sorry, we couldn't find any resources that matched your filter.</p>
+			<?php endif ?>
+		</div>
 	</div>
 </div>
+<?php
+	print theme('pager');
+?>
