@@ -11,7 +11,7 @@ function healthtronicsv2_block_view_alter(&$data, $block) {
         $section = ucwords(str_replace($replacements, " ", $section));
         if($search_section == 'search') $section = t('Search Results');
         if($section == 'It Solutions') $section = 'IT Solutions';
-        
+        if($section == 'Find An Md') $section = 'Find an M.D.';
         $data['content'] = '<h1> ' .  $section . '</h1>';	    
     }
     

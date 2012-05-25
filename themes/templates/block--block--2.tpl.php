@@ -40,7 +40,10 @@
  * @see template_preprocess()
  * @see template_preprocess_block()
  * @see template_process()
+ *
+ * SHARE THIS FORM
  */
+
 	$node = menu_get_object();
 	if($node && $node->nid)
 	{
