@@ -10,7 +10,7 @@ $link_title = $node->field_link['und'][0]['title'];
 		<a style="display:block;" href="<?php print  $link; ?>">
 		<div class="large-molecule-copy">
 			<div class="inner">
-				<h1><?php print $node->body['und'][0]['value']; ?></h1>
+				<h1><?php print strip_tags($node->body['und'][0]['value']); ?></h1>
 				<p>
 					<a href="<?php print  $link; ?>"><?php print $link_title; ?></a>
 				</p>

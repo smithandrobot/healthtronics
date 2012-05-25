@@ -118,7 +118,7 @@
 								</h1>
 							</div>
 							<div id="header-bg-p-resize" class="span5">
-								<?php print $node->body['und'][0]['value']; ?>
+								<?php print ($node->body['und'][0]['value']); ?>
 								<!-- <p>
 									HealthTronics is the urology solutions company built by urologists. Like you, we’re working for better economics, better patient care and better outcomes. <a href="/our-company/overview">More about our company.</a>
 								</p> -->
