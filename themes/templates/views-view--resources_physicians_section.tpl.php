@@ -49,3 +49,6 @@
 		</div>
 	</div>
 </div>
+<?php
+	print theme('pager');
+?>

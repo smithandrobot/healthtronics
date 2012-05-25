@@ -181,6 +181,26 @@
 </div>
 <!-- /Accordion for mobile menu -->
 
+
+<!-- VIDEO MODAL -->
+<!-- <a class="btn" data-toggle="modal" href="#videoModal" >Launch Modal</a> -->
+
+<div id="videoModal" class="modal hide fade" style="display: none;">
+	<div class="modal-header">
+		<button class="close" data-dismiss="modal">×</button>
+		<h3>Video Title</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+	</div>
+	<div class="modal-body">
+		<iframe width="794" height="404" src="http://www.youtube.com/embed/VGRQGm4-A4k?rel=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div class="modal-footer">
+		<a href="#modalCollapse" class="share-image"></a>
+	</div>
+</div>
+<!-- /VIDEO MODAL -->
+
+
 <!-- Content Inside Orange Area + Share Module -->
 <?php if ($page['header']): ?>
 <div class="yellow-stripe">
@@ -219,7 +239,7 @@
 			<div class="row">
 				<div class="span12">
 					<div class="row">
-						<?php if( $page['sidebar_left'] || $page['pull_quote'] ): ?>
+						<?php // if( $page['sidebar_left'] || $page['pull_quote'] ): ?>
 						<div class="span3">
 							<div id="sidebar-left">
 								<?php print render($page['sidebar_left']); ?>
@@ -230,7 +250,7 @@
 								<?php endif; ?>
 							</div>
 						</div>
-						<?php endif; ?>
+						<?php // endif; ?>
 						<div id="subpage-span6-resize" class="span6">
 							<div id="subpage-body-copy">
 								<?php print render($page['content']); ?>
@@ -395,7 +415,7 @@
 								?>
 							</div>
 						</div>
-						<div class="span6">
+						<div class="span9">
 							<?php print render($page['content']); ?>
 						</div>
 					</div>
