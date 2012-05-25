@@ -1,10 +1,11 @@
 <?php
 $name = $node->field_first_name['und'][0]["value"] . ' ' . $node->field_last_name['und'][0]["value"];
+$last_name = $node->field_last_name['und'][0]["value"];
 ?>
 
 <?php if($teaser): ?>
 <div class="span3 small-mol-resize-c">
-	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
+	<a href="/<?php print 'our-company/our-story/leadership#' . $last_name; ?>">
 		<div class="small-molecule mol-border-yellow">
 			<div class="inner">
 				<h1><?php  print $name; ?></h1>

@@ -84,6 +84,21 @@
 	$large_molecule = $node->field_hero_banner['und'][0]['node'];
 	$info_graphics = $node->field_info_graphics['und'];
 ?>
+<?php if($teaser): ?>
+<div class="span3 small-mol-resize-c">
+	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
+		<div class="small-molecule mol-border-yellow">
+			<div class="inner">
+				<h1><?php print $node->title; ?></h1>
+				<p><?php print $node->field_sub_page_summary_title['und'][0]["value"]; ?></p>
+				<div class="arrow"></div>
+			</div>
+		</div>
+	</a>
+</div>
+<?php endif?>
+
+<?php if ($view_mode == 'full'): ?>
 <div class="yellow-stripe">
 	<div class="inner">
 		<div class="container">
@@ -161,7 +176,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="physicians/laser-treatments/laser-treatment-overview">
+									<a href="/physicians/laser-treatments/laser-treatments-overview">
 										<div class="small-molecule mol-border-green large-font">
 											<div class="inner">
 												<h1>Laser Treatments</h1>
@@ -172,7 +187,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="physicians/cryotherapy/cryotherapy-overview">
+									<a href="/physicians/cryotherapy/cryotherapy-overview">
 										<div class="small-molecule mol-border-blue large-font">
 											<div class="inner">
 												<h1>Cryotherapy</h1>
@@ -183,7 +198,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="physicians/it-solutions/overview-it-solutions">
+									<a href="/physicians/it-solutions/it-solutions-overview">
 										<div class="small-molecule mol-border-purple large-font">
 											<div class="inner">
 												<h1>IT Solutions</h1>
@@ -231,11 +246,26 @@
 						<div class="inner clearfix">
 							<img src="<?php print '/' . path_to_theme() . '/images/symbol_at.png'; ?>" class="at">
 							<div class="content">
+								<!-- 
 								<h1>Sign up to receive email alerts.</h1>
 								<p>Your address will stay private. Unsubscribe any time.</p>
 								<form class="form-inline">
 									<input id="email-field-top" type="text" class="email-field" value="Enter Your email address" onblur="if (this.value == '') {this.value = 'Enter Your email address';}" onfocus="if (this.value == 'Enter Your email address') {this.value = '';}"><button type="submit" class="submit-btn">submit</button>
+								-->
+								<h1 class="email-header">Sign up to receive email alerts.</h1>
+								<p class="email-details">Your address will stay private. Unsubscribe any time.</p>
+								<form id="email-form-homepage" class="form-inline" action="http://healthtronicsemail.createsend.com/t/j/s/eujkk/">
+									<input id="email-field-top" 
+									name="cm-eujkk-eujkk" 
+									type="text" 
+									class="email-field" 
+									value="Enter Your email address" 
+									onblur="if (this.value == '') {this.value = 'Enter Your email address';}" 
+									onfocus="if (this.value == 'Enter Your email address') {this.value = '';}"><button type="submit" id="email-top-btn" class="submit-btn">submit</button>
 								</form>
+								<script type="text/javascript" charset="utf-8">
+									var cHomePage=new CMonitorForm('#email-form-homepage', '#email-top-btn', '#email-field-top', '.email-header', '.email-details');
+								</script>
 							</div>
 						</div>
 					</div>
@@ -254,7 +284,7 @@
 						
 						<?php if(count($node->field_info_graphics) > 0): ?>
 						<!-- Carousel -->
-						<div id="carousel" class="carousel carousel-top-margin mol-border-white">
+						<div id="carousel" class="carousel carousel-top-margin">
 					   		<div class="carousel-inner">
 								<?php foreach($info_graphics as $info_graphic): ?>
 									<?php print render( node_view($info_graphic['node'], 'teaser') ); ?>
@@ -287,3 +317,4 @@
 	</div>
 </div>
 <!-- /grey stripe container -->
+<?php endif ?>

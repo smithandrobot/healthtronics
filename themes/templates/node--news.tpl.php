@@ -1,11 +1,8 @@
 <?php
-	$block 			= block_load('block', 2);
-	$output 		= drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
 	$time 			= date('M j, Y', $node->field_news_date['und'][0]['value']);
 	$month 			= date('M', $node->field_news_date['und'][0]['value']);
 	$day 			= date('j', $node->field_news_date['und'][0]['value']);
 	$year 			= date('Y', $node->field_news_date['und'][0]['value']);
-	// print $output;
 ?>
 <?php if($teaser): ?>
 <div class="span3 small-mol-resize-c">
@@ -75,11 +72,13 @@
 			</div>
 			<h2><?php print $node->title; ?></h2>
 		</div>
-		<p class="subpage-body-summary">
-			<?php print $node->body['und'][0]['summary']; ?>
-		</p>
-		<div id="event-detail-body">
-			<?php print $node->body['und'][0]['value']; ?>
+		<div id="subpage-body-copy">
+			<div id="subpage-body-summary">
+				<?php print $node->body['und'][0]['summary']; ?>
+			</div>
+			<div id="event-detail-body">
+				<?php print $node->body['und'][0]['value']; ?>
+			</div>
 		</div>
 	</div>
 <?php endif?>

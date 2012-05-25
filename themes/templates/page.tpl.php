@@ -76,36 +76,48 @@
 	
 	// set this so we can check later how to render
 	$view = views_get_page_view();
-
+	
 ?>
 
-<!-- Header -->
-<div id="white-stripe">
+<!-- Header for tablet, desktop -->
+<div id="white-stripe" class="hidden-phone">
 	<div class="container">
 		<div class="row">
 	   		<div class="span12 page-top">
 	   	   		<a href="/"><img class="logo" src="<?php print '/' . path_to_theme() . '/images/logo_ht.png'; ?>"></a>
 	   	   		<div id="nav-primary-move" class="nav-primary">
-	   	   	  		<div class="accordion-menu-btn visible-phone">
-	   	   	  	   		<a href="#" data-toggle="collapse" data-target="#accordion2">menu</a>
-	   	   	  		</div>
-	   	   	  		<div class="hidden-phone">
-	   	   	  			<div class="contact">
-	   	   	  				<a href="/contact">contact us</a>
-	   	   	  			</div>
-	   	   	  			<div class="search">
-	   	   	  	   			<div class="input-append">
-								<?php print render($page['search_bar']); ?>
-	   	   	  	   			</div>
-	   	   	  			</div>
-				   		<?php print render($page['main_nav']); ?>
-	   	   	  		</div>
+					<div class="contact">
+						<a href="/contact">contact us</a>
+					</div>
+					<div class="search">
+						<div class="input-append">
+							<?php print render($page['search_bar']); ?>
+						</div>
+					</div>
+					<?php print render($page['main_nav']); ?>
 	   	   	  	</div>
 	   	   	</div>
 		</div>
 	</div>
 </div>
-<!-- /Header -->
+<!-- /Header for tablet, desktop -->
+
+<!-- Header for phone -->
+<div id="white-stripe" class="visible-phone">
+	<div class="container">
+		<div class="row">
+			<div class="span12 page-top">
+				<a href="/"><img class="logo" src="<?php print '/' . path_to_theme() . '/images/logo_ht.png'; ?>"></a>
+				<div class="nav-mobile">
+					<div class="accordion-menu-btn visible-phone">
+	   	   	  	   		<a href="#" data-toggle="collapse" data-target="#accordion2">menu</a>
+	   	   	  		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Header for phone -->
 
 
 <!-- Accordion for mobile menu -->
@@ -117,12 +129,12 @@
 		<div id="collapse1" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<ul class="accordion-menu-ul">
-					<li><a href="#">Lithotripsy</a></li>
-					<li><a href="#">Laser Treatment</a></li>
-					<li><a href="#">Cryotherapy</a></li>
-					<li><a href="#">IT Solutions</a></li>
-					<li><a href="#">Laboratory Solutions</a></li>
-					<li><a href="#">Equipment Services</a></li>
+					<li><a href="/physicians/lithotripsy/lithotripsy-overview">Lithotripsy</a></li>
+					<li><a href="/physicians/laser-treatments/laser-treatments-overview">Laser Treatment</a></li>
+					<li><a href="/physicians/cryotherapy/cryotherapy-overview">Cryotherapy</a></li>
+					<li><a href="/physicians/it-solutions/it-solutions-overview">IT Solutions</a></li>
+					<li><a href="/physicians/lab-solutions/laboratory-solutions-overview">Laboratory Solutions</a></li>
+					<li><a href="/physicians/equipment-services/equipment-services-overview">Equipment Services</a></li>
 				</ul>
 			</div>
 		</div>
@@ -134,11 +146,11 @@
 		<div id="collapse2" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<ul class="accordion-menu-ul">
-					<li><a href="#">What We Do</a></li>
-					<li><a href="#">For Cancer</a></li>
-					<li><a href="#">For Stones</a></li>
-					<li><a href="#">For Enlarged Prostate</a></li>
-					<li><a href="#">Find an M.D.</a></li>
+					<li><a href="/patients/what-we-do/what-we-do-overview">What We Do</a></li>
+					<li><a href="/patients/prostate-cancer/prostate-cancer-overview">Prostate Cancer</a></li>
+					<li><a href="/patients/kidney-stones/kidney-stones-overview">Kidney Stones</a></li>
+					<li><a href="/patients/enlarged-prostate/prostate-cancer-overview">Enlarged Prostate</a></li>
+					<li><a href="/patients/find-an-md/search">Find an M.D.</a></li>
 				</ul>
 			</div>
 		</div>
@@ -156,17 +168,38 @@
 		<div id="collapse4" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<ul class="accordion-menu-ul">
-					<li><a href="#">Overview</a></li>
-					<li><a href="#">TotalCare&trade;</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Events</a></li>
-					<li><a href="#">Careers</a></li>
+					<li><a href="/our-company/our-story/our-company-overview">Our Story</a></li>
+					<li><a href="/our-company/resources/all/all">Resources</a></li>
+					<li><a href="/our-company/events/all">Events</a></li>
+					<li><a href="/our-company/news/all">News</a></li>
+					<li><a href="/our-company/investors/investor-information-overview">Investors</a></li>
+					<li><a href="/our-company/careers/overview">Careers</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- /Accordion for mobile menu -->
+
+
+<!-- VIDEO MODAL -->
+<!-- <a class="btn" data-toggle="modal" href="#videoModal" >Launch Modal</a> -->
+
+<div id="videoModal" class="modal hide fade" style="display: none;">
+	<div class="modal-header">
+		<button class="close" data-dismiss="modal">×</button>
+		<h3>Video Title</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+	</div>
+	<div class="modal-body">
+		<iframe width="794" height="404" src="http://www.youtube.com/embed/VGRQGm4-A4k?rel=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div class="modal-footer">
+		<a href="#modalCollapse" class="share-image"></a>
+	</div>
+</div>
+<!-- /VIDEO MODAL -->
+
 
 <!-- Content Inside Orange Area + Share Module -->
 <?php if ($page['header']): ?>
@@ -206,7 +239,7 @@
 			<div class="row">
 				<div class="span12">
 					<div class="row">
-						<?php if( $page['sidebar_left'] || $page['pull_quote'] ): ?>
+						<?php // if( $page['sidebar_left'] || $page['pull_quote'] ): ?>
 						<div class="span3">
 							<div id="sidebar-left">
 								<?php print render($page['sidebar_left']); ?>
@@ -217,12 +250,8 @@
 								<?php endif; ?>
 							</div>
 						</div>
-						<?php endif; ?>
-						<?php if( $page['sidebar_left'] || $page['pull_quote'] ): ?>
+						<?php // endif; ?>
 						<div id="subpage-span6-resize" class="span6">
-						<?php elseif ( !$page['sidebar_left'] && !$page['pull_quote'] ): ?>
-						<div id="subpage-span9-resize" class="span9">
-						<?php endif; ?>
 							<div id="subpage-body-copy">
 								<?php print render($page['content']); ?>
 							</div>
@@ -283,11 +312,12 @@
    										<?php print render($page['sidebar_right']);?>
    									</div>
    								</div>
-   								<div class="span9">
-   									<div id="subpage-body-copy">
-   										<?php print render($page['content']); ?>
+							</div>
+   									<div class="span9">
+   										<div id="subpage-body-copy">
+   											<?php print render($page['content']); ?>
+   										</div>
    									</div>
-   								</div>
    							</div>
    						</div>
    					</div>
@@ -441,13 +471,16 @@
 						<div class="inner clearfix">
 							<img src="<?php print '/' . path_to_theme() . '/images/symbol_footer_at.png'?>" class="at">
 							<div class="content">
-								<h1>Sign up to receive email alerts.</h1>
-								<p>Your address will stay private. Unsubscribe any time.</p>
+								<h1 class="email-footer-header">Sign up to receive email alerts.</h1>
+								<p class="email-footer-details">Your address will stay private. Unsubscribe any time.</p>
 							</div>
-							<form class="form-inline">
-								<input id="email-field-bottom" type="text" class="email-field" style="width: 285px;" placeholder="Enter Your email address"><button type="submit" class="submit-btn">submit</button>
+							<form id="footer-email-signup" class="form-inline" action="http://healthtronicsemail.createsend.com/t/j/s/eujkk/" >
+								<input name="cm-eujkk-eujkk" id="email-field-bottom" type="text" class="email-field" style="width: 285px;" placeholder="Enter Your email address"><button id="footer-email-btn" type="submit" class="submit-btn">submit</button>
 							</form>
 						</div>
+						<script type="text/javascript" charset="utf-8">
+							var cFooter=new CMonitorForm('#footer-email-signup', '#footer-email-btn', '#email-field-bottom', '.email-footer-header', '.email-footer-details');
+						</script>
 						<div class="logos clearfix">
 							<a href="http://www.endo.com/"><img src="<?php print '/' . path_to_theme() . '/images/logo_bottom_endo.png'; ?>" class="endo"></a>
 							<a href="http://www.visitams.com/"><img src="<?php print '/' . path_to_theme() . '/images/logo_bottom_ams.png'; ?>" class="ams"></a>
@@ -503,6 +536,14 @@
 			wrap: 'word'
 		});
 		
+		$(".events-molecule .event-large h1").dotdotdot({
+			wrap: 'word'
+		});
+		
+		$(".events-molecule .event-large p").dotdotdot({
+			wrap: 'word'
+		});
+		
 		
 		// carousel
 		// ----------------------------------
@@ -520,6 +561,8 @@
 		$(".small-molecule p").trigger("update");
 		$(".large-molecule h1").trigger("update");
 		$(".large-molecule p").trigger("update");
+		$(".events-molecule .event-large h1").trigger("update");
+		$(".events-molecule .event-large p").trigger("update");
 	});
 	
 	
@@ -552,6 +595,7 @@
 			$("#events-mol-resize").removeClass("span6").addClass("span12");
 			
 			$(".small-mol-resize-c").removeClass("span3").addClass("span6");
+			$(".small-mol-resize-d").removeClass("span3").addClass("span4");
 			
 			
 			$("#email-mol-bottom-resize").removeClass("span5").removeClass("offset1").addClass("span6");
@@ -559,8 +603,9 @@
 			
 			// subpage
 			// ----------------------------------
-			$("#subpage-span6-resize").removeClass("span6").addClass("span9");
-			$(".subpage-span3-resize").removeClass("span3").addClass("span12");
+			// $("#subpage-span6-resize").removeClass("span6").addClass("span9");
+			// $(".subpage-span3-resize").removeClass("span3").addClass("span12");
+			
 			
 			// trigger dotdotdot
 			// ----------------------------------
@@ -568,6 +613,8 @@
 			$(".small-molecule p").trigger("update");
 			$(".large-molecule h1").trigger("update");
 			$(".large-molecule p").trigger("update");
+			$(".events-molecule .event-large h1").trigger("update");
+			$(".events-molecule .event-large p").trigger("update");
 		}
 		
 		
@@ -587,14 +634,16 @@
 			$("#events-mol-resize").removeClass("span12").addClass("span6");
 			
 			$(".small-mol-resize-c").removeClass("span6").addClass("span3");
-						
+			$(".small-mol-resize-d").removeClass("span4").addClass("span3");
+			
+			
 			$("#email-mol-bottom-resize").removeClass("span6").addClass("offset1").addClass("span5");
 			$("#email-field-bottom").css("width", 285);
 			
 			// subpage
 			// ----------------------------------
-			$("#subpage-span6-resize").removeClass("span9").addClass("span6");
-			$(".subpage-span3-resize").removeClass("span12").addClass("span3");
+			// $("#subpage-span6-resize").removeClass("span9").addClass("span6");
+			// $(".subpage-span3-resize").removeClass("span12").addClass("span3");
 			
 			// trigger dotdotdot
 			// ----------------------------------
@@ -602,6 +651,8 @@
 			$(".small-molecule p").trigger("update");
 			$(".large-molecule h1").trigger("update");
 			$(".large-molecule p").trigger("update");
+			$(".events-molecule .event-large h1").trigger("update");
+			$(".events-molecule .event-large p").trigger("update");
 		}
 		
 		

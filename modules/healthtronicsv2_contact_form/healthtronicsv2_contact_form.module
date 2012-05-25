@@ -150,14 +150,14 @@ function get_option_map()
         'Our Company'=> 'Contact Us',
         'Lithotripsy'=> 'Lithotripsy',
         'Why Healthtronics'=> 'Software Request',
-        'Facilities'=> 'Facilities',
-        'What We Offer'=> 'Equipment Services',
+        'What We Offer'=> 'Facilities',
         'Cryotherapy'=> 'Cryotherapy',
         'Careers'=> 'Software Request',
         'Laser Treatments'=> 'Laser Treatments',
         'Lab Solutions'=> 'Software Request',
         'IT Solutions'=> 'IT Solutions',
         'Investors'=> 'Investors',
+        'Equipment Services' => 'Equipment Services',
     );
 }
 
