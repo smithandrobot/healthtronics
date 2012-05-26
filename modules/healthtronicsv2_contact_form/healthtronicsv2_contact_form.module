@@ -102,7 +102,7 @@ function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id)
         {
             map_taxonomy_to_select($form, $node->field_site_section['und'][0]['taxonomy_term']->name);
         }
-        var_dump($form);
+        // var_dump($form);
         return $form;
     }
 }
