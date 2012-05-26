@@ -56,11 +56,11 @@
 	<?php else: ?>
 	<a href="<?php print $file; ?>">
 	<?php endif; ?>
-		<div style="background-image:url(<?php print $image; ?>);" 
-			class="video-molecule <?php print $color; ?>">
+		<div style="background-image:url(<?php print $image; ?>);" class="video-molecule <?php print $color; ?>">
 			<div class="video-molecule-description">
 				<p><?php print $summary; ?></p>
 				<div class="video-molecule-content-background"></div>
+				<div class="icon <?php print $icon; ?>"></div>
 			</div>
 		</div>
 	</a>

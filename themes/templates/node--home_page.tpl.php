@@ -156,7 +156,7 @@
 					<div class="row">
 						
 						<!-- Start Large Molecule -->
-						<?php print  render( node_view( $large_molecule, 'full') ); ?> 
+						<?php print  render( node_view( $large_molecule, 'teaser') ); ?> 
 						<!-- End Large Molecule -->
 						
 						<div id="small-mol-resize" class="span6">

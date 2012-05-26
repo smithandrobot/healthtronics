@@ -15,11 +15,11 @@
  */
 drupal_theme_rebuild();
 
-function healthtronicsv2_preprocess_page(&$vars)
+function healthtronicsv2_preprocess_node(&$vars)
 {
     $node = $vars['node'];
 	$image = url('/sites/all/themes/healthtronicsv2/images/logo_ht.png', array('absolute'=>TRUE));
-	print($vars['view_mode']);
+	//print($vars['view_mode']);
 	if(isset($node) && $vars['view_mode']=='full')
 	{
 	   	// var_dump($node);

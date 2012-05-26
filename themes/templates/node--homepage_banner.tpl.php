@@ -5,6 +5,7 @@ $link = '/' . $node->field_link['und'][0]['url'];
 $link_title = $node->field_link['und'][0]['title'];
 
 ?>
+<?php if($view_mode == 'teaser'): ?>
 <div id="large-mol-resize" class="span6" style="background-image:url(<?php print $image; ?>); background-repeat:no-repeat;">
 	<div class="large-molecule">
 		<a style="display:block;" href="<?php print  $link; ?>">
@@ -20,3 +21,4 @@ $link_title = $node->field_link['und'][0]['title'];
 		</a>
 	</div>
 </div>
+<?php endif ?>
