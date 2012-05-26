@@ -124,7 +124,9 @@ function healthtronicsv2_contact_form_form_validate($form, &$form_state) {
 
 function healthtronicsv2_contact_form_form_submit($form, &$form_state)
 {
-    $form_state['redirect'] = 'our-company/contact/confirm';
+    //$form_state['redirect'] = 'our-company/contact/confirm';
+    //var_dump($form_state);
+    //exit;
 }
 
 // loop through options and set the default select index
