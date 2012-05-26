@@ -31,6 +31,7 @@
 			break;
 	}
 
+	preprocess_view('Healthtronics Resources for Physicians', 'Healthtronics Resources for Physicians',  'http://' . $_SERVER['SERVER_NAME'] .''.$_SERVER['REQUEST_URI']);
 ?>
 <div class="row">
 	<div id="filter-header-resize" class="span9">

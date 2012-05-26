@@ -42,6 +42,7 @@
 	$past_events = views_get_view_result('past_events', 'block');
 	$i = 0;
 	$class = array('date-color-orange', 'date-color-orangelight', 'date-color-yellow');
+	preprocess_view('Events Healthtronics', 'Healthtronics Events',  'http://' . $_SERVER['SERVER_NAME'] .''.$_SERVER['REQUEST_URI']);
 ?>
 <div class="row">
 	<div class="span6">

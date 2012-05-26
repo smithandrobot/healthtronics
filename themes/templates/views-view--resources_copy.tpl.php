@@ -1,4 +1,5 @@
 <?php
+	preprocess_view('Resources Healthtronics', 'Healthtronics Resources',  'http://' . $_SERVER['SERVER_NAME'] .''.$_SERVER['REQUEST_URI']);
 ?>
 <div class="news-header clearfix">
 	<h1>Resources</h1>
