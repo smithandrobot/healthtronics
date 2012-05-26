@@ -96,13 +96,13 @@ function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id)
                 
         $form['actions']['submit']['#id'] = 'edit-submit';
         $form["#validate"][]='healthtronicsv2_contact_form_form_validate';
-        
+        $form['#submit'][] = 'healthtronicsv2_contact_form_form_submit';
         // autoselect the form select option based on the pages site category
         if(isset($node))
         {
             map_taxonomy_to_select($form, $node->field_site_section['und'][0]['taxonomy_term']->name);
         }
-        
+        var_dump($form);
         return $form;
     }
 }
@@ -122,17 +122,25 @@ function healthtronicsv2_contact_form_form_validate($form, &$form_state) {
   }
 }
 
+function healthtronicsv2_contact_form_form_submit($form, &$form_state)
+{
+    $form_state['redirect'] = 'our-company/contact/confirm';
+}
+
 // loop through options and set the default select index
 function map_taxonomy_to_select(&$form, $name)
 {
     $map   = get_option_map();
     foreach($form['cid']['#options'] as $key => $option)
     {
-        if($map[$name] == $option)
+        if(isset($map[$name]))
         {
-        
-           $form['cid']["#default_value"] = $key;
-           return;
+           if($map[$name] == $option)
+           {
+           
+              $form['cid']["#default_value"] = $key;
+              return;
+           }
         }
     }
     
