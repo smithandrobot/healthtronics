@@ -2,6 +2,7 @@
 function fetchFacilitiesURL()
 {
 	window.location.href = "/facilities/what-we-offer/services-and-solutions-facilities";
+	
 }		
 
 
