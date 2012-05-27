@@ -30,7 +30,10 @@
 			$menu = 'menu-filters-lithotripsy';
 			break;
 	}
-
+	
+	/*
+	 * Add meta tags
+	**/
 	preprocess_view('Healthtronics Resources for Physicians', 'Healthtronics Resources for Physicians',  'http://' . $_SERVER['SERVER_NAME'] .''.$_SERVER['REQUEST_URI']);
 ?>
 <div class="row">

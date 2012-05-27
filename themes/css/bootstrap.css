@@ -4229,16 +4229,20 @@ ul.menu li {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 12px;
 }
-.share-molecule a.share-email-btn {
+.share-molecule .share-email-btn {
   float: right;
   font-size: 15px;
   width: 142px;
-  padding-top: 5px;
+  padding-top: 3px;
   height: 25px;
   color: #ffffff;
   background-color: #f1b434;
   text-align: center;
-  line-height: 21px;
+  /*  line-height: 1em;*/
+
+  border: 0;
+  /*  display:block;*/
+
 }
 .share-molecule a.share-email-btn:hover {
   background-color: #ffc72c;
@@ -5298,6 +5302,7 @@ ul.menu li {
   height: 125px;
   background-color: white;
   float: left;
+  margin-bottom: 20px;
 }
 .video-molecule-description {
   margin-top: 81px;

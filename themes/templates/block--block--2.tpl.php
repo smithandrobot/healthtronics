@@ -60,14 +60,21 @@
 						<img src="<?php print '/' . path_to_theme() . '/images/arrow_share.png'; ?>"> Share this page
 					</div>
 					<div class="row">
-						<div class="span4">
-							<input type="text" placeholder="To (email address)">
-							<input type="text" placeholder="Sender's Email">						
-						</div>
-						<div class="span5">
-							<textarea>Your Message.</textarea>
-							<a class="share-email-btn">submit</a>
-						</div>
+						<form id="share-email" action='/api/sharethis' method='post'>
+							<div class="span4">
+								<input name="to-email" id="to-email" type="text" value="To (email address)"
+									   onblur="if (this.value == '') {this.value = 'To (email address)';}"
+									   onfocus="if (this.value == 'To (email address)') {this.value = '';}">
+								<input name="from-email" id="from-email" type="text" value="Sender's Email"
+									   onblur="if (this.value == '') {this.value = 'Sender's Email';}"
+									   onfocus="if (this.value == 'Sender's Email') {this.value = '';}">
+								<input name="nid" value="<?php print $node->nid; ?>" type="hidden">
+							</div>
+							<div class="span5">
+								<textarea name="message" id="message">Your Message</textarea>
+								<button id="share-page-btn" class="share-email-btn">submit</button>
+							</div>
+						</form>
 						<div class="span2">
 							<!-- AddThis Button BEGIN -->
 							<div class="addthis_toolbox addthis_default_style ">

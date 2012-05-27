@@ -162,7 +162,7 @@
 						<div id="small-mol-resize" class="span6">
 							<div id="small-mol-row" class="row">
 								<div class="small-mol-resize-c span3">
-									<a href="physicians/lithotripsy/lithotripsy-overview">
+									<a href="physicians/lithotripsy/lithotripsy-services-and-solutions">
 										<div class="small-molecule mol-border-orange large-font">
 											<div class="inner">
 												<h1>Lithotripsy</h1>
@@ -173,7 +173,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/physicians/laser-treatments/laser-treatments-overview">
+									<a href="/physicians/laser-treatments/laser-treatment-services-and-solutions">
 										<div class="small-molecule mol-border-green large-font">
 											<div class="inner">
 												<h1>Laser Treatments</h1>
@@ -184,7 +184,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/physicians/cryotherapy/cryotherapy-overview">
+									<a href="/physicians/cryotherapy/cryotherapy-services-and-solutions">
 										<div class="small-molecule mol-border-blue large-font">
 											<div class="inner">
 												<h1>Cryotherapy</h1>
@@ -195,7 +195,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="/physicians/it-solutions/it-solutions-overview">
+									<a href="/physicians/it-solutions/information-technology-solutions-urologists">
 										<div class="small-molecule mol-border-purple large-font">
 											<div class="inner">
 												<h1>IT Solutions</h1>
@@ -206,7 +206,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="physicians/lab-solutions/laboratory-solutions-overview">
+									<a href="/physicians/lab-solutions/laboratory-solutions-overview">
 										<div class="small-molecule mol-border-yellow large-font">
 											<div class="inner">
 												<h1>Laboratory Solutions</h1>
@@ -217,7 +217,7 @@
 									</a>
 								</div>
 								<div class="small-mol-resize-c span3">
-									<a href="physicians/equipment-services/equipment-services-overview">
+									<a href="/physicians/equipment-services/equipment-services-overview">
 										<div class="small-molecule mol-border-grey large-font">
 											<div class="inner">
 												<h1>Equipment Services</h1>

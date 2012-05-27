@@ -14,6 +14,7 @@ scripts[] = js/jquery.fitvids.js
 scripts[] = js/accordion.js
 scripts[] = js/videomodal.js
 scripts[] = js/c_monitor.js
+scripts[] = js/sharepage.js
 
 regions[sidebar_left] = Sidebar Left
 regions[sidebar_right] = Sidebar Right

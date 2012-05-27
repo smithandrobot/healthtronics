@@ -21,15 +21,25 @@ function healthtronicsv2_preprocess_node(&$vars)
 	//print($vars['view_mode']);
 	if(isset($node) && $vars['view_mode']=='full')
 	{
-	   	// var_dump($node);
 	   	$url = url('node/'.$node->nid, array('absolute'=>TRUE));
-	   	$summary = strip_tags($node->body['und'][0]['safe_summary']);
+		if(isset($node->body['und'][0]['safe_summary']))
+		{
+			$summary = strip_tags($node->body['und'][0]['safe_summary']);	
+		}
+		
+		if(isset($node->field_summary['und'][0]['value']))
+		{
+			$summary = $node->field_summary['und'][0]['value'];
+		}
+		
 	   	$title = strip_tags($node->title);
 		add_meta($summary, $title, $url);
 	}
 }
 
-
+/*
+ * Add meta tags to view pages (this method is called inside the view.tpl file)
+**/
 function preprocess_view($summary, $title, $url)
 {
 	add_meta($summary, $title, $url);
