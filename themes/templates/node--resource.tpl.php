@@ -4,8 +4,8 @@
 	$resource_type = taxonomy_term_load($node->field_resource_type['und'][0]['tid']);
 	$file = '/sites/default/files/' . file_uri_target($node->field_file_reference['und'][0]['uri']);
 	$resource = strtolower($resource_type->name);
-	$video_link = $node->field_video_embed['und'][0]['value'];
-	$image = $node->field_resource_thumbnail['und'][0]['uri'];
+	$video_link = isset($node->field_video_embed['und'][0]['value']) ? $node->field_video_embed['und'][0]['value'] : NULL;
+	$image = isset($node->field_resource_thumbnail['und'][0]['uri']) ? $node->field_resource_thumbnail['und'][0]['uri'] : NULL;
 	if(isset($image)) $image = '/sites/default/files/' . file_uri_target($image);
 	
 	switch($resource)

@@ -68,7 +68,9 @@
 								<input name="from-email" id="from-email" type="text" value="Sender's Email"
 									   onblur="if (this.value == '') {this.value = 'Sender's Email';}"
 									   onfocus="if (this.value == 'Sender's Email') {this.value = '';}">
+									<?php if(isset($node->nid)) : ?>
 								<input name="nid" value="<?php print $node->nid; ?>" type="hidden">
+								<?php endif ?>
 							</div>
 							<div class="span5">
 								<textarea name="message" id="message">Your Message</textarea>
