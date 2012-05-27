@@ -1,7 +1,7 @@
 // get URL for Facilities accordion button
 function fetchFacilitiesURL()
 {
-	window.location.href = "/facilities/what-we-offer/what-we-offer-overview";
+	window.location.href = "/facilities/what-we-offer/services-and-solutions-facilities";
 }		
 
 

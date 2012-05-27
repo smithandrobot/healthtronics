@@ -128,14 +128,15 @@
 		</div>
 		<div id="collapse1" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
-				<ul class="accordion-menu-ul">
+				<?php print render(module_invoke( 'menu', 'block_view', 'menu-mobile-main-menu') ); ?>
+				<!-- <ul class="accordion-menu-ul">
 					<li><a href="/physicians/lithotripsy/lithotripsy-overview">Lithotripsy</a></li>
 					<li><a href="/physicians/laser-treatments/laser-treatments-overview">Laser Treatment</a></li>
 					<li><a href="/physicians/cryotherapy/cryotherapy-overview">Cryotherapy</a></li>
 					<li><a href="/physicians/it-solutions/it-solutions-overview">IT Solutions</a></li>
 					<li><a href="/physicians/lab-solutions/laboratory-solutions-overview">Laboratory Solutions</a></li>
 					<li><a href="/physicians/equipment-services/equipment-services-overview">Equipment Services</a></li>
-				</ul>
+				</ul> -->
 			</div>
 		</div>
 	</div>
@@ -145,13 +146,14 @@
 		</div>
 		<div id="collapse2" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
-				<ul class="accordion-menu-ul">
+				<?php print render(module_invoke( 'menu', 'block_view', 'menu-mobile-patients') ); ?>
+				<!-- <ul class="accordion-menu-ul">
 					<li><a href="/patients/what-we-do/what-we-do-overview">What We Do</a></li>
 					<li><a href="/patients/prostate-cancer/prostate-cancer-overview">Prostate Cancer</a></li>
 					<li><a href="/patients/kidney-stones/kidney-stones-overview">Kidney Stones</a></li>
 					<li><a href="/patients/enlarged-prostate/prostate-cancer-overview">Enlarged Prostate</a></li>
 					<li><a href="/patients/find-an-md/search">Find an M.D.</a></li>
-				</ul>
+				</ul> -->
 			</div>
 		</div>
 	</div>
@@ -167,14 +169,15 @@
 		</div>
 		<div id="collapse4" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
-				<ul class="accordion-menu-ul">
+				<?php print render(module_invoke( 'menu', 'block_view', 'menu-mobile-our-company') ); ?>
+				<!-- <ul class="accordion-menu-ul">
 					<li><a href="/our-company/our-story/our-company-overview">Our Story</a></li>
 					<li><a href="/our-company/resources/all/all">Resources</a></li>
 					<li><a href="/our-company/events/all">Events</a></li>
 					<li><a href="/our-company/news/all">News</a></li>
 					<li><a href="/our-company/investors/investor-information-overview">Investors</a></li>
 					<li><a href="/our-company/careers/overview">Careers</a></li>
-				</ul>
+				</ul> -->
 			</div>
 		</div>
 	</div>

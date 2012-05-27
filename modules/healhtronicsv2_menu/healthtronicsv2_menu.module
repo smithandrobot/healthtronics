@@ -45,6 +45,20 @@ function healthtronicsv2_menu_tree__menu_subnav_our_company_menu($menu)
 	return '<ul class="nav nav-secondary clearfix">' . $menu['tree'] . '</ul>';
 }
 
+function healthtronicsv2_menu_tree__menu_mobile_main_menu($menu)
+{
+	return '<ul class="accordion-menu-ul">' . $menu['tree'] . '</ul>';
+}
+
+function healthtronicsv2_menu_tree__menu_mobile_patients($menu)
+{
+	return '<ul class="accordion-menu-ul">' . $menu['tree'] . '</ul>';
+}
+
+function healthtronicsv2_menu_tree__menu_mobile_our_company($menu)
+{
+	return '<ul class="accordion-menu-ul">' . $menu['tree'] . '</ul>';
+}
 /*
  * This sets the main nav menu links class to active depending on the section
  */
