@@ -87,7 +87,7 @@ function add_meta($summary, $title, $url)
 	       			    '#tag' => 'meta',
 	       			    '#attributes' => array(
 	       			        'name' => 'keywords',
-	       			        'content' => 'urology, urologist, lithotripsy, laser surgery, laser treatments, oncology, cancer, cryotherapy, ice surgery, interventional radiology, interventional radiologist, kidney stones, bladder stones, enlarged prostate, BPH',
+	       			        'content' => 'urology, urologist, lithotripsy, lithotriptor, laser surgery, laser treatments, oncology, cancer, prostate cancer, cryotherapy, cryoablation, ice surgery, interventional radiology, interventional radiologist, kidney stones, bladder stones, enlarged prostate, BPH, EHR, EMR, electronic medical record, electronic health record',
 	       			    ),
 	       			),
 				);
