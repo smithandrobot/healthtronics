@@ -315,13 +315,12 @@
    										<?php print render($page['sidebar_right']);?>
    									</div>
    								</div>
-							</div>
-   									<div class="span9">
-   										<div id="subpage-body-copy">
-   											<?php print render($page['content']); ?>
-   										</div>
+   								<div class="span9">
+   									<div id="subpage-body-copy">
+   										<?php print render($page['content']); ?>
    									</div>
-   							</div>
+   								</div>
+							</div>
    						</div>
    					</div>
    				</div>
