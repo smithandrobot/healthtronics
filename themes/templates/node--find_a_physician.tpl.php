@@ -145,7 +145,7 @@
  <?php if($error) :?>
  	<h3>Error</h3>
  	<p class="address"><?php print $errorMessage; ?></p>
- <?php else: ?>
+ <?php elseif(!$submitted): ?>
  	<h3>Welcome to the physician finder.</h3>
 	<div id="find-a-physician-result-summary">
 		HealthTronics helps physicians provide better care for you. Use the short form on the left to locate the HealthTronics affiliated physician closest to you.
