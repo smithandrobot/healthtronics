@@ -8,33 +8,40 @@
 	$section = ucwords(strtolower($section));
 	if($section === 'It Solutions') $section = 'IT Solutions';
 	if($section === 'Equipment Services') $section = 'Equipment Services&rsquo;';
+	$description = 'Browse case studies, videos, whitepapers, patient guides and physician guides from the leader in urology services and solutions.';
 	
 	switch($sectionURI[2])
 	{
 		case 'cryotherapy':
 			$menu = 'menu-filters-cryotherapy';
+			$title = 'Cryotherapy Resources';
 			break;
 		case 'equipment-services':
 			$menu = 'menu-filters-equipment-services';
+			$title = 'Equipment Services Resources';
 			break;
 		case 'it-solutions':
 			$menu = 'menu-filters-it-solutions';
+			$title = 'IT Solutions Resources';
 			break;
 		case 'lab-solutions':
 			$menu = 'menu-filters-lab-solutions';
+			$title = 'Lab Solutions Resources';
 			break;
 		case 'laser-treatments':
 			$menu = 'menu-filters-lab-solutions';
+			$title = 'Laser Treatment Resources';
 			break;
 		case 'lithotripsy':
 			$menu = 'menu-filters-lithotripsy';
+			$title = 'Lithotripsy Resources';
 			break;
 	}
 	
 	/*
 	 * Add meta tags
 	**/
-	preprocess_view('Healthtronics Resources for Physicians', 'Healthtronics Resources for Physicians',  'http://' . $_SERVER['SERVER_NAME'] .''.$_SERVER['REQUEST_URI']);
+	preprocess_view($description, $title,  'http://' . $_SERVER['SERVER_NAME'] .''.$_SERVER['REQUEST_URI']);
 ?>
 <div class="row">
 	<div id="filter-header-resize" class="span9">

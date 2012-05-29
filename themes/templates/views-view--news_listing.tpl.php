@@ -27,7 +27,7 @@
  */
 	// Get the two most recent news items
 	$most_recent_news_result = views_get_view_result('news_two_results','news_two_result');
-	preprocess_view('News from Healthtronics', 'Healthtronics News',  'http://' . $_SERVER['SERVER_NAME'] .''.$_SERVER['REQUEST_URI']);
+	preprocess_view('News and announcements from the leader in urology services and solutions.', 'News | Healthtronics',  'http://' . $_SERVER['SERVER_NAME'] .''.$_SERVER['REQUEST_URI']);
 ?>
 <div class="news-header clearfix">
 	<h1>Latest News</h1>

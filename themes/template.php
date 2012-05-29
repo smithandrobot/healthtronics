@@ -46,7 +46,7 @@ function preprocess_view($summary, $title, $url)
 
 function add_meta($summary, $title, $url)
 {
-	$image = url('/sites/all/themes/healthtronicsv2/images/logo_ht.png', array('absolute'=>TRUE));
+	$image = url('/sites/all/themes/healthtronicsv2/images/healthronics-logo-social-icon.png', array('absolute'=>TRUE));
 	$elements = array(
 	       			'meta_desc' => array(
 	       			    '#tag' => 'meta',
@@ -81,6 +81,13 @@ function add_meta($summary, $title, $url)
 	       			    '#attributes' => array(
 	       			        'property' => 'og:title',
 	       			        'content' => $title,
+	       			    ),
+	       			),
+	       			'keywords' => array(
+	       			    '#tag' => 'meta',
+	       			    '#attributes' => array(
+	       			        'name' => 'keywords',
+	       			        'content' => 'urology, urologist, lithotripsy, laser surgery, laser treatments, oncology, cancer, cryotherapy, ice surgery, interventional radiology, interventional radiologist, kidney stones, bladder stones, enlarged prostate, BPH',
 	       			    ),
 	       			),
 				);
