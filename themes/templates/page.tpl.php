@@ -87,7 +87,7 @@
 	   	   		<a href="/"><img class="logo" src="<?php print '/' . path_to_theme() . '/images/logo_ht.png'; ?>"></a>
 	   	   		<div id="nav-primary-move" class="nav-primary">
 					<div class="contact">
-						<a href="/contact">contact us</a>
+						<a href="/our-company/contact/contact-us">contact us</a>
 					</div>
 					<div class="search">
 						<div class="input-append">
