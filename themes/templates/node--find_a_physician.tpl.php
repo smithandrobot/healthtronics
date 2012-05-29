@@ -83,7 +83,7 @@
 		$action = 'http://labs.healthtronics.com/physicianfinder/physicianfinder.asmx/PhysicianFinder';
 		$type = $_POST['physician_type'];
 		$zip  = $_POST['zip'];
-		$formVars = "zipcode=". $zip ."&results=3&condition=" . $type;
+		$formVars = "zipcode=". $zip ."&results=30&condition=" . $type;
 		$handle = curl_init($action);
 		$submitted = TRUE;
 		
