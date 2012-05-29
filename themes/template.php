@@ -18,7 +18,6 @@ drupal_theme_rebuild();
 function healthtronicsv2_preprocess_node(&$vars)
 {
     $node = $vars['node'];
-	//print($vars['view_mode']);
 	if(isset($node) && $vars['view_mode']=='full')
 	{
 	   	$url = url('node/'.$node->nid, array('absolute'=>TRUE));

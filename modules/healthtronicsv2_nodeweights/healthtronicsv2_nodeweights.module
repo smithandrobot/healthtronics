@@ -1,0 +1,190 @@
+<?php
+
+
+function healthtronicsv2_nodeweights_menu()
+{
+    $items = array();
+    $arg = (3) ? 3 :NULL;
+    $items['admin/content/ordering'] = array(
+        'title' => 'Content Ordering',
+        'description' => 'A list of existing nodes and their weights',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('healthtronicsv2_nodeweight_overview_nodes'),
+        'access arguments' => array('access administration pages'),
+        'type' => MENU_LOCAL_TASK
+    );
+    
+    $items['admin/content/ordering/%'] = array(
+        'title' => 'Content Ordering',
+        'description' => 'A list of existing nodes and their weights',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('healthtronicsv2_nodeweight_overview_nodes', 3),
+        'access arguments' => array('access administration pages'),
+        'type' => MENU_LOCAL_TASK
+    );
+
+    return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function healthtronicsv2_nodeweights_theme()
+{
+    return array(
+        'healthtronicsv2_nodeweight_overview_nodes' => array(
+            'render element' => 'form',
+        ),
+    );
+}
+
+function healthtronicsv2_nodeweight_overview_nodes($form, &$form_state, $type = null)
+{
+    $form['#tree'] = TRUE;
+    print('type: '.$type);
+    if($type){
+        $filters= array($type);
+    } else {
+        $filters = array('resource', 'bio', 'info_graphic');
+    }
+    $query = db_select('node', 'n');
+    $query->fields('n', array('nid', 'title', 'type'));
+    $query->fields('weight', array('weight'));
+    $query->join('node_weight', 'weight', 'n.nid = weight.nid');
+    $query -> condition('type', $filters);
+    $query->orderBy('weight');
+    $nodes = $query->execute();
+
+    foreach ($nodes as $node) {
+        $form[$node->nid]['#node'] = $node;
+        $form[$node->nid]['title'] = array('#markup' => check_plain($node->title));
+        $form[$node->nid]['type'] = array('#markup' => check_plain($node->type));
+        $form[$node->nid]['weight'] = array(
+            '#type' => 'weight',
+            '#title' => t('Weight for @title', array('@title' => $node->title)),
+            '#title_display' => 'invisible',
+            '#delta' => 10,
+            '#default_value' => $node->weight,
+        );
+    }
+
+    if (count($nodes) > 0) {
+        $form['actions'] = array('#type' => 'actions');
+        $form['actions']['submit'] = array('#type' => 'submit', '#value' => t('Save'));
+    }
+
+
+    return $form;
+
+}
+
+
+function healthtronicsv2_nodeweight_overview_nodes_submit($form, &$form_state) {
+
+  foreach ($form_state['values'] as $nid => $node) {
+
+      if (is_numeric($nid) && $form[$nid]['#node']->weight != $form_state['values'][$nid]['weight']) {
+        $form[$nid]['#node']->weight = $form_state['values'][$nid]['weight'];
+        //variable_set('node_weights_node_'.$form[$nid]['#node']->nid.'_weight', array('nid'=> $form[$nid]['#node']->nid, 'weight'=>$form[$nid]['#node']->weight));
+        //print 'node weight: ' . variable_get('node_weights_node_'.$form[$nid].'_weight');
+        db_update('node_weight')
+            -> fields(array('weight'=> $form[$nid]['#node']->weight))
+            -> condition('nid', $form[$nid]['#node']->nid)
+            -> execute();
+    }
+  }
+  //dmemcache_delete('lp-filter-main');
+  //dmemcache_delete('inspiration-main');
+  watchdog('healthtronicsv2 nodeweights', 'Cache cleared due to new node ordering');
+  drupal_set_message(t('The nodes have been re-ordered.'));
+}
+
+function theme_healthtronicsv2_nodeweight_overview_nodes($variables = array())
+{
+
+
+    $form = $variables['form'];
+
+    $output = '';
+
+
+    $output .= t("Drag the content to change it's ordering weight.") . '<br /><br />';
+    $output .= 'Filter: ';
+    $output .= '<a href="/admin/content/ordering/resource">Resources</a> | ';
+    $output .= '<a href="/admin/content/ordering/info_graphic">Info Graphics</a> | ';
+    $output .= '<a href="/admin/content/ordering/bio">Bios</a>';
+
+
+    $rows = array();
+
+
+    foreach (element_children($form) as $key) {
+
+        if (isset($form[$key]['title'])) {
+            $node = &$form[$key];
+            
+            $row = array();
+            $row[] = drupal_render($node['type']) .": ". drupal_render($node['title']);
+            if (isset($node['weight'])) {
+                $node['weight']['#attributes']['class'] = array('node-weight');
+                $row[] = drupal_render($node['weight']);
+            }
+            $rows[] = array('data' => $row, 'class' => array('draggable'));
+        }
+    }
+
+    $header = array(t('Node'));
+
+    if (isset($form['actions'])) {
+        $header[] = t('Weight');
+        drupal_add_tabledrag('node-weight-table', 'order', 'sibling', 'node-weight');
+    }
+
+
+
+    $output .= theme_table(array(
+                                'header' => $header,
+                                'rows' => $rows,
+                                'attributes' => array('id' => 'node-weight-table'),
+                                'caption' => NULL,
+                                'colgroups' => NULL,
+                                'sticky' => TRUE,
+                                'empty' => t('No data has been collected.'),
+                           )) . drupal_render_children($form);
+    return $output;
+}
+
+function healthtronicsv2_nodeweights_node_insert($node){
+    watchdog('nodeweight', 'node update: ' . $node -> nid);
+    $query = db_select('node_weight', 'nw');
+    $query -> condition('nid', $node -> nid);
+    $query -> fields('nw');
+    $matched = $query -> execute() -> rowCount();
+    if(!$matched){
+        db_insert('node_weight')
+           -> fields(array("nid" => $node -> nid, "weight" => 0))
+           -> execute();
+    }
+}
+
+/*
+    Expects an array from a node reference field
+*/
+function get_weighted_nodes($nodes)
+{
+    foreach($nodes as $node)
+    {
+        $ids[] = $node['node']->nid;
+    }
+    
+    $query = db_select('node', 'n');
+    $query->fields('n', array('nid'));
+    $query->fields('weight', array('weight'));
+    $query->join('node_weight', 'weight', 'n.nid = weight.nid');
+    $query -> condition('weight.nid', $ids);
+    $query->orderBy('weight');
+    $weighted_nodes = $query->execute();
+    return $weighted_nodes;
+}
+
+

@@ -28,7 +28,6 @@ function healthtronicsv2_menu_tree__menu_footer_for_professionals($menu)
 	return '<ul class="unstyled footer-ul clearfix">' . $menu['tree'] . '</ul>';
 }
 
-
 function healthtronicsv2_menu_tree__menu_physicians_menu($menu)
 {
     //var_dump($menu);
@@ -59,6 +58,7 @@ function healthtronicsv2_menu_tree__menu_mobile_our_company($menu)
 {
 	return '<ul class="accordion-menu-ul">' . $menu['tree'] . '</ul>';
 }
+
 /*
  * This sets the main nav menu links class to active depending on the section
  */

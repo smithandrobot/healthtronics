@@ -1,0 +1,53 @@
+<?php
+
+function healthtronicsv2_nodeweights_schema()
+{
+    $schema['node_weight'] = array(
+        'description' => 'The base table for storing node weights.',
+        'fields' => array(
+            'id' => array(
+                'description' => 'The row id.',
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ),
+            'nid' => array(
+                'description' => 'The node id that is being weighted.',
+                'type' => 'int',
+                'not null' => TRUE,
+            ),
+            'weight' => array(
+                'description' => 'The node weight.',
+                'type' => 'int',
+                'not null' => TRUE,
+                'default' => 0
+            ),
+
+        ),
+        'foreign keys' => array(
+            'node' => array(
+                'table' => 'node',
+                'columns' => array('nid' => 'nid'),
+            ),
+        ),
+        'indexes' => array(
+            'nid' => array('nid'),
+        ),
+        'primary key' => array('id'),
+    );
+
+
+    return $schema;
+
+}
+
+function healthtronicsv2_nodeweights_install(){
+    $query = db_select('node', 'n');
+    $query -> fields('n', array('nid'));
+    $results = $query -> execute();
+    foreach($results as $row){
+        $query = db_insert('node_weight')
+                -> fields(array("nid" => $row -> nid, "weight" => 0))
+                -> execute();
+    }
+}

@@ -17,6 +17,7 @@
 	{
 		print '<p><a href="/node/' . $node->nid . '/edit?destination=' . drupal_lookup_path('alias','node/'.$node->nid) . '">Edit this page</a></p>';
 	}
+	$info_graphics = get_weighted_nodes($node->field_info_graphics['und']);
 ?>
 
 <?php if($teaser): ?>
@@ -45,23 +46,8 @@
 	<!-- Carousel -->
 	<div id="carousel" class="carousel carousel-top-margin">
 		<div class="carousel-inner">
-		<?php foreach($node->field_info_graphics['und'] as $infoGraphic): ?>
-			<?php $activeClass = ($i === 0) ? 'active' : ''; ?>
-			<div class="item <?php print $activeClass; ?>">
-				<div class="stat">
-					<h1 class="<?php print $colors[$colorIndex]; ?>">
-						<?php print $infoGraphic["node"]->field_info_graphic_statistic['und'][0]['value']; ?>
-					</h1>
-					<p>
-						<?php print $infoGraphic["node"]->title; ?>
-					</p>
-				</div>
-			</div>
-			<?php 
-				++$i; 
-				++$colorIndex;
-				if ($colorIndex > count($colors)-1) $colorIndex = 0;
-			?>
+		<?php foreach($info_graphics as $info_graphic): ?>
+		    <?php print render( node_view( node_load($info_graphic->nid), 'teaser') );  ?>
 		<?php endforeach ?>
 		</div>
 		<a class="left carousel-control" href="#carousel" data-slide="prev"></a>

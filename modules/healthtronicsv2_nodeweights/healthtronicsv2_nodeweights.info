@@ -1,0 +1,6 @@
+; $Id$
+name = Healthtronics Node Weights
+description = Provides mechanisms for ordering of nodes.
+package = Healthtronics V2
+core = 7.x
+version = 7.x-1.0

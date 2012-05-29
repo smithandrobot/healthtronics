@@ -43,25 +43,27 @@
  */
 	$node = menu_get_object();
 	$nodes = array();
-	//var_dump(variable_get('multiselector', array('fulltext','title', '4', '8')));
+
 	if(isset($node))
 	{
 		if($node && $node->nid )
 		{
 			if(isset($node->field_related_items['und'])){
 				$nodes = $node->field_related_items['und'];
+        		$weighted_nodes = get_weighted_nodes($nodes);
 			}
 		}
 	}
 ?>
-<?php if(count($nodes)  > 0) : ?>
+<?php if($weighted_nodes) : ?>
 	<div class="row">
-	<?php foreach($nodes as $n): ?>
+	<?php foreach($weighted_nodes as $n): ?>
 		<?php 
-			if(isset($n['node']->nid))
-			{
-				print render( node_view( node_load($n['node']->nid), 'teaser') ); 
-			}
+			//var_dump($n);
+		   if(isset($n->nid))
+		   {
+		   	print render( node_view( node_load($n->nid), 'teaser') ); 
+		   }
 		?>
 	<?php endforeach ?>
 	</div>

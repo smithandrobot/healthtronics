@@ -82,7 +82,7 @@
 	$i = 0;
 	$class = array('date-color-orange', 'date-color-orangelight', 'date-color-yellow');
 	$large_molecule = $node->field_hero_banner['und'][0]['node'];
-	$info_graphics = $node->field_info_graphics['und'];
+	$info_graphics = get_weighted_nodes($node->field_info_graphics['und']);
 ?>
 <?php if($teaser): ?>
 <div class="span3 small-mol-resize-c">
@@ -284,7 +284,7 @@
 						<div id="carousel" class="carousel carousel-top-margin">
 					   		<div class="carousel-inner">
 								<?php foreach($info_graphics as $info_graphic): ?>
-									<?php print render( node_view($info_graphic['node'], 'teaser') ); ?>
+									<?php print render( node_view( node_load($info_graphic->nid), 'teaser') );  ?>
 								<?php endforeach ?>
 					   		</div>
 					   		<a class="left carousel-control" href="#carousel" data-slide="prev"></a>
