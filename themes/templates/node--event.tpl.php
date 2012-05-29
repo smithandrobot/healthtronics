@@ -176,7 +176,7 @@
 						print $month . ' ' . $date_range . ', ' .$year. '<br />';
 						if($location_name !== NULL)
 						{ 
-							print $location_name . ' ';
+							print $location_name . '<br />';
 						}
 						print nl2br($node->field_physical_address['und'][0]['value']);
 					?>
