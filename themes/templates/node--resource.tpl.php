@@ -30,9 +30,9 @@
 	}
 ?>
 
-<!-- No Image BKG -->
 <?php if($teaser && !isset($image)): ?>
-<div class="span3 small-mol-resize-d">
+<!-- No Image BKG -->
+<div class="span3 small-mol-resize-c">
 	<?php if($resource == 'video'): ?>
 	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
 	<?php else: ?>
@@ -49,6 +49,7 @@
 </div>
 <?php endif?>
 
+<!-- <<<<<<< HEAD
 <?php if($teaser && !isset($image)): ?>
 <div class="span3 small-mol-resize-d">
 	<?php if($resource == 'video'): ?>
@@ -66,14 +67,12 @@
 	</a>
 </div>
 <?php endif?>
+======= -->
+>>>>>>> 28a1809342474c35fb53645fe7c6cafb826843f4
 
 <?php if($teaser && isset($image)): ?>
 <div class="span3 small-mol-resize-d">
-	<?php if($resource == 'video'): ?>
-	<a class="video_open" data-toggle="modal" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
-	<?php else: ?>
 	<a href="<?php print $file; ?>">
-	<?php endif; ?>
 		<div style="background-image:url(<?php print $image; ?>);" class="video-molecule <?php print $color; ?>">
 			<div class="video-molecule-description">
 				<p><?php print $summary; ?></p>
