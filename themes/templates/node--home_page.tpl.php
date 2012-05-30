@@ -276,7 +276,7 @@
 					<div class="stats-molecule">
 						<div class="header clearfix">
 							<h1>Stats</h1>
-							<div class="more-link"><a href="/our-company/our-story/overview">More Company Info <div class="arrow icon-06"></div></a></div>
+							<div class="more-link"><a href="/our-company/our-story/our-story">More Company Info <div class="arrow icon-06"></div></a></div>
 						</div>
 						
 						<?php if(count($node->field_info_graphics) > 0): ?>
