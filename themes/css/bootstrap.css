@@ -5315,7 +5315,7 @@ ul.menu li {
 .video-molecule .video-molecule-content-background {
   position: relative;
   z-index: 1;
-  opacity: .5;
+  opacity: .85;
   height: 45px;
   background-color: white;
   margin-top: -50px;
