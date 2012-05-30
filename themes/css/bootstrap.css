@@ -5231,6 +5231,7 @@ ul.menu li {
   line-height: 1.1em;
   color: #707272;
   font-size: 32px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 #event-detail-content h3 {
