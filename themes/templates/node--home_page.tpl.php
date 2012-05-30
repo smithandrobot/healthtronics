@@ -284,10 +284,10 @@
 						<div id="carousel" class="carousel carousel-top-margin">
 					   		<div class="carousel-inner">
 								<?php
-								$i = 0;
+								$c = 0;
 								foreach($info_graphics as $info_graphic)
 								{
-									if($i == 0)
+									if($c == 0)
 									{
 										// print first item as active
 										print render( node_view( node_load($info_graphic->nid), 'first-teaser') );
@@ -297,7 +297,7 @@
 										// print > 1 items as inactive
 										print render( node_view( node_load($info_graphic->nid), 'teaser') );
 									}
-									$i++;
+									$c++;
 								}
 								?>
 					   		</div>
