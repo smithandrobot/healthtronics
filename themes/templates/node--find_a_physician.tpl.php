@@ -83,14 +83,14 @@
 		$action = 'http://labs.healthtronics.com/physicianfinder/physicianfinder.asmx/PhysicianFinder';
 		$type = $_POST['physician_type'];
 		$zip  = $_POST['zip'];
-		$formVars = "zip code=". $zip ."&results=30&condition=" . $type;
+		$formVars = "zipcode=". $zip ."&results=10&condition=" . $type;
 		$handle = curl_init($action);
 		$submitted = TRUE;
 		
 		curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($handle, CURLOPT_POST, TRUE);
 		curl_setopt($handle, CURLOPT_POSTFIELDS, $formVars);
-		//print 'Reponse: <br />' . curl_exec($handle);
+		// print 'Reponse: <br />' . curl_exec($handle);
 		try
 		{
 			// the response is returned as xml with a node <string>
