@@ -24,13 +24,11 @@ $(document).ready(function()
 	{
 		// Get data, construct embed code
 		// --------------------------------------
-		alert("die");
 		var vid_title = $(this).attr("data-title");
 		var vid_summary = $(this).attr("data-summary");
 		var vid_link = $(this).attr("data-video").substr(16);
 	    var embed = '<iframe width="794" height="404" src="http://www.youtube.com/embed/' + vid_link + '?rel=0" frameborder="0" allowfullscreen></iframe>';
 		// var vid_data = "http://gdata.youtube.com/feeds/api/videos/" + vid_link;
-		alert(vid_title);
 		
 		// Empty existing modal content
 		// --------------------------------------
@@ -40,9 +38,10 @@ $(document).ready(function()
 	
 		// Add data to modal
 		// --------------------------------------
-		$(vid_title).appendTo(".modal-title");
-		$(vid_summary).appendTo(".modal-summary");
-	    $(embed).appendTo(".modal-body");
+		// $(vid_title).appendTo(".modal-title");
+		$(".modal-title").append(vid_title);
+		$(".modal-summary").append(vid_summary);
+	   	$(embed).appendTo(".modal-body");
 				
 	    var modal = $("#videoModal");
 	    

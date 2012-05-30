@@ -3315,9 +3315,9 @@ input[type="submit"].btn.btn-mini {
 .modal-header h3 {
   font-size: 32px;
   letter-spacing: -1px;
+  line-height: 1.4em;
 }
 .modal-header p {
-  margin-top: 8px;
   font-size: 19px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 100;
