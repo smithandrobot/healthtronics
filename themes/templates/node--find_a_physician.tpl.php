@@ -83,7 +83,7 @@
 		$action = 'http://labs.healthtronics.com/physicianfinder/physicianfinder.asmx/PhysicianFinder';
 		$type = $_POST['physician_type'];
 		$zip  = $_POST['zip'];
-		$formVars = "zipcode=". $zip ."&results=30&condition=" . $type;
+		$formVars = "zip code=". $zip ."&results=30&condition=" . $type;
 		$handle = curl_init($action);
 		$submitted = TRUE;
 		
@@ -139,7 +139,7 @@
 		</div>
 	<?php endforeach ?>
 <?php elseif($submitted && $total < 1): ?>
-	<div id="find-a-physician-result-summary">Sorry, we couldn't find any doctors that matched your zipcode.</div>
+	<div id="find-a-physician-result-summary">Sorry, we couldn't find any doctors that matched your zip code.</div>
 <?php endif ?>
 
  <?php if($error) :?>

@@ -34,7 +34,7 @@
 <?php if($teaser && !isset($image)): ?>
 <div class="span3 small-mol-resize-d">
 	<?php if($resource == 'video'): ?>
-	<a class="video_open" data-toggle="modal" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
+	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
 	<?php else: ?>
 	<a href="<?php print $file; ?>">
 	<?php endif; ?>

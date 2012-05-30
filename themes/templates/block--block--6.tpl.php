@@ -62,9 +62,9 @@
 	  <!-- <option value="LungCancer_YN">Lung Cancer</option> -->
 	  <!-- <option value="PALLINT_YN">PALLINT_YN</option> -->
 	</select>
-	<input id="find-physician-zip" type="text" name="zip" value="Type in your zipcode" 
-				onblur="if (this.value == '') {this.value = 'Type in your zipcode';}"
-                onfocus="if (this.value == 'Type in your zipcode') {this.value = '';}">
+	<input id="find-physician-zip" type="text" name="zip" value="Type in your zip code" 
+				onblur="if (this.value == '') {this.value = 'Type in your zip code';}"
+                onfocus="if (this.value == 'Type in your zip code') {this.value = '';}">
 	<input type="submit" value="Find">
 </form>
 </div>
