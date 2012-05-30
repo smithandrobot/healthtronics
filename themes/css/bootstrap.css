@@ -5304,12 +5304,13 @@ ul.menu li {
   background-position: top center;
   background-repeat: no-repeat;
   height: 125px;
-  background-color: white;
-  float: left;
-  margin-bottom: 20px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  position: relative;
 }
 .video-molecule-description {
-  margin-top: 81px;
+  position: absolute;
+  bottom: -18px;
 }
 .video-molecule .video-molecule-content-background {
   position: relative;
