@@ -10,7 +10,7 @@
 	$index = rand(0, count($colors)-1);
 ?>
 
-<?php if($teaser == "first-teaser"): ?>
+<?php if($view_mode == "first-teaser"): ?>
 <div class="active item bam">
 	<div class="stat">
 		<h1 class="<?php print $colors[$index]; ?>"><?php print $node->field_info_graphic_statistic['und'][0]['value']; ?></h1>
@@ -19,7 +19,7 @@
 </div>
 <?php endif?>
 
-<?php if($teaser == "teaser"): ?>
+<?php if($view_mode == "teaser"): ?>
 <div class="item">
 	<div class="stat">
 		<h1 class="<?php print $colors[$index]; ?>"><?php print $node->field_info_graphic_statistic['und'][0]['value']; ?></h1>

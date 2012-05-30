@@ -46,9 +46,23 @@
 	<!-- Carousel -->
 	<div id="carousel" class="carousel carousel-top-margin">
 		<div class="carousel-inner">
-		<?php foreach($info_graphics as $info_graphic): ?>
-		    <?php print render( node_view( node_load($info_graphic->nid), 'teaser') );  ?>
-		<?php endforeach ?>
+			<?php
+			$i = 0;
+			foreach($info_graphics as $info_graphic)
+			{
+				if($i == 0)
+				{
+					// print first item as active
+					print render( node_view( node_load($info_graphic->nid), 'first-teaser') );
+				}
+				else
+				{
+					// print > 1 items as inactive
+					print render( node_view( node_load($info_graphic->nid), 'teaser') );
+				}
+				$i++;
+			}
+			?>
 		</div>
 		<a class="left carousel-control" href="#carousel" data-slide="prev"></a>
 		<a class="right carousel-control" href="#carousel" data-slide="next"></a>

@@ -53,7 +53,7 @@
 	<?php endif ?>
 <form action="/patients/find-an-md/search" method="post">
 	<select name="physician_type">		
-	  <option value="BPH">Enlarged Prostate</option>
+	  <option value="BPH_YN">Enlarged Prostate (BPH)</option>
 	  <option value="ProstateCancer_YN">Prostate Cancer</option>
 	  <option value="KidneyStones_YN">Kidney Stones</option>
 	  <option value="KidneyCancer_YN">Kidney Cancer</option>

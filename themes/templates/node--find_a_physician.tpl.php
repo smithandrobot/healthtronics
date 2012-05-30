@@ -90,7 +90,6 @@
 		curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($handle, CURLOPT_POST, TRUE);
 		curl_setopt($handle, CURLOPT_POSTFIELDS, $formVars);
-		// print 'Reponse: <br />' . curl_exec($handle);
 		try
 		{
 			// the response is returned as xml with a node <string>
@@ -103,6 +102,7 @@
 		}catch(Exception $e){
 			$error = TRUE;
 			$errorMessage = 'Caught exception: ' . $e->getMessage();
+			print 'Reponse: <br />' . curl_exec($handle);
 		}
 		curl_close($handle);
 		$total = count($json);
