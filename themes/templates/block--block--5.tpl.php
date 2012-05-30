@@ -62,7 +62,8 @@
 			//var_dump($n);
 		   if(isset($n->nid))
 		   {
-		   	print render( node_view( node_load($n->nid), 'teaser') ); 
+			// change view to load in here
+		   	print render( node_view( node_load($n->nid), 'side_bar') ); 
 		   }
 		?>
 	<?php endforeach ?>

@@ -49,6 +49,24 @@
 </div>
 <?php endif?>
 
+<?php if($teaser && !isset($image)): ?>
+<div class="span3 small-mol-resize-d">
+	<?php if($resource == 'video'): ?>
+	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
+	<?php else: ?>
+	<a href="<?php print $file; ?>">
+	<?php endif; ?>
+		<div class="small-molecule news-teaser <?php print $color; ?>">
+			<div class="inner">
+				<h1><?php print $node->title; ?></h1>
+				<p><?php print $summary; ?></p>
+				<div class="icon <?php print $icon; ?>"></div>
+			</div>
+		</div>
+	</a>
+</div>
+<?php endif?>
+
 <?php if($teaser && isset($image)): ?>
 <div class="span3 small-mol-resize-d">
 	<?php if($resource == 'video'): ?>
@@ -60,6 +78,43 @@
 			<div class="video-molecule-description">
 				<p><?php print $summary; ?></p>
 				<div class="video-molecule-content-background"></div>
+				<div class="icon <?php print $icon; ?>"></div>
+			</div>
+		</div>
+	</a>
+</div>
+<?php endif?>
+
+<!-- NEW CODE SHOULD BE PUT BELOW FOR SIE BAR -->
+<?php if($view_mode=='side_bar' && isset($image)): ?>
+<div class="span3 small-mol-resize-d">
+	<?php if($resource == 'video'): ?>
+	<a class="video_open" data-toggle="modal" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
+	<?php else: ?>
+	<a href="<?php print $file; ?>">
+	<?php endif; ?>
+		<div style="background-image:url(<?php print $image; ?>);" class="video-molecule <?php print $color; ?>">
+			<div class="video-molecule-description">
+				<p><?php print $summary; ?></p>
+				<div class="video-molecule-content-background"></div>
+				<div class="icon <?php print $icon; ?>"></div>
+			</div>
+		</div>
+	</a>
+</div>
+<?php endif?>
+
+<?php if($view_mode=='side_bar' && !isset($image)): ?>
+<div class="span3 small-mol-resize-d">
+	<?php if($resource == 'video'): ?>
+	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
+	<?php else: ?>
+	<a href="<?php print $file; ?>">
+	<?php endif; ?>
+		<div class="small-molecule news-teaser <?php print $color; ?>">
+			<div class="inner">
+				<h1><?php print $node->title; ?></h1>
+				<p><?php print $summary; ?></p>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
 		</div>
