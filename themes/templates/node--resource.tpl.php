@@ -66,7 +66,7 @@
 
 <!-- NEW CODE SHOULD BE PUT BELOW FOR SIDE BAR -->
 <?php if($view_mode=='side_bar' && isset($image)): ?>
-<div class="span3 small-mol-resize-d">
+<div class="span3 small-mol-resize-c">
 	<?php if($resource == 'video'): ?>
 	<a class="video_open" data-toggle="modal" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
 	<?php else: ?>
@@ -84,7 +84,7 @@
 <?php endif?>
 
 <?php if($view_mode=='side_bar' && !isset($image)): ?>
-<div class="span3 small-mol-resize-d">
+<div class="span3 small-mol-resize-c">
 	<?php if($resource == 'video'): ?>
 	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
 	<?php else: ?>

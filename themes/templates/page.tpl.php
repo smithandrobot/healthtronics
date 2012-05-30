@@ -254,7 +254,7 @@
 							</div>
 						</div>
 						<?php // endif; ?>
-						<div id="subpage-span6-resize" class="span6">
+						<div class="span6">
 							<div id="subpage-body-copy">
 								<?php print render($page['content']); ?>
 							</div>
@@ -606,7 +606,7 @@
 			// subpage
 			// ----------------------------------
 			// $("#subpage-span6-resize").removeClass("span6").addClass("span9");
-			// $(".subpage-span3-resize").removeClass("span3").addClass("span12");
+			$(".subpage-span3-resize").removeClass("span3").addClass("span12");
 			
 			
 			// trigger dotdotdot
@@ -645,7 +645,7 @@
 			// subpage
 			// ----------------------------------
 			// $("#subpage-span6-resize").removeClass("span9").addClass("span6");
-			// $(".subpage-span3-resize").removeClass("span12").addClass("span3");
+			$(".subpage-span3-resize").removeClass("span12").addClass("span3");
 			
 			// trigger dotdotdot
 			// ----------------------------------
