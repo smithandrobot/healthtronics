@@ -26,7 +26,6 @@ function ShareThis()
           form.submit(function() { return false; });
           formAction = form.attr("action");
           str = form.serialize();
-          log('submitting');
           if(!validate()) return;
           
           emailHeader.html('Submitting...');
@@ -42,7 +41,6 @@ function ShareThis()
     
       function onSuccess(d)
       {
-          log(d);
           emailHeader.html(orgHeadline);
           toEmail.val('To (email address)');
           fromEmail.val('Sender\'s Email');
@@ -99,7 +97,6 @@ function ShareThis()
       {	
       	var pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
       	  , emailVal = email.val();
-      	log('form val: '+emailVal);
       	return pattern.test(emailVal);
       }
 }

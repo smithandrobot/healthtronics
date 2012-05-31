@@ -6,6 +6,7 @@ engine = phptemplate
 stylesheets[all][] = css/bootstrap.css
 stylesheets[all][] = css/bootstrap-responsive.css
 stylesheets[all][] = css/MyFontsWebfontsKit.css
+stylesheets[all][] = css/hellobar.css
 
 scripts[] = js/jquery.js
 scripts[] = js/bootstrap.min.js
@@ -16,6 +17,7 @@ scripts[] = js/videomodal.js
 scripts[] = js/c_monitor.js
 scripts[] = js/sharepage.js
 scripts[] = js/bootstrap-transition.js
+scripts[] = js/hellobar.js
 
 
 regions[sidebar_left] = Sidebar Left
