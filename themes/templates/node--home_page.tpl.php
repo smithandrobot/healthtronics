@@ -120,7 +120,7 @@
 							<div id="header-bg-p-resize" class="span5">
 								<?php print $node->body['und'][0]['value']; ?>
 								<div class="share">
-									<a href="javascript: return false;" data-toggle="collapse" data-target="#share"><div class="image"></div></a>
+									<a href="javascript: ;" data-toggle="collapse" data-target="#share"><div class="image"></div></a>
 								</div>
 							</div>
 						</div>

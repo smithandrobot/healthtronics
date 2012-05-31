@@ -181,7 +181,7 @@ function get_weighted_nodes($nodes)
     $query->fields('n', array('nid'));
     $query->fields('weight', array('weight'));
     $query->join('node_weight', 'weight', 'n.nid = weight.nid');
-    $query -> condition('weight.nid', $ids);
+    $query->condition('weight.nid', $ids);
     $query->orderBy('weight');
     $weighted_nodes = $query->execute();
     return $weighted_nodes;
