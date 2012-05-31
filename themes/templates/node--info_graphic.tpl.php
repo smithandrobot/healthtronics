@@ -11,7 +11,7 @@
 ?>
 
 <?php if($view_mode == "first-teaser"): ?>
-<div class="active item bam">
+<div class="active item">
 	<div class="stat">
 		<h1 class="<?php print $colors[$index]; ?>"><?php print $node->field_info_graphic_statistic['und'][0]['value']; ?></h1>
 		<p><?php print $node->title; ?></p>

@@ -281,7 +281,7 @@
 						
 						<?php if(count($node->field_info_graphics) > 0): ?>
 						<!-- Carousel -->
-						<div id="carousel" class="carousel carousel-top-margin">
+						<div id="statCarousel" class="carousel slide">
 					   		<div class="carousel-inner">
 								<?php
 								$c = 0;
@@ -301,8 +301,8 @@
 								}
 								?>
 					   		</div>
-					   		<a class="left carousel-control" href="#carousel" data-slide="prev"></a>
-					   		<a class="right carousel-control" href="#carousel" data-slide="next"></a>
+					   		<a class="left carousel-control" href="#statCarousel" data-slide="prev"></a>
+					   		<a class="right carousel-control" href="#statCarousel" data-slide="next"></a>
 						</div>
 						<!-- /Carousel -->
 						<?php endif ?>
