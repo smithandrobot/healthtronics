@@ -62,12 +62,8 @@
 					<div class="row">
 						<form id="share-email" action='/api/sharethis' method='post'>
 							<div class="span4">
-								<input name="to-email" id="to-email" type="text" value="To (email address)"
-									   onblur="if (this.value == '') {this.value = 'To (email address)';}"
-									   onfocus="if (this.value == 'To (email address)') {this.value = '';}">
-								<input name="from-email" id="from-email" type="text" value="Sender's Email"
-									   onblur="if (this.value == '') {this.value = 'Sender's Email';}"
-									   onfocus="if (this.value == 'Sender's Email') {this.value = '';}">
+								<input name="to-email" id="to-email" type="text" value="To (email address)">
+								<input name="from-email" id="from-email" type="text" value="Sender's Email">
 									<?php if(isset($node->nid)) : ?>
 								<input name="nid" value="<?php print $node->nid; ?>" type="hidden">
 								<?php endif ?>

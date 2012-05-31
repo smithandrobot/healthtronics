@@ -218,7 +218,7 @@
 			   			<?php print render($page['header']); ?>
 			   		</div>
 			   		<div class="sub-page share">
-			   			<a href="javascript: return false;" data-toggle="collapse" data-target="#share">
+			   			<a href="javascript: ;" data-toggle="collapse" data-target="#share">
 			   				<div class="image"></div>
 			   			</a>
 			   		</div>
@@ -511,46 +511,44 @@
 	</div>
 </div>
 
-<script>
+<?php if(!$is_front): ?>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function()
+		{
+			if($(".small-molecule h1").length > 0) $(".small-molecule h1").dotdotdot({ wrap: 'word' });
+
+	    	if($(".small-molecule p").length > 0) $(".small-molecule p").dotdotdot({ wrap: 'word' });
+
+			if($(".large-molecule h1").length > 0) $(".large-molecule h1").dotdotdot({ wrap: 'word' });
+
+			if($(".large-molecule p").length > 0) $(".large-molecule p").dotdotdot({ wrap: 'word' });
+		});
+	</script>
+<?php endif; ?>
+	
+
+<script type="text/javascript" charset="utf-8">
 	// DOCUMENT READY
 	// ----------------------------------------------------------
 	$(document).ready(function()
 	{
 		// ellipsis
 		// ----------------------------------
-		$(".date h1").dotdotdot({
-			wrap: 'word'
-		});
+		//*
+		if($(".date h1").length > 0) $(".date h1").dotdotdot({ wrap: 'word' });
 		
-		$(".small-molecule h1").dotdotdot({
-			wrap: 'word'
-		});
+		if($(".events-molecule .event-large h1").length > 0) $(".events-molecule .event-large h1").dotdotdot({ wrap: 'word' });
 		
-    	$(".small-molecule p").dotdotdot({
-			wrap: 'word'
-		});
+		if($(".events-molecule .event-large p").length > 0) $(".events-molecule .event-large p").dotdotdot({ wrap: 'word' });
 		
-		$(".large-molecule h1").dotdotdot({
-			wrap: 'word'
-		});
-		
-		$(".large-molecule p").dotdotdot({
-			wrap: 'word'
-		});
-		
-		$(".events-molecule .event-large h1").dotdotdot({
-			wrap: 'word'
-		});
-		
-		$(".events-molecule .event-large p").dotdotdot({
-			wrap: 'word'
-		});
+		if($(".video-molecule-description p").length > 0) $(".video-molecule-description p").dotdotdot({ wrap: 'word' });		
+		//*/
 		
 		
 		// carousel
 		// ----------------------------------
 		$('.carousel').carousel({
-			interval: 2000
+			interval: 3000
 		});
 		
 		
@@ -669,5 +667,5 @@
 		}
 	}
 </script>
-		
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4faab0d16ed7d203"></script>
+
+<script type="text/javascript" charset="utf-8" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4faab0d16ed7d203"></script>

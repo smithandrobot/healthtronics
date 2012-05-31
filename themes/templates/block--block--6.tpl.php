@@ -47,7 +47,7 @@
 	
 	//print('show headline' . $show_headline);
 ?>
-<div id="find-physician-form">
+<div id="find-physician-form" class="clearfix">
 	<?php if($show_headline): ?>
 	<h2>Find an M.D.</h2>
 	<?php endif ?>

@@ -352,6 +352,12 @@ ul.menu li
 	padding-right: 10px;
 }
 
+#large-mol-resize
+{
+	height: 450px;
+	background-position: top center;
+}
+
 .large-molecule
 {
 	position: relative;
@@ -408,9 +414,7 @@ ul.menu li
 {
 	color: @blue;
 	font-size: 24px;
-	// line-height: 24px;
 	line-height: 1.1em;
-	// letter-spacing: -1px;
 	margin-bottom: 8px;
 	height: 55px;
 	// width: 420px;
@@ -418,7 +422,7 @@ ul.menu li
 
 .large-molecule p
 {
-	color: #9E9F9F;
+	// color: #9E9F9F;
 	font-size: 12px;
 	font-family: @altFontFamily;
 	line-height: 13px;
@@ -492,6 +496,7 @@ ul.menu li
 	font-family: @altFontFamily;
 	// width: 180px;
 	height: 45px;
+	line-height: 1.2em;
 	overflow: hidden;
 }
 
@@ -1860,11 +1865,12 @@ ul.menu li
 
 .video-molecule-description p
 {
-	position:relative;
-	z-index:2;
-	padding:5px 50px 0 10px;
-	height:35px;
-	overflow:hidden;
+	position: relative;
+	z-index: 2;
+	padding: 5px 50px 0 10px;
+	height: 35px;
+	overflow: hidden;
+	line-height: 1.2em;
 }
 
 // Find a physician form
@@ -1887,20 +1893,36 @@ ul.menu li
     box-shadow: none;
     -webkit-transition: none
 }
+
 #find-physician-form  h2
 {
     color:@blue;
 }
+
+#find-physician-form input
+{
+	padding: 4px 0 4px 0;
+}
+
+#find-physician-form select
+{
+	width: 100%;
+}
+
 #find-physician-form input,
 #find-physician-form select
 {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+	display: block;
 }
+
 #find-physician-form #find-physician-zip
 {
-    margin-top:10px;
+    margin-top: 10px;
+	width: 100%;
+	text-indent: 5px;
 }
 
 .find-a-md-map

@@ -4282,6 +4282,10 @@ ul.menu li {
   padding-left: 10px;
   padding-right: 10px;
 }
+#large-mol-resize {
+  height: 450px;
+  background-position: top center;
+}
 .large-molecule {
   position: relative;
   width: 100%;
@@ -4329,7 +4333,6 @@ ul.menu li {
   height: 55px;
 }
 .large-molecule p {
-  color: #9E9F9F;
   font-size: 12px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   line-height: 13px;
@@ -4383,6 +4386,7 @@ ul.menu li {
   font-size: 12px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   height: 45px;
+  line-height: 1.2em;
   overflow: hidden;
 }
 .small-molecule.large-font p {
@@ -5326,6 +5330,7 @@ ul.menu li {
   padding: 5px 50px 0 10px;
   height: 35px;
   overflow: hidden;
+  line-height: 1.2em;
 }
 #find-physician-form input[type="submit"] {
   padding: 7px 25px 5px 25px;
@@ -5347,14 +5352,23 @@ ul.menu li {
 #find-physician-form h2 {
   color: #007296;
 }
+#find-physician-form input {
+  padding: 4px 0 4px 0;
+}
+#find-physician-form select {
+  width: 100%;
+}
 #find-physician-form input,
 #find-physician-form select {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  display: block;
 }
 #find-physician-form #find-physician-zip {
   margin-top: 10px;
+  width: 100%;
+  text-indent: 5px;
 }
 .find-a-md-map {
   height: 125px;
