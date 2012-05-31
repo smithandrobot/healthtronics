@@ -31,9 +31,7 @@
 ?>
 
 <form action="<?php print base_path() ?>search/node/" accept-charset="UTF-8" method="post" id="search-block-form">
-	<input type="search" name="search_block_form" value="Keyword Search" class="search-field"
-				onblur="if (this.value == '') {this.value = 'Keyword Search';}"
-                onfocus="if (this.value == 'Keyword Search') {this.value = '';}">
+	<input type="search" name="search_block_form" value="Keyword Search" class="search-field">
 	<div class="search-btn">
 		<input  class="" type="submit" value="" border="0" alt="Submit Search Term">
 	</div>

@@ -99,7 +99,7 @@
 	<a href="/<?php print drupal_lookup_path('alias','node/'.$node->nid); ?>">
 		<div class="small-molecule mol-border-orange events-teaser">
 			<div class="inner">
-				<div class="clearfix">
+				<div class="event-heading clearfix">
 					<div class="date">
 						<div class="month"><?php print $month; ?></div>
 						<div class="day"><?php print $day; ?></div>

@@ -74,12 +74,17 @@ padding-bottom: 5px;
 	margin-bottom: 20px;
 }
 
+ul.nav-secondary
+{
+	margin-bottom: 20px;
+}
+
 .nav-secondary li
 {
 	float: left;
 	padding-left: 45px;
     font-size: 18px;
-	margin-bottom: 23px;
+	// margin-bottom: 23px;
 }
 
 .nav-secondary li.first.leaf
@@ -356,6 +361,7 @@ ul.menu li
 {
 	height: 450px;
 	background-position: top center;
+	margin-bottom: 30px;
 }
 
 .large-molecule
@@ -365,7 +371,6 @@ ul.menu li
 	// margin-left: auto;
 	// margin-right: auto;
 	overflow: hidden;
-	margin-bottom: 30px;
 	// background-image: url("/sites/all/themes/healthtronicsv2/images/bg_large_molecule.jpg");
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -904,6 +909,12 @@ ul.menu li
 
 // Events Teaser
 // -----------------------------------------
+.small-molecule.events-teaser .event-heading
+{
+	width: 175px;
+	height: 91px;
+}
+
 .small-molecule.events-teaser .date
 {
 	
@@ -934,12 +945,17 @@ ul.menu li
 	font-size: 18px;
 	line-height: 1.1em;
 	max-height: 75px;
+	*width: 125px;
+	*height: 100px;
 }
 
 .small-molecule.events-teaser p
 {
 	height: auto;
 	margin: 0 0 0 0;
+	float: left;
+	text-align: left;
+	*height: 40px;
 }
 
 
@@ -1961,13 +1977,15 @@ ul.menu li
 
 #contact-site-form #edit-cid
 {
-    width:460px;
+    // width:460px;
+	width: 99%;
 }
 
 #contact-site-form #edit-first-name, #contact-site-form #edit-last-name
 {
-    float:left;
-    margin-top:20px;
+    float: left;
+    margin-top: 20px;
+	margin-right: 20px;
 }
 
 #contact-site-form #edit-first-name.error, #contact-site-form #edit-last-name.error
@@ -1975,11 +1993,21 @@ ul.menu li
     width:208px;
 }
 
-#contact-site-form #edit-last-name { margin-left:20px;}
+#contact-site-form #edit-last-name
+{
+	// margin-left: 0px;
+}
+
 #contact-site-form #edit-mail
 {
     margin-top: 20px;
-    width: 450px;
+    // width: 450px;
+	width: 98%;
+}
+
+.form-textarea-wrapper textarea
+{
+	width: 99%;
 }
 
 #contact-site-form #edit-message {margin-top:20px;}

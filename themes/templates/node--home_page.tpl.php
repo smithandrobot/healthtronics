@@ -256,9 +256,7 @@
 									name="cm-eujkk-eujkk" 
 									type="text" 
 									class="email-field" 
-									value="Enter Your email address" 
-									onblur="if (this.value == '') {this.value = 'Enter Your email address';}" 
-									onfocus="if (this.value == 'Enter Your email address') {this.value = '';}"><button type="submit" id="email-top-btn" class="submit-btn">submit</button>
+									value="Enter Your email address"><button type="submit" id="email-top-btn" class="submit-btn">submit</button>
 								</form>
 								<script type="text/javascript" charset="utf-8">
 									var cHomePage=new CMonitorForm('#email-form-homepage', '#email-top-btn', '#email-field-top', '.email-header', '.email-details');
