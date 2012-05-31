@@ -4256,6 +4256,9 @@ ul.menu li {
 .share-molecule .close-btn {
   text-align: right;
 }
+#videoModal .share-molecule .close-btn {
+  margin-top: 80px;
+}
 .share-molecule.video-modal input {
   width: 212px;
 }
@@ -4619,7 +4622,7 @@ ul.menu li {
 .events-molecule .event-large h1 {
   font-family: LeituraSans-Italic2, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
-  line-height: 1.2em;
+  line-height: 1.1em;
   width: 365px;
   height: 58px;
   margin-left: auto;
