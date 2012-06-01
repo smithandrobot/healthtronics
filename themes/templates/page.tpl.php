@@ -78,7 +78,8 @@
 	$view = views_get_page_view();
 	
 ?>
-<script type="text/javascript">
+
+<!-- <script type="text/javascript">
     new HelloBar('<span>Healthtronics is a part of Endo – now Endo Health Solutions – working together to find a better way.<\/span> <a href="http:\/\/www.endo.com\/" target="_blank" class="button">Learn More<\/a>', {
         showWait: 1000,
         fonts: 'Helvetica,Arial,sans-serif',
@@ -88,7 +89,7 @@
         borderColor: '#F28C18'
     }, 1.0);
 
-</script>
+</script> -->
 
 <!-- Header for tablet, desktop -->
 <div id="white-stripe" class="hidden-phone">
@@ -212,7 +213,6 @@
 		<a href="javascript: ;" class="share-image" data-toggle="collapse" data-target="#modalCollapse"></a>
 	</div>
 	<div id="modalCollapse" class="collapse">
-	<div id="share" class="share-molecule">
 		<div class="inner">
 			<div class="container">
 				<div class="row">
@@ -254,7 +254,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 </div>
 

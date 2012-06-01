@@ -153,7 +153,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="span12">
-					<div class="row">
+					<div class="row ie-margin">
 						
 						<!-- Start Large Molecule -->
 						<?php print  render( node_view( $large_molecule, 'teaser') ); ?> 

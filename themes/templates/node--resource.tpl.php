@@ -94,14 +94,19 @@
 
 <?php if($resource == 'video'): ?>
 <div class="span3 small-mol-resize-c">
-	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
+	<a class="video_open" style="position: relative;" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
 		<?php $style = 'background-image: url(http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg);'; ?>
-		<div class="video-molecule <?php print $color; ?>" style="<?php print $style; ?>">
+		<?php $img = 'http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg'; ?>
+		<div class="video-molecule <?php print $color; ?>" >
 			<div class="video-molecule-description">
-				<p><?php print $node->title; ?></p>
-				<div class="video-molecule-content-background"></div>
-				<div class="icon <?php print $icon; ?>"></div>
+				<div class="video-molecule-content-background">
+					<p>
+						<?php print $node->title; ?>
+					</p>
+				</div>
 			</div>
+			<div class="video-bg"><img src="<?php print $img; ?>"></div>
+			<div class="icon <?php print $icon; ?>"></div>
 		</div>
 	</a>
 </div>

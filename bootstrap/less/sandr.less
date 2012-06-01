@@ -1871,31 +1871,75 @@ ul.menu li
 	position: relative;
 }
 
+.video-molecule .icon
+{
+	height: 22px;
+	width: 22px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	position: absolute;
+	right: 10px;
+	bottom: 7px;
+	z-index: 6;
+}
+
 .video-molecule-description
 {
 	position: absolute;
-	bottom: -18px;
+	bottom: 0px;
 	width: 100%;
+	z-index: 5;
 }
 
 .video-molecule .video-molecule-content-background
 {
+	/* IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+
+	/* IE 5-7 */
+	filter: alpha(opacity=80);
+
+	/* Netscape */
+	-moz-opacity: 0.8;
+
+	/* Safari 1.x */
+	-khtml-opacity: 0.8;
+	
+	/* Good browsers */
+	opacity: 0.8;
+	
 	position: relative;
-	z-index: 1;
-	opacity: .85;
+	z-index: 3;
 	height: 45px;
-	background-color: white;
-	margin-top: -50px;
+	background-color: @white;
+	margin-top: -45px;
 }
 
 .video-molecule-description p
 {
 	position: relative;
-	z-index: 2;
+	z-index: 4;
 	padding: 5px 50px 0 10px;
 	height: 35px;
 	overflow: hidden;
 	line-height: 1.2em;
+}
+
+.video-bg
+{
+	position: relative;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	z-index: 2;
+	zoom: 1;
+}
+
+.video-bg img
+{
+	width: 220px;
+	height: 125px;
+	position: relative;
+	z-index: 1;
 }
 
 // Find a physician form
@@ -2051,6 +2095,11 @@ ul.menu li
 
 .form-item input.error, .form-item textarea.error, .form-item select.error {
     border: 2px solid @orange;
+}
+
+.ie-margin
+{
+	*margin-bottom: 30px;
 }
 
 // Bio Page
