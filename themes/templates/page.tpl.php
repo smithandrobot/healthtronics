@@ -209,9 +209,55 @@
 		<iframe width="794" height="404" src="http://www.youtube.com/embed/VGRQGm4-A4k?rel=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 	<div class="modal-footer">
-		<a href="#modalCollapse" class="share-image"></a>
+		<a href="javascript: ;" class="share-image" data-toggle="collapse" data-target="#modalCollapse"></a>
+	</div>
+	<div id="modalCollapse" class="collapse">
+	<div id="share" class="share-molecule">
+		<div class="inner">
+			<div class="container">
+				<div class="row">
+					<div class="span9">
+						<div class="share-headline">
+							<img src="<?php print '/' . path_to_theme() . '/images/arrow_share.png'; ?>"> Share this page
+						</div>
+						<div class="row">
+							<form id="share-email" action='/api/sharethis' method='post'>
+								<div class="span4">
+									<input name="to-email" id="to-email" type="text" value="To (email address)">
+									<input name="from-email" id="from-email" type="text" value="Sender's Email">
+										<?php if(isset($node->nid)) : ?>
+									<input name="nid" value="<?php print $node->nid; ?>" type="hidden">
+									<?php endif ?>
+								</div>
+								<div class="span5">
+									<textarea name="message" id="message">Your Message</textarea>
+									<button id="share-page-btn" class="share-email-btn">submit</button>
+								</div>
+							</form>
+							<div class="span2">
+								<!-- AddThis Button BEGIN -->
+								<div class="addthis_toolbox addthis_default_style ">
+								<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+								<a class="addthis_button_tweet"></a>
+								<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+								<a class="addthis_counter addthis_pill_style"></a>
+								</div>
+								<!-- AddThis Button END -->
+							</div>
+							<div class="span7">
+								<div class="close-btn">
+									<a href="javascript: ;" data-toggle="collapse" data-target="#share"><img src="<?php print '/' . path_to_theme() . '/images/close_btn.png'; ?>"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	</div>
 </div>
+
 <!-- /VIDEO MODAL -->
 
 
