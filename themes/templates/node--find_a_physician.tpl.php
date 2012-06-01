@@ -111,9 +111,9 @@
 	}
 ?>
 
-<h2 id="title" class="find-a-md-title">Find a Healthtronics Affliated Physician</h2>
+<h2 id="title" class="find-a-md-title">Find a HealthTronics Affliated Physician</h2>
 <?php if ($success && $total > 0) :?>
-<div id="find-a-physician-result-summary"><?php print count($json); ?> Healthtronics Physicians found near you.</div>
+<div id="find-a-physician-result-summary"><?php print count($json); ?> HealthTronics Physicians found near you.</div>
 <!-- Body  -->
 <div class="find-a-md-result-container">
 	<?php foreach($json as $physician):?>
