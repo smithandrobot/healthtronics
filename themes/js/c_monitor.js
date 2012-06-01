@@ -12,7 +12,6 @@ function CMonitorForm(form, btn, input, header, details)
       , str
       , final
     
-    log(form);
     form.submit(function() { return false; })
     btn.click(emailSubmit);
     
