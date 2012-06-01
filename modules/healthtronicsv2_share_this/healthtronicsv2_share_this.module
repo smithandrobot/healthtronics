@@ -68,15 +68,9 @@ function healthtronicsv2_share_this_mail_alter(&$message) {
       'langcode' => $message['language']->language,
     );
     $from = $message['from'];
-    $message['subject'] = "Healthtronics - " . $message['params']['subject'];
-    /*
-This is cool.
-http://dev.healthtronics:8888/physicians/cryotherapy/cryotherapy-services-and-solutions#.T8Fe1HDMgx8.email
----
-This message was sent by david@smithandrobot.com via http://addthis.com.  Please note that AddThis does not verify email addresses.
-    */
+    $message['subject'] = $message['from'] . ' shared a link on HealthTronics.com';
     $message['body'][] = $message['params']['message'];
     $message['body'][] = $message['params']['url'];
-    $message['body'][] = 'This message was sent by  ' . $from . ' via Healthtronics. Please note that Healthtronics does not verify email addresses.';
+    $message['body'][] = "- - -\nYou received this email because someone using the email " . $message["from"] . " sent you a link on HealthTronics.com. You have not been subscribed to an email list.";
 }
 
