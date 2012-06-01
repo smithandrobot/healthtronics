@@ -4348,6 +4348,7 @@ ul.menu li {
 }
 .small-molecule {
   background-color: #ffffff;
+  background-size: 100% 125px;
   width: 100%;
   height: 125px;
   margin-bottom: 30px;

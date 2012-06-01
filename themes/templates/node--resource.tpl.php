@@ -35,10 +35,12 @@
 <div class="span3 small-mol-resize-d">
 	<?php if($resource == 'video'): ?>
 	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
+	<?php $style = 'background: url(http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg);'; ?>
+		<div class="small-molecule news-teaser <?php print $color; ?>" style="<?php print $style; ?>">
 	<?php else: ?>
 	<a href="<?php print $file; ?>">
-	<?php endif; ?>
 		<div class="small-molecule news-teaser <?php print $color; ?>">
+	<?php endif; ?>
 			<div class="inner">
 				<h1><?php print $node->title; ?></h1>
 				<p><?php print $summary; ?></p>
@@ -92,10 +94,12 @@
 <div class="span3 small-mol-resize-c">
 	<?php if($resource == 'video'): ?>
 	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
+	<?php $style = 'background: url(http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg);'; ?>
+		<div class="small-molecule news-teaser <?php print $color; ?>" style="<?php print $style; ?>">
 	<?php else: ?>
 	<a href="<?php print $file; ?>">
-	<?php endif; ?>
 		<div class="small-molecule news-teaser <?php print $color; ?>">
+	<?php endif; ?>
 			<div class="inner">
 				<h1><?php print $node->title; ?></h1>
 				<p><?php print $summary; ?></p>
