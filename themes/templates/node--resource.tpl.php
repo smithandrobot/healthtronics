@@ -107,7 +107,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="video-bg"><img src="<?php print $img; ?>"></div>
+			<div class="video-bg hidden-phone"><img src="<?php print $img; ?>"></div>
 			<div class="icon <?php print $icon; ?>"></div>
 		</div>
 	</a>
@@ -141,7 +141,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="video-bg"><img src="<?php print $img; ?>"></div>
+			<div class="video-bg hidden-phone"><img src="<?php print $img; ?>"></div>
 			<div class="icon <?php print $icon; ?>"></div>
 		</div>
 	</a>
