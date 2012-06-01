@@ -111,9 +111,9 @@
 	}
 ?>
 
-<h2 id="title" class="find-a-md-title">Find a Healthtronics Affliated Physician</h2>
+<h2 id="title" class="find-a-md-title">Find a HealthTronics Affliated Physician</h2>
 <?php if ($success && $total > 0) :?>
-<div id="find-a-physician-result-summary"><?php print count($json); ?> Healthtronics Physicians found near you.</div>
+<div id="find-a-physician-result-summary"><?php print count($json); ?> HealthTronics Physicians found near you.</div>
 <!-- Body  -->
 <div class="find-a-md-result-container">
 	<?php foreach($json as $physician):?>
@@ -146,7 +146,6 @@
  	<h3>Error</h3>
  	<p class="address"><?php print $errorMessage; ?></p>
  <?php elseif(!$submitted): ?>
- 	<h3>Welcome to the physician finder.</h3>
 	<div id="find-a-physician-result-summary">
 		HealthTronics helps physicians provide better care for you. Use the short form on the left to locate the HealthTronics affiliated physician closest to you.
 	</div>
