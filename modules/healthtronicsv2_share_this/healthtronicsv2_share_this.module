@@ -12,6 +12,17 @@ function healthtronicsv2_share_this_menu()
         'description' => 'Provides a way to email with ajax from the share this form.',
         'page callback' => 'share'
     );
+
+    $items = array();
+    $items['share-video-form-js-api'] = array(
+        'path' => 'api/share/video',
+        'title callback' => FALSE,
+        'title' => 'Share This Video',
+        'type' => MENU_NORMAL_ITEM,
+        'access callback' => TRUE,
+        'description' => 'Provides a way to email with ajax from the share this form.',
+        'page callback' => 'share_video'
+    );
     
     return $items;
 }
@@ -26,24 +37,32 @@ function share_old()
 
 
 function share() {
-    // All system mails need to specify the module and template key (mirrored from
-    // hook_mail()) that the message they want to send comes from.
+    // Share's a page by sending an email
     $module = 'healthtronicsv2_share_this';
     $key = 'share_form';
     $language = language_default();
     $send = TRUE;
     $node = node_load($_POST['nid']);
     $port = ($_SERVER['SERVER_PORT'] != 80 ) ? ':'.$_SERVER['SERVER_PORT'] : '';
-    $url = 'http://' . $_SERVER['SERVER_NAME'] . $port . '/'.drupal_lookup_path('alias','node/'.$node->nid);
-    $subject = $node->title;
+
+	switch($_POST["share_type"])
+	{
+		case 'page':
+			$url = 'http://' . $_SERVER['SERVER_NAME'] . $port . '/'.drupal_lookup_path('alias','node/'.$node->nid);
+			break;
+		case 'video':
+			$url = 'http://' . $_SERVER['SERVER_NAME'] . $port . '/share/video/'.$node->nid;
+			break;
+		default:
+			$url = 'http://' . $_SERVER['SERVER_NAME'] . $port;
+	}
     
     $params = array(
                     'message'=>$_POST['message'], 
                     'url'=>$url,
-                    'subject'=>$subject,
                     );
     
-    flood_register_event('share_form', variable_get('share_threshold_window', 60));
+    flood_register_event('share_form', variable_get('share_threshold_window', 60*3));
     $result = drupal_mail($module, $key, $_POST['to-email'], $language, $params, $_POST['from-email'], $send);
     if ($result['result'] == TRUE) {
         drupal_add_http_header('Content-Type', 'application/json');
@@ -59,6 +78,7 @@ function share() {
 }
 
 
+
 function healthtronicsv2_share_this_mail_alter(&$message) {
     $node = node_load(arg(1));
     $url = drupal_lookup_path('alias','node/'.$node->nid);
@@ -67,6 +87,7 @@ function healthtronicsv2_share_this_mail_alter(&$message) {
     $options = array(
       'langcode' => $message['language']->language,
     );
+	
     $from = $message['from'];
     $message['subject'] = $message['from'] . ' shared a link on HealthTronics.com';
     $message['body'][] = $message['params']['message'];

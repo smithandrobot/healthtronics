@@ -194,7 +194,7 @@
 				<div class="row">
 					<div class="span9">
 						<div class="share-headline">
-							<img src="<?php print '/' . path_to_theme() . '/images/arrow_share.png'; ?>"> Share this page
+							<img src="<?php print '/' . path_to_theme() . '/images/arrow_share.png'; ?>"> Share this Video
 						</div>
 						<div class="row">
 							<form id="share-video-email" action='/api/sharethis' method='post'>
@@ -202,6 +202,7 @@
 									<input name="to-email" id="to-email" type="text" value="To (email address)">
 									<input name="from-email" id="from-email" type="text" value="Sender's Email">
 									<input id="nid-input" name="nid" value="" type="hidden">
+									<input name="share_type" value="video" type="hidden">
 								</div>
 								<div class="span5">
 									<textarea name="message" id="message">Your Message</textarea>
