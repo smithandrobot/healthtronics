@@ -4349,6 +4349,7 @@ ul.menu li {
 .small-molecule {
   background-color: #ffffff;
   background-size: 100% 125px;
+  background-repeat: no-repeat;
   width: 100%;
   height: 125px;
   margin-bottom: 30px;
@@ -5331,6 +5332,7 @@ ul.menu li {
 .video-molecule-description {
   position: absolute;
   bottom: -18px;
+  width: 100%;
 }
 .video-molecule .video-molecule-content-background {
   position: relative;

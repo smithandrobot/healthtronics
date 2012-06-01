@@ -30,17 +30,11 @@
 	}
 ?>
 
-<?php if($teaser && !isset($image)): ?>
+<?php if($teaser && !isset($image) && $resource != 'video'): ?>
 <!-- No Image BKG -->
 <div class="span3 small-mol-resize-d">
-	<?php if($resource == 'video'): ?>
-	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
-	<?php $style = 'background: url(http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg);'; ?>
-		<div class="small-molecule news-teaser <?php print $color; ?>" style="<?php print $style; ?>">
-	<?php else: ?>
 	<a href="<?php print $file; ?>">
 		<div class="small-molecule news-teaser <?php print $color; ?>">
-	<?php endif; ?>
 			<div class="inner">
 				<h1><?php print $node->title; ?></h1>
 				<p><?php print $summary; ?></p>
@@ -54,14 +48,10 @@
 
 <?php if($teaser && isset($image)): ?>
 <div class="span3 small-mol-resize-d">
-	<?php if($resource == 'video'): ?>
-	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
-	<?php else: ?>
 	<a href="<?php print $file; ?>">
-	<?php endif; ?>
 		<div style="background-image:url(<?php print $image; ?>);" class="video-molecule <?php print $color; ?>">
 			<div class="video-molecule-description">
-				<p><?php print $summary; ?></p>
+				<p><?php print $node->title; ?></p>
 				<div class="video-molecule-content-background"></div>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
@@ -74,14 +64,10 @@
 <!-- NEW CODE SHOULD BE PUT BELOW FOR SIDE BAR -->
 <?php if($view_mode=='side_bar' && isset($image)): ?>
 <div class="span3 small-mol-resize-c">
-	<?php if($resource == 'video'): ?>
-	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
-	<?php else: ?>
 	<a href="<?php print $file; ?>">
-	<?php endif; ?>
 		<div style="background-image:url(<?php print $image; ?>);" class="video-molecule <?php print $color; ?>">
 			<div class="video-molecule-description">
-				<p><?php print $summary; ?></p>
+				<p><?php print $node->title; ?></p>
 				<div class="video-molecule-content-background"></div>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
@@ -90,19 +76,30 @@
 </div>
 <?php endif?>
 
-<?php if($view_mode=='side_bar' && !isset($image)): ?>
+
+<?php if($view_mode=='side_bar' && !isset($image) && $resource != 'video'): ?>
 <div class="span3 small-mol-resize-c">
-	<?php if($resource == 'video'): ?>
-	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
-	<?php $style = 'background: url(http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg);'; ?>
-		<div class="small-molecule news-teaser <?php print $color; ?>" style="<?php print $style; ?>">
-	<?php else: ?>
 	<a href="<?php print $file; ?>">
 		<div class="small-molecule news-teaser <?php print $color; ?>">
-	<?php endif; ?>
 			<div class="inner">
 				<h1><?php print $node->title; ?></h1>
 				<p><?php print $summary; ?></p>
+				<div class="icon <?php print $icon; ?>"></div>
+			</div>
+		</div>
+	</a>
+</div>
+<?php endif?>
+
+
+<?php if($resource == 'video'): ?>
+<div class="span3 small-mol-resize-c">
+	<a class="video_open" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
+		<?php $style = 'background-image: url(http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg);'; ?>
+		<div class="video-molecule <?php print $color; ?>" style="<?php print $style; ?>">
+			<div class="video-molecule-description">
+				<p><?php print $node->title; ?></p>
+				<div class="video-molecule-content-background"></div>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
 		</div>
