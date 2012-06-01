@@ -1,0 +1,6 @@
+; $Id$
+name = Healthtronics Search
+description = Alters Drupal's defaut search. Allows the exclusion of node content types
+package = Healthtronics V2
+core = 7.x
+version = 7.x-1.0

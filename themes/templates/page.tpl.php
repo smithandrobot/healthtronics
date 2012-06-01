@@ -78,6 +78,17 @@
 	$view = views_get_page_view();
 	
 ?>
+<script type="text/javascript">
+    new HelloBar('<span>Healthtronics is a part of Endo – now Endo Health Solutions – working together to find a better way.<\/span> <a href="http:\/\/www.endo.com\/" target="_blank" class="button">Learn More<\/a>', {
+        showWait: 1000,
+        fonts: 'Helvetica,Arial,sans-serif',
+        barColor: '#FFA826',
+        shadow: false,
+        helloBarLogo: false,
+        borderColor: '#F28C18'
+    }, 1.0);
+
+</script>
 
 <!-- Header for tablet, desktop -->
 <div id="white-stripe" class="hidden-phone">
