@@ -130,7 +130,7 @@
 
 <?php if($teaser && $resource == 'video'): ?>
 <div class="span3 small-mol-resize-d">
-	<a class="video_open" style="position: relative;" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
+	<a class="video_open" style="position: relative;" data-node-id="<?php print $node->nid; ?>" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
 		<?php $style = 'background-image: url(http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg);'; ?>
 		<?php $img = 'http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg'; ?>
 		<div class="video-molecule <?php print $color; ?>" >
