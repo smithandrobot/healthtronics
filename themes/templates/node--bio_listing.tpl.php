@@ -94,7 +94,7 @@
 			<img src="<?php print '/sites/default/files/bio_images/' . $bio_node['node']->field_bio_image['und'][0]['filename'];?>">
 			<?php endif ?>
 			<div id="<?php print $bio_node['node']->field_last_name['und'][0]["value"]; ?>" class="name-title-container">		
-				<h3><?php print $bio_node['node']->title; ?></h3>
+				<h2><?php print $bio_node['node']->title; ?></h2>
 				<p class="job-title"><?php print $bio_node['node']->field_job_title['und'][0]['value']; ?></p>
 			</div>
 			<?php print $bio_node['node']->body['und'][0]['value']; ?>
