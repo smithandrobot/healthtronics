@@ -37,7 +37,7 @@ function healthtronicsv2_contact_form_block_view($delta = '') {
 function healthtronicsv2_contact_form_form_alter(&$form, &$form_state, $form_id)
 {
     $node = node_load(arg(1));
-    
+    //var_dump($form);
     if( $form_id == 'contact_site_form')
     {   
         unset($form['name']);
@@ -125,8 +125,26 @@ function healthtronicsv2_contact_form_form_validate($form, &$form_state) {
 function healthtronicsv2_contact_form_form_submit($form, &$form_state)
 {
     $form_state['redirect'] = 'our-company/contact/confirm';
-    //var_dump($form_state);
-    //exit;
+}
+
+function healthtronicsv2_contact_form_mail_alter(&$message) {
+    $node = node_load(arg(1));
+    $url = drupal_lookup_path('alias','node/'.$node->nid);
+    if($message['module'] != 'contact') return;
+	//var_dump($message);
+	//exit;
+    
+    //$options = array(
+    //  'langcode' => $message['language']->language,
+    //);
+    //$from = $message['from'];
+	unset($message['body']);
+    $message['subject'] = 'Web Site Submission re: '.$message['params']['category']['category'];
+    $message['body'][] = 'The following message was submitted through the HealthTronics web site:';
+    $message['body'][] = 'Name: ' . $message['params']['first_name'] . ' ' . $message['params']['last_name'];
+    $message['body'][] = 'Email: ' . $message['params']['mail'];
+    $message['body'][] = 'Re: ' . $message['params']['category']['category'];
+    $message['body'][] = "Message:\n\n" . $message['params']["message"];
 }
 
 // loop through options and set the default select index
