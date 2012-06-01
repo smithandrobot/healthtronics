@@ -57,7 +57,7 @@ function ShareThis(formName)
           log(thrownError);
           log(ajaxOptions);
           log(xhr);
-          emailHeader.text('Ooops! Something went wrong. Please try again.');
+          emailHeader.text('Sorry, something went wrong. Please try again later.');
       }
       
       

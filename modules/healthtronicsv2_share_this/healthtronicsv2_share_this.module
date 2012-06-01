@@ -16,14 +16,6 @@ function healthtronicsv2_share_this_menu()
     return $items;
 }
 
-function share_old()
-{
-    drupal_add_http_header('Content-Type', 'application/json');
-    //print('add_to_list');
-    $a = array('one', 'two', 'two', 'three');
-    echo drupal_json_output(array_values(array_unique($a)));
-}
-
 
 function share() {
     // Share's a page by sending an email

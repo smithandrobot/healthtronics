@@ -20,6 +20,10 @@ $(document).ready(function()
 		}
 	});
 	
+	$('#videoModal').on('hidden', function () {
+		$("#videoModal .modal-body").empty();
+	})
+
 	$(".video_open").click(function()
 	{
 		// Get data, construct embed code
