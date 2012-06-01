@@ -187,7 +187,8 @@
 	<div class="modal-footer">
 		<a href="javascript: ;" class="share-image" data-toggle="collapse" data-target="#modalCollapse"></a>
 	</div>
-	<div id="modalCollapse" class="collapse">
+	
+	<div id="modalCollapse" class="share-molecule collapse">
 		<div class="inner">
 			<div class="container">
 				<div class="row">
@@ -219,7 +220,7 @@
 							</div>
 							<div class="span7">
 								<div class="close-btn">
-									<a href="javascript: ;" data-toggle="collapse" data-target="#share"><img src="<?php print '/' . path_to_theme() . '/images/close_btn.png'; ?>"></a>
+									<a href="javascript: ;" data-toggle="collapse" data-target="#modalCollapse"><img src="<?php print '/' . path_to_theme() . '/images/close_btn.png'; ?>"></a>
 								</div>
 							</div>
 						</div>
@@ -228,6 +229,9 @@
 			</div>
 		</div>
 	</div>
+	
+	
+	
 </div>
 <!-- /VIDEO MODAL -->
 
