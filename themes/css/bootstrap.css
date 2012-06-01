@@ -5381,12 +5381,16 @@ ul.menu li {
   margin-bottom: 0px;
   z-index: 2;
   zoom: 1;
+  width: 220px;
+  height: 125px;
+  overflow: hidden;
 }
 .video-bg img {
   width: 220px;
-  height: 125px;
+  height: 165px;
   position: relative;
   z-index: 1;
+  top: -21px;
 }
 #find-physician-form input[type="submit"] {
   padding: 7px 25px 5px 25px;
