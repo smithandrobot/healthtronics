@@ -91,6 +91,10 @@
 
 </script> -->
 
+<!--[if lt IE 9]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+
 <!-- Header for tablet, desktop -->
 <div id="white-stripe" class="hidden-phone">
 	<div class="container">

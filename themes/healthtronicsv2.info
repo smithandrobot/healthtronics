@@ -18,6 +18,7 @@ scripts[] = js/c_monitor.js
 scripts[] = js/sharepage.js
 scripts[] = js/bootstrap-transition.js
 scripts[] = js/hellobar.js
+scripts[] = js/respond.min.js
 
 
 regions[sidebar_left] = Sidebar Left
