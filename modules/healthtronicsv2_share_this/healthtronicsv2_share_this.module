@@ -12,17 +12,6 @@ function healthtronicsv2_share_this_menu()
         'description' => 'Provides a way to email with ajax from the share this form.',
         'page callback' => 'share'
     );
-
-    $items = array();
-    $items['share-video-form-js-api'] = array(
-        'path' => 'api/share/video',
-        'title callback' => FALSE,
-        'title' => 'Share This Video',
-        'type' => MENU_NORMAL_ITEM,
-        'access callback' => TRUE,
-        'description' => 'Provides a way to email with ajax from the share this form.',
-        'page callback' => 'share_video'
-    );
     
     return $items;
 }
