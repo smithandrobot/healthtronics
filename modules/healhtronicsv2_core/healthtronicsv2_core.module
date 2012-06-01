@@ -49,6 +49,11 @@ function healthtronicsv2_core_entity_info_alter(&$entity_info)
       'label' => t('Home Page Molecule'),
       'custom settings' => TRUE,
     );
+
+    $entity_info['node']['view modes']['video_share'] = array(
+      'label' => t('Video Sharing Page'),
+      'custom settings' => TRUE,
+    );
     
     // 
 } 

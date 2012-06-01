@@ -1,22 +1,26 @@
 $(
     function()
     { 
-        var share = new ShareThis();
+        if($('#share-email').length > 0) var sharePage = new ShareThis('share-email');
+        if($('#share-video-email').length > 0) var shareVideo = new ShareThis('share-video-email');
     }
 )
 
-function ShareThis()
+function ShareThis(formName)
 {
     //alert('share this');
-    var form = $('#share-email')
-      , btn = $('#share-page-btn')
+
+// modalCollapse = video
+// share = page
+    var form = $('#'+formName)
+      , btn = form.find('#share-page-btn')
       , str
-      , emailHeader = $('.share-headline')
+      , emailHeader = (formName == 'share-email') ? $('#share .share-headline') : $('#modalCollapse .share-headline')
       , orgHeadline = emailHeader.html()
-      , orgColor = $('#to-email').css('color')
-      , toEmail = $('#to-email')
-      , fromEmail = $('#from-email')
-      , message = $('#message')
+      , orgColor = form.find('#to-email').css('color')
+      , toEmail = form.find('#to-email')
+      , fromEmail = form.find('#from-email')
+      , message = form.find('#message')
 
       form.submit(function() { return false; })
       btn.click(emailSubmit);
@@ -53,7 +57,7 @@ function ShareThis()
           log(thrownError);
           log(ajaxOptions);
           log(xhr);
-          emailHeader.text('Ooops! Something went wrong. Please try again.');
+          emailHeader.text('Sorry, something went wrong. Please try again later.');
       }
       
       

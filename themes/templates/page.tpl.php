@@ -146,14 +146,6 @@
 		<div id="collapse1" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<?php print render(module_invoke( 'menu', 'block_view', 'menu-mobile-main-menu') ); ?>
-				<!-- <ul class="accordion-menu-ul">
-					<li><a href="/physicians/lithotripsy/lithotripsy-overview">Lithotripsy</a></li>
-					<li><a href="/physicians/laser-treatments/laser-treatments-overview">Laser Treatment</a></li>
-					<li><a href="/physicians/cryotherapy/cryotherapy-overview">Cryotherapy</a></li>
-					<li><a href="/physicians/it-solutions/it-solutions-overview">IT Solutions</a></li>
-					<li><a href="/physicians/lab-solutions/laboratory-solutions-overview">Laboratory Solutions</a></li>
-					<li><a href="/physicians/equipment-services/equipment-services-overview">Equipment Services</a></li>
-				</ul> -->
 			</div>
 		</div>
 	</div>
@@ -164,13 +156,6 @@
 		<div id="collapse2" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<?php print render(module_invoke( 'menu', 'block_view', 'menu-mobile-patients') ); ?>
-				<!-- <ul class="accordion-menu-ul">
-					<li><a href="/patients/what-we-do/what-we-do-overview">What We Do</a></li>
-					<li><a href="/patients/prostate-cancer/prostate-cancer-overview">Prostate Cancer</a></li>
-					<li><a href="/patients/kidney-stones/kidney-stones-overview">Kidney Stones</a></li>
-					<li><a href="/patients/enlarged-prostate/prostate-cancer-overview">Enlarged Prostate</a></li>
-					<li><a href="/patients/find-an-md/search">Find an M.D.</a></li>
-				</ul> -->
 			</div>
 		</div>
 	</div>
@@ -187,14 +172,6 @@
 		<div id="collapse4" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner">
 				<?php print render(module_invoke( 'menu', 'block_view', 'menu-mobile-our-company') ); ?>
-				<!-- <ul class="accordion-menu-ul">
-					<li><a href="/our-company/our-story/our-company-overview">Our Story</a></li>
-					<li><a href="/our-company/resources/all/all">Resources</a></li>
-					<li><a href="/our-company/events/all">Events</a></li>
-					<li><a href="/our-company/news/all">News</a></li>
-					<li><a href="/our-company/investors/investor-information-overview">Investors</a></li>
-					<li><a href="/our-company/careers/overview">Careers</a></li>
-				</ul> -->
 			</div>
 		</div>
 	</div>
@@ -203,8 +180,6 @@
 
 
 <!-- VIDEO MODAL -->
-<!-- <a class="btn" data-toggle="modal" href="#videoModal" >Launch Modal</a> -->
-
 <div id="videoModal" class="modal hide fade" style="display: none;">
 	<div class="modal-header">
 		<button class="close" data-dismiss="modal">×</button>
@@ -224,16 +199,15 @@
 				<div class="row">
 					<div class="span9">
 						<div class="share-headline">
-							<img src="<?php print '/' . path_to_theme() . '/images/arrow_share.png'; ?>"> Share this page
+							<img src="<?php print '/' . path_to_theme() . '/images/arrow_share.png'; ?>"> Share this Video
 						</div>
 						<div class="row">
-							<form id="share-email" action='/api/sharethis' method='post'>
+							<form id="share-video-email" action='/api/sharethis' method='post'>
 								<div class="span4">
 									<input name="to-email" id="to-email" type="text" value="To (email address)">
 									<input name="from-email" id="from-email" type="text" value="Sender's Email">
-										<?php if(isset($node->nid)) : ?>
-									<input name="nid" value="<?php print $node->nid; ?>" type="hidden">
-									<?php endif ?>
+									<input id="nid-input" name="nid" value="" type="hidden">
+									<input name="share_type" value="video" type="hidden">
 								</div>
 								<div class="span5">
 									<textarea name="message" id="message">Your Message</textarea>
@@ -265,7 +239,6 @@
 	
 	
 </div>
-
 <!-- /VIDEO MODAL -->
 
 
@@ -297,8 +270,8 @@
 <!-- End Content Inside Orange Area + Share Module -->
 
 <!--  Subpage Nodes-->
-<?php if(isset($node)):?>
-<?php if($node->type == 'sub_page' || $node->type == 'bio_listing'): ?>
+<?php if(isset($node) || isset($view->name)):?>
+<?php if($node->type == 'sub_page' || $node->type == 'bio_listing' || $view->name == 'video_page'): ?>
 	<?php $contentRendered = TRUE; ?>
 	<!-- <?php print $node->nid; ?> -->
 <div id="grey-stripe">

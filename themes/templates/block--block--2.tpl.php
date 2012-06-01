@@ -64,7 +64,8 @@
 							<div class="span4">
 								<input name="to-email" id="to-email" type="text" value="To (email address)">
 								<input name="from-email" id="from-email" type="text" value="Sender's Email">
-									<?php if(isset($node->nid)) : ?>
+								<input name="share_type" value="page" type="hidden">
+								<?php if(isset($node->nid)) : ?>
 								<input name="nid" value="<?php print $node->nid; ?>" type="hidden">
 								<?php endif ?>
 							</div>
