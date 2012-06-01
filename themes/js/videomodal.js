@@ -29,6 +29,9 @@ $(document).ready(function()
 		var vid_link = $(this).attr("data-video").substr(16);
 	    var embed = '<iframe width="794" height="404" src="http://www.youtube.com/embed/' + vid_link + '?rel=0" frameborder="0" allowfullscreen></iframe>';
 		// var vid_data = "http://gdata.youtube.com/feeds/api/videos/" + vid_link;
+		var form = $("#share-video-email");
+		var nIDinput = $('#nid-input');
+		nIDinput.val($(this).attr('data-node-id'));
 		
 		// Empty existing modal content
 		// --------------------------------------
@@ -60,4 +63,5 @@ $(document).ready(function()
 	    }
 				
 	});
+
 });
