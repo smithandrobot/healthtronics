@@ -1,4 +1,4 @@
-function respond()
+function windowrespond()
 {
 	// console.log($(window).width());
 	
@@ -33,12 +33,12 @@ function respond()
 		
 		// trigger dotdotdot
 		// ----------------------------------
-		$(".small-molecule h1").trigger("update");
-		$(".small-molecule p").trigger("update");
-		$(".large-molecule h1").trigger("update");
-		$(".large-molecule p").trigger("update");
-		$(".events-molecule .event-large h1").trigger("update");
-		$(".events-molecule .event-large p").trigger("update");
+		if($(".small-molecule h1").length > 0) $(".small-molecule h1").trigger("update");
+		if($(".small-molecule p").length > 0) $(".small-molecule p").trigger("update");
+		if($(".large-molecule h1").length > 0) $(".large-molecule h1").trigger("update");
+		if($(".large-molecule p").length > 0) $(".large-molecule p").trigger("update");
+		if($(".events-molecule .event-large h1").length > 0) $(".events-molecule .event-large h1").trigger("update");
+		if($(".events-molecule .event-large p").length > 0) $(".events-molecule .event-large p").trigger("update");
 	}
 	
 	
@@ -71,20 +71,23 @@ function respond()
 		
 		// trigger dotdotdot
 		// ----------------------------------
-		$(".small-molecule h1").trigger("update");
-		$(".small-molecule p").trigger("update");
-		$(".large-molecule h1").trigger("update");
-		$(".large-molecule p").trigger("update");
-		$(".events-molecule .event-large h1").trigger("update");
-		$(".events-molecule .event-large p").trigger("update");
+		if($(".small-molecule h1").length > 0) $(".small-molecule h1").trigger("update");
+		if($(".small-molecule p").length > 0) $(".small-molecule p").trigger("update");
+		if($(".large-molecule h1").length > 0) $(".large-molecule h1").trigger("update");
+		if($(".large-molecule p").length > 0) $(".large-molecule p").trigger("update");
+		if($(".events-molecule .event-large h1").length > 0) $(".events-molecule .event-large h1").trigger("update");
+		if($(".events-molecule .event-large p").length > 0) $(".events-molecule .event-large p").trigger("update");
 	}
 	
 	
 	// If there isn't a 'Previous' link,
 	// push the 'Next' link to the right
 	// ----------------------------------
-	if(!$(".news-molecules-nav li").hasClass("prev"))
+	if($(".news-molecules-nav li").length > 0)
 	{
-		$(".news-molecules-nav li").css("width", "100%");
+		if(!$(".news-molecules-nav li").hasClass("prev"))
+		{
+			$(".news-molecules-nav li").css("width", "100%");
+		}
 	}
 }

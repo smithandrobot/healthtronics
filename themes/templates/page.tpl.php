@@ -79,7 +79,10 @@
 	
 ?>
 
+<![if !IE 7]>
+<script src="/sites/all/themes/healthtronicsv2/js/hellobar.js" type="text/javascript"></script>
 <script type="text/javascript">
+
     new HelloBar('<span>Healthtronics is a part of Endo – now Endo Health Solutions – working together to find a better way.<\/span> <a href="http:\/\/www.endo.com\/" target="_blank" class="button">Learn More<\/a>', {
         showWait: 1000,
         fonts: 'Helvetica,Arial,sans-serif',
@@ -90,6 +93,7 @@
     }, 1.0);
 
 </script>
+<![endif]>
 
 <!--[if lt IE 9]>
 <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
@@ -191,7 +195,6 @@
 		<p class="modal-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 	</div>
 	<div class="modal-body">
-		<iframe width="794" height="404" src="http://www.youtube.com/embed/VGRQGm4-A4k?rel=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 	<div class="modal-footer">
 		<a href="javascript: ;" class="share-image" data-toggle="collapse" data-target="#modalCollapse"></a>
@@ -589,24 +592,27 @@
 		
 		// carousel
 		// ----------------------------------
-		$('.carousel').carousel({
-			interval: 3000
-		});
+		if($('.carousel').length > 0)
+		{
+			$('.carousel').carousel({
+				interval: 3000
+			});
+		}
 		
 		
 		// respond
 		// ----------------------------------
-		respond();
+		windowrespond();
 		
 		
 		// trigger dotdotdot
 		// ----------------------------------
-		$(".small-molecule h1").trigger("update");
-		$(".small-molecule p").trigger("update");
-		$(".large-molecule h1").trigger("update");
-		$(".large-molecule p").trigger("update");
-		$(".events-molecule .event-large h1").trigger("update");
-		$(".events-molecule .event-large p").trigger("update");
+		if($(".small-molecule h1").length > 0) $(".small-molecule h1").trigger("update");
+		if($(".small-molecule p").length > 0) $(".small-molecule p").trigger("update");
+		if($(".large-molecule h1").length > 0) $(".large-molecule h1").trigger("update");
+		if($(".large-molecule p").length > 0) $(".large-molecule p").trigger("update");
+		if($(".events-molecule .event-large h1").length > 0) $(".events-molecule .event-large h1").trigger("update");
+		if($(".events-molecule .event-large p").length > 0) $(".events-molecule .event-large p").trigger("update");
 	});
 	
 	
@@ -614,7 +620,7 @@
 	// ----------------------------------------------------------
 	$(window).resize(function()
 	{
-		respond();
+		windowrespond();
 	});
 	
 </script>
