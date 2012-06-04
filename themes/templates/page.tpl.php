@@ -79,7 +79,7 @@
 	
 ?>
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
     new HelloBar('<span>Healthtronics is a part of Endo – now Endo Health Solutions – working together to find a better way.<\/span> <a href="http:\/\/www.endo.com\/" target="_blank" class="button">Learn More<\/a>', {
         showWait: 1000,
         fonts: 'Helvetica,Arial,sans-serif',
@@ -89,7 +89,7 @@
         borderColor: '#F28C18'
     }, 1.0);
 
-</script> -->
+</script>
 
 <!--[if lt IE 9]>
 <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
