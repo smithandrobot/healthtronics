@@ -1,21 +1,24 @@
 /*
 */
-ul li.leaf {
-list-style-image: none;
-list-style-type: none;
+ul li.leaf
+{
+	list-style-image: none;
+	list-style-type: none;
 }
 
-li.expanded, li.collapsed, li.leaf {
-padding: 0;
+li.expanded, li.collapsed, li.leaf
+{
+	padding: 0;
 }
 
 li a.active {
-color: #007296;
+	color: #007296;
 }
 
-.accordion-menu-ul li.leaf {
-padding-top: 5px;
-padding-bottom: 5px;
+.accordion-menu-ul li.leaf
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 // SandR.less
@@ -62,11 +65,13 @@ padding-bottom: 5px;
 	margin-right: 67px;
 	text-align: center;
 	line-height: 21px;
+	.transition(background-color .1s linear);
 }
 
 .nav-primary .contact a:hover
 {
 	background-color: @blueLight;
+	.transition(background-color .1s linear);
 }
 
 .nav-primary .search
@@ -84,13 +89,23 @@ ul.nav-secondary
 	float: left;
 	padding-left: 45px;
     font-size: 18px;
-	// margin-bottom: 23px;
 }
 
 .nav-secondary li.first.leaf
 {
 	padding-left: 0;
 }
+
+.nav-secondary li a
+{
+	.transition(color .1s linear);
+}
+
+.nav-secondary li a:hover
+{
+	.transition(color .1s linear);
+}
+
 /*override Drupal*/
 .nav-primary ul li.leaf
 {
@@ -98,12 +113,13 @@ ul.nav-secondary
     list-style-type: none;
     padding: 0;
 }
+
 ul.menu li
 {
     margin:0;
 }
-
 /* end overrides */
+
 .subnav-bg
 {
 	padding: 17px 0px 0px 0px;
@@ -149,11 +165,13 @@ ul.menu li
 .header-bg p a
 {
 	color: @white;
+	.transition(color .1s linear);
 }
 
 .header-bg p a:hover
 {
 	color: @blueLight;
+	.transition(color .1s linear);
 }
 
 .header-bg .share
@@ -293,14 +311,14 @@ ul.menu li
 	color: @white;
 	background-color: @yellow;
 	text-align: center;
-/*  line-height: 1em;*/
 	border:0;
-/*  display:block;*/
+	.transition(background-color .1s linear);
 }
 
-.share-molecule a.share-email-btn:hover
+.share-molecule .share-email-btn:hover
 {
 	background-color: @yellowLight;
+	.transition(background-color .1s linear);
 }
 
 .share-molecule .close-btn
@@ -427,12 +445,11 @@ ul.menu li
 	line-height: 1.1em;
 	margin-bottom: 8px;
 	height: 55px;
-	// width: 420px;
+	.transition(color .1s linear);
 }
 
 .large-molecule p
 {
-	// color: #9E9F9F;
 	font-size: 12px;
 	font-family: @altFontFamily;
 	line-height: 13px;
@@ -442,6 +459,7 @@ ul.menu li
 .large-molecule:hover h1
 {
 	color: @blueLight;
+	.transition(color .1s linear);
 }
 
 .small-molecule
@@ -482,9 +500,15 @@ ul.menu li
 	background-position: 0px -23px;
 }
 
+#grey-stripe .small-molecule .inner h1
+{
+	.transition(color .1s linear);
+}
+
 #grey-stripe .small-molecule:hover .inner h1
 {
 	color: @blueLight;
+	.transition(color .1s linear);
 }
 
 .small-molecule h1
@@ -539,11 +563,13 @@ ul.menu li
 .news-molecule a
 {
 	color: @white;
+	.transition(color .1s linear);
 }
 
 .news-molecule a:hover
 {
 	color: @yellowLight;
+	.transition(color .1s linear);
 }
 
 .news-molecule .more-link
@@ -572,6 +598,7 @@ ul.menu li
 .news-molecule .more-link:hover a
 {
 	color: @blueLight;
+	.transition(color .1s linear);
 }
 
 .news-molecule .more-link:hover .arrow
@@ -1121,36 +1148,43 @@ ul.menu li
 .mol-border-green
 {
 	border-bottom: 5px solid @green;
+	.transition(border-bottom .1s linear);
 }
 
 .mol-border-orange
 {
 	border-bottom: 5px solid @orange;
+	.transition(border-bottom .1s linear);
 }
 
 .mol-border-blue
 {
 	border-bottom: 5px solid @blue;
+	.transition(border-bottom .1s linear);
 }
 
 .mol-border-purple
 {
 	border-bottom: 5px solid @purple;
+	.transition(border-bottom .1s linear);
 }
 
 .mol-border-yellow
 {
 	border-bottom: 5px solid @yellow;
+	.transition(border-bottom .1s linear);
 }
 
 .mol-border-grey
 {
 	border-bottom: 5px solid @greyDark;
+	.transition(border-bottom .1s linear);
 }
 
 .mol-border-white
 {
 	border-bottom: 5px solid @white;
+	.transition(border-bottom .1s linear);
 }
 
 // Rollover border colors
@@ -1159,35 +1193,41 @@ ul.menu li
 .small-molecule:hover.mol-border-green
 {
 	border-bottom: 5px solid @greenLight;
+	.transition(border-bottom .1s linear);
 }
 
 .small-molecule:hover.mol-border-orange
 {
 	border-bottom: 5px solid @orangeLight;
+	.transition(border-bottom .1s linear);
 }
 
 .small-molecule:hover.mol-border-blue
 {
 	border-bottom: 5px solid @blueLight;
+	.transition(border-bottom .1s linear);
 }
 
 .small-molecule:hover.mol-border-purple
 {
 	border-bottom: 5px solid @purpleLight;
+	.transition(border-bottom .1s linear);
 }
 
 .small-molecule:hover.mol-border-yellow
 {
 	border-bottom: 5px solid @yellowLight;
+	.transition(border-bottom .1s linear);
 }
 
 .small-molecule:hover.mol-border-grey
 {
 	border-bottom: 5px solid @grey;
+	.transition(border-bottom .1s linear);
 }
 
 // Dates in the list view
-
+// -----------------------------------------
 .date-color-orange .date
 {
 	background-color: @orange;
@@ -1202,6 +1242,7 @@ ul.menu li
 {
 	background-color: @yellow;
 }
+
 // Background Colors
 // -----------------------------------------
 
@@ -1405,11 +1446,13 @@ ul.menu li
 	font-size: 16px;
 	line-height: 28px;
 	border: 0px solid #000000;
+	.transition(background-color .1s linear);
 }
 
 .submit-btn:hover
 {
 	background-color: @blueLight;
+	.transition(background-color .1s linear);
 }
 
 
@@ -1458,11 +1501,13 @@ ul.menu li
 {
 	display: block;
 	padding: 5px 10px 5px 10px;
+	.transition(background-color .1s linear);
 }
 
 .filter-header ul li a:hover, .filter-header ul li a.active
 {
 	background-color: @white;
+	.transition(background-color .1s linear);
 }
 
 
@@ -1514,11 +1559,13 @@ ul.menu li
 {
 	display: block;
 	padding: 5px 10px 5px 10px;
+	.transition(background-color .1s linear);
 }
 
 .events-filter ul li a:hover, .events-filter ul li a:active
 {
 	background-color: @white;
+	.transition(background-color .1s linear);
 }
 
 
@@ -1570,11 +1617,13 @@ ul.menu li
 {
 	display: block;
 	padding: 5px 10px 5px 10px;
+	.transition(background-color .1s linear);
 }
 
 .news-filter ul li a:hover, .news-filter ul li a:active
 {
 	background-color: @white;
+	.transition(background-color .1s linear);
 }
 
 .news-large-molecule
@@ -1612,9 +1661,15 @@ ul.menu li
 	background-position: 0px -39px;
 }
 
+#grey-stripe .news-large-molecule .inner h1
+{
+	.transition(background-color .1s linear);
+}
+
 #grey-stripe .news-large-molecule:hover .inner h1
 {
 	color: @blueLight;
+	.transition(background-color .1s linear);
 }
 
 .news-large-molecule h1
@@ -2023,6 +2078,12 @@ ul.menu li
     color: @greyDark;
 	line-height: 1.4em;
 }
+
+.find-a-md-result .address
+{
+	font-family: @altFontFamily;
+}
+
 // Contact Site Form (Override Drupal Styles)
 // ------------------------------------------------------------------
 #subpage-body-copy #contact-site-form{margin-top:20px;}
@@ -2148,9 +2209,15 @@ ul, ol
 	margin: 0;
 }
 
+a
+{
+	.transition(color .1s linear);
+}
+
 a:hover
 {
 	text-decoration: none;
+	.transition(color .1s linear);
 }
 
 .input-prepend, .input-append
@@ -2169,6 +2236,14 @@ a:hover
 input, textarea, select, .uneditable-input
 {
 	margin-bottom: 0;
+}
+
+.search-field:focus {
+	outline:0px !important;
+	-webkit-appearance:none;
+	.box-shadow(none);
+	border: 1px solid #DADADA;
+	border-right: 0px;
 }
 
 

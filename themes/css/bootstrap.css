@@ -2590,10 +2590,30 @@ input[type="submit"].btn.btn-mini {
   -moz-border-radius: 0px;
   border-radius: 0px;
   background-color: #ececec;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .nav-pills > li > a:hover {
   color: #ffffff;
   background-color: #f1b434;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .nav-pills > li > a.active,
 .nav-pills > .active > a,
@@ -3005,12 +3025,21 @@ input[type="submit"].btn.btn-mini {
   line-height: 19px;
   color: #999999;
   text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 .navbar .nav > li > a:hover {
   background-color: transparent;
   color: #ffffff;
   text-decoration: none;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
@@ -4090,9 +4119,19 @@ li a.active {
   margin-right: 67px;
   text-align: center;
   line-height: 21px;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .nav-primary .contact a:hover {
   background-color: #0093b2;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .nav-primary .search {
   margin-bottom: 20px;
@@ -4107,6 +4146,20 @@ ul.nav-secondary {
 }
 .nav-secondary li.first.leaf {
   padding-left: 0;
+}
+.nav-secondary li a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+}
+.nav-secondary li a:hover {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 /*override Drupal*/
 .nav-primary ul li.leaf {
@@ -4150,9 +4203,19 @@ ul.menu li {
 }
 .header-bg p a {
   color: #ffffff;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 .header-bg p a:hover {
   color: #0093b2;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 .header-bg .share {
   position: relative;
@@ -4244,14 +4307,20 @@ ul.menu li {
   color: #ffffff;
   background-color: #f1b434;
   text-align: center;
-  /*  line-height: 1em;*/
-
   border: 0;
-  /*  display:block;*/
-
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
-.share-molecule a.share-email-btn:hover {
+.share-molecule .share-email-btn:hover {
   background-color: #ffc72c;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .share-molecule .close-btn {
   text-align: right;
@@ -4336,6 +4405,11 @@ ul.menu li {
   line-height: 1.1em;
   margin-bottom: 8px;
   height: 55px;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 .large-molecule p {
   font-size: 12px;
@@ -4345,6 +4419,11 @@ ul.menu li {
 }
 .large-molecule:hover h1 {
   color: #0093b2;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 .small-molecule {
   background-color: #ffffff;
@@ -4375,8 +4454,20 @@ ul.menu li {
 #grey-stripe .small-molecule:hover .inner .icon {
   background-position: 0px -23px;
 }
+#grey-stripe .small-molecule .inner h1 {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+}
 #grey-stripe .small-molecule:hover .inner h1 {
   color: #0093b2;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 .small-molecule h1 {
   color: #007296;
@@ -4409,9 +4500,19 @@ ul.menu li {
 }
 .news-molecule a {
   color: #ffffff;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 .news-molecule a:hover {
   color: #ffc72c;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 .news-molecule .more-link {
   margin-right: 10px;
@@ -4434,6 +4535,11 @@ ul.menu li {
 }
 .news-molecule .more-link:hover a {
   color: #0093b2;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 .news-molecule .more-link:hover .arrow {
   background-position: 0px -23px;
@@ -4808,42 +4914,107 @@ ul.menu li {
 }
 .mol-border-green {
   border-bottom: 5px solid #a8ad00;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .mol-border-orange {
   border-bottom: 5px solid #e87722;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .mol-border-blue {
   border-bottom: 5px solid #007296;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .mol-border-purple {
   border-bottom: 5px solid #ac1359;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .mol-border-yellow {
   border-bottom: 5px solid #f1b434;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .mol-border-grey {
   border-bottom: 5px solid #707272;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .mol-border-white {
   border-bottom: 5px solid #ffffff;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .small-molecule:hover.mol-border-green {
   border-bottom: 5px solid #c4d600;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .small-molecule:hover.mol-border-orange {
   border-bottom: 5px solid #ed8b00;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .small-molecule:hover.mol-border-blue {
   border-bottom: 5px solid #0093b2;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .small-molecule:hover.mol-border-purple {
   border-bottom: 5px solid #b52555;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .small-molecule:hover.mol-border-yellow {
   border-bottom: 5px solid #ffc72c;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .small-molecule:hover.mol-border-grey {
   border-bottom: 5px solid #9ea2a2;
+  -webkit-transition: border-bottom 0.1s linear;
+  -moz-transition: border-bottom 0.1s linear;
+  -ms-transition: border-bottom 0.1s linear;
+  -o-transition: border-bottom 0.1s linear;
+  transition: border-bottom 0.1s linear;
 }
 .date-color-orange .date {
   background-color: #e87722;
@@ -4992,9 +5163,19 @@ ul.menu li {
   font-size: 16px;
   line-height: 28px;
   border: 0px solid #000000;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .submit-btn:hover {
   background-color: #0093b2;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .filter-header {
   border-bottom: 5px solid #ffffff;
@@ -5026,10 +5207,20 @@ ul.menu li {
 .filter-header ul li a {
   display: block;
   padding: 5px 10px 5px 10px;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .filter-header ul li a:hover,
 .filter-header ul li a.active {
   background-color: #ffffff;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .events-header {
   border-bottom: 5px solid #ffffff;
@@ -5062,10 +5253,20 @@ ul.menu li {
 .events-filter ul li a {
   display: block;
   padding: 5px 10px 5px 10px;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .events-filter ul li a:hover,
 .events-filter ul li a:active {
   background-color: #ffffff;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .news-header {
   border-bottom: 5px solid #ffffff;
@@ -5098,10 +5299,20 @@ ul.menu li {
 .news-filter ul li a {
   display: block;
   padding: 5px 10px 5px 10px;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .news-filter ul li a:hover,
 .news-filter ul li a:active {
   background-color: #ffffff;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .news-large-molecule {
   width: 100%;
@@ -5130,8 +5341,20 @@ ul.menu li {
 #grey-stripe .news-large-molecule:hover .inner .icon {
   background-position: 0px -39px;
 }
+#grey-stripe .news-large-molecule .inner h1 {
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
 #grey-stripe .news-large-molecule:hover .inner h1 {
   color: #0093b2;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .news-large-molecule h1 {
   color: #ffffff;
@@ -5451,6 +5674,9 @@ ul.menu li {
   color: #707272;
   line-height: 1.4em;
 }
+.find-a-md-result .address {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
 #subpage-body-copy #contact-site-form {
   margin-top: 20px;
 }
@@ -5543,8 +5769,20 @@ ul,
 ol {
   margin: 0;
 }
+a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+}
 a:hover {
   text-decoration: none;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 .input-prepend,
 .input-append {
@@ -5562,6 +5800,15 @@ textarea,
 select,
 .uneditable-input {
   margin-bottom: 0;
+}
+.search-field:focus {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #DADADA;
+  border-right: 0px;
 }
 .item-list ul {
   margin: 0 0 0 0;

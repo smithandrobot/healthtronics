@@ -211,8 +211,8 @@
 						<div class="row">
 							<form id="share-video-email" action='/api/sharethis' method='post'>
 								<div class="span4">
-									<input name="to-email" id="to-email" type="text" value="To (email address)">
-									<input name="from-email" id="from-email" type="text" value="Sender's Email">
+									<input name="to-email" id="to-email" type="text" placeholder="To (email address)">
+									<input name="from-email" id="from-email" type="text" placeholder="Sender's Email">
 									<input id="nid-input" name="nid" value="" type="hidden">
 									<input name="share_type" value="video" type="hidden">
 								</div>

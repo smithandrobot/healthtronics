@@ -53,16 +53,13 @@
 	<?php endif ?>
 <form action="/patients/find-an-md/search" method="post">
 	<select name="physician_type">		
-	  <option value="BPH_YN">Enlarged Prostate (BPH)</option>
-	  <option value="ProstateCancer_YN">Prostate Cancer</option>
-	  <option value="KidneyStones_YN">Kidney Stones</option>
-	  <option value="KidneyCancer_YN">Kidney Cancer</option>
-	  <option value="OtherCancer_YN">Cancer (other)</option>
-	  <!-- <option value="LiverCancer_YN">Liver Cancer</option> -->
-	  <!-- <option value="LungCancer_YN">Lung Cancer</option> -->
-	  <!-- <option value="PALLINT_YN">PALLINT_YN</option> -->
+		<option value="BPH_YN">Enlarged Prostate (BPH)</option>
+		<option value="ProstateCancer_YN">Prostate Cancer</option>
+		<option value="KidneyStones_YN">Kidney Stones</option>
+		<option value="KidneyCancer_YN">Kidney Cancer</option>
+		<option value="OtherCancer_YN">Cancer (other)</option>
 	</select>
-	<input id="find-physician-zip" type="text" name="zip" value="Type in your zip code">
+	<input id="find-physician-zip" type="text" name="zip" placeholder="Type in your zip code">
 	<input type="submit" value="Find">
 </form>
 </div>
