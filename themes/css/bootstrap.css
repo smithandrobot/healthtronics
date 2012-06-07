@@ -3347,10 +3347,7 @@ input[type="submit"].btn.btn-mini {
   line-height: 1.4em;
 }
 .modal-header p {
-  font-size: 19px;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 100;
-  letter-spacing: 1px;
+  line-height: 1.2em;
 }
 .modal-body {
   max-height: 400px;
@@ -4327,6 +4324,10 @@ ul.menu li {
 }
 #videoModal .share-molecule .close-btn {
   margin-top: 80px;
+}
+#videoModal .modal-header .modal-summary {
+  font-size: 19px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 .share-molecule.video-modal input {
   width: 212px;
@@ -5724,13 +5725,30 @@ ul.menu li {
   -moz-transition: none;
   -ms-transition: none;
   -o-transition: none;
+  -webkit-appearance: none;
   background-color: #007296;
-  color: white;
+  color: #ffffff;
   width: 140px;
   border: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  height: 25px;
+  font-size: 15px;
+  font-family: LeituraSans-Italic2, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
+#contact-site-form #edit-submit:hover {
+  background-color: #0093b2;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .form-item input.error,
 .form-item textarea.error,

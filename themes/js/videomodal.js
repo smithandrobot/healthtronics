@@ -67,5 +67,11 @@ $(document).ready(function()
 	    }
 				
 	});
+	
+	$("#modalCollapse").on("shown", function() {
+		// not a very good solution
+		var modal = $(".modal");
+		modal.css('margin-top', (modal.outerHeight() / 2) * -1).css('margin-left', (modal.outerWidth() / 2) * -1);
+	})
 
 });

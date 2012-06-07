@@ -331,6 +331,12 @@ ul.menu li
 	margin-top: 80px;
 }
 
+#videoModal .modal-header .modal-summary
+{
+	font-size: 19px;
+    font-family: @altFontFamily;
+}
+
 // Video Modal Share
 // ----------------------------------------------
 
@@ -2145,17 +2151,28 @@ ul.menu li
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    -webkit-transition:none;
+    -webkit-transition: none;
     -moz-transition: none;
     -ms-transition: none;
     -o-transition: none;
-    background-color:@blue;
-    color:white;
-    width:140px;
+	-webkit-appearance: none;
+    background-color: @blue;
+    color: @white;
+    width: 140px;
     border: none;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+	height: 25px;
+	font-size: 15px;
+	font-family: @baseFontFamily;
+	.transition(background-color .1s linear);
+}
+
+#contact-site-form #edit-submit:hover
+{
+	background-color: @blueLight;
+	.transition(background-color .1s linear);
 }
 
 .form-item input.error, .form-item textarea.error, .form-item select.error {
