@@ -81,7 +81,7 @@
 
 <![if !IE 7]>
 <script src="/sites/all/themes/healthtronicsv2/js/hellobar.js" type="text/javascript"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
     new HelloBar('<span>Healthtronics is a part of Endo – now Endo Health Solutions – working together to find a better way.<\/span> <a href="http:\/\/www.endo.com\/" target="_blank" class="button">Learn More<\/a>', {
         showWait: 1000,
@@ -92,7 +92,7 @@
         borderColor: '#F28C18'
     }, 1.0);
 
-</script>
+</script> -->
 <![endif]>
 
 <!--[if lt IE 9]>
@@ -197,7 +197,7 @@
 	<div class="modal-body">
 	</div>
 	<div class="modal-footer">
-		<a href="javascript: ;" class="share-image" data-toggle="collapse" data-target="#modalCollapse"></a>
+		<a id="video-share" href="javascript: ;" class="share-image" data-toggle="collapse" data-target="#modalCollapse"></a>
 	</div>
 	
 	<div id="modalCollapse" class="share-molecule collapse">
@@ -242,9 +242,6 @@
 			</div>
 		</div>
 	</div>
-	
-	
-	
 </div>
 <!-- /VIDEO MODAL -->
 

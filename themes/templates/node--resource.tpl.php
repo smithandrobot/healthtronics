@@ -38,8 +38,8 @@
 	<a href="<?php print $file; ?>">
 		<div class="small-molecule news-teaser <?php print $color; ?>">
 			<div class="inner">
-				<h1><?php print $node->title; ?></h1>
-				<p><?php print $summary; ?></p>
+				<h1 title="<?php print $node->title; ?>"><?php print $node->title; ?></h1>
+				<p title="<?php print $summary; ?>"><?php print $summary; ?></p>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
 		</div>
@@ -53,7 +53,7 @@
 	<a href="<?php print $file; ?>">
 		<div style="background-image:url(<?php print $image; ?>);" class="video-molecule <?php print $color; ?>">
 			<div class="video-molecule-description">
-				<p><?php print $node->title; ?></p>
+				<p title="<?php print $node->title; ?>"><?php print $node->title; ?></p>
 				<div class="video-molecule-content-background"></div>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
@@ -69,7 +69,7 @@
 	<a href="<?php print $file; ?>">
 		<div style="background-image:url(<?php print $image; ?>);" class="video-molecule <?php print $color; ?>">
 			<div class="video-molecule-description">
-				<p><?php print $node->title; ?></p>
+				<p title="<?php print $node->title; ?>"><?php print $node->title; ?></p>
 				<div class="video-molecule-content-background"></div>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
@@ -84,8 +84,8 @@
 	<a href="<?php print $file; ?>">
 		<div class="small-molecule news-teaser <?php print $color; ?>">
 			<div class="inner">
-				<h1><?php print $node->title; ?></h1>
-				<p><?php print $summary; ?></p>
+				<h1 title="<?php print $node->title; ?>"><?php print $node->title; ?></h1>
+				<p title="<?php print $summary; ?>"><?php print $summary; ?></p>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
 		</div>
@@ -101,11 +101,8 @@
 		<?php $img = 'http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg'; ?>
 		<div class="video-molecule <?php print $color; ?>" >
 			<div class="video-molecule-description">
-				<div class="video-molecule-content-background">
-					<p>
-						<?php print $node->title; ?>
-					</p>
-				</div>
+				<p title="<?php print $node->title; ?>"><?php print $node->title; ?></p>
+				<div class="video-molecule-content-background"></div>
 			</div>
 			<div class="video-bg hidden-phone"><img src="<?php print $img; ?>"></div>
 			<div class="icon <?php print $icon; ?>"></div>
@@ -116,11 +113,11 @@
 
 <!-- Video Share Page -->
 <?php if($view_mode == 'video_share'):?>
-	<h2 id="title">
+	<h2 id="title" title="<?php print $node->title; ?>">
 		<?php print $node->title; ?>
 	</h2>
 	<div id="subpage-body-summary">
-		<p><?php print $summary; ?></p>
+		<p title="<?php print $summary; ?>"><?php print $summary; ?></p>
 	</div>
 	<div class="mol-border-white"></div>
 	<div style="margin-top:20px;">
@@ -135,11 +132,8 @@
 		<?php $img = 'http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg'; ?>
 		<div class="video-molecule <?php print $color; ?>" >
 			<div class="video-molecule-description">
-				<div class="video-molecule-content-background">
-					<p>
-						<?php print $node->title; ?>
-					</p>
-				</div>
+				<p title="<?php print $node->title; ?>"><?php print $node->title; ?></p>
+				<div class="video-molecule-content-background"></div>
 			</div>
 			<div class="video-bg hidden-phone"><img src="<?php print $img; ?>"></div>
 			<div class="icon <?php print $icon; ?>"></div>
