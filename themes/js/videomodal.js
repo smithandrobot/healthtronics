@@ -20,9 +20,12 @@ $(document).ready(function()
 		}
 	});
 	
-	$('#videoModal').on('hidden', function () {
-		$("#videoModal .modal-body").empty();
-	})
+	$('#videoModal').on('hidden', function (e) {
+		if(e.target.id == "videoModal")
+		{
+			$("#videoModal .modal-body").empty();
+		}
+	});
 
 	$(".video_open").click(function()
 	{
