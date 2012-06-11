@@ -2016,11 +2016,11 @@ table .span24 {
   text-decoration: none;
   background-color: #e6e6e6;
   background-position: 0 -15px;
-  -webkit-transition: background-position 0.1s linear;
-  -moz-transition: background-position 0.1s linear;
-  -ms-transition: background-position 0.1s linear;
-  -o-transition: background-position 0.1s linear;
-  transition: background-position 0.1s linear;
+  -webkit-transition: background-position 0.2s linear;
+  -moz-transition: background-position 0.2s linear;
+  -ms-transition: background-position 0.2s linear;
+  -o-transition: background-position 0.2s linear;
+  transition: background-position 0.2s linear;
 }
 .btn:focus {
   outline: thin dotted #333;
@@ -2590,30 +2590,30 @@ input[type="submit"].btn.btn-mini {
   -moz-border-radius: 0px;
   border-radius: 0px;
   background-color: #ececec;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .nav-pills > li > a:hover {
   color: #ffffff;
   background-color: #f1b434;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .nav-pills > li > a.active,
 .nav-pills > .active > a,
@@ -3025,21 +3025,21 @@ input[type="submit"].btn.btn-mini {
   line-height: 19px;
   color: #999999;
   text-decoration: none;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 .navbar .nav > li > a:hover {
   background-color: transparent;
   color: #ffffff;
   text-decoration: none;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
@@ -4116,19 +4116,19 @@ li a.active {
   margin-right: 67px;
   text-align: center;
   line-height: 21px;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .nav-primary .contact a:hover {
   background-color: #0093b2;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .nav-primary .search {
   margin-bottom: 20px;
@@ -4145,18 +4145,18 @@ ul.nav-secondary {
   padding-left: 0;
 }
 .nav-secondary li a {
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 .nav-secondary li a:hover {
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 /*override Drupal*/
 .nav-primary ul li.leaf {
@@ -4198,19 +4198,19 @@ ul.menu li {
 }
 .header-bg p a {
   color: #ffffff;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 .header-bg p a:hover {
   color: #0093b2;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 .header-bg .share {
   position: relative;
@@ -4303,19 +4303,19 @@ ul.menu li {
   background-color: #f1b434;
   text-align: center;
   border: 0;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .share-molecule .share-email-btn:hover {
   background-color: #ffc72c;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .share-molecule .close-btn {
   text-align: right;
@@ -4404,11 +4404,11 @@ ul.menu li {
   line-height: 1.1em;
   margin-bottom: 8px;
   height: 55px;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 .large-molecule p {
   font-size: 12px;
@@ -4418,11 +4418,11 @@ ul.menu li {
 }
 .large-molecule:hover h1 {
   color: #0093b2;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 .small-molecule {
   background-color: #ffffff;
@@ -4454,19 +4454,19 @@ ul.menu li {
   background-position: 0px -23px;
 }
 #grey-stripe .small-molecule .inner h1 {
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 #grey-stripe .small-molecule:hover .inner h1 {
   color: #0093b2;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 .small-molecule h1 {
   color: #007296;
@@ -4499,19 +4499,19 @@ ul.menu li {
 }
 .news-molecule a {
   color: #ffffff;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 .news-molecule a:hover {
   color: #ffc72c;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 .news-molecule .more-link {
   margin-right: 10px;
@@ -4534,11 +4534,11 @@ ul.menu li {
 }
 .news-molecule .more-link:hover a {
   color: #0093b2;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 .news-molecule .more-link:hover .arrow {
   background-position: 0px -23px;
@@ -4913,107 +4913,107 @@ ul.menu li {
 }
 .mol-border-green {
   border-bottom: 5px solid #a8ad00;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .mol-border-orange {
   border-bottom: 5px solid #e87722;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .mol-border-blue {
   border-bottom: 5px solid #007296;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .mol-border-purple {
   border-bottom: 5px solid #ac1359;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .mol-border-yellow {
   border-bottom: 5px solid #f1b434;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .mol-border-grey {
   border-bottom: 5px solid #707272;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .mol-border-white {
   border-bottom: 5px solid #ffffff;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .small-molecule:hover.mol-border-green {
   border-bottom: 5px solid #c4d600;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .small-molecule:hover.mol-border-orange {
   border-bottom: 5px solid #ed8b00;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .small-molecule:hover.mol-border-blue {
   border-bottom: 5px solid #0093b2;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .small-molecule:hover.mol-border-purple {
   border-bottom: 5px solid #b52555;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .small-molecule:hover.mol-border-yellow {
   border-bottom: 5px solid #ffc72c;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .small-molecule:hover.mol-border-grey {
   border-bottom: 5px solid #9ea2a2;
-  -webkit-transition: border-bottom 0.1s linear;
-  -moz-transition: border-bottom 0.1s linear;
-  -ms-transition: border-bottom 0.1s linear;
-  -o-transition: border-bottom 0.1s linear;
-  transition: border-bottom 0.1s linear;
+  -webkit-transition: border-bottom 0.2s linear;
+  -moz-transition: border-bottom 0.2s linear;
+  -ms-transition: border-bottom 0.2s linear;
+  -o-transition: border-bottom 0.2s linear;
+  transition: border-bottom 0.2s linear;
 }
 .date-color-orange .date {
   background-color: #e87722;
@@ -5165,19 +5165,19 @@ ul.menu li {
   font-size: 16px;
   line-height: 28px;
   border: 0px solid #000000;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .submit-btn:hover {
   background-color: #0093b2;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .filter-header {
   border-bottom: 5px solid #ffffff;
@@ -5209,20 +5209,20 @@ ul.menu li {
 .filter-header ul li a {
   display: block;
   padding: 5px 10px 5px 10px;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .filter-header ul li a:hover,
 .filter-header ul li a.active {
   background-color: #ffffff;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .events-header {
   border-bottom: 5px solid #ffffff;
@@ -5255,20 +5255,20 @@ ul.menu li {
 .events-filter ul li a {
   display: block;
   padding: 5px 10px 5px 10px;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .events-filter ul li a:hover,
 .events-filter ul li a:active {
   background-color: #ffffff;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .news-header {
   border-bottom: 5px solid #ffffff;
@@ -5301,20 +5301,20 @@ ul.menu li {
 .news-filter ul li a {
   display: block;
   padding: 5px 10px 5px 10px;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .news-filter ul li a:hover,
 .news-filter ul li a:active {
   background-color: #ffffff;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .news-large-molecule {
   width: 100%;
@@ -5344,19 +5344,19 @@ ul.menu li {
   background-position: 0px -39px;
 }
 #grey-stripe .news-large-molecule .inner h1 {
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 #grey-stripe .news-large-molecule:hover .inner h1 {
   color: #0093b2;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .news-large-molecule h1 {
   color: #ffffff;
@@ -5741,19 +5741,19 @@ ul.menu li {
   height: 25px;
   font-size: 15px;
   font-family: LeituraSans-Italic2, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 #contact-site-form #edit-submit:hover {
   background-color: #0093b2;
-  -webkit-transition: background-color 0.1s linear;
-  -moz-transition: background-color 0.1s linear;
-  -ms-transition: background-color 0.1s linear;
-  -o-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .form-item input.error,
 .form-item textarea.error,
@@ -5793,19 +5793,19 @@ ol {
   margin: 0;
 }
 a {
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 a:hover {
   text-decoration: none;
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  -ms-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 .input-prepend,
 .input-append {
