@@ -129,7 +129,7 @@
 				Loading Map...
 			</div>
 			<div class="find-a-md-result span6">
-				<h3><?php print $physician->Physician; ?></h3>
+				<h2><?php print $physician->Physician; ?></h2>
 				<p class="address">
 					<?php print $addressString ?><br />
 					<?php print $physician->Phone; ?><br />

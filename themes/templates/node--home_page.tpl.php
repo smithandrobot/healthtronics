@@ -243,12 +243,6 @@
 						<div class="inner clearfix">
 							<img src="<?php print '/' . path_to_theme() . '/images/symbol_at.png'; ?>" class="at">
 							<div class="content">
-								<!-- 
-								<h1>Sign up to receive email alerts.</h1>
-								<p>Your address will stay private. Unsubscribe any time.</p>
-								<form class="form-inline">
-									<input id="email-field-top" type="text" class="email-field" value="Enter Your email address" onblur="if (this.value == '') {this.value = 'Enter Your email address';}" onfocus="if (this.value == 'Enter Your email address') {this.value = '';}"><button type="submit" class="submit-btn">submit</button>
-								-->
 								<h1 class="email-header">Sign up to receive email alerts.</h1>
 								<p class="email-details">Your address will stay private. Unsubscribe any time.</p>
 								<form id="email-form-homepage" class="form-inline" action="http://healthtronicsemail.createsend.com/t/j/s/eujkk/">
@@ -256,7 +250,7 @@
 									name="cm-eujkk-eujkk" 
 									type="text" 
 									class="email-field" 
-									value="Enter Your email address"><button type="submit" id="email-top-btn" class="submit-btn">submit</button>
+									placeholder="Enter Your email address"><button type="submit" id="email-top-btn" class="submit-btn">submit</button>
 								</form>
 								<script type="text/javascript" charset="utf-8">
 									var cHomePage=new CMonitorForm('#email-form-homepage', '#email-top-btn', '#email-field-top', '.email-header', '.email-details');

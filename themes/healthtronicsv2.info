@@ -17,8 +17,12 @@ scripts[] = js/accordion.js
 scripts[] = js/videomodal.js
 scripts[] = js/c_monitor.js
 scripts[] = js/sharepage.js
+<<<<<<< HEAD
 scripts[] = js/bootstrap-transition.js
 scripts[] = js/respond.min.js
+=======
+scripts[] = js/windowresize.js
+>>>>>>> 9ca8986deea082157874a2af70af13ba74765362
 
 
 regions[sidebar_left] = Sidebar Left

@@ -20,9 +20,12 @@ $(document).ready(function()
 		}
 	});
 	
-	$('#videoModal').on('hidden', function () {
-		$("#videoModal .modal-body").empty();
-	})
+	$('#videoModal').on('hidden', function (e) {
+		if(e.target.id == "videoModal")
+		{
+			$("#videoModal .modal-body").empty();
+		}
+	});
 
 	$(".video_open").click(function()
 	{
@@ -67,5 +70,11 @@ $(document).ready(function()
 	    }
 				
 	});
+	
+	$("#modalCollapse").on("shown", function() {
+		// not a very good solution
+		var modal = $(".modal");
+		modal.css('margin-top', (modal.outerHeight() / 2) * -1).css('margin-left', (modal.outerWidth() / 2) * -1);
+	})
 
 });

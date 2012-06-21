@@ -12,21 +12,25 @@
 	switch($resource)
 	{
 		case 'video':
-			$icon 	='icon-01';
+			$icon 	= 'icon-01';
 			$color 	= 'mol-border-purple';
 			$file 	= '#videoModal';
+			$target = '_self';
 			break;
 		case 'link':
-			$icon 	='icon-02';
+			$icon 	= 'icon-02';
 			$color 	= 'mol-border-blue';
+			$target = '_self';
 			break;
 		case 'image':
-			$icon 	='icon-04';
+			$icon 	= 'icon-04';
 			$color 	= 'mol-border-grey';
+			$target = '_blank';
 			break;
 		default:
-			$icon 	='icon-03';
-			$color 	='mol-border-green';
+			$icon 	= 'icon-03';
+			$color 	= 'mol-border-green';
+			$target = '_blank';
 			break;
 	}
 
@@ -35,11 +39,11 @@
 <?php if($teaser && !isset($image) && $resource != 'video'): ?>
 <!-- No Image BKG -->
 <div class="span3 small-mol-resize-d">
-	<a href="<?php print $file; ?>">
+	<a href="<?php print $file; ?>" target="<?php print $target; ?>">
 		<div class="small-molecule news-teaser <?php print $color; ?>">
 			<div class="inner">
-				<h1><?php print $node->title; ?></h1>
-				<p><?php print $summary; ?></p>
+				<h1 title="<?php print $node->title; ?>"><?php print $node->title; ?></h1>
+				<p title="<?php print $summary; ?>"><?php print $summary; ?></p>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
 		</div>
@@ -50,10 +54,10 @@
 
 <?php if($teaser && isset($image)): ?>
 <div class="span3 small-mol-resize-d">
-	<a href="<?php print $file; ?>">
+	<a href="<?php print $file; ?>" target="<?php print $target; ?>">
 		<div style="background-image:url(<?php print $image; ?>);" class="video-molecule <?php print $color; ?>">
 			<div class="video-molecule-description">
-				<p><?php print $node->title; ?></p>
+				<p title="<?php print $node->title; ?>"><?php print $node->title; ?></p>
 				<div class="video-molecule-content-background"></div>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
@@ -66,10 +70,10 @@
 <!-- NEW CODE SHOULD BE PUT BELOW FOR SIDE BAR -->
 <?php if($view_mode=='side_bar' && isset($image)): ?>
 <div class="span3 small-mol-resize-c">
-	<a href="<?php print $file; ?>">
+	<a href="<?php print $file; ?>" target="<?php print $target; ?>">
 		<div style="background-image:url(<?php print $image; ?>);" class="video-molecule <?php print $color; ?>">
 			<div class="video-molecule-description">
-				<p><?php print $node->title; ?></p>
+				<p title="<?php print $node->title; ?>"><?php print $node->title; ?></p>
 				<div class="video-molecule-content-background"></div>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
@@ -81,11 +85,11 @@
 
 <?php if($view_mode=='side_bar' && !isset($image) && $resource != 'video'): ?>
 <div class="span3 small-mol-resize-c">
-	<a href="<?php print $file; ?>">
+	<a href="<?php print $file; ?>" target="<?php print $target; ?>">
 		<div class="small-molecule news-teaser <?php print $color; ?>">
 			<div class="inner">
-				<h1><?php print $node->title; ?></h1>
-				<p><?php print $summary; ?></p>
+				<h1 title="<?php print $node->title; ?>"><?php print $node->title; ?></h1>
+				<p title="<?php print $summary; ?>"><?php print $summary; ?></p>
 				<div class="icon <?php print $icon; ?>"></div>
 			</div>
 		</div>
@@ -96,16 +100,13 @@
 
 <?php if($view_mode=='side_bar' && $resource == 'video' && $view_mode != 'video_share'): ?>
 <div class="span3 small-mol-resize-c">
-	<a class="video_open" style="position: relative;" data-node-id="<?php print $node->nid; ?>" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
+	<a class="video_open" style="position: relative;" data-node-id="<?php print $node->nid; ?>" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>" target="<?php print $target; ?>">
 		<?php $style = 'background-image: url(http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg);'; ?>
 		<?php $img = 'http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg'; ?>
 		<div class="video-molecule <?php print $color; ?>" >
 			<div class="video-molecule-description">
-				<div class="video-molecule-content-background">
-					<p>
-						<?php print $node->title; ?>
-					</p>
-				</div>
+				<p title="<?php print $node->title; ?>"><?php print $node->title; ?></p>
+				<div class="video-molecule-content-background"></div>
 			</div>
 			<div class="video-bg hidden-phone"><img src="<?php print $img; ?>"></div>
 			<div class="icon <?php print $icon; ?>"></div>
@@ -116,11 +117,11 @@
 
 <!-- Video Share Page -->
 <?php if($view_mode == 'video_share'):?>
-	<h2 id="title">
+	<h2 id="title" title="<?php print $node->title; ?>">
 		<?php print $node->title; ?>
 	</h2>
 	<div id="subpage-body-summary">
-		<p><?php print $summary; ?></p>
+		<p title="<?php print $summary; ?>"><?php print $summary; ?></p>
 	</div>
 	<div class="mol-border-white"></div>
 	<div style="margin-top:20px;">
@@ -130,16 +131,13 @@
 
 <?php if($teaser && $resource == 'video'): ?>
 <div class="span3 small-mol-resize-d">
-	<a class="video_open" style="position: relative;" data-node-id="<?php print $node->nid; ?>" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>">
+	<a class="video_open" style="position: relative;" data-node-id="<?php print $node->nid; ?>" data-toggle="modal" data-title="<?php print $node->title; ?>" data-summary="<?php print $summary; ?>" data-video="<?php print $video_link; ?>" href="<?php print $file; ?>" target="<?php print $target; ?>">
 		<?php $style = 'background-image: url(http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg);'; ?>
 		<?php $img = 'http://img.youtube.com/vi/' . substr($video_link, 16) . '/0.jpg'; ?>
 		<div class="video-molecule <?php print $color; ?>" >
 			<div class="video-molecule-description">
-				<div class="video-molecule-content-background">
-					<p>
-						<?php print $node->title; ?>
-					</p>
-				</div>
+				<p title="<?php print $node->title; ?>"><?php print $node->title; ?></p>
+				<div class="video-molecule-content-background"></div>
 			</div>
 			<div class="video-bg hidden-phone"><img src="<?php print $img; ?>"></div>
 			<div class="icon <?php print $icon; ?>"></div>
