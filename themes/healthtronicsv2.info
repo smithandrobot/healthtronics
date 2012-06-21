@@ -8,6 +8,7 @@ stylesheets[all][] = css/bootstrap-responsive.css
 stylesheets[all][] = css/MyFontsWebfontsKit.css
 stylesheets[all][] = css/hellobar.css
 
+scripts[] = js/hellobar.js
 scripts[] = js/jquery.js
 scripts[] = js/bootstrap.min.js
 scripts[] = js/jquery.dotdotdot-1.4.0-packed.js
@@ -17,7 +18,6 @@ scripts[] = js/videomodal.js
 scripts[] = js/c_monitor.js
 scripts[] = js/sharepage.js
 scripts[] = js/bootstrap-transition.js
-scripts[] = js/hellobar.js
 scripts[] = js/respond.min.js
 
 

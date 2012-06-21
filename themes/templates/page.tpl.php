@@ -79,18 +79,6 @@
 	
 ?>
 
-<script type="text/javascript">
-    new HelloBar('<span>Healthtronics is a part of Endo – now Endo Health Solutions – working together to find a better way.<\/span> <a href="http:\/\/www.endo.com\/" target="_blank" class="button">Learn More<\/a>', {
-        showWait: 1000,
-        fonts: 'Helvetica,Arial,sans-serif',
-        barColor: '#FFA826',
-        shadow: false,
-        helloBarLogo: false,
-        borderColor: '#F28C18'
-    }, 1.0);
-
-</script>
-
 <!--[if lt IE 9]>
 <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
 <![endif]-->
@@ -601,12 +589,12 @@
 		
 		// trigger dotdotdot
 		// ----------------------------------
-		$(".small-molecule h1").trigger("update");
-		$(".small-molecule p").trigger("update");
-		$(".large-molecule h1").trigger("update");
-		$(".large-molecule p").trigger("update");
-		$(".events-molecule .event-large h1").trigger("update");
-		$(".events-molecule .event-large p").trigger("update");
+		//$(".small-molecule h1").trigger("update");
+		//$(".small-molecule p").trigger("update");
+		//$(".large-molecule h1").trigger("update");
+		//$(".large-molecule p").trigger("update");
+		//$(".events-molecule .event-large h1").trigger("update");
+		//$(".events-molecule .event-large p").trigger("update");
 	});
 	
 	
@@ -620,3 +608,16 @@
 </script>
 
 <script type="text/javascript" charset="utf-8" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4faab0d16ed7d203"></script>
+<script type="text/javascript">
+	    new HelloBar(
+	'<span>Healthtronics is a part of Endo – now Endo Health Solutions – working together to find a better way.<\/span> <a href="http:\/\/www.endo.com\/" target="_blank" class="button">Learn More<\/a>', 
+	{
+	        showWait: 1000,
+	        fonts: 'Helvetica,Arial,sans-serif',
+	        barColor: '#FFA826',
+	        shadow: false,
+	        helloBarLogo: false,
+	        borderColor: '#F28C18'
+	    }, 1.0);
+
+</script>
