@@ -111,10 +111,9 @@
 							</div>
 						</div>
 						<div class="row">
-							<div id="header-bg-h1-resize" class="span7">
+							<div id="header-bg-h1-resize" class="span6">
 								<h1>
-									<?php print strip_tags($node->body['und'][0]['summary'], array('<br />')); ?>
-									<!-- Working for urology professionals.<br/>Dedicated to great outcomes. -->
+									<?php print strip_tags($node->body['und'][0]['summary'], array('<br />', '<br/>')); ?>
 								</h1>
 							</div>
 							<div id="header-bg-p-resize" class="span5">

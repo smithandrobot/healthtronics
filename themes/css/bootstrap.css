@@ -4212,6 +4212,9 @@ ul.menu li {
   -o-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
+#header-bg-h1-resize h1 {
+  font-size: 42px;
+}
 .header-bg .share {
   position: relative;
 }
