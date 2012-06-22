@@ -535,7 +535,7 @@
 @media (min-width: 768px) and (max-width: 979px) {
   .header-bg h1 {
     font-size: 36px;
-    line-height: 40px;
+    line-height: 1.1em;
     margin-bottom: 10px;
   }
   .nav-secondary li {
@@ -598,7 +598,7 @@
   }
   .header-bg h1 {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.1em;
     margin-bottom: 10px;
     display: block;
   }
@@ -662,8 +662,9 @@
   }
   .header-bg h1 {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.1em;
     margin-bottom: 10px;
+    color: red;
   }
   .header-bg p {
     font-size: 12px;
