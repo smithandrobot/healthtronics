@@ -4226,6 +4226,7 @@ ul.menu li {
   background-repeat: none;
   background-position: 0px 0px;
   position: absolute;
+  bottom: ;
   right: 8px;
 }
 .sub-page.share .image {
