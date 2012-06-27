@@ -10,6 +10,7 @@ function windowrespond()
 		$(".contact a").css("width", 100);
 		$(".search-field").css("width", 209);
 		
+		// changed from span7 to span6...
 		$("#header-bg-h1-resize").removeClass("span6").addClass("span12");
 		$("#header-bg-p-resize").removeClass("span6").addClass("span12");
 		
