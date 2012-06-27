@@ -113,7 +113,7 @@
 						<div class="row">
 							<div id="header-bg-h1-resize" class="span6">
 								<h1>
-									<?php print strip_tags($node->body['und'][0]['summary'], '<br>'); ?>
+									<?php print strip_tags($node->body['und'][0]['summary'], ''); ?>
 								</h1>
 							</div>
 							<div id="header-bg-p-resize" class="span6">
