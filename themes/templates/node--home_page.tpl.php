@@ -111,12 +111,12 @@
 							</div>
 						</div>
 						<div class="row">
-							<div id="header-bg-h1-resize" class="span7">
+							<div id="header-bg-h1-resize" class="span6">
 								<h1>
 									<?php print strip_tags($node->body['und'][0]['summary'], '<br>'); ?>
 								</h1>
 							</div>
-							<div id="header-bg-p-resize" class="span5">
+							<div id="header-bg-p-resize" class="span6">
 								<?php print $node->body['und'][0]['value']; ?>
 								<div class="share">
 									<a href="javascript: ;" data-toggle="collapse" data-target="#share"><div class="image"></div></a>
