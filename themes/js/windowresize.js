@@ -10,8 +10,9 @@ function windowrespond()
 		$(".contact a").css("width", 100);
 		$(".search-field").css("width", 209);
 		
-		$("#header-bg-h1-resize").removeClass("span7").addClass("span12");
-		$("#header-bg-p-resize").removeClass("span5").addClass("span12");
+		// changed from span7 to span6...
+		$("#header-bg-h1-resize").removeClass("span6").addClass("span12");
+		$("#header-bg-p-resize").removeClass("span6").addClass("span12");
 		
 		$("#large-mol-resize").removeClass("span6").addClass("span12");
 		$("#small-mol-resize").removeClass("span6").addClass("span12");
@@ -49,8 +50,8 @@ function windowrespond()
 		$(".contact a").css("width", 120);
 		$(".search-field").css("width", 269);
 		
-		$("#header-bg-h1-resize").removeClass("span12").addClass("span7");
-		$("#header-bg-p-resize").removeClass("span12").addClass("span5");
+		$("#header-bg-h1-resize").removeClass("span12").addClass("span6");
+		$("#header-bg-p-resize").removeClass("span12").addClass("span6");
 		
 		$("#large-mol-resize").removeClass("span12").addClass("span6");
 		$("#small-mol-resize").removeClass("span12").addClass("span6");

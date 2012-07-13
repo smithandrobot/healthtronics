@@ -4187,7 +4187,7 @@ ul.menu li {
 }
 .header-bg h1 {
   color: #ffffff;
-  font-size: 36px;
+  font-size: 42px;
   line-height: 1.1em;
 }
 .header-bg p {
@@ -4212,9 +4212,6 @@ ul.menu li {
   -o-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
-#header-bg-h1-resize h1 {
-  font-size: 42px;
-}
 .header-bg .share {
   position: relative;
 }
@@ -4229,6 +4226,7 @@ ul.menu li {
   background-repeat: none;
   background-position: 0px 0px;
   position: absolute;
+  bottom: ;
   right: 8px;
 }
 .sub-page.share .image {

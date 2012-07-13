@@ -624,7 +624,19 @@
 	
 </script>
 
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25628857-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
 <script type="text/javascript" charset="utf-8" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4faab0d16ed7d203"></script>
+
 <script type="text/javascript">
 	    new HelloBar(
 	'<span>Healthtronics is a part of Endo – now Endo Health Solutions – working together to find a better way.<\/span> <a href="http:\/\/www.endo.com\/" target="_blank" class="button">Learn More<\/a>', 
