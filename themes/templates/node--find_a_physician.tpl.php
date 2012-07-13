@@ -131,7 +131,7 @@
 			<div class="find-a-md-result span6">
 				<h2><?php print $physician->Physician; ?></h2>
 				<p class="address">
-					<?php print $addressString ?><br />
+					<?php print $addressString; ?><br />
 					<?php print $physician->Phone; ?><br />
 					<a href="http://maps.google.com/maps?q=<?php print $addressString; ?>" class="map-link">Map it.</a>
 				</p>
