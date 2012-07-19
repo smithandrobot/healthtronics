@@ -133,7 +133,7 @@
 				<p class="address">
 					<?php print $addressString ?><br />
 					<?php print $physician->Phone; ?><br />
-					<a href="http://maps.google.com/maps?q=<?php print $addressString; ?>" class="map-link">Map it.</a>
+					<a href="http://maps.google.com/maps?q=<?php print $addressString; ?>" class="map-link" target="_blank">Map it.</a>
 				</p>
 			</div>
 		</div>
