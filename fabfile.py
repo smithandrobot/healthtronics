@@ -38,5 +38,5 @@ def deploy():
 
 @roles('dev')
 def stage():
-    run('cd /var/www/healthtronics/healthtronics && git pull origin master')
+    run('cd /var/www/healthtronics/healthtronics && git pull origin dev')
 
