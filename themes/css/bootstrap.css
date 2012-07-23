@@ -5684,6 +5684,9 @@ ul.menu li {
 .find-a-md-result .address {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
+.find-a-physician-result-summary-disclaimer {
+  font-size: 11px;
+}
 #subpage-body-copy #contact-site-form {
   margin-top: 20px;
 }

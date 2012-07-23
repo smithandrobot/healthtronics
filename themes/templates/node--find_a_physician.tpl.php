@@ -153,6 +153,8 @@
 	</div>
  <?php endif?>
 
+<p class="find-a-physician-result-summary-disclaimer">Please note that the source for physician contact information is the NPI Registry.</p>
+
 </div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="/sites/all/themes/healthtronicsv2/js/event_map/map.js"></script>
