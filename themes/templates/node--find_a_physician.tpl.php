@@ -122,7 +122,9 @@
 			$city = $physician->City;
 			$state = $physician->State;
 			$zip = $physician->Zip;
-			$addressString = $address.', '.$city.', '.$state.''.$zip;
+			$addressString = $address.', '.$city.', '.$state.' '.$zip;
+			$formatted_number = ($physician->Phone) ? preg_replace("/^(\d{3})(\d{3})(\d{4})$/", "$1-$2-$3", $physician->Phone) : '-';
+			
 		?>
 		<div class="row">
 			<div data-location="<?php print $addressString; ?>" class="map find-a-md-map span3">
