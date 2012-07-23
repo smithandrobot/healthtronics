@@ -127,10 +127,10 @@
 			
 		?>
 		<div class="row">
-			<div data-location="<?php print $addressString; ?>" class="map find-a-md-map span3">
+			<div data-location="<?php print $addressString; ?>" class="map find-a-md-map span6">
 				Loading Map...
 			</div>
-			<div class="find-a-md-result span6">
+			<div class="find-a-md-result span3">
 				<h2><?php print $physician->Physician; ?></h2>
 				<p class="address">
 					<?php print $addressString ?><br />
